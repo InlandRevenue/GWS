@@ -1,4 +1,4 @@
-![IRD logo](http://meetus.online/sdlu/index_files/irdlogo.gif)
+![IRD logo](https://github.com/InlandRevenue/Gateway-Services/blob/master/Images/IRlogo.gif)
 # Business Transformation Build Pack Content
 
 The Business Transformation Programme integration build packs are issued frequently. Download the latest or previous versions from this GitHub repository. You can also subscribe to updates using GitHub functionality.
