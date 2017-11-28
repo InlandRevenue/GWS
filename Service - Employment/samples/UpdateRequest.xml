@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:empl="https://services.ird.govt.nz/GWS/Employment/" xmlns:upd="https://services.ird.govt.nz/GWS/Employment/:types/UpdateRequest">
+   <soap:Header>
+      <a:To>http://localhost/WebServices/Gateway/GWS/Employment</a:To>
+      <a:Action>https://services.ird.govt.nz/GWS/Employment/Employment/Update</a:Action>
+   </soap:Header>
+   <soap:Body>
+      <empl:Update>
+         <empl:UpdateRequestMsg>
+            <upd:UpdateRequestWrapper>
+               <!--You may enter ANY elements at this point-->
+               <emp:updateRequest xmlns:emp="urn:www.ird.govt.nz/GWS:types/Employment" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                  <emp:header>
+                     <cmn:softwareProviderData>
+                        <cmn:softwareProvider>Provider</cmn:softwareProvider>
+                        <cmn:softwarePlatform>Platform</cmn:softwarePlatform>
+                        <cmn:softwareRelease>Release</cmn:softwareRelease>
+                     </cmn:softwareProviderData>
+                     <cmn:identifier IdentifierValueType="ACCIRD">123009916</cmn:identifier>
+                  </emp:header>
+                  <emp:employeeIdentifier>
+                     <emp:employeeIRD>951753820</emp:employeeIRD>
+                     <emp:employeeNameOnEILine>MCharlesPatrickJames</emp:employeeNameOnEILine>
+                     <emp:employeeDateOfBirth>1986-07-21</emp:employeeDateOfBirth>
+                     <emp:employmentStartDate>2017-03-22</emp:employmentStartDate>
+                  </emp:employeeIdentifier>
+                  <emp:updateBody>
+                     <emp:employeeIRD>951753820</emp:employeeIRD>
+                     <emp:employeeName>
+                        <cmn:nameTitle>Lord</cmn:nameTitle>
+                        <cmn:nameFirst>Charles</cmn:nameFirst>
+                        <cmn:nameSurname>James</cmn:nameSurname>
+                        <cmn:nameMiddle>Patrick</cmn:nameMiddle>
+                     </emp:employeeName>
+                     <emp:employeeNameOnEILine>MCharlesPatrickJames</emp:employeeNameOnEILine>
+                     <emp:employmentStartDate>2017-03-22</emp:employmentStartDate>
+                     <emp:employeeDateOfBirth>1986-07-21</emp:employeeDateOfBirth>
+                     <emp:taxCodes>
+                        <emp:taxCode>ESS</emp:taxCode>
+                        <emp:taxCode>SSL</emp:taxCode>
+                     </emp:taxCodes>
+                     <emp:kiwiSaverStatus>NM</emp:kiwiSaverStatus>
+                     <emp:validRelationship>1</emp:validRelationship>
+                  </emp:updateBody>
+               </emp:updateRequest>
+            </upd:UpdateRequestWrapper>
+         </empl:UpdateRequestMsg>
+      </empl:Update>
+   </soap:Body>
+</soap:Envelope>

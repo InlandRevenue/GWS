@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:cre="https://services.ird.govt.nz/GWS/Employment/:types/CreateRequest" xmlns:empl="https://services.ird.govt.nz/GWS/Employment/">
+   <soap:Header>
+      <a:To>http://localhost/WebServices/Gateway/GWS/Employment</a:To>
+      <a:Action>https://services.ird.govt.nz/GWS/Employment/Employment/Create</a:Action>
+   </soap:Header>
+   <soap:Body>
+      <empl:Create>
+         <empl:CreateRequestMsg>
+            <cre:CreateRequestWrapper>
+               <!--You may enter ANY elements at this point-->
+               <emp:createRequest xmlns:emp="urn:www.ird.govt.nz/GWS:types/Employment" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                  <emp:header>
+                     <cmn:softwareProviderData>
+                        <cmn:softwareProvider>softwareProvider</cmn:softwareProvider>
+                        <cmn:softwarePlatform>softwarePlatform</cmn:softwarePlatform>
+                        <cmn:softwareRelease>v1</cmn:softwareRelease>
+                     </cmn:softwareProviderData>
+                     <cmn:identifier IdentifierValueType="ACCIRD">123009916</cmn:identifier>
+                  </emp:header>
+                  <emp:createBody>
+                     <emp:employeeIRD>951753820</emp:employeeIRD>
+                     <emp:employeeName>
+                        <cmn:nameTitle>Mr.</cmn:nameTitle>
+                        <cmn:nameFirst>Jackie</cmn:nameFirst>
+                        <cmn:nameSurname>Sparrow</cmn:nameSurname>
+                     </emp:employeeName>
+                     <emp:employeeNameOnEILine>Charlotte</emp:employeeNameOnEILine>
+                     <emp:taxCodes>
+                        <emp:taxCode>MSL</emp:taxCode>
+                        <emp:taxCode>CAE</emp:taxCode>
+                     </emp:taxCodes>
+                     <emp:employmentStartDate>2017-03-24</emp:employmentStartDate>
+                     <emp:employeeDateOfBirth>1986-07-25</emp:employeeDateOfBirth>
+                     <emp:kiwiSaverStatus>NM</emp:kiwiSaverStatus>
+                  </emp:createBody>
+               </emp:createRequest>
+            </cre:CreateRequestWrapper>
+         </empl:CreateRequestMsg>
+      </empl:Create>
+   </soap:Body>
+</soap:Envelope>
