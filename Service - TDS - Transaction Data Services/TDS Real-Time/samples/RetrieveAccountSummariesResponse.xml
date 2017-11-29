@@ -1,0 +1,56 @@
+<!--RESPONSE-->
+
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Account/Account/RetrieveAccountSummariesResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <RetrieveAccountSummariesResponse xmlns="https://services.ird.govt.nz/GWS/Account/">
+         <RetrieveAccountSummariesResult xmlns:b="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <b:RetrieveAccountSummariesResponseWrapper>
+               <retrieveAccountSummariesResponse xmlns="urn:www.ird.govt.nz/GWS:types/Account">
+                  <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                     <statusCode>0</statusCode>
+                     <errorMessage/>
+                  </statusMessage>
+                  <responseBody>
+                     <account>
+                        <accountId>011264190GST002</accountId>
+                        <commenceDate>1986-10-01</commenceDate>
+                        <ceaseDate>9999-12-31</ceaseDate>
+                        <formattedAddress>C/O 26 A STEWART STREET WHAKATANE 3120</formattedAddress>
+                        <formattedName>Grigor, Peter W</formattedName>
+                        <filingFrequency>GSTMO</filingFrequency>
+                        <accountType>GST</accountType>
+                        <balance>445100.49</balance>
+                        <maxActivity>2017/9/22T18:49:11</maxActivity>
+                     </account>
+                     <account>
+                        <accountId>011264190IPE008</accountId>
+                        <commenceDate>1989-10-01</commenceDate>
+                        <ceaseDate>9999-12-31</ceaseDate>
+                        <formattedAddress>186 WHATAWHATA ROAD HAMILTON 3204</formattedAddress>
+                        <formattedName>TRUSTEES IN THE A M &amp; A L ROBERTSON FAMILY TRUST</formattedName>
+                        <filingFrequency>IPEMO</filingFrequency>
+                        <accountType>IPE</accountType>
+                        <balance>-9920.70</balance>
+                        <maxActivity>2017/9/27T22:58:19</maxActivity>
+                     </account>
+                     <account>
+                        <accountId>011264190PSO007</accountId>
+                        <commenceDate>1987-02-01</commenceDate>
+                        <ceaseDate>9999-12-31</ceaseDate>
+                        <formattedAddress>C/O 26 A STEWART STREET WHAKATANE 3120</formattedAddress>
+                        <formattedName>Grigor, Peter W</formattedName>
+                        <filingFrequency>PSOSEM</filingFrequency>
+                        <accountType>PSO</accountType>
+                        <balance>0.00</balance>
+                        <maxActivity>9999/12/31T00:00:00</maxActivity>
+                     </account>
+                  </responseBody>
+               </retrieveAccountSummariesResponse>
+            </b:RetrieveAccountSummariesResponseWrapper>
+         </RetrieveAccountSummariesResult>
+      </RetrieveAccountSummariesResponse>
+   </s:Body>
+</s:Envelope>

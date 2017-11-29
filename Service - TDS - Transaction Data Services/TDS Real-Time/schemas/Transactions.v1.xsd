@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation
+_______________________________________
+NAME: 	Transactions.xsd
+VER:		0.1
+ISSUER:	Inland Revenue Department
+DATE:		17/10/2017
+DESC:		This schema defines the employment data types used accross the IRD hosted, Gateway Services.
+_______________________________________
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/Transactions" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:tds="urn:www.ird.govt.nz/GWS:types/TDSCommon" xmlns:trn="urn:www.ird.govt.nz/GWS:types/Transactions" targetNamespace="urn:www.ird.govt.nz/GWS:types/Transactions" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/TDSCommon" schemaLocation="./TDSCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statement-->
+	<!--Begin Root Elements-->
+	<xsd:element name="retrieveListRequest" type="RetrieveListRequestType"/>
+	<xsd:element name="retrieveListResponse" type="RetrieveListResponseType"/>
+	<!--End Root Elements-->
+	<!--Begin Complex Data Types-->
+	<xsd:complexType name="RetrieveListRequestType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:HeaderType">
+				<xsd:sequence>
+					<xsd:element name="filingPeriod" type="cmn:DateType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveListResponseType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:StandardResponseType">
+				<xsd:sequence>
+					<xsd:element name="responseBody" type="RetrieveListResponseBodyType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveListResponseBodyType">
+		<xsd:sequence>
+			<xsd:element name="list" type="ListDetail" minOccurs="0" maxOccurs="1000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ListDetail">
+		<xsd:sequence>
+			<xsd:element name="pendingPayments" type="PendingPaymentsType" minOccurs="0"/>
+			<xsd:element name="bankAccounts" type="BankAccountsType" minOccurs="0"/>
+			<xsd:element name="transfers" type="TransfersType" minOccurs="0"/>
+			<xsd:element name="bills" type="BillsType" minOccurs="0"/>
+			<xsd:element name="transaction" type="TransactionType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PendingPaymentsType">
+		<xsd:sequence>
+			<xsd:element name="payment" type="PendingPaymentType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BankAccountsType">
+		<xsd:sequence>
+			<xsd:element name="bankAccount" type="tds:TDSBankAccountType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransfersType">
+		<xsd:sequence>
+			<xsd:element name="transfer" type="tds:TransferType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransactionsType">
+		<xsd:sequence>
+			<xsd:element name="transaction" type="TransactionType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BillsType">
+		<xsd:sequence>
+			<xsd:element name="bill" type="BillType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransactionType">
+		<xsd:sequence>
+			<xsd:element name="amount" type="cmn:MoneyType"/>
+			<xsd:element name="transactionID" type="tds:TransactionIDType"/>
+			<xsd:element name="transactionType" type="TransactionTypeType"/>
+			<xsd:element name="postedDate" type="cmn:DateType"/>
+			<xsd:element name="effectiveDate" type="cmn:DateType"/>
+			<xsd:element name="linkID" type="TransactionLinkIDType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PendingPaymentType">
+		<xsd:sequence>
+			<xsd:element name="paymentID" type="PaymentIDType"/>
+			<xsd:element name="amount" type="cmn:MoneyType"/>
+			<xsd:element name="pendingDate" type="cmn:DateType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BillType">
+		<xsd:sequence>
+			<xsd:element name="billID" type="BillIDType"/>
+			<xsd:element name="dueDate" type="cmn:DateType"/>
+			<xsd:element name="credit" type="cmn:MoneyType"/>
+			<xsd:element name="balance" type="cmn:MoneyType"/>
+			<xsd:element name="transactions" type="TransactionsType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Complex Data Types-->
+	<!--Begin Simple Data Types-->
+	<xsd:simpleType name="PaymentIDType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TransactionTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:pattern value="[a-zA-Z]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TransactionLinkIDType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="BillIDType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--End Simple Data Types-->
+</xsd:schema>

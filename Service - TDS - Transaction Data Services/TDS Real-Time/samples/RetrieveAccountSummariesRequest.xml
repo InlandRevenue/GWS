@@ -1,0 +1,25 @@
+<!--REQUEST-->
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
+	xmlns:acc="https://services.ird.govt.nz/GWS/Account/" 
+	xmlns:ret="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesRequest" 
+	xmlns:acc1="urn:www.ird.govt.nz/GWS:types/Account" 
+	xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+   <soap:Header/>
+   <soap:Body>
+      <acc:RetrieveAccountSummaries>
+         <acc:RetrieveAccountSummariesRequestMsg>
+            <ret:RetrieveAccountSummariesRequestWrapper>
+               <acc1:retrieveAccountSummariesRequest>
+                  <com:softwareProviderData>
+                     <com:softwareProvider>START_SoftwareProvider</com:softwareProvider>
+                     <com:softwarePlatform>START_SoftwarePlatform</com:softwarePlatform>
+                     <com:softwareRelease>v1</com:softwareRelease>
+                  </com:softwareProviderData>
+                  <com:identifier IdentifierValueType="IRD">098885123</com:identifier>
+               </acc1:retrieveAccountSummariesRequest>
+            </ret:RetrieveAccountSummariesRequestWrapper>
+         </acc:RetrieveAccountSummariesRequestMsg>
+      </acc:RetrieveAccountSummaries>
+   </soap:Body>
+</soap:Envelope>
