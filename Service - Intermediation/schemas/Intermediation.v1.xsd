@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:	Intermediation.v1.xsd
+	VER:	1.01
+	ISSUER:	Inland Revenue Department
+	DATE:	21/11/2017
+	DESC:	This schema defines the elements and related data types required for the Intermediation Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Complex Data Types-->
+	<xsd:complexType name="RetrieveClientListRequestType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:HeaderType">
+				<xsd:sequence>
+					<xsd:element name="retrieveClientListBody" type="RetrieveClientListBodyType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveClientListResponseType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:StandardResponseType">
+				<xsd:sequence>
+					<xsd:element name="clientList" type="ClientListType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ClientListType">
+		<xsd:sequence>
+			<xsd:element name="client" type="ClientInformationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ClientInformationType">
+		<xsd:sequence>
+			<xsd:element name="clientIRD" type="cmn:IRDNumberType"/>
+			<xsd:element name="clientAccountType" type="cmn:AccountTypeType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveClientListBodyType">
+		<xsd:sequence>
+			<xsd:element name="accountType" type="cmn:AccountTypeType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Client Link Data Types-->
+	<!--Begin Root Elements-->
+	<xsd:element name="retrieveClientListRequest" type="RetrieveClientListRequestType"/>
+	<xsd:element name="retrieveClientListResponse" type="RetrieveClientListResponseType"/>
+	<!--End Root Elements-->
+</xsd:schema>
