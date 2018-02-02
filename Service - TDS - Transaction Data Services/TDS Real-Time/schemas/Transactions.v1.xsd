@@ -2,10 +2,10 @@
 <!-- Documentation
 _______________________________________
 NAME: 	Transactions.xsd
-VER:		0.1
+VER:		1.00
 ISSUER:	Inland Revenue Department
-DATE:		17/10/2017
-DESC:		This schema defines the employment data types used accross the IRD hosted, Gateway Services.
+DATE:		20/12/2017
+DESC:		This schema defines the Transactions data types used accross the IRD hosted, Gateway Services.
 _______________________________________
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/Transactions" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:tds="urn:www.ird.govt.nz/GWS:types/TDSCommon" xmlns:trn="urn:www.ird.govt.nz/GWS:types/Transactions" targetNamespace="urn:www.ird.govt.nz/GWS:types/Transactions" elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -46,7 +46,7 @@ _______________________________________
 	</xsd:complexType>
 	<xsd:complexType name="RetrieveListResponseBodyType">
 		<xsd:sequence>
-			<xsd:element name="list" type="ListDetail" minOccurs="0" maxOccurs="1000"/>
+			<xsd:element name="list" type="ListDetail" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:complexType name="ListDetail">
@@ -103,8 +103,17 @@ _______________________________________
 	<xsd:complexType name="BillType">
 		<xsd:sequence>
 			<xsd:element name="billID" type="BillIDType"/>
+      <xsd:element name="billDisplay" type="billDisplayType"/>
 			<xsd:element name="dueDate" type="cmn:DateType"/>
+			<xsd:element name="tax" type="cmn:MoneyType"/>
+			<xsd:element name="penalty" type="cmn:MoneyType"/>
+			<xsd:element name="penaltyForecast" type="cmn:MoneyType"/>
+			<xsd:element name="interest" type="cmn:MoneyType"/>
+			<xsd:element name="interestForecast" type="cmn:MoneyType"/>
+			<xsd:element name="other" type="cmn:MoneyType"/>
+			<xsd:element name="otherForecast" type="cmn:MoneyType"/>
 			<xsd:element name="credit" type="cmn:MoneyType"/>
+			<xsd:element name="creditForecast" type="cmn:MoneyType"/>
 			<xsd:element name="balance" type="cmn:MoneyType"/>
 			<xsd:element name="transactions" type="TransactionsType"/>
 		</xsd:sequence>
@@ -147,5 +156,14 @@ _______________________________________
 			<xsd:maxLength value="2"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+  <xsd:simpleType name="billDisplayType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:maxLength value="2"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 	<!--End Simple Data Types-->
 </xsd:schema>

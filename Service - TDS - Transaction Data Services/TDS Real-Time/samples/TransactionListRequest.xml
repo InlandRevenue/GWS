@@ -6,8 +6,8 @@
             <ret:RetrieveListRequestWrapper>
                              <retrieveListRequest xmlns="urn:www.ird.govt.nz/GWS:types/Transactions">
                   <softwareProviderData xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
-                     <softwareProvider>softwareProvider1</softwareProvider>
-                     <softwarePlatform>softwarePlatform1</softwarePlatform>
+                     <softwareProvider>SoftwareProvider</softwareProvider>
+                     <softwarePlatform>SoftwarePlatform</softwarePlatform>
                      <softwareRelease>1</softwareRelease>
                   </softwareProviderData>
                   <identifier IdentifierValueType="ACCIRD" xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">011264190</identifier>
