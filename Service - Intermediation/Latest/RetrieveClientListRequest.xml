@@ -1,0 +1,25 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:int="https://services.ird.govt.nz/GWS/Intermediation/" xmlns:ret="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientListRequest" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <soap:Header/>
+   <soap:Body>
+      <int:RetrieveClientList>
+         <int:RetrieveClientListRequestMsg>
+            <ret:RetrieveClientListRequestWrapper>
+               <!--You may enter ANY elements at this point-->
+               <int:retrieveClientListRequest 
+               xmlns:int="urn:www.ird.govt.nz/GWS:types/Intermediation.v1"
+               xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1">
+               	<cmn:softwareProviderData>
+						<cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+						<cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+						<cmn:softwareRelease>1</cmn:softwareRelease>
+				</cmn:softwareProviderData>
+				<cmn:identifier IdentifierValueType="IRD">123062353</cmn:identifier>
+				<!--<int:retrieveClientListBody>
+					<int:accountType>GST</int:accountType>
+				</int:retrieveClientListBody>-->
+			</int:retrieveClientListRequest>
+            </ret:RetrieveClientListRequestWrapper>
+         </int:RetrieveClientListRequestMsg>
+      </int:RetrieveClientList>
+   </soap:Body>
+</soap:Envelope>

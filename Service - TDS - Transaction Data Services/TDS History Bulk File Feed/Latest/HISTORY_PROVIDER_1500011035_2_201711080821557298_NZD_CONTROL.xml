@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<FileTransfers xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" TotalTransactionCount="237" TotalPeriodCount="30">
+  <FileTransfer FileName="HISTORY_PROVIDER_1500011035_0_201711080821541475_NZD.zip" TransactionCount="237" PeriodCount="27">
+    <ChildFile FileName="HISTORY_AGENT_IRD_123105028_0_201711080821555419_NZD.xml" TransactionCount="237" PeriodCount="27" />
+  </FileTransfer>
+  <FileTransfer FileName="HISTORY_PROVIDER_1500011035_1_201711080821555889_NZD.zip" TransactionCount="0" PeriodCount="3">
+    <ChildFile FileName="HISTORY_AGENT_IRD_123105028_1_201711080821555889_NZD.xml" TransactionCount="0" PeriodCount="3" />
+    <ChildFile FileName="HISTORY_PROVIDER_1500011035_1_201711080821555889_NZD_INTERMEDIATION.xml" TransactionCount="0" PeriodCount="0" />
+  </FileTransfer>
+</FileTransfers>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation
+_______________________________________
+NAME: 	Account.xsd
+VER:		1.00
+ISSUER:	Inland Revenue Department
+DATE:		20/12/2017
+DESC:		This schema defines the account/period data types used accross the IRD hosted, Gateway Services.
+_______________________________________
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/Account" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:tds="urn:www.ird.govt.nz/GWS:types/TDSCommon" xmlns:trn="urn:www.ird.govt.nz/GWS:types/Account" targetNamespace="urn:www.ird.govt.nz/GWS:types/Account" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/TDSCommon" schemaLocation="./TDSCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statement-->
+	<xsd:element name="retrieveAccountSummariesRequest" type="RetrieveAccountSummariesRequestType"/>
+	<xsd:element name="retrieveAccountSummariesResponse" type="RetrieveAccountSummariesResponseType"/>
+	<xsd:element name="retrievePeriodSummariesRequest" type="RetrievePeriodSummariesRequestType"/>
+	<xsd:element name="retrievePeriodSummariesResponse" type="RetrievePeriodSummariesResponseType"/>
+	<!--End Root Elements-->
+	<!--Begin Complex Data Types-->
+	<xsd:complexType name="RetrieveAccountSummariesRequestType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:HeaderType">
+				<xsd:sequence>
+					<xsd:element name="filterByIdentifier" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="filterByClientListID" type="cmn:IdentifierType" minOccurs="0" maxOccurs="1"/>
+					<xsd:element name="filterAccountType" type="cmn:AccountTypeType" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveAccountSummariesResponseType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:StandardResponseType">
+				<xsd:sequence>
+					<xsd:element name="responseBody" type="RetrieveAccountSummariesResponseBodyType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveAccountSummariesResponseBodyType">
+		<xsd:sequence>
+			<xsd:element name="account" type="AccountList" minOccurs="0" maxOccurs="1000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AccountList">
+		<xsd:sequence>
+			<xsd:element name="accountId" type="tds:AccountIDType"/>
+			<xsd:element name="commenceDate" type="cmn:DateType"/>
+			<xsd:element name="ceaseDate" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="formattedAddress" type="cmn:FormattedAddressType"/>
+			<xsd:element name="formattedName" type="cmn:FormattedNameType"/>
+			<xsd:element name="filingFrequency" type="tds:FilingFrequencyType"/>
+			<xsd:element name="accountType" type="cmn:AccountTypeType"/>
+			<xsd:element name="balance" type="cmn:MoneyType"/>
+			<xsd:element name="maxActivity" type="cmn:DateTimeType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="RetrievePeriodSummariesRequestType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:HeaderType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrievePeriodSummariesResponseType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:StandardResponseType">
+				<xsd:sequence>
+					<xsd:element name="responseBody" type="RetrievePeriodSummariesResponseBodyType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrievePeriodSummariesResponseBodyType">
+		<xsd:sequence>
+			<xsd:element name="period" type="PeriodList" minOccurs="0" maxOccurs="1000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PeriodList">
+		<xsd:sequence>
+			<xsd:element name="beginDate" type="cmn:DateType"/>
+			<xsd:element name="endDate" type="cmn:DateType"/>
+			<xsd:element name="filingFrequency" type="tds:FilingFrequencyType"/>
+			<xsd:element name="tax" type="cmn:MoneyType"/>
+			<xsd:element name="penalty" type="cmn:MoneyType"/>
+			<xsd:element name="penaltyForecast" type="cmn:MoneyType"/>
+			<xsd:element name="interest" type="cmn:MoneyType"/>
+			<xsd:element name="interestForecast" type="cmn:MoneyType"/>
+			<xsd:element name="other" type="cmn:MoneyType"/>
+			<xsd:element name="otherForecast" type="cmn:MoneyType"/>
+			<xsd:element name="credit" type="cmn:MoneyType"/>
+			<xsd:element name="creditForecast" type="cmn:MoneyType"/>
+			<xsd:element name="balance" type="cmn:MoneyType"/>
+			<xsd:element name="activity" type="cmn:DateTimeType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Complex Data Types-->
+</xsd:schema>

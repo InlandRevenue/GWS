@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/SoftwareIntermediation" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/SoftwareIntermediation" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin Complex Data Types-->
+	<xsd:complexType name="RetrieveListRequestType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:HeaderType">
+				<xsd:sequence>
+					<xsd:element name="clientType" type="ClientTypeType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveListResponseType">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:StandardResponseType">
+				<xsd:sequence>
+					<xsd:element name="softwareUser" type="SoftwareUserType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RelationshipManagerRequest">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:HeaderType">
+				<xsd:sequence>
+					<xsd:element name="clientIRD" type="cmn:IRDNumberType"/>
+				</xsd:sequence>
+			</xsd:extension>	
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RelationshipManagerResponse">
+		<xsd:complexContent>
+			<xsd:extension base="cmn:StandardResponseType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SoftwareUserType">
+    <xsd:sequence>
+      <xsd:element name="client" type="ClientList" minOccurs="0" maxOccurs="1000"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ClientList">
+    <xsd:sequence>
+			<xsd:element name="clientType" type="ClientTypeType"/>
+			<xsd:element name="idType" type="cmn:IdentifierValueTypeType"/>
+			<xsd:element name="id" type="cmn:IdentifierTypeType"/>
+			<xsd:element name="accountType" type="cmn:AccountTypeType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Client Link Data Types-->
+	<!--Begin Simple Data Types-->
+	<xsd:simpleType name="ClientTypeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="AGENT"/>
+			<xsd:enumeration value="CUST"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--End Simple Data Types-->
+	<!--Begin Root Elements-->
+	<xsd:element name="relationshipManagerRequest" type="RelationshipManagerRequest"/>
+	<xsd:element name="relationshipManagerResponse" type="RelationshipManagerResponse"/>
+	<xsd:element name="retrieveListRequest" type="RetrieveListRequestType"/>
+	<xsd:element name="retrieveListResponse" type="RetrieveListResponseType"/>
+	<!--End Root Elements-->
+</xsd:schema>

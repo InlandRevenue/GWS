@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="urn:nz.govt.ird.eservices.types.account.transaction:0-6" xmlns:ircom="urn:nz.govt.ird.eservices.types.utility.common:0-6" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:nz.govt.ird.eservices.types.account.transaction:0-6" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:import namespace="urn:nz.govt.ird.eservices.types.utility.common:0-6" schemaLocation="TDS_history_common.xsd"/>
+	<!-- ==================== Account Transactions ========================= -->
+	<xsd:element name="AgentAccountTxns" type="AgentAccountTransactionsTypes"/>
+	<xsd:complexType name="AgentAccountTransactionsTypes">
+		<xsd:sequence>
+			<xsd:element name="AgentAccountTransactionsType" type="AgentAccountTransactionsType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AgentAccountTransactionsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Header record for one IRD agent's client accounts. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ClientTxs" type="ClientAccountTransactionsType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="agentIrdNumber" type="ircom:IrdNumberType" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ClientAccountTransactionsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Header record for one IRD account, keyed on IRD number. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="taxPeriodTxs" type="TaxPeriodTransactionsType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="clientIrdNumber" type="ircom:IrdNumberType" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TaxPeriodTransactionsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Record containing transactions for one client account, one tax type,
+				one period. Keyed on tax type and period end date.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="TxDetails" type="TransactionDetailsType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="taxType" type="xsd:string" use="required"/>
+		<xsd:attribute name="periodEndDate" type="ircom:DateType" use="required"/>
+		<xsd:attribute name="periodStartDate" type="ircom:DateType" use="optional"/>
+		<xsd:attribute name="periodBalanceAmount" type="ircom:MoneyType" use="optional"/>
+		<xsd:attribute name="lastTxId" type="xsd:string" use="optional"/>
+		<xsd:attribute name="migrationDate" type="ircom:DateType" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TransactionDetailsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Detail record for one transaction, keyed on a unique identifier.
+				The sign of the amount field is positive for transactions shown on 
+				statements as credits (e.g. payments to IRD).
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="newTxId" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required"/>
+		<xsd:attribute name="txType" type="TransactionType" use="required"/>
+		<xsd:attribute name="procDate" type="ircom:DateType" use="optional"/>
+		<xsd:attribute name="effDate" type="ircom:DateType" use="optional"/>
+		<xsd:attribute name="amount" type="ircom:MoneyType" use="optional"/>
+	</xsd:complexType>
+	<xsd:simpleType name="TransactionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Transaction type code - 4 digit integer. Current values supported and 
+				their descriptions are detailed in build pack documentation
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="4"/>
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
