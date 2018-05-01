@@ -1,3 +1,5 @@
+For an introduction to TDS please see the [TDS Overview and Transition Build Pack](https://github.com/InlandRevenue/Gateway-Services/tree/master/Service%20-%20TDS%20-%20Transaction%20Data%20Services/TDS%20Overview%20and%20Transition/Latest), it also covers aspects of onboarding.
+
 ![TDS Build Packs](https://github.com/InlandRevenue/Gateway-Services/blob/master/Images/TDSBuildPacks.PNG)
 
 See also these supporting services:
