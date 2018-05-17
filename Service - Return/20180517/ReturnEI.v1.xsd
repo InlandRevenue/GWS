@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnEI.xsd
+	VER:			1.09
+	ISSUER:		Inland Revenue Department
+	DATE:			11/01/2018
+	DESC:		This schema defines the elements and related data types required for the Returns EI Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnEI.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnEI.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnEI.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" schemaLocation="./ReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:QuantityTypePositive" minOccurs="0"/>
+					<xsd:element name="isReverseReplace" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="payDayDate" type="cmn:DateType"/>
+					<xsd:element name="piIrdNumber" type="cmn:IRDNumberType" minOccurs="0"/>
+					<xsd:element name="contactName" type="PSONameType" minOccurs="0"/>
+					<xsd:element name="contactPhoneNumber" type="PSOPhoneNumberType" minOccurs="0"/>
+					<xsd:element name="contactEmail" type="cmn:EmailAddressType" minOccurs="0"/>
+					<xsd:element name="employeeFields" type="EmployeeSectionType"/>
+					<xsd:element name="totalGrossEarnings" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalEarningsNotLiableACC" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalPAYESchedularTaxDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalChildSupportDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalStudentLoansDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalKiwisaverEmployerContributions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalKiwisaverDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalTaxCreditPayrollDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalESCTDeducted" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalFamilyTaxCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalAmountPayable" type="cmn:MoneyTypePositive" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--Begin Specific File Data Types-->
+	<xsd:complexType name="EmployeeSectionType">
+		<xsd:sequence>
+			<xsd:element name="employee" type="EmployeeInfoType" minOccurs="0" maxOccurs="1000000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EmployeeInfoType">
+		<xsd:sequence>
+			<xsd:element name="lineNumber" type="cmn:QuantityTypePositive" minOccurs="0"/>
+			<xsd:element name="referenceId" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:normalizedString">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="20"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="irdNumber" type="cmn:IRDNumberType"/>
+			<xsd:element name="employeeName" type="PSONameType"/>
+			<xsd:element name="taxCode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:normalizedString">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="6"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="payPeriodStartDate" type="cmn:DateType"/>
+			<xsd:element name="payPeriodEndDate" type="cmn:DateType"/>
+			<xsd:element name="employmentStartDate" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="employmentFinishDate" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="employeePayFrequency" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">weekly (WK), 4 weekly (4W), fortnightly (FT), monthly (MT), daily (DA) or irregular/ad hoc (AH)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:normalizedString">
+						<xsd:length value="2"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="grossEarnings" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="earningsNotLiableACC" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="lumpSumIndicator" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="payeSchedularTaxDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="childSupportCode" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:normalizedString">
+						<xsd:length value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="childSupportDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="studentLoansDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="kiwisaverEmployerContributions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="kiwisaverDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="taxCreditPayrollDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="esctDeducted" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="familyTaxCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="PSONameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Names cannot be greater than 20 characters.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PSOPhoneNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Phone number cannot be greater than 12 characters.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="4"/>
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--End Specific File Data Types-->
+	<!--Begin Prepop Elements-->
+	<xsd:complexType name="PrepopResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:PrepopResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="accountId" type="xsd:normalizedString"/>
+					<xsd:element name="employee" type="EmployeePrepopInfoType" maxOccurs="1000000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="EmployeePrepopInfoType">
+		<xsd:sequence>
+			<xsd:element name="irdNumber" type="cmn:IRDNumberType"/>
+			<xsd:element name="employeeName" type="PSONameType"/>
+			<xsd:element name="taxCode" type="xsd:normalizedString"/>
+			<xsd:element name="employmentStartDate" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="employmentFinishDate" type="cmn:DateType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Prepop Elements-->
+	<!--Begin Specific retrieveReturn Data-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Specific retrieveReturn Data-->
+	<!--RetrieveReturnRequestType is unique to ReturnEI because a return can be filed for every payDayDate in a period.-->
+	<xsd:element name="retrieveEIRequest" type="RetrieveEIRequestType"/>
+	<xsd:complexType name="RetrieveEIRequestType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Defines the request for the RetrieveReturn operation. This operation is different from other return types due to the ability to file a different return for every pay day date.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormInfoRequestType">
+				<xsd:sequence>
+					<xsd:element name="payDayDate" type="cmn:DateType"/>
+					<xsd:element name="submissionKey" type="cmn:QuantityTypePositive" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>
