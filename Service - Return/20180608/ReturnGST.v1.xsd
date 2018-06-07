@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation
+_______________________________________
+NAME: 	ReturnGST.xsd
+VER:		1.07
+ISSUER:	Inland Revenue Department
+DATE:		13/10/2017
+DESC:		This schema defines the GST data types used accross the IRD hosted, Gateway Services.
+_______________________________________
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" schemaLocation="./ReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="gstSpecificFields" type="GSTFieldsType"/>
+					<xsd:element name="transitionalFields" type="TransitionalFieldsType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">transitionalFields repeats fields in gstSpecificFields. This should only be populated for transitional periods.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="provSpecificFields" type="ProvFieldsType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">provSpecificFields should only be populated for provisional customers. This should not be populated for 101A filings.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--Begin Specific File Data Types-->
+	<xsd:complexType name="DebitAdjustmentType">
+		<xsd:choice>
+			<xsd:sequence>
+				<xsd:element name="privateUsePeriodAdjustment" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="privateUseOneOff" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="assetsAfterCease" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="entertainment" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="changeAccountingBasis" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="exemptSupplies" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="currentRateGSTAdjustments" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="other" type="cmn:MoneyTypePositive"/>
+			</xsd:sequence>
+			<xsd:element name="totalDebitAdjustment" type="cmn:MoneyTypePositive"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="CreditAdjustmentType">
+		<xsd:choice>
+			<xsd:sequence>
+				<xsd:element name="useOfPrivateGoods" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="privateAssetsForBusiness" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="changeAccountingBasis" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="currentRateGSTCredits" type="cmn:MoneyTypePositive"/>
+				<xsd:element name="other" type="cmn:MoneyTypePositive"/>
+			</xsd:sequence>
+			<xsd:element name="totalCreditAdjustment" type="cmn:MoneyTypePositive"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="GSTFieldsType">
+		<xsd:sequence>
+			<xsd:element name="totalSales" type="cmn:MoneyTypePositive"/>
+			<xsd:element name="totalSalesRestHomes" type="cmn:MoneyTypePositive" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">totalSalesRestHomes should only be populated for hospice filers.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="totalSalesHospitals" type="cmn:MoneyTypePositive" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">totalSalesHospitals should only be populated for hospice filers.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="zeroRatedSupplies" type="cmn:MoneyTypePositive"/>
+			<xsd:element name="debitAdjustments" type="DebitAdjustmentType"/>
+			<xsd:element name="totalExpenses" type="cmn:MoneyTypePositive"/>
+			<xsd:element name="creditAdjustments" type="CreditAdjustmentType"/>
+			<xsd:element name="totalGST" type="cmn:MoneyType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransitionalFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="GSTFieldsType">
+				<xsd:sequence>
+					<xsd:element name="totalTransitionalAndStandardGST" type="cmn:MoneyType">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">This field should be the sum of totalGST from standardFields and totalGST for transitionalFields.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ProvFieldsType">
+		<xsd:sequence>
+			<xsd:element name="ratioTaxPercent" type="RatioTaxPercentType" minOccurs="0"/>
+			<xsd:element name="ratioLastMonthTotalSales" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="ratioMultiBranchTotalSales" type="cmn:MoneyTypePositive" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>ratioMultiBranchTotalSales should only be populated for multi branch filers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="ratioAssetAdjustment" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="provTaxInstalmentAmount" type="cmn:MoneyTypePositive"/>
+			<xsd:element name="instalmentDueOrVoluntaryPayment" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="refundTransferAmountToProv" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="totalGSTandProvToPay" type="cmn:MoneyTypePositive"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="RatioTaxPercentType">
+		<xsd:restriction base="cmn:PercentageType">
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--End Specific File Data Types-->
+	<!--Begin Specific Prepop Data-->
+	<xsd:complexType name="PrepopResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:PrepopResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="accountId" type="xsd:normalizedString"/>
+					<xsd:element name="periodEndDate" type="cmn:DateType"/>
+					<xsd:element name="filingFrequency" type="rc:CodeStringType"/>
+					<xsd:element name="dueDate" type="cmn:DateType"/>
+					<xsd:element name="expectedMinorFormType" type="xsd:normalizedString"/>
+					<xsd:element name="multiBranch" type="xsd:boolean"/>
+					<xsd:element name="provFiler" type="xsd:boolean"/>
+					<xsd:element name="provOption" type="xsd:normalizedString" minOccurs="0"/>
+					<xsd:element name="compulsory" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="provTaxInstalmentAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="ratioTaxPercent" type="RatioTaxPercentType" minOccurs="0"/>
+					<xsd:element name="hospiceFiler" type="xsd:normalizedString" minOccurs="0"/>
+					<xsd:element name="hospiceType" type="xsd:normalizedString" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Specific Prepop Data-->
+	<!--Begin Specific retrieveReturn Data-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Specific retrieveReturn Data-->
+</xsd:schema>
