@@ -1,9 +1,9 @@
-![IRD logo](https://bitbucket.nsp.ird.govt.nz/projects/INTWS/repos/gws_integration_info/Images/IRlogo.gif)
-![Software Dev](https://bitbucket.nsp.ird.govt.nz/projects/INTWS/repos/gws_integration_info/Images/SoftwareDev.png)
+![IRD logo](/Images/IRlogo.gif)
+![Software Dev](/Images/SoftwareDev.png)
 
 # Gateway Services - API products information
 
-Use this repository to access software development kits (SDKs) for API products integration build packs are issued frequently. 
+Use this repository to access software development kits (SDKs) for API products offered through Inland Revenue's Gateway Services. 
 
 * Product - Accounting Income Method (AIM) - [Statement Filing SDK](Product%20-%20AIM)
 * Product - Goods and Services Tax (GST) - [Return Filing SDK](Product%20-%20GST)
