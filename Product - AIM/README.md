@@ -9,12 +9,18 @@ Key Features:
 	- Test Data
     - Message samples (positive responses)
     - Schema Validation
-
     - Error Handling (Not Included)
 	
 - OAuth Authentication 
 	- [How to Integrate with 0Auth](AIM_Auth_Access_Token_Steps.md)
 	- [Sample curl commands - for testing the OAuth flow](AIM_Auth_Access_Token_Steps.md)
+	
+- Returns Service - [Download the build pack](../Service%20-%20Return/Latest/) to view 
+	- data definitions of each operation 
+	- response status code definitions 
+	
+- Identity and Access Service - [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
+	- for OAuth 2.0 implementation 
 
 Features Details:
 -----------------
