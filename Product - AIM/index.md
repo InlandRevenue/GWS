@@ -20,7 +20,7 @@ Features Details:
 -----------------
 
 - Test Scenarios
-	[Test Scenarios](index/Emulated_Services_Coverage_Map-Return_AIM.png)
+	[Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
 
 - Test Data
 This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
@@ -41,24 +41,24 @@ This table shows which scenarios (as per their numbers in the mindmap) require s
 - Message samples - simulating AIM Returns Operations:
     - PrePop
         - Positive response
-            - [request sample](sample_messages/body-gws-returnprepop-request.xml)
-            - [response sample](sample_messages/body-gws-returnprepop-response.xml)
+            - [request sample](sample_messages/body-aim-returnprepop-request.xml)
+            - [response sample](sample_messages/body-aim-returnprepop-response.xml)
     - File
         - Positive response
-            - [request sample](sample_messages/body-gws-returnfile-request.xml)
-            - [response sample](sample_messages/body-gws-returnfile-response.xml)
+            - [request sample](sample_messages/body-aim-returnfile-request.xml)
+            - [response sample](sample_messages/body-aim-returnfile-response.xml)
     - RetrieveStatus
         - Positive response
-            - [request sample](sample_messages/body-gws-returnstatus-request.xml)
-            - [response sample](sample_messages/body-gws-returnstatus-response.xml)
+            - [request sample](sample_messages/body-aim-returnstatus-request.xml)
+            - [response sample](sample_messages/body-aim-returnstatus-response.xml)
     - RetrieveFilingObligations
         - Positive response
-            - [request sample](sample_messages/body-gws-filingobligation-request.xml)
-            - [response sample](sample_messages/body-gws-filingobligation-response.xml)
+            - [request sample](sample_messages/body-aim-filingobligation-request.xml)
+            - [response sample](sample_messages/body-aim-filingobligation-response.xml)
     - RetrieveReturn
         - Positive response
-            - [request sample](sample_messages/body-gws-retrievereturn-request.xml)
-            - [response sample](sample_messages/body-gws-retrievereturn-response.xml)
+            - [request sample](sample_messages/body-aim-retrievereturn-request.xml)
+            - [response sample](sample_messages/body-aim-retrievereturn-response.xml)
 
             
 Requests Matching Logic
