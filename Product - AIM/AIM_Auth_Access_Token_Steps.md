@@ -16,9 +16,11 @@ Key Features:
 
 # Simulating Authentication Flow
 	
-[High Level Flow](images/high_level_flow.jpg)
+High Level Flow
+(images/high_level_flow.jpg)
 	
-[Sequence Diagram](images/sequence_diagram.png)
+Sequence Diagram
+(images/sequence_diagram.png)
 
 # Full authentication flow: 
 	
