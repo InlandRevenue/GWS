@@ -1,4 +1,4 @@
-Employee Details (ED) Returns Software Development Kit (SDK)
+Employee Details (ED) Software Development Kit (SDK)
 =======================================
 
 Key Features:
@@ -17,7 +17,7 @@ Key Features:
 	- View and download the Employee Details (ED) return xsd and wsdl from this current directory
 	
 - Employment Service 
-	- [Download the build pack](Gateway Services Build Pack - Employment Service.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](Gateway%20Services%20Build%20Pack%20-%20Employment%20Service.pdf) to view data definitions of each operation and response status code definitions
 	
 - OAuth Authentication 
 	- [How to Integrate with OAuth](AIM_Auth_Access_Token_Steps.md)
