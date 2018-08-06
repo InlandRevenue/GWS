@@ -5,13 +5,13 @@ Key Features:
 -------------
 
 - Simulating Authentication Flow
-    - Issuing Auth Access Token
-    - Validating Auth Access Token
+    - Issuing OAuth Access Token
+    - Validating OAuth Access Token
 
 - Sample Curl commands
-	- Request Auth Code
-	- Get Auth Code
-	- Get Auth Token 
+	- Request OAuth Code
+	- Get OAuth Code
+	- Get OAuth Token 
 	- API call to Smoke Test (Prepop Operation) 
 
 # Simulating Authentication Flow
@@ -24,10 +24,12 @@ Sequence Diagram
 
 # Full authentication flow: 
 	
-	this is an emulated Auth service, so as a service provider you would need to trigger customer's behaviour to complete this Auth flow.
+	In Mock Services an emulated OAuth service is used, so as a service provider you would need to trigger customer's behaviour to complete this OAuth flow.
+	
         1. Customer accesses the Client Application via browser. They take an action that requires access to IR Gateway Services.
-        2. The Client Application invokes the Auth Server to get access token, the customer's browser is redirected to IR login page.
-            At this step as a service provider you need to send a HTTP GET request to Auth Server, url format as below:
+		
+        2. The Client Application invokes the OAuth Server to get access token, the customer's browser is redirected to IR login page.
+            At this step as a service provider you need to send a HTTP GET request to OAuth Server, url format as below:
             > https://{EmulatedServiceHost}:{AuthServicePort}/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id={ClientID}&redirect_uri={RedirectURI}&scope={Scope}&response_type=code
        
             - Parameters:
@@ -41,7 +43,7 @@ Sequence Diagram
 				TestClient2 | TestClient2Secret | no				
 				
         3. Customer login to MyIR and consent - Customer submits credentials, consent page and redirection pages are skipped in this emulated service.
-            At this step as a service provider you need to send a HTTP POST request to Auth Server.
+            At this step as a service provider you need to send a HTTP POST request to OAuth Server.
             Url format:
 			> https://{EmulatedServiceHost}/oam/server/auth_cred_submit
 			
@@ -70,7 +72,7 @@ Sequence Diagram
                     - {RedirectURI}: Client Application's redirect URI
                     - {AuthorizationCode}: the Authorization Code to be used for retrieving an access token
 					
-        5. Client Application retrieves Auth Access Token by sending Authorization Code as well as Client Application's credentials
+        5. Client Application retrieves OAuth Access Token by sending Authorization Code as well as Client Application's credentials
             Url format:
             > https://{EmulatedServiceHost}/ms_oauth/oauth2/endpoints/oauthservice/tokens
 			
@@ -97,7 +99,7 @@ Sequence Diagram
             Response body format as below, {AuthAccessToken} is the token string:
             > {"expires_in":28800,"token_type":"Bearer","access_token":"{AuthAccessToken}"}
             
-        6. Client Application invokes IR Gateway Services with the Auth Access Token in header
+        6. Client Application invokes IR Gateway Services with the OAuth Access Token in header
             Url format:
             > http://{EmulatedServiceHost}/gateway/GWS/Returns
 			
