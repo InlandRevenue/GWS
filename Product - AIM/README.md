@@ -17,7 +17,9 @@ Key Features:
 	
 - Returns Service - [Download the build pack](../Service%20-%20Return/Latest/) to view 
 	- data definitions of each operation 
-	- response status code definitions 
+	- response status code definitions
+
+- Common Service - [View and download the common xsd](../Service%20-%20Common/)
 	
 - Identity and Access Service - [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 	- for OAuth 2.0 implementation 
