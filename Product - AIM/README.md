@@ -4,25 +4,27 @@ AIM Returns Software Development Kit (SDK)
 Key Features:
 -------------
 
-- Simulating AIM filing Operations
+- Simulating AIM filing operations
 	- Test Scenarios
 	- Test Data
     - Message samples (positive responses)
     - Schema Validation
     - Error Handling (Not Included)
 	
+- Schemas and WSDLS
+	- [View and download the common xsd](../Service%20-%20Common/)
+	- [View and download the return service common xsd](../Service%20-%20Return/Latest/)
+	- View and download the AIM return xsd and wsdl from this current directory
+	
+- Returns Service 
+	- [Download the build pack](../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
+	
 - OAuth Authentication 
 	- [How to Integrate with 0Auth](AIM_Auth_Access_Token_Steps.md)
 	- [Sample curl commands - for testing the OAuth flow](AIM_Auth_Access_Token_Steps.md)
-	
-- Returns Service - [Download the build pack](../Service%20-%20Return/Latest/) to view 
-	- data definitions of each operation 
-	- response status code definitions
 
-- Common Service - [View and download the common xsd](../Service%20-%20Common/)
-	
-- Identity and Access Service - [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
-	- for OAuth 2.0 implementation 
+- Identity and Access Service 
+	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/)for OAuth 2.0 implementation 
 
 Features Details:
 -----------------
