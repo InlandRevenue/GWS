@@ -1,0 +1,95 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+    <s:Header>
+        <a:Action xmlns:a="http://www.w3.org/2005/08/addressing" s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+    </s:Header>
+    <s:Body>
+        <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+            <RetrieveReturnResult>
+                <b:RetrieveReturnResponseWrapper xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse">
+                    <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                            <statusCode>0</statusCode>
+                            <errorMessage/>
+                        </statusMessage>
+                        <responseBody xsi:type="r:RetrieveReturnResponseBodyType" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <standardFields>
+                                <isNilReturn>false</isNilReturn>
+                            </standardFields>
+                            <formFields xmlns="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">
+                                <r:aimInstalmentDate xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">2019-01-28</r:aimInstalmentDate>
+                                <r:grossSalesAndServiceIncome xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1000.00</r:grossSalesAndServiceIncome>
+                                <r:openingStock xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1002.00</r:openingStock>
+                                <r:purchases xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1003.00</r:purchases>
+                                <r:closingStock xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="100.00">100.00</r:closingStock>
+                                <r:grossProfit xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1006.00</r:grossProfit>
+                                <r:interestReceived xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1007.00</r:interestReceived>
+                                <r:dividendsReceived xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1008.00</r:dividendsReceived>
+                                <r:rentLeaseLicenceIncome xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1009.00</r:rentLeaseLicenceIncome>
+                                <r:otherIncome xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1010.00</r:otherIncome>
+                                <r:badDebts xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1011.00</r:badDebts>
+                                <r:depreciationAndAmortisation xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1012.00</r:depreciationAndAmortisation>
+                                <r:insurance xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1013.00</r:insurance>
+                                <r:interestExpense xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1014.00</r:interestExpense>
+                                <r:fees xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1015.00</r:fees>
+                                <r:rates xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1016.00</r:rates>
+                                <r:rentsLeasesLicences xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1017.00</r:rentsLeasesLicences>
+                                <r:repairsAndMaintenance xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1018.00</r:repairsAndMaintenance>
+                                <r:researchAndDevelopment xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1019.00</r:researchAndDevelopment>
+                                <r:relatedPartyRemuneration xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1020.00</r:relatedPartyRemuneration>
+                                <r:salariesAndWages xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1021.00</r:salariesAndWages>
+                                <r:contractorPayments xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1022.00</r:contractorPayments>
+                                <r:otherExpenses xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1023.00</r:otherExpenses>
+                                <r:exceptionalItems xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1024.00</r:exceptionalItems>
+                                <r:netProfitLossBeforeTax xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1024.50</r:netProfitLossBeforeTax>
+                                <r:taxAdjustments xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1025.00</r:taxAdjustments>
+                                <r:currentYearTaxableProfitLoss xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1024.50</r:currentYearTaxableProfitLoss>
+                                <r:accountsReceivable xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="100.00">100.00</r:accountsReceivable>
+                                <r:cashAndDeposits xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1028.00</r:cashAndDeposits>
+                                <r:otherCurrentAssets xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1029.00</r:otherCurrentAssets>
+                                <r:vehicles xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1030.00</r:vehicles>
+                                <r:plantAndMachinery xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1031.00</r:plantAndMachinery>
+                                <r:furnitureAndFittings xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1032.00</r:furnitureAndFittings>
+                                <r:land xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1033.00</r:land>
+                                <r:buildings xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1034.00</r:buildings>
+                                <r:otherFixedAssets xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1035.00</r:otherFixedAssets>
+                                <r:intangibles xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1036.00</r:intangibles>
+                                <r:sharesAndOwnershipInterests xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1037.00</r:sharesAndOwnershipInterests>
+                                <r:termDeposits xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1038.00</r:termDeposits>
+                                <r:otherNonCurrent xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1039.00</r:otherNonCurrent>
+                                <r:provisions xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="1040.00">1041.00</r:provisions>
+                                <r:provisionsForShareholderSalaries xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="1042.00">1043.00</r:provisionsForShareholderSalaries>
+                                <r:accountsPayable xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="1044.00">1045.00</r:accountsPayable>
+                                <r:currentLoans xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1046.00</r:currentLoans>
+                                <r:otherCurrentLiabilities xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1047.00</r:otherCurrentLiabilities>
+                                <r:nonCurrentLiabilities xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1048.00</r:nonCurrentLiabilities>
+                                <r:ownersEquity xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1049.00</r:ownersEquity>
+                                <r:taxDepreciation xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="1050.00">1051.00</r:taxDepreciation>
+                                <r:unTaxedRealisedGainsAndReceipts xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1052.00</r:unTaxedRealisedGainsAndReceipts>
+                                <r:additionsToFixedAssets xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1053.00</r:additionsToFixedAssets>
+                                <r:disposalOfFixedAssets xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1054.00</r:disposalOfFixedAssets>
+                                <r:depreciationRecovered xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="1055.00">1056.00</r:depreciationRecovered>
+                                <r:losses xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1056.00</r:losses>
+                                <r:privateUse xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" userAdjustedValue="100.00" systemAdjustedValue="1059.00">1060.00</r:privateUse>
+                                <r:dividendsPaid xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1061.00</r:dividendsPaid>
+                                <r:drawings xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1062.00</r:drawings>
+                                <r:currentAccountYearEndBalances xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1063.00</r:currentAccountYearEndBalances>
+                                <r:taxDeductibleLossOnDisposalOfFixedAssets xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1064.00</r:taxDeductibleLossOnDisposalOfFixedAssets>
+                                <r:otherAdjustments xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">
+                                    <r:adjustments>
+                                        <r:amount>1065.00</r:amount>
+                                        <r:description>test</r:description>
+                                    </r:adjustments>
+                                </r:otherAdjustments>
+                                <r:yearToDateProvTaxLiability xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1068.00</r:yearToDateProvTaxLiability>
+                                <r:thisInstalment xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1069.00</r:thisInstalment>
+                                <r:shareholderProvTax xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">1070.00</r:shareholderProvTax>
+                                <r:refundAmount xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">750.00</r:refundAmount>
+                                <r:refundIndicator xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">true</r:refundIndicator>
+                            </formFields>
+                        </responseBody>
+                    </retrieveReturnResponse>
+                </b:RetrieveReturnResponseWrapper>
+            </RetrieveReturnResult>
+        </RetrieveReturnResponse>
+    </s:Body>
+</s:Envelope>

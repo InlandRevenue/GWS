@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnAIM.xsd
+	VER:			1.09
+	ISSUER:		Inland Revenue Department
+	DATE:			20/12/2017
+	DESC:			This schema defines the elements and related data types required for the Returns AIM Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" schemaLocation="./ReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="aimInstalmentDate" type="cmn:DateType"/>
+					<xsd:element name="grossSalesAndServiceIncome" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="openingStock" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="purchases" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="closingStock" type="AdjustableType"/>
+					<xsd:element name="grossProfit" type="cmn:MoneyType"/>
+					<xsd:element name="interestReceived" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="dividendsReceived" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="rentLeaseLicenceIncome" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="otherIncome" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="badDebts" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="depreciationAndAmortisation" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="insurance" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="interestExpense" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="fees" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="rates" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="rentsLeasesLicences" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="repairsAndMaintenance" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="researchAndDevelopment" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="relatedPartyRemuneration" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="salariesAndWages" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="contractorPayments" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="otherExpenses" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="exceptionalItems" type="cmn:MoneyType"/>
+					<xsd:element name="netProfitLossBeforeTax" type="cmn:MoneyType"/>
+					<xsd:element name="taxAdjustments" type="cmn:MoneyType"/>
+					<xsd:element name="currentYearTaxableProfitLoss" type="cmn:MoneyType"/>
+					<xsd:element name="accountsReceivable" type="AdjustableType"/>
+					<xsd:element name="cashAndDeposits" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="otherCurrentAssets" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="vehicles" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="plantAndMachinery" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="furnitureAndFittings" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="land" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="buildings" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="otherFixedAssets" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="intangibles" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="sharesAndOwnershipInterests" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="termDeposits" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="otherNonCurrent" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="provisions" type="AdjustableType"/>
+					<xsd:element name="provisionsForShareholderSalaries" type="AdjustableType"/>
+					<xsd:element name="accountsPayable" type="AdjustableType"/>
+					<xsd:element name="currentLoans" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="otherCurrentLiabilities" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="nonCurrentLiabilities" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="ownersEquity" type="cmn:MoneyType"/>
+					<xsd:element name="taxDepreciation" type="AdjustableType"/>
+					<xsd:element name="unTaxedRealisedGainsAndReceipts" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="additionsToFixedAssets" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="disposalOfFixedAssets" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="depreciationRecovered" type="AdjustableType"/>
+					<xsd:element name="losses" type="cmn:MoneyType"/>
+					<xsd:element name="privateUse" type="AdjustableType"/>
+					<xsd:element name="dividendsPaid" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="drawings" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="currentAccountYearEndBalances" type="cmn:MoneyType"/>
+					<xsd:element name="taxDeductibleLossOnDisposalOfFixedAssets" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="otherAdjustments" type="OtherAdjustments"/>
+					<xsd:element name="yearToDateProvTaxLiability" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="thisInstalment" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="shareholderProvTax" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="refundAmount" type="cmn:MoneyTypePositive"/>
+					<xsd:element name="refundIndicator" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--Begin Specific File Data Types-->
+	<xsd:complexType name="AdjustableType">
+		<xsd:simpleContent>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">These adjusted values will allow a user or system to adjust the value submitted for a particular tag</xsd:documentation>
+			</xsd:annotation>
+			<xsd:extension base="cmn:MoneyType">
+				<xsd:attribute name="userAdjustedValue" type="cmn:MoneyType" use="optional"/>
+				<xsd:attribute name="systemAdjustedValue" type="cmn:MoneyType" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:complexType name="OtherAdjustments">
+		<xsd:sequence>
+			<xsd:element name="adjustments" type="AdjustmentsType" minOccurs="0" maxOccurs="20"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="AdjustmentsType">
+		<xsd:sequence>
+			<xsd:element name="amount" type="cmn:MoneyType"/>
+			<xsd:element name="description" type="xsd:normalizedString"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Specific File Data Types-->
+	<!--Begin Specific Prepop Data-->
+	<xsd:complexType name="PrepopResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:PrepopResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="irdNumber" type="xsd:normalizedString"/>
+					<xsd:element name="filingFrequency" type="xsd:normalizedString"/>
+					<xsd:element name="returnPeriodDate" type="cmn:DateType"/>
+					<xsd:element name="returnType" type="xsd:normalizedString"/>
+					<xsd:element name="balanceDate" type="cmn:DateType"/>
+					<xsd:element name="periodBalance" type="cmn:MoneyType"/>
+					<xsd:element name="residualIncomeTax" type="cmn:MoneyType"/>
+					<xsd:element name="totalLossCarriedForward" type="cmn:MoneyType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Specific Prepop Data-->
+	<!--Begin Specific retrieveReturn Data-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Specific retrieveReturn Data-->
+</xsd:schema>

@@ -1,0 +1,29 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+    <s:Header>
+        <a:Action xmlns:a="http://www.w3.org/2005/08/addressing" s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/PrepopResponse</a:Action>
+    </s:Header>
+    <s:Body>
+        <PrepopResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+            <PrepopResult>
+                <b:PrepopResponseWrapper xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/PrepopResponse">
+                    <prepopResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                            <statusCode>0</statusCode>
+                            <errorMessage/>
+                        </statusMessage>
+                        <responseBody xsi:type="r:PrepopResponseBodyType" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <r:irdNumber xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">123090918</r:irdNumber>
+                            <r:filingFrequency xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">SOA two monthly - periods ending even months</r:filingFrequency>
+                            <r:returnPeriodDate xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">2017-05-31</r:returnPeriodDate>
+                            <r:returnType xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">IR7</r:returnType>
+                            <r:balanceDate xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">2017-05-31</r:balanceDate>
+                            <r:periodBalance xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">+20367.00</r:periodBalance>
+                            <r:residualIncomeTax xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">+19397.28</r:residualIncomeTax>
+                            <r:totalLossCarriedForward xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">0.00</r:totalLossCarriedForward>
+                        </responseBody>
+                    </prepopResponse>
+                </b:PrepopResponseWrapper>
+            </PrepopResult>
+        </PrepopResponse>
+    </s:Body>
+</s:Envelope>
