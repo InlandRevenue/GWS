@@ -1,4 +1,4 @@
-AIM Returns Software Development Kit (SDK)
+Employment Income (EI) Returns Software Development Kit (SDK)
 =======================================
 
 Key Features:
@@ -14,7 +14,7 @@ Key Features:
 - Schemas and WSDLS
 	- [View and download the common xsd](../Service%20-%20Common/)
 	- [View and download the return service common xsd](../Service%20-%20Return/Latest/)
-	- View and download the AIM return xsd and wsdl from this current directory
+	- View and download the Employment Income (EI) return xsd and wsdl from this current directory
 	
 - Returns Service 
 	- [Download the build pack](../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
@@ -30,45 +30,39 @@ Features Details:
 -----------------
 
 - Test Scenarios
-	[Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
+	[Test Scenarios](images/Emulated_Services_Coverage_Map-Return_EI.png)
 
 - Test Data
 This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
 	**To Add**
 	
 	Operation | Scenario ID | Data | 
-	File | EMS_AIM0183 | Customer IRD (identifier): 123090918
-	RetrieveFilingObligations | EMS_AIM042 | Customer IRD (identifier): 123064887 
-	Prepop | EMS_AIM054 | Customer IRD (identifier): abcdefgh 
-	Prepop | EMS_AIM063 | Customer IRD (identifier): 123064887 
-	Prepop | EMS_AIM059 | Customer IRD (identifier): 123066081 
-	RetrieveReturn | EMS_AIM028 | Customer IRD (identifier): 123081420 
-	RetrieveStatus | EMS_AIM065 | Customer IRD (identifier): 123090918 periodEndDate: 2019-12-31 
-	RetrieveStatus | EMS_AIM066 | Customer IRD (identifier): 123090918 periodEndDate: 2017-12-31 
-	RetrieveStatus | EMS_AIM034 | Customer IRD (identifier): 123090918 (two-monthly even filer) periodEndDate: 2017-11-30 
-	
+	Prepop | EMS_EI001 | Employer IRD (identifier): 123041607 periodEndDate: 2018-04-30 payDayDate 2018-04-10
+	Prepop | EMS_EI002 | Employer IRD (identifier): 123094018 periodEndDate: 2018-12-31 payDayDate 2018-12-10
+	RetrieveReturn | EMS_EI017 | Employer IRD (identifier): 123041607 periodEndDate: 2018-04-30 payDayDate 2018-04-10 submissionKey 987654321
+	RetrieveReturn | EMS_EI017 | Employer IRD (identifier): 123094018 periodEndDate: 2018-12-31 payDayDate 2018-12-10 submissionKey 987654321
         
-- Message samples - simulating AIM Returns Operations:
+- Message samples - simulating EI Returns Operations:
     - PrePop
         - Positive response
-            - [request sample](sample_messages/body-aim-returnprepop-request.xml)
-            - [response sample](sample_messages/body-aim-returnprepop-response.xml)
+            - [request sample](sample_messages/body-ei-returnprepop-request.xml)
+            - [response sample](sample_messages/body-ei-returnprepop-response.xml)
     - File
         - Positive response
-            - [request sample](sample_messages/body-aim-returnfile-request.xml)
-            - [response sample](sample_messages/body-aim-returnfile-response.xml)
+            - [request sample](sample_messages/body-ei-returnfile-request.xml)
+            - [response sample](sample_messages/body-ei-returnfile-response.xml)
     - RetrieveStatus
         - Positive response
-            - [request sample](sample_messages/body-aim-returnstatus-request.xml)
-            - [response sample](sample_messages/body-aim-returnstatus-response.xml)
+            - [request sample](sample_messages/body-ei-returnstatus-request.xml)
+            - [response sample](sample_messages/body-ei-returnstatus-response.xml)
     - RetrieveFilingObligations
         - Positive response
-            - [request sample](sample_messages/body-aim-filingobligation-request.xml)
-            - [response sample](sample_messages/body-aim-filingobligation-response.xml)
+            - [request sample](sample_messages/body-ei-filingobligation-request.xml)
+            - [response sample](sample_messages/body-ei-filingobligation-response.xml)
     - RetrieveReturn
         - Positive response
-            - [request sample](sample_messages/body-aim-retrievereturn-request.xml)
-            - [response sample](sample_messages/body-aim-retrievereturn-response.xml)
+            - [request sample](sample_messages/body-ei-retrievereturn-request.xml)
+            - [response sample](sample_messages/body-ei-retrievereturn-response.xml)
 
             
 Requests Matching Logic
