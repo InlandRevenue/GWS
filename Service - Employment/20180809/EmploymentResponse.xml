@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employmentResponse xmlns="urn:www.ird.govt.nz/GWS:types/Employment">
+   <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+      <statusCode>0</statusCode>
+      <errorMessage>Success</errorMessage>
+   </statusMessage>
+</employmentResponse>
+
