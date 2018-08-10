@@ -357,7 +357,7 @@ _______________________________________
 			<xsd:documentation source="ITU-T/E.164" xml:lang="en">The area/network code</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="[1-9]\d{0,4}">
+			<xsd:pattern value="\d{0,5}">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">Up to 5 digits with non-zero first digit</xsd:documentation>
 				</xsd:annotation>
@@ -633,7 +633,7 @@ _______________________________________
 		<xsd:choice>
 			<xsd:element name="nzPostAddress" type="NZPostAddressType"/>
 			<xsd:element name="foreignAddress" type="ForeignAddressType"/>
-			<xsd:element name="freeFromAddress" type="FormattedAddressType"/>
+			<xsd:element name="freeFormAddress" type="FormattedAddressType"/>
 		</xsd:choice>
 	</xsd:complexType>
 	<!--Banking Types-->
