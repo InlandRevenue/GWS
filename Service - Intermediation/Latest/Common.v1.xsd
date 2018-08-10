@@ -633,7 +633,7 @@ _______________________________________
 		<xsd:choice>
 			<xsd:element name="nzPostAddress" type="NZPostAddressType"/>
 			<xsd:element name="foreignAddress" type="ForeignAddressType"/>
-			<xsd:element name="freeFromAddress" type="FormattedAddressType"/>
+			<xsd:element name="freeFormAddress" type="FormattedAddressType"/>
 		</xsd:choice>
 	</xsd:complexType>
 	<!--Banking Types-->
