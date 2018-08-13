@@ -1,3 +1,6 @@
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
+
 Employee Details (ED) Software Development Kit (SDK)
 =======================================
 
@@ -12,19 +15,19 @@ Key Features:
     - Error Handling (Not Included)
 	
 - Schemas and WSDLS
-	- [View and download the common xsd](../Service%20-%20Common/)
-	- [View and download the return service common xsd](../Service%20-%20Return/Latest/)
+	- [View and download the common xsd](../../Schema%20-%20Common/)
+	- [View and download the return service common xsd](../../Service%20-%20Return/Latest/)
 	- View and download the Employee Details (ED) return xsd and wsdl from this current directory
 	
 - Employment Service 
 	- [Download the build pack](Gateway%20Services%20Build%20Pack%20-%20Employment%20Service.pdf) to view data definitions of each operation and response status code definitions
 	
 - OAuth Authentication 
-	- [How to Integrate with OAuth](AIM_Auth_Access_Token_Steps.md)
-	- [Sample curl commands - for testing the OAuth flow](AIM_Auth_Access_Token_Steps.md)
+	- [How to Integrate with OAuth](ED_Auth_Access_Token_Steps.md)
+	- [Sample curl commands - for testing the OAuth flow](ED_Auth_Access_Token_Steps.md)
 
 - Identity and Access Service 
-	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/) for OAuth 2.0 implementation 
+	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/) for OAuth 2.0 implementation 
 
 Features Details:
 -----------------
@@ -45,20 +48,20 @@ This table shows which scenarios (as per their numbers in the mindmap) require s
 - Message samples - simulating Employment Service Operations:
     - Create
         - Positive response
-            - [request sample](sample_messages/body-employment-create-request.xml)
-            - [response sample](sample_messages/body-employment-create-response.xml)
+            - [request sample](sample%20messages/body-employment-create-request.xml)
+            - [response sample](sample%20messages/body-employment-create-response.xml)
     - Terminate
         - Positive response
-            - [request sample](sample_messages/body-employment-terminate-request.xml)
-            - [response sample](sample_messages/body-employment-terminate-response.xml)
+            - [request sample](sample%20messages/body-employment-terminate-request.xml)
+            - [response sample](sample%20messages/body-employment-terminate-response.xml)
     - Update
         - Positive response
-            - [request sample](sample_messages/body-employment-update-request.xml)
-            - [response sample](sample_messages/body-employment-update-response.xml)
+            - [request sample](sample%20messages/body-employment-update-request.xml)
+            - [response sample](sample%20messages/body-employment-update-response.xml)
     - RetrieveList
         - Positive response
-            - [request sample](sample_messages/body-employment-retrievelist-request.xml)
-            - [response sample](sample_messages/body-employment-retrievelist-response.xml)
+            - [request sample](sample%20messages/body-employment-retrievelist-request.xml)
+            - [response sample](sample%20messages/body-employment-retrievelist-response.xml)
 
             
 Requests Matching Logic

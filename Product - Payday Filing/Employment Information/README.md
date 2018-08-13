@@ -1,4 +1,7 @@
-Employment Income (EI) Returns Software Development Kit (SDK)
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
+
+Employment Information (EI) Returns Software Development Kit (SDK)
 =======================================
 
 Key Features:
@@ -12,19 +15,19 @@ Key Features:
     - Error Handling (Not Included)
 	
 - Schemas and WSDLS
-	- [View and download the common xsd](../Service%20-%20Common/)
-	- [View and download the return service common xsd](../Service%20-%20Return/Latest/)
+	- [View and download the common xsd](../../Service%20-%20Common/)
+	- [View and download the return service common xsd](../../Service%20-%20Return/Latest/)
 	- View and download the Employment Income (EI) return xsd and wsdl from this current directory
 	
 - Returns Service 
-	- [Download the build pack](../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
 	
 - OAuth Authentication 
-	- [How to Integrate with OAuth](AIM_Auth_Access_Token_Steps.md)
-	- [Sample curl commands - for testing the OAuth flow](AIM_Auth_Access_Token_Steps.md)
+	- [How to Integrate with OAuth](EI_Auth_Access_Token_Steps.md)
+	- [Sample curl commands - for testing the OAuth flow](EI_Auth_Access_Token_Steps.md)
 
 - Identity and Access Service 
-	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/) for OAuth 2.0 implementation 
+	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/) for OAuth 2.0 implementation 
 
 Features Details:
 -----------------
@@ -45,24 +48,24 @@ This table shows which scenarios (as per their numbers in the mindmap) require s
 - Message samples - simulating EI Returns Operations:
     - PrePop
         - Positive response
-            - [request sample](sample_messages/body-ei-returnprepop-request.xml)
-            - [response sample](sample_messages/body-ei-returnprepop-response.xml)
+            - [request sample](sample%20messages/body-ei-returnprepop-request.xml)
+            - [response sample](sample%20messages/body-ei-returnprepop-response.xml)
     - File
         - Positive response
-            - [request sample](sample_messages/body-ei-returnfile-request.xml)
-            - [response sample](sample_messages/body-ei-returnfile-response.xml)
+            - [request sample](sample%20messages/body-ei-returnfile-request.xml)
+            - [response sample](sample%20messages/body-ei-returnfile-response.xml)
     - RetrieveStatus
         - Positive response
-            - [request sample](sample_messages/body-ei-returnstatus-request.xml)
-            - [response sample](sample_messages/body-ei-returnstatus-response.xml)
+            - [request sample](sample%20messages/body-ei-returnstatus-request.xml)
+            - [response sample](sample%20messages/body-ei-returnstatus-response.xml)
     - RetrieveFilingObligations
         - Positive response
-            - [request sample](sample_messages/body-ei-filingobligation-request.xml)
-            - [response sample](sample_messages/body-ei-filingobligation-response.xml)
+            - [request sample](sample%20messages/body-ei-filingobligation-request.xml)
+            - [response sample](sample%20messages/body-ei-filingobligation-response.xml)
     - RetrieveReturn
         - Positive response
-            - [request sample](sample_messages/body-ei-retrievereturn-request.xml)
-            - [response sample](sample_messages/body-ei-retrievereturn-response.xml)
+            - [request sample](sample%20messages/body-ei-retrievereturn-request.xml)
+            - [response sample](sample%20messages/body-ei-retrievereturn-response.xml)
 
             
 Requests Matching Logic
