@@ -17,7 +17,7 @@ Key Features:
 - Schemas and WSDLS
 	- [View and download the common xsd](../../Service%20-%20Common/)
 	- [View and download the return service common xsd](../../Service%20-%20Return/Latest/)
-	- View and download the Employment Income (EI) return [xsd](ReturnE1.v1.xsd) and [wsdl](ReturnEIDevWsdl.wsdl) from this current directory
+	- View and download the Employment Income (EI) return [xsd](ReturnEI.v1.xsd) and [wsdl](ReturnsEIDevWsdl.wsdl) from this current directory
 	
 - Returns Service 
 	- [Download the build pack](../../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
