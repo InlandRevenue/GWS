@@ -15,8 +15,8 @@ Key Features:
     - Error Handling (Not Included)
 	
 - Schemas and WSDLS
-	- [View and download the common xsd](../Schema%20-%20Common/)
-	- [View and download the return service common xsd](../Service%20-%20Return/Latest/)
+	- View and download the [common xsd](../Schema%20-%20Common/)
+	- View and download the [return service common xsd](../Service%20-%20Return/Latest/)
 	- View and download the AIM return [xsd](ReturnAIM.v1.xsd) and [wsdl](ReturnsAIMDevWsdl.wsdl) from this current directory
 	
 - Returns Service 

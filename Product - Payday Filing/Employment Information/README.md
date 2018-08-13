@@ -15,8 +15,8 @@ Key Features:
     - Error Handling (Not Included)
 	
 - Schemas and WSDLS
-	- [View and download the common xsd](../../Service%20-%20Common/)
-	- [View and download the return service common xsd](../../Service%20-%20Return/Latest/)
+	- View and download the [common xsd](../../Service%20-%20Common/)
+	- View and download the [return service common xsd](../../Service%20-%20Return/Latest/)
 	- View and download the Employment Income (EI) return [xsd](ReturnEI.v1.xsd) and [wsdl](ReturnsEIDevWsdl.wsdl) from this current directory
 	
 - Returns Service 

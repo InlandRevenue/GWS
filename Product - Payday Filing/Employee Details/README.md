@@ -15,8 +15,8 @@ Key Features:
     - Error Handling (Not Included)
 	
 - Schemas and WSDLS
-	- [View and download the common xsd](../../Schema%20-%20Common/)
-	- [View and download the return service common xsd](../../Service%20-%20Return/Latest/)
+	- View and download the [common xsd](../../Schema%20-%20Common/)
+	- View and download the [return service common xsd](../../Service%20-%20Return/Latest/)
 	- View and download the Employee Details (ED) [xsd](Employment.xsd) and [wsdl](EmploymentDevWsdl.wsdl) from this current directory
 	
 - Employment Service 
