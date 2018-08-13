@@ -1,5 +1,5 @@
-![IRD logo](../../Images/IRlogo.gif)
-![Software Dev](../../Images/SoftwareDev.png)
+![IRD logo](../Images/IRlogo.gif)
+![Software Dev](../Images/SoftwareDev.png)
 
 AIM Returns Software Development Kit (SDK)
 =======================================
@@ -15,19 +15,19 @@ Key Features:
     - Error Handling (Not Included)
 	
 - Schemas and WSDLS
-	- [View and download the common xsd](../../Schema%20-%20Common/)
-	- [View and download the return service common xsd](../../Service%20-%20Return/Latest/)
+	- [View and download the common xsd](../Schema%20-%20Common/)
+	- [View and download the return service common xsd](../Service%20-%20Return/Latest/)
 	- View and download the AIM return [xsd](ReturnAIM.v1.xsd) and [wsdl](ReturnsAIMDevWsdl.wsdl) from this current directory
 	
 - Returns Service 
-	- [Download the build pack](../../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
 	
 - OAuth Authentication 
 	- [How to Integrate with OAuth](AIM_Auth_Access_Token_Steps.md)
 	- [Sample curl commands - for testing the OAuth flow](AIM_Auth_Access_Token_Steps.md)
 
 - Identity and Access Service 
-	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/) for OAuth 2.0 implementation 
+	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/) for OAuth 2.0 implementation 
 
 Features Details:
 -----------------
