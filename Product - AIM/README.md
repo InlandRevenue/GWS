@@ -20,7 +20,7 @@ Key Features:
 	- View and download the AIM return [xsd](ReturnAIM.v1.xsd) and [wsdl](ReturnsAIMDevWsdl.wsdl) from this current directory
 	
 - Returns Service 
-	- [Download the build pack](../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
 	
 - OAuth Authentication 
 	- [How to Integrate with OAuth](AIM_Auth_Access_Token_Steps.md)
@@ -33,7 +33,7 @@ Features Details:
 -----------------
 
 - Test Scenarios
-	[Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
+	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
 
 - Test Data
 This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.

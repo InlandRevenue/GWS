@@ -33,7 +33,7 @@ Features Details:
 -----------------
 
 - Test Scenarios
-	[Test Scenarios](images/Emulated_Services_Coverage_Map-Return_ES.png)
+	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_ES.png)
 
 - Test Data
 This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.

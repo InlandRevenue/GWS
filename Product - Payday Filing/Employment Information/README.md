@@ -15,12 +15,12 @@ Key Features:
     - Error Handling (Not Included)
 	
 - Schemas and WSDLS
-	- View and download the [common xsd](../../Service%20-%20Common/)
+	- View and download the [common xsd](../../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../../Service%20-%20Return/Latest/)
 	- View and download the Employment Income (EI) return [xsd](ReturnEI.v1.xsd) and [wsdl](ReturnsEIDevWsdl.wsdl) from this current directory
 	
 - Returns Service 
-	- [Download the build pack](../../Service%20-%20Return/Latest/) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
 	
 - OAuth Authentication 
 	- [How to Integrate with OAuth](EI_Auth_Access_Token_Steps.md)
@@ -33,7 +33,7 @@ Features Details:
 -----------------
 
 - Test Scenarios
-	[Test Scenarios](images/Emulated_Services_Coverage_Map-Return_EI.png)
+	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_EI.png)
 
 - Test Data
 This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
