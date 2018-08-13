@@ -17,7 +17,7 @@ Key Features:
 - Schemas and WSDLS
 	- [View and download the common xsd](../../Schema%20-%20Common/)
 	- [View and download the return service common xsd](../../Service%20-%20Return/Latest/)
-	- View and download the Employee Details (ED) return xsd and wsdl from this current directory
+	- View and download the Employee Details (ED) [xsd](Employment.xsd) and [wsdl](EmploymentDevWsdl.wsdl) from this current directory
 	
 - Employment Service 
 	- [Download the build pack](Gateway%20Services%20Build%20Pack%20-%20Employment%20Service.pdf) to view data definitions of each operation and response status code definitions
