@@ -8,7 +8,7 @@ Use this repository to access software development kits (SDKs) for API products 
 * Product - Accounting Income Method (AIM) - [Statement Filing SDK](Product%20-%20AIM)
 * Product - Goods and Services Tax (GST) - [Return Filing SDK](Product%20-%20GST)
 * Product - Payday Filing 
-	- [Employment Income SDK](Product%20-%20Payday%20Filing/Employment%20Income)
+	- [Employment Information SDK](Product%20-%20Payday%20Filing/Employment%20Information)
 	- [Employee details SDK](Product%20-%20Payday%20Filing/Employee%20Details)
 
 # Supporting Services documentation
