@@ -18,7 +18,7 @@ Key Features:
 	
 High Level Flow
 ![High Level Flow](images/high_level_flow.jpg)
-	
+
 Sequence Diagram
 ![Sequence Diagram](images/sequence_diagram.png)
 
