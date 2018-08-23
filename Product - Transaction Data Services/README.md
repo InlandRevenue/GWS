@@ -10,9 +10,9 @@ Financial transaction data includes amounts assessed and associated credits or d
 Overview
 -------------
 
-To understand the TDS service - [view details](TDS%20Overview%20and%20Transition/Latest)
+The [TDS Overview](TDS%20Overview%20and%20Transition/Latest)
 
-* TDS Overview and Transition build pack
+* The TDS Overview and Transition build pack detailing: 
 	* fundamental concepts for interacting parties using the TDS
 	* overview of the bulk file feed, real time feed and history feed services
 	* data models and business rules
@@ -20,9 +20,9 @@ To understand the TDS service - [view details](TDS%20Overview%20and%20Transition
 	* business use cases
 	* delegations and permissions in using TDS.
 
-Scenarios for 
-* TDS Data Conversion
-* TDS Data 
+* Scenarios for 
+	* TDS Data Conversion
+	* TDS Data 
 
 Key services
 -------------
