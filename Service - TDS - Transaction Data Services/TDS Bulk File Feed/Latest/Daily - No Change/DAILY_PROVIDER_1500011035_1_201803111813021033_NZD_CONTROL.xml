@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<FileTransfers xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" TotalTransactionCount="0" TotalPeriodCount="0">
-  <FileTransfer FileName="DAILY_PROVIDER_1500011035_0_201803111813017393_NZD.zip" TransactionCount="0" PeriodCount="0">
-    <ChildFile FileName="DAILY_PROVIDER_1500011035_0_201803111813017393_NZD_SOFTWARE_INTERMEDIATION.xml" TransactionCount="0" PeriodCount="0" />
-    <ChildFile FileName="DAILY_PROVIDER_1500011035_0_201803111813017393_NZD_INTERMEDIATION.xml" TransactionCount="0" PeriodCount="0" />
-    <ChildFile FileName="DAILY_PROVIDER_1500011035_0_201803111813017393_NZD_PERMISSION.xml" TransactionCount="0" PeriodCount="0" />
-  </FileTransfer>
-</FileTransfers>
