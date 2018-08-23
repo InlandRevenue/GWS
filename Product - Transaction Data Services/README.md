@@ -12,7 +12,7 @@ Overview
 
 View [details in the TDS Overview](TDS%20Overview%20and%20Transition/Latest)
 
-* The Overview and Transition build pack detailing: 
+* The Overview and Transition build pack includes: 
 	* fundamental concepts for interacting parties using the TDS
 	* overview of the bulk file feed, real time feed and history feed services
 	* data models and business rules
