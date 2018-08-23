@@ -16,6 +16,10 @@ Key Features:
 * [view Return schema](Latest/ReturnCommon.v1.xsd)
 * [view Return service build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf)
 
+Supporting schema
+-------------
+* [view Common schema](../Schema%20-%20Common/Common.v1.xsd)
+
 Products using this service:
 -------------
 * [Accounting Income Method (AIM) - Statement Filing](../Product%20-%20AIM)
@@ -25,7 +29,3 @@ Products using this service:
 Supporting services
 -------------
 * [Service - Identity and Access](../Service%20-%20Identity%20and%20Access/Latest/)
-
-Supporting schema
--------------
-* [Schema - Common](../Schema%20-%20Common)
