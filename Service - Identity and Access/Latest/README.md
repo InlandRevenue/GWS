@@ -40,14 +40,14 @@ Message Samples - OAuth requests and responses
 		- [Success Response sample – Authorisation Code sent](sample_messages/authorisation-code-response.txt)
 		
     3. Request Access token : Service consumer to IR
-		3.1 Exchange Authorisation Code for oAuth Access Token
+		- Exchange Authorisation Code for oAuth Access Token
 			At this step as a service provider you need to send a HTTP POST request to Auth Server with Authorization Code and your client credentials
 			Url format:
 			> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/access-token-requestheader.txt)
 				- [request sample body](sample_messages/access-token-requestbody.txt)
 		
-		3.2 Success Response – Access Token sent
+		- Success Response – Access Token sent
 		The response contains the Access Token and expiry time.
 			- [response sample](sample_messages/access-token-response.txt)
 		
@@ -55,38 +55,38 @@ Message Samples - OAuth requests and responses
 			- [response sample with refresh](sample_messages/access-token-refresh-token-response.txt)
 		
     4. Request Refresh token : Service consumer to IR
-		4.1 Refresh request
-		At this step as a service provider you need to send a HTTP POST request to the Auth Server with the Refresh Token and your client credentials
+		- Refresh request
+			At this step as a service provider you need to send a HTTP POST request to the Auth Server with the Refresh Token and your client credentials
 			- [request sample header](sample_messages/refresh-token-requestheader.txt)
 			- [request sample body](sample_messages/refresh-token-requestbody.txt)
 
-		4.2 Refresh token reply
-		The Refresh token reply is the same as an authorisation code exchange for an Access token
+		- Refresh token reply
+			The Refresh token reply is the same as an authorisation code exchange for an Access token
 			- [response sample](sample_messages/refresh-token-reply.txt)
     
 	5. Error response
 			- [response sample](sample_messages/error-response.json)
 	
 	6. Validate token request : Service consumer to IR
-		6.1 Validate token request 
-		As a service provider you need to send a HTTP POST request to Auth Server with Access Token to validate your client credentials
+		- Validate token request 
+			As a service provider you need to send a HTTP POST request to Auth Server with Access Token to validate your client credentials
 			Url format:
 			> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/validate-token-requestheader.json)
 				- [request sample body](sample_messages/validate-token-requestbody.json)
 
-		6.2 Validate  token reply 
+		- Validate  token reply 
 			- [response sample](ssample_messages/validate-token-response.json)
 			- [error response sample](ssample_messages/validate-token-error-response.json)
     
 	7. Revoke token request : Service consumer to IR
-		7.1 Revoke token request 
-		At this step as a service provider you need to send a HTTP POST request to Auth Server with Access Token OR Refresh Token to revoke your client credentials. 
+		- Revoke token request 
+			At this step as a service provider you need to send a HTTP POST request to Auth Server with Access Token OR Refresh Token to revoke your client credentials. 
 			- Url format:
 			> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/revoke-token-requestheader.json)
 				- [request sample body](sample_messages/revoke-token-requestbody.json)
 		
-		7.2 Revoke token reply 
+		- Revoke token reply 
 			- [response sample](sample_messages/revoke-token-response.json)
 			- [error response sample](sample_messages/revoke-token-error-response.json)
