@@ -29,8 +29,8 @@ Message Samples - OAuth requests and responses
 1. **Request Authorisation Code**  : Service consumer to IR
 	- Request sample
 		- Service provider will send a HTTP GET request to Auth Server, 
-		  Url format
-		  > https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=Test99999999&redirect_uri=https://myreturnuri/test/&scope=MYIR.Services&response_type=code
+			- Url format:
+				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=Test99999999&redirect_uri=https://myreturnuri/test/&scope=MYIR.Services&response_type=code
 		  
 2. **Authorisation Code response** : IR to Service consumer
 	- Success Response sample
@@ -40,8 +40,8 @@ Message Samples - OAuth requests and responses
 3. **Request Access token** : Service consumer to IR
 	- Exchange Authorisation Code for oAuth Access Token
 		- At this step as a service provider you need to send a HTTP POST request to Auth Server with Authorization Code and your client credentials
-			- Url format:
-			> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
+			- Url format: 
+				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/access-token-requestheader.txt)
 				- [request sample body](sample_messages/access-token-requestbody.txt)
 	
@@ -63,13 +63,13 @@ Message Samples - OAuth requests and responses
 			- [response sample](sample_messages/refresh-token-reply.txt)
 
 5. **Error response**
-		- [response sample](sample_messages/error-response.json)
+	- [response sample](sample_messages/error-response.json)
 
 6. **Validate token request** : Service consumer to IR
 	- Validate token request 
 		- As a service provider you need to send a HTTP POST request to Auth Server with Access Token to validate your client credentials
 			- Url format:
-			> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
+				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/validate-token-requestheader.json)
 				- [request sample body](sample_messages/validate-token-requestbody.json)
 
@@ -81,7 +81,7 @@ Message Samples - OAuth requests and responses
 	- Revoke token request 
 		- At this step as a service provider you need to send a HTTP POST request to Auth Server with Access Token OR Refresh Token to revoke your client credentials. 
 			- Url format:
-			> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
+				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/revoke-token-requestheader.json)
 				- [request sample body](sample_messages/revoke-token-requestbody.json)
 	
