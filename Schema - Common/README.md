@@ -6,8 +6,6 @@ Schema - Common
 
 This schema defines the common data types used across the IR gateway services. 
 
-Supporting schema
--------------
 * [view Common schema](Common.v1.xsd)
 
 Products using this schema:
