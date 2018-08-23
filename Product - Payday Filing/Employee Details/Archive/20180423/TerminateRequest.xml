@@ -1,0 +1,37 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+xmlns:empl="https://services.ird.govt.nz/GWS/Employment/"
+xmlns:ter="https://services.ird.govt.nz/GWS/Employment/:types/TerminateRequest"
+xmlns:a="http://www.w3.org/2005/08/addressing">
+   <soap:Header>
+   </soap:Header>
+   <soap:Body>
+      <empl:Terminate>
+         <empl:TerminateRequestMsg>
+            <ter:TerminateRequestWrapper>
+               <emp:terminateRequest
+               xmlns:emp="urn:www.ird.govt.nz/GWS:types/Employment"
+               xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1">
+				<emp:header>
+					<cmn:softwareProviderData>
+						<cmn:softwareProvider>Provider</cmn:softwareProvider>
+						<cmn:softwarePlatform>Platform</cmn:softwarePlatform>
+						<cmn:softwareRelease>1.0</cmn:softwareRelease>
+					</cmn:softwareProviderData>
+					<cmn:identifier IdentifierValueType="ACCIRD">123123123</cmn:identifier>
+					<cmn:accountType>PSO</cmn:accountType>
+				</emp:header>
+				<emp:employeeIdentifier>
+					<emp:employeeIRD>123117751</emp:employeeIRD>
+					<emp:employeeNameOnEILine>MyNameIsEmployee</emp:employeeNameOnEILine>
+					<emp:employeeDateOfBirth>1986-07-28</emp:employeeDateOfBirth>
+					<emp:employmentStartDate>2017-03-28</emp:employmentStartDate>
+				</emp:employeeIdentifier>
+				<emp:terminateBody>
+					<emp:employmentFinishDate>2017-03-29</emp:employmentFinishDate>
+               	</emp:terminateBody>
+               </emp:terminateRequest>
+            </ter:TerminateRequestWrapper>
+         </empl:TerminateRequestMsg>
+      </empl:Terminate>
+   </soap:Body>
+</soap:Envelope>
