@@ -37,11 +37,11 @@ Key services
 	- schemas
 	- test data
 	- build pack
-
-
-![TDS Build Packs](../../Images/TDSBuildPacks.PNG)
-
-See also these supporting services:
+	
+Supporting services
+-------------
 * [Service - Intermediation](../../../Service%20-%20Intermediation)
 * [Service - Software Intermediation](../../../Service%20-%20Software%20Intermediation)
 * [Service - Identity and Access](../../../Service%20-%20Identity%20and%20Access/Latest)
+
+![TDS Build Packs](../../Images/TDSBuildPacks.PNG)
