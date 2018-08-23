@@ -13,10 +13,8 @@ The Return Service provided through gateway services supports the business proce
 Key Features:
 -------------
 
-* [view details](Latest/) for
-	- schemas and wsdls
-	- message samples
-	- build pack
+* [view Return schema](Latest/ReturnCommon.v1.xsd)
+* [view Return service build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf)
 
 Products using this service:
 -------------
