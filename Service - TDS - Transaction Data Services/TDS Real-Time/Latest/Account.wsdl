@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="https://services.ird.govt.nz/GWS/Account/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:ac="urn:www.ird.govt.nz/GWS:types/Account" xmlns:tds="urn:www.ird.govt.nz/GWS:types/TDSCommon" name="Account" targetNamespace="https://services.ird.govt.nz/GWS/Account/">
+	<wsdl:types>
+		<xs:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Account/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="RetrieveAccountSummaries">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" name="RetrieveAccountSummariesRequestMsg" nillable="true" type="q1:RetrieveAccountSummariesRequestType" xmlns:q1="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesRequest"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RetrieveAccountSummariesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="RetrieveAccountSummariesResult" nillable="true" type="q2:RetrieveAccountSummariesResponseType" xmlns:q2="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RetrievePeriodSummaries">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="1" name="RetrievePeriodSummariesRequestMsg" nillable="true" type="q3:RetrievePeriodSummariesRequestType" xmlns:q3="https://services.ird.govt.nz/GWS/Account/:types/RetrievePeriodSummariesRequest"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RetrievePeriodSummariesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="RetrievePeriodSummariesResult" nillable="true" type="q4:RetrievePeriodSummariesResponseType" xmlns:q4="https://services.ird.govt.nz/GWS/Account/:types/RetrievePeriodSummariesResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesRequest">
+			<xs:import namespace="urn:www.ird.govt.nz/GWS:types/Account" schemaLocation="Account.v1.xsd"/>
+			<xs:complexType name="RetrieveAccountSummariesRequestType">
+				<xs:sequence>
+					<xs:element name="RetrieveAccountSummariesRequestWrapper" nillable="true">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ac:retrieveAccountSummariesRequest"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RetrieveAccountSummariesRequestType" nillable="true" type="tns:RetrieveAccountSummariesRequestType"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesResponse">
+			<xs:import namespace="urn:www.ird.govt.nz/GWS:types/Account" schemaLocation="Account.v1.xsd"/>
+			<xs:complexType name="RetrieveAccountSummariesResponseType">
+				<xs:sequence>
+					<xs:element name="RetrieveAccountSummariesResponseWrapper" nillable="true">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ac:retrieveAccountSummariesResponse"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RetrieveAccountSummariesResponseType" nillable="true" type="tns:RetrieveAccountSummariesResponseType"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Account/:types/RetrievePeriodSummariesRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.ird.govt.nz/GWS/Account/:types/RetrievePeriodSummariesRequest">
+			<xs:import namespace="urn:www.ird.govt.nz/GWS:types/Account" schemaLocation="Account.v1.xsd"/>
+			<xs:complexType name="RetrievePeriodSummariesRequestType">
+				<xs:sequence>
+					<xs:element name="RetrievePeriodSummariesRequestWrapper" nillable="true">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ac:retrievePeriodSummariesRequest"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RetrievePeriodSummariesRequestType" nillable="true" type="tns:RetrievePeriodSummariesRequestType"/>
+		</xs:schema>
+		<xs:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Account/:types/RetrievePeriodSummariesResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.ird.govt.nz/GWS/Account/:types/RetrievePeriodSummariesResponse">
+			<xs:import namespace="urn:www.ird.govt.nz/GWS:types/Account" schemaLocation="Account.v1.xsd"/>
+			<xs:complexType name="RetrievePeriodSummariesResponseType">
+				<xs:sequence>
+					<xs:element name="RetrievePeriodSummariesResponseWrapper" nillable="true">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="ac:retrievePeriodSummariesResponse"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="RetrievePeriodSummariesResponseType" nillable="true" type="tns:RetrievePeriodSummariesResponseType"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="Account_RetrieveAccountSummaries_InputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveAccountSummaries"/>
+	</wsdl:message>
+	<wsdl:message name="Account_RetrieveAccountSummaries_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveAccountSummariesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Account_RetrievePeriodSummaries_InputMessage">
+		<wsdl:part name="parameters" element="tns:RetrievePeriodSummaries"/>
+	</wsdl:message>
+	<wsdl:message name="Account_RetrievePeriodSummaries_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RetrievePeriodSummariesResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="Account">
+		<wsdl:documentation>The Account service can be utilised for a number of customer tasks. For information regarding the proper use of this service, schemas, formatting of request and response types please refer to the documentation provided during onboarding.</wsdl:documentation>
+		<wsdl:operation name="RetrieveAccountSummaries">
+			<wsdl:documentation>
+				<summary>For use of the RetrieveAccountSummaries operation please reference the Intermediation namespace, www.ird.govt.nz/Gateway/GWS/Account/ provided at http://www.ird.govt.nz/software-developers/</summary>
+				<returns>RetrieveAccountSummariesResponse will contain a status and error message. See schema for more details.</returns>
+				<param name="RetrieveAccountSummariesRequestMsg">RetrieveAccountSummariesRequest will contain the return specific fields in XML format. See return specific schema for more details.</param>
+			</wsdl:documentation>
+			<wsdl:input message="tns:Account_RetrieveAccountSummaries_InputMessage" wsam:Action="https://services.ird.govt.nz/GWS/Account/Account/RetrieveAccountSummaries"/>
+			<wsdl:output message="tns:Account_RetrieveAccountSummaries_OutputMessage" wsam:Action="https://services.ird.govt.nz/GWS/Account/Account/RetrieveAccountSummariesResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="RetrievePeriodSummaries">
+			<wsdl:documentation>
+				<summary>For use of the RetrievePeriodSummaries operation please reference the Intermediation namespace, www.ird.govt.nz/Gateway/GWS/Account/ provided at http://www.ird.govt.nz/software-developers/</summary>
+				<returns>RetrievePeriodSummariesResponse will contain a status and error message. See schema for more details.</returns>
+				<param name="RetrievePeriodSummariesRequestMsg">RetrievePeriodSummariesRequest will contain the return specific fields in XML format. See return specific schema for more details.</param>
+			</wsdl:documentation>
+			<wsdl:input message="tns:Account_RetrievePeriodSummaries_InputMessage" wsam:Action="https://services.ird.govt.nz/GWS/Account/Account/RetrievePeriodSummaries"/>
+			<wsdl:output message="tns:Account_RetrievePeriodSummaries_OutputMessage" wsam:Action="https://services.ird.govt.nz/GWS/Account/Account/RetrievePeriodSummariesResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="WSHttpBinding_Account" type="tns:Account">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsp:PolicyReference URI="#WSHttpBinding_Account_policy"/>
+		<wsdl:operation name="RetrieveAccountSummaries">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Account/Account/RetrieveAccountSummaries" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RetrievePeriodSummaries">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Account/Account/RetrievePeriodSummaries" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Account">
+		<wsdl:port name="WSHttpBinding_Account" binding="tns:WSHttpBinding_Account">
+			<soap12:address location="https://eservices-test-gateway.npnsp.ird.govt.nz:4046/Gateway/GWS/Account/"/>
+			<wsa10:EndpointReference>
+				<wsa10:Address>https://eservices-test-gateway.npnsp.ird.govt.nz:4046/Gateway/GWS/Account/</wsa10:Address>
+			</wsa10:EndpointReference>
+		</wsdl:port>
+	</wsdl:service>
+	<wsp:Policy wsu:Id="WSHttpBinding_Account_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false"/>
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Strict/>
+							</wsp:Policy>
+						</sp:Layout>
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<wsam:Addressing>
+					<wsp:Policy>
+						<wsam:AnonymousResponses/>
+					</wsp:Policy>
+				</wsam:Addressing>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+</wsdl:definitions>
