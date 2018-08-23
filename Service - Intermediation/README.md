@@ -1,5 +1,5 @@
-![IRD logo](../../Images/IRlogo.gif)
-![Software Dev](../../Images/SoftwareDev.png)
+![IRD logo](../Images/IRlogo.gif)
+![Software Dev](../Images/SoftwareDev.png)
 
 Intermediation Service
 =======================================
@@ -10,16 +10,16 @@ While the Intermediation Gateway Service will eventually provide this linking fe
 Key Features:
 -------------
 
-* [view details](/Latest) for
+* [view details](Latest/) for
 	- schemas and wsdls
 	- message samples
 	- build pack
 
 Products using this service:
 -------------
-* [Transaction Data Services](../../Product%20-%20Transaction%20Data%20Services)
+* [Transaction Data Services](../Product%20-%20Transaction%20Data%20Services)
 
 Supporting services
 -------------
-* [Service - Identity and Access](../../Service%20-%20Identity%20and%20Access)
-* [Service - Software Intermediation](../../Service%20-%20Software%20Intermediation)
+* [Service - Identity and Access](../Service%20-%20Identity%20and%20Access)
+* [Service - Software Intermediation](../Service%20-%20Software%20Intermediation)
