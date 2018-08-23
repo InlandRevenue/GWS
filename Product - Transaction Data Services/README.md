@@ -10,9 +10,9 @@ Financial transaction data includes amounts assessed and associated credits or d
 Overview
 -------------
 
-The [TDS Overview](TDS%20Overview%20and%20Transition/Latest)
+View [details in the TDS Overview](TDS%20Overview%20and%20Transition/Latest)
 
-* The TDS Overview and Transition build pack detailing: 
+* The Overview and Transition build pack detailing: 
 	* fundamental concepts for interacting parties using the TDS
 	* overview of the bulk file feed, real time feed and history feed services
 	* data models and business rules
