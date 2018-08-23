@@ -4,10 +4,16 @@
 Intermediation Service
 =======================================
 
-Key Features:
--------------
 Intermediation is the process of linking an intermediary (such as a tax agent) to an individual or organisation so the intermediary can act on their behalf for tax purposes. 
 While the Intermediation Gateway Service will eventually provide this linking feature, initially it will only provide the ability to retrieve tax agent links already established in myIR. 
+
+Key Features:
+-------------
+
+* [view details](/Latest) for
+	- schemas and wsdls
+	- message samples
+	- build pack
 
 Products using this service:
 -------------
