@@ -22,17 +22,18 @@ Key services
 -------------
 
 * **Service - TDS Bulk File Feed** - [view details](TDS%20Bulk%20File%20Feed/Latest/) for
-	- Schemas
+	- schemas
 	- test data
 	- build pack
 	
 * **Service - TDS Real-Time** - [view details](TDS%20Real-Time/Latest/) for
-	- Schemas
+	- schemas
+	- message samples
 	- test data
 	- build pack
 	
 * **Service - TDS History Bulk File Feed** - [view details](TDS%20History%20Bulk%20File%20Feed/Latest/) for
-	- Schemas
+	- schemas
 	- test data
 	- build pack
 
