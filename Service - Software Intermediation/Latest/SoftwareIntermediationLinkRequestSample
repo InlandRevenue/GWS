@@ -1,0 +1,23 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/SoftwareIntermediation/SoftwareIntermediation/Link</wsa:Action>
+    </soap:Header>
+    <soap:Body>
+        <sof:Link xmlns:sof="https://services.ird.govt.nz/GWS/SoftwareIntermediation/">
+            <sof:LinkRequestMsg>
+                <sof1:LinkRequestWrapper xmlns:sof1="https://services.ird.govt.nz/GWS/SoftwareIntermediation/:types/SoftwareClientLinkRequest">
+                    <sof2:linkRequest xmlns:sof2="urn:www.ird.govt.nz/GWS:types/SoftwareIntermediation">
+                        <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                            <com:softwareProvider>SoftwareProvider</com:softwareProvider>
+                            <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
+                            <com:softwareRelease>1.0</com:softwareRelease>
+                        </com:softwareProviderData>
+                        <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1" IdentifierValueType="ACCIRD">123129891</com:identifier>
+                        <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">GST</com:accountType>
+                        <sof2:softwarePlatformID>1500120052</sof2:softwarePlatformID>
+                    </sof2:linkRequest>
+                </sof1:LinkRequestWrapper>
+            </sof:LinkRequestMsg>
+        </sof:Link>
+    </soap:Body>
+</soap:Envelope>
