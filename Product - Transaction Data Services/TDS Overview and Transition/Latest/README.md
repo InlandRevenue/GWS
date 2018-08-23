@@ -19,6 +19,5 @@ Financial transaction data includes amounts assessed and associated credits or d
 
 * [Download and view the TDS Data Scenarios](TDS%20Overview%20and%20Transition%20Data%20Scenarios.xlsx)
 
-[View Key services and Supporting Services](../)
--------------
+* [**View Key services and Supporting Services**](../../)
 
