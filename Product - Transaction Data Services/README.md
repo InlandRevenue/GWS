@@ -42,6 +42,10 @@ Key services
 	- schemas
 	- test data
 	- build pack
+	
+Supporting schema
+-------------
+* [view Common schema](../Schema%20-%20Common/Common.v1.xsd)
 
 Supporting services
 -------------

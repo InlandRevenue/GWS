@@ -16,6 +16,10 @@ Key Features:
 	- schemas and wsdls
 	- message samples
 	- build pack
+	
+Supporting schema
+-------------
+* [view Common schema](../Schema%20-%20Common/Common.v1.xsd)
 
 Products using this service:
 -------------

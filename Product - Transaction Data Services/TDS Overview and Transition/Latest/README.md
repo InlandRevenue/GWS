@@ -19,29 +19,6 @@ Financial transaction data includes amounts assessed and associated credits or d
 
 * [Download and view the TDS Data Scenarios](TDS%20Overview%20and%20Transition%20Data%20Scenarios.xlsx)
 
-Key services
+[View Key services and Supporting Services](../)
 -------------
 
-* **Service - TDS Bulk File Feed** - [view details](../../TDS%20Bulk%20File%20Feed/Latest/) for
-	- schemas
-	- test data
-	- build pack
-	
-* **Service - TDS Real-Time** - [view details](../../TDS%20Real-Time/Latest/) for
-	- schemas
-	- message samples
-	- test data
-	- build pack
-	
-* **Service - TDS History Bulk File Feed** - [view details](../../TDS%20History%20Bulk%20File%20Feed/Latest/) for
-	- schemas
-	- test data
-	- build pack
-	
-Supporting services
--------------
-* [Service - Intermediation](../../../Service%20-%20Intermediation)
-* [Service - Software Intermediation](../../../Service%20-%20Software%20Intermediation)
-* [Service - Identity and Access](../../../Service%20-%20Identity%20and%20Access/Latest)
-
-![TDS Build Packs](../../Images/TDSBuildPacks.PNG)
