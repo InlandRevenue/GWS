@@ -7,13 +7,15 @@ Transaction Data Services (TDS)
 The TDS is a suite of business services that provides access to IR customers transaction data for consumption by software packages.  In turn these packages present that data to their users. 
 Financial transaction data includes amounts assessed and associated credits or debits.  There is no data sent associated with the details of how an assessment has been calculated
 
+Overview
+-------------
 [Download and view the TDS Overview and Transition build pack](TDS%20Overview%20and%20Transition/Latest) to view:
-•	fundamental concepts for interacting parties using the TDS
-•	overview of the bulk file feed, real time feed and history feed services
-•	data models and business rules
-•	data scenarios and data conversion from the TAWS
-•	business use cases
-•	delegations and permissions in using TDS.
+* fundamental concepts for interacting parties using the TDS
+* overview of the bulk file feed, real time feed and history feed services
+* data models and business rules
+* data scenarios and data conversion from the TAWS
+* business use cases
+* delegations and permissions in using TDS.
 
 
 Key services
