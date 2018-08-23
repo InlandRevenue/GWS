@@ -66,7 +66,7 @@ This table shows which scenarios (as per their numbers in the mindmap) require s
 Requests Matching Logic
 -----------------------
 
-- ReadMe Page - (default) port 8080 of root path of Welcome Page, you are already here
+- ReadMe Page - (default) port 8080 of root path of Welcome Page
 - Authentication mappings - (default) port 8443 of following paths:
     - /ms_oauth/oauth2/endpoints/oauthservice/authorize
     - /oam/server/auth_cred_submit

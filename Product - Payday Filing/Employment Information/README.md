@@ -22,12 +22,11 @@ Key Features:
 - Returns Service 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
 	
-- OAuth Authentication 
-	- [How to Integrate with OAuth](EI_Auth_Access_Token_Steps.md)
-	- [Sample curl commands - for testing the OAuth flow](EI_Auth_Access_Token_Steps.md)
-
-- Identity and Access Service 
-	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/) for OAuth 2.0 implementation 
+- Identity and Access Service
+	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
+	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
+	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
+	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
 Features Details:
 -----------------
@@ -71,7 +70,7 @@ This table shows which scenarios (as per their numbers in the mindmap) require s
 Requests Matching Logic
 -----------------------
 
-- ReadMe Page - (default) port 8080 of root path of Welcome Page, you are already here
+- ReadMe Page - (default) port 8080 of root path of Welcome Page
 - Authentication mappings - (default) port 8443 of following paths:
     - /ms_oauth/oauth2/endpoints/oauthservice/authorize
     - /oam/server/auth_cred_submit
