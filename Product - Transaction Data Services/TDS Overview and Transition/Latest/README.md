@@ -15,9 +15,9 @@ Financial transaction data includes amounts assessed and associated credits or d
 	- business use cases
 	- delegations and permissions in using TDS.
 
-* Download and view the TDS Data Conversion Scenarios](TDS%20Overview%20and%20Transition%20Data%20Conversion%20Scenarios.xlsx)
+* [Download and view the TDS Data Conversion Scenarios](TDS%20Overview%20and%20Transition%20Data%20Conversion%20Scenarios.xlsx)
 
-* Download and view the TDS Data Conversion Scenarios](TDS%20Overview%20and%20Transition%20Data%20Scenarios.xlsx)
+* [Download and view the TDS Data Conversion Scenarios](TDS%20Overview%20and%20Transition%20Data%20Scenarios.xlsx)
 
 Key services
 -------------
