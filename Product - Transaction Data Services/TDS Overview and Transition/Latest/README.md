@@ -21,7 +21,7 @@ Financial transaction data includes amounts assessed and associated credits or d
 
 
 Transaction Data Services details
-=======================================
+-------------
 * [View key services](../../)
 
 Supporting services
