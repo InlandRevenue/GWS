@@ -1,5 +1,5 @@
-![IRD logo](../Images/IRlogo.gif)
-![Software Dev](../Images/SoftwareDev.png)
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
 
 OAuth Authentication - How to Integrate
 =======================================
@@ -160,8 +160,6 @@ Message Samples - OAuth requests and responses
 		- Request sample
 			- Service provider will send a HTTP GET request to Auth Server, url format as below:
 			  https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=Test99999999&redirect_uri=https://myreturnuri/test/&scope=MYIR.Services&response_type=code
-
-		
 	2. Authorisation Code response : IR to Service consumer 
 		- [Success Response sample – Authorisation Code sent](sample_messages/authorisation-code-response.txt)
 		
