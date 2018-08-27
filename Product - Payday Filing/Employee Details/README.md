@@ -31,7 +31,8 @@ Key Features:
 Features Details:
 -----------------
 
-- Test Scenarios
+- Test Scenarios 
+	- [Download test scenarios template](Payday%20Filing%20–%20Employee%20details%20Test%20Scenarios.docx)
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-ES.png)
 
 - Test Data
