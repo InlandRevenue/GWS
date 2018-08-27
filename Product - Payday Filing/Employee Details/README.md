@@ -10,9 +10,7 @@ Key Features:
 - Simulating Employee Details (ED) filing operations
 	- Test Scenarios
 	- Test Data
-    - Message samples (positive responses)
-    - Schema Validation
-    - Error Handling (Not Included)
+    - [Message samples](#Message%20samples) - positive responses
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
@@ -46,7 +44,9 @@ Features Details:
 	Create | EMS_ES095 | Employee IRD (*identifier*): 123183711
 	Update | EMS_ES099 | employmentStartDate: today's date
         
-- Message samples - simulating Employment Service Operations:
+Message samples :
+----------------- 
+- Simulating Employment Service Operations:
     - Create
         - Positive response
             - [request sample](sample%20messages/body-employment-create-request.xml)

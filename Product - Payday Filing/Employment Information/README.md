@@ -10,8 +10,7 @@ Key Features:
 - Simulating Employment Information (EI) filing operations
 	- Test Scenarios
 	- Test Data
-    - Message samples (positive responses)
-    - Schema Validation
+    - [Message samples](#Message%20samples)- positive responses
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
@@ -27,7 +26,7 @@ Key Features:
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
-Features Details:
+Test Details:
 -----------------
 
 - Test Scenarios 
@@ -35,27 +34,29 @@ Features Details:
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_EI.png)
 
 - Test Data
-	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
-	- Text in italics represents the name of the XML node in the request.
+	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
 	
 	Operation | Scenario ID | Data
 	--- | --- | ---
-	Prepop | EMS_EI001 | Employer IRD (*identifier*): 123041607 
-	 | | *periodEndDate*: 2018-04-30
-	 | | *payDayDate*: 2018-04-10
+	Prepop | EMS_EI001 | Employer IRD (*identifier*): 123041607
+	 | | | *periodEndDate*: 2018-04-30
+	 | | | *payDayDate*: 2018-04-10
 	Prepop | EMS_EI002 | Employer IRD (*identifier*): 123094018
-	 | | *periodEndDate*: 2018-12-31
-	 | | *payDayDate*: 2018-12-10
+	 | | | *periodEndDate*: 2018-12-31
+	 | | | *payDayDate*: 2018-12-10
 	RetrieveReturn | EMS_EI017 | Employer IRD (*identifier*): 123041607
-	 | | *periodEndDate*: 2018-04-30
-	 | | *payDayDate*: 2018-04-10
-	 | | *submissionKey*: 987654321
+	 | | | *periodEndDate*: 2018-04-30
+	 | | | *payDayDate*: 2018-04-10
+	 | | | *submissionKey*: 987654321
 	RetrieveReturn | EMS_EI017 | Employer IRD (*identifier*): 123094018
-	 | | *periodEndDate*: 2018-12-31
-	 | | *payDayDate*: 2018-12-10
-	 | | *submissionKey*: 987654321
+	 | | | *periodEndDate*: 2018-12-31
+	 | | | *payDayDate*: 2018-12-10
+	 | | | *submissionKey*: 987654321
         
-- Message samples - simulating EI Returns Operations:
+Message samples :
+-----------------
+
+- Simulating EI Returns Operations:
     - PrePop
         - Positive response
             - [request sample](sample%20messages/body-ei-returnprepop-request.xml)

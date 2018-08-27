@@ -10,9 +10,7 @@ Key Features:
 - Simulating GST filing operations
 	- Test Scenarios
 	- Test Data
-    - Message samples (positive responses)
-    - Schema Validation
-    - Error Handling
+    - [Message samples](#Message%20samples) - positive responses
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common/)
@@ -41,18 +39,20 @@ Features Details:
 	
 	Operation | Scenario ID | Data
 	--- | --- | ---	
-	File | EMS_GST013 | Customer IRD (identifier): 123090918
-	File | EMS_GST012 | Customer IRD (identifier): 123039456
-	Prepop | EMS_GST027 | Customer IRD (identifier): 123039858 
-	Prepop | EMS_GST028 | Customer IRD (identifier): 123084226 
-	Prepop | EMS_GST029 | Customer IRD (identifier): 123084217
-	Prepop | EMS_GST030 | Customer IRD (identifier): 123088077
-	Prepop | EMS_GST031 | Customer IRD (identifier): 123070054 
-	Prepop | EMS_GST032 | Customer IRD (identifier): 123101294
-	Prepop | EMS_GST033 | Customer IRD (identifier): 123084225
-	Prepop | EMS_GST034 | Customer IRD (identifier): 123080106 
+	File | EMS_GST013 | Customer IRD (*identifier*): 123090918
+	File | EMS_GST012 | Customer IRD (*identifier*): 123039456
+	Prepop | EMS_GST027 | Customer IRD (*identifier*): 123039858 
+	Prepop | EMS_GST028 | Customer IRD (*identifier*): 123084226 
+	Prepop | EMS_GST029 | Customer IRD (*identifier*): 123084217
+	Prepop | EMS_GST030 | Customer IRD (*identifier*): 123088077
+	Prepop | EMS_GST031 | Customer IRD (*identifier*): 123070054 
+	Prepop | EMS_GST032 | Customer IRD (*identifier*): 123101294
+	Prepop | EMS_GST033 | Customer IRD (*identifier*): 123084225
+	Prepop | EMS_GST034 | Customer IRD (*identifier*): 123080106 
         
-- Message samples - simulating GST Returns Operations:
+Message samples :
+-----------------  
+- Simulating GST Returns Operations:
     - PrePop
         - Positive response
             - [request sample](sample%20messages/body-gst-returnprepop-request.xml)
