@@ -26,7 +26,7 @@ Key Features:
 	- [Message Samples](../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
-Features Details:
+Test Details:
 -----------------
 
 - Test Scenarios 
@@ -37,7 +37,8 @@ Features Details:
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
 	
-	Operation | Scenario ID | Data
+	
+	- Operation | Scenario ID | Data
 	--- | --- | ---	
 	File | EMS_GST013 | Customer IRD (*identifier*): 123090918
 	File | EMS_GST012 | Customer IRD (*identifier*): 123039456
