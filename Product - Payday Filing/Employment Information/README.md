@@ -35,16 +35,25 @@ Features Details:
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_EI.png)
 
 - Test Data
-	This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
-	Text in italics represents the name of the XML node in the request.
-	**To Add**
+	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
+	- Text in italics represents the name of the XML node in the request.
 	
-	Operation | Scenario ID | Data |
+	Operation | Scenario ID | Data
 	--- | --- | ---
-	Prepop | EMS_EI001 | Employer IRD (identifier): 123041607 periodEndDate: 2018-04-30 payDayDate 2018-04-10
-	Prepop | EMS_EI002 | Employer IRD (identifier): 123094018 periodEndDate: 2018-12-31 payDayDate 2018-12-10
-	RetrieveReturn | EMS_EI017 | Employer IRD (identifier): 123041607 periodEndDate: 2018-04-30 payDayDate 2018-04-10 submissionKey 987654321
-	RetrieveReturn | EMS_EI017 | Employer IRD (identifier): 123094018 periodEndDate: 2018-12-31 payDayDate 2018-12-10 submissionKey 987654321
+	Prepop | EMS_EI001 | Employer IRD (*identifier*): 123041607 
+	 | | *periodEndDate*: 2018-04-30
+	 | | *payDayDate*: 2018-04-10
+	Prepop | EMS_EI002 | Employer IRD (*identifier*): 123094018
+	 | | *periodEndDate*: 2018-12-31
+	 | | *payDayDate*: 2018-12-10
+	RetrieveReturn | EMS_EI017 | Employer IRD (*identifier*): 123041607
+	 | | *periodEndDate*: 2018-04-30
+	 | | *payDayDate*: 2018-04-10
+	 | | *submissionKey*: 987654321
+	RetrieveReturn | EMS_EI017 | Employer IRD (*identifier*): 123094018
+	 | | *periodEndDate*: 2018-12-31
+	 | | *payDayDate*: 2018-12-10
+	 | | *submissionKey*: 987654321
         
 - Message samples - simulating EI Returns Operations:
     - PrePop

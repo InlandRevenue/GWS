@@ -36,10 +36,11 @@ Features Details:
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_GST.png)
 
 - Test Data
-This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
-	**To Add**
+	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
+	- Text in italics represents the name of the XML node in the request.
 	
-	Operation | Scenario ID | Data | 
+	Operation | Scenario ID | Data
+	--- | --- | ---	
 	File | EMS_GST013 | Customer IRD (identifier): 123090918
 	File | EMS_GST012 | Customer IRD (identifier): 123039456
 	Prepop | EMS_GST027 | Customer IRD (identifier): 123039858 

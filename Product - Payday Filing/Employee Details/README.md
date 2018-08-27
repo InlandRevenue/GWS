@@ -36,13 +36,14 @@ Features Details:
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-ES.png)
 
 - Test Data
-This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
-	**To Add**
+	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
+	- Text in italics represents the name of the XML node in the request.
 	
-	Operation | Scenario ID | Data | 
-	RetrieveList | EMS_ES081 | Employee IRD (identifier): 123114116
-	Update | EMS_ES096 | Employee IRD (identifier): 123183711
-	Create | EMS_ES095 | Employee IRD (identifier): 123183711
+	Operation | Scenario ID | Data
+	--- | --- | ---
+	RetrieveList | EMS_ES081 | Employee IRD (*identifier*): 123114116
+	Update | EMS_ES096 | Employee IRD (*identifier*): 123183711
+	Create | EMS_ES095 | Employee IRD (*identifier*): 123183711
 	Update | EMS_ES099 | employmentStartDate: today's date
         
 - Message samples - simulating Employment Service Operations:
