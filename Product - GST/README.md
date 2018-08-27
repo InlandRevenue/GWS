@@ -17,7 +17,7 @@ Key Features:
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../Service%20-%20Return/Latest/)
-	- View and download the GST return [xsd](ReturnGST.v1.xsd) and [wsdl](ReturnsGSTDevWsdl.wsdl) from this current directory
+	- View and download the GST return [xsd](ReturnGST.v1.xsd) and [wsdl](ReturnsGSTDevWsdl.v1.wsdl) from this current directory
 	
 - Returns Service 
 	- [Download the build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
@@ -31,7 +31,8 @@ Key Features:
 Features Details:
 -----------------
 
-- Test Scenarios
+- Test Scenarios 
+	- [View and download](GST%20-%20Returns%20ervice-%20Test%20Scenarios.docx)
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_GST.png)
 
 - Test Data
