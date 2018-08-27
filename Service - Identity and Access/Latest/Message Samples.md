@@ -20,25 +20,25 @@ Message Samples - OAuth requests and responses
 		- At this step as a service provider you need to send a HTTP POST request to Auth Server with Authorization Code and your client credentials
 			- Url format: 
 				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
-				- [request sample header](sample_messages/access-token-requestheader.txt)
+				- [request sample header](sample_messages/access-token-requestheader.json)
 				- [request sample body](sample_messages/access-token-requestbody.txt)
 	
 	- Success Response – Access Token sent
 		- The response contains the Access Token and expiry time.
-			- [response sample](sample_messages/access-token-response.txt)
+			- [response sample](sample_messages/access-token-response.json)
 	
 		- If refresh tokens are used this is also returned
-			- [response sample with refresh](sample_messages/access-token-refresh-token-response.txt)
+			- [response sample with refresh](sample_messages/access-token-refresh-token-response.json)
 	
 4. **Request Refresh token** : Service consumer to IR
 	- Refresh request
 		- At this step as a service provider you need to send a HTTP POST request to the Auth Server with the Refresh Token and your client credentials
-			- [request sample header](sample_messages/refresh-token-requestheader.txt)
+			- [request sample header](sample_messages/refresh-token-requestheader.json)
 			- [request sample body](sample_messages/refresh-token-requestbody.txt)
 
 	- Refresh token reply
 		- The Refresh token reply is the same as an authorisation code exchange for an Access token
-			- [response sample](sample_messages/refresh-token-reply.txt)
+			- [response sample](sample_messages/refresh-token-reply.json)
 
 5. **Error response**
 	- [response sample](sample_messages/error-response.json)
