@@ -13,6 +13,8 @@ Key Features:
 	- SSH Keys
 
 * OAuth Authentication - [How to Integrate](OAuth%20Authentication%20-%20How%20to%20Integrate.md)
+	- Simulating Authentication Flow
+	- Sample Curl commands
 
 * [Message Samples](Message%20Samples.md) - OAuth requests and responses provided for
 	- Authorisation code request and response
