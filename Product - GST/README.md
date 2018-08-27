@@ -32,7 +32,7 @@ Features Details:
 -----------------
 
 - Test Scenarios 
-	- [View and download](GST%20-%20Returns%20ervice-%20Test%20Scenarios.docx)
+	- [Download test scenarios template](GST%20-%20Returns%20Service-%20Test%20Scenarios.docx)
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_GST.png)
 
 - Test Data
