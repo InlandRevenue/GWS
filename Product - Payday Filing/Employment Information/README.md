@@ -8,9 +8,9 @@ Key Features:
 -------------
 
 - Simulating Employment Information (EI) filing operations
-	- Test Scenarios
-	- Test Data
-    - [Message samples](#Message%20samples)- positive responses
+	- [Test Scenarios and data](#test-details)
+    - [Message samples](#message-samples-) - positive responses
+	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
