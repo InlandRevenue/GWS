@@ -8,11 +8,9 @@ Key Features:
 -------------
 
 - Simulating AIM filing operations
-	- Test Scenarios
-	- Test Data
-    - Message samples (positive responses)
-    - Schema Validation
-    - Error Handling (Not Included)
+	- [Test Scenarios and data](#test-details)
+    - [Message samples](#message-samples-) - positive responses
+	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common/)
@@ -28,29 +26,36 @@ Key Features:
 	- [Message Samples](../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
-Features Details:
+Test Details:
 -----------------
 
 - Test Scenarios
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
 
 - Test Data
-This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
-	**To Add**
+	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
+	- Text in italics represents the name of the XML node in the request.
+	-
 	
-	Operation | Scenario ID | Data | 
-	File | EMS_AIM0183 | Customer IRD (identifier): 123090918
-	RetrieveFilingObligations | EMS_AIM042 | Customer IRD (identifier): 123064887 
-	Prepop | EMS_AIM054 | Customer IRD (identifier): abcdefgh 
-	Prepop | EMS_AIM063 | Customer IRD (identifier): 123064887 
-	Prepop | EMS_AIM059 | Customer IRD (identifier): 123066081 
-	RetrieveReturn | EMS_AIM028 | Customer IRD (identifier): 123081420 
-	RetrieveStatus | EMS_AIM065 | Customer IRD (identifier): 123090918 periodEndDate: 2019-12-31 
-	RetrieveStatus | EMS_AIM066 | Customer IRD (identifier): 123090918 periodEndDate: 2017-12-31 
-	RetrieveStatus | EMS_AIM034 | Customer IRD (identifier): 123090918 (two-monthly even filer) periodEndDate: 2017-11-30 
-	
+	Operation | Scenario ID | Data
+	--- | --- | ---
+	File | EMS_AIM0183 | Customer IRD (*identifier*): 123090918
+	RetrieveFilingObligations | EMS_AIM042 | Customer IRD (*identifier*): 123064887 
+	Prepop | EMS_AIM054 | Customer IRD (*identifier*): abcdefgh 
+	Prepop | EMS_AIM063 | Customer IRD (*identifier*): 123064887 
+	Prepop | EMS_AIM059 | Customer IRD (*identifier*): 123066081 
+	RetrieveReturn | EMS_AIM028 | Customer IRD (*identifier*): 123081420 
+	RetrieveStatus | EMS_AIM065 | Customer IRD (*identifier*): 123090918 
+	 | | | *periodEndDate*: 2019-12-31 
+	RetrieveStatus | EMS_AIM066 | Customer IRD (*identifier*): 123090918
+	 | | | *periodEndDate*: 2017-12-31 
+	RetrieveStatus | EMS_AIM034 | Customer IRD (*identifier*): 123090918 (two-monthly even filer)
+	 | | | *periodEndDate*: 2017-11-30 
         
-- Message samples - simulating AIM Returns Operations:
+Message samples :
+-----------------
+
+- Simulating AIM Returns Operations:
     - PrePop
         - Positive response
             - [request sample](sample%20messages/body-aim-returnprepop-request.xml)
