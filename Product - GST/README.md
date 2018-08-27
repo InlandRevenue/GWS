@@ -36,9 +36,9 @@ Test Details:
 - Test Data
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
+	- 
 	
-	
-	- Operation | Scenario ID | Data
+	Operation | Scenario ID | Data
 	--- | --- | ---	
 	File | EMS_GST013 | Customer IRD (*identifier*): 123090918
 	File | EMS_GST012 | Customer IRD (*identifier*): 123039456
