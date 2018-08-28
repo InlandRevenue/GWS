@@ -1,0 +1,39 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:emp1="urn:www.ird.govt.nz/GWS:types/Employment"
+               xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1"
+               xmlns:emp="https://services.ird.govt.nz/GWS/Employment/"
+               xmlns:cre="https://services.ird.govt.nz/GWS/Employment/:types/RetrieveListResponse">
+    <soap:Header/>
+    <soap:Body>
+        <emp:RetrieveListResponse>
+            <emp:RetrieveListResult>
+                <cre:RetrieveListResponseWrapper>
+                    <emp1:retrieveListResponse xmlns:emp1="urn:www.ird.govt.nz/GWS:types/Employment"
+                                               xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                        <com:statusMessage>
+                            <com:statusCode>0</com:statusCode>
+                            <com:errorMessage></com:errorMessage>
+                        </com:statusMessage>
+                        <emp1:responseBody>
+                            <emp1:listResponse>
+                                <emp1:employee>
+                                    <emp1:employeeIRD>123114116</emp1:employeeIRD>
+                                    <emp1:employeeName>
+                                        <emp1:nameFirst>Test</emp1:nameFirst>
+                                        <emp1:nameSurname>Retrieve Linked</emp1:nameSurname>
+                                    </emp1:employeeName>
+                                    <emp1:employeeNameOnEILine>Marie Billou</emp1:employeeNameOnEILine>
+                                    <emp1:taxCodes>
+                                        <emp1:taxCode>MSL</emp1:taxCode>
+                                        <emp1:taxCode>SLBOR</emp1:taxCode>
+                                    </emp1:taxCodes>
+                                    <emp1:employmentStartDate>2005-07-20</emp1:employmentStartDate>
+                                </emp1:employee>
+                            </emp1:listResponse>
+                        </emp1:responseBody>
+                    </emp1:retrieveListResponse>
+                </cre:RetrieveListResponseWrapper>
+            </emp:RetrieveListResult>
+        </emp:RetrieveListResponse>
+    </soap:Body>
+</soap:Envelope>

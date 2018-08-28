@@ -1,7 +1,31 @@
-This service is used by the following business process(es):
-* [Process - AIM - Income Statement Filing](https://github.com/InlandRevenue/Gateway-Services/tree/master/Process%20-%20AIM%20-%20Income%20Statement%20Filing)
-* [Process - Employment Activities](https://github.com/InlandRevenue/Gateway-Services/tree/master/Process%20-%20Employment%20Activities)
-* [Process - GST Return Filing](https://github.com/InlandRevenue/Gateway-Services/tree/master/Process%20-%20GST%20Return%20Filing)
+![IRD logo](../Images/IRlogo.gif)
+![Software Dev](../Images/SoftwareDev.png)
 
-See also these supporting services:
-* [Service - Identity and Access](https://github.com/InlandRevenue/Gateway-Services/tree/master/Service%20-%20Identity%20and%20Access)
+Return Service
+=======================================
+
+The Return Service provided through gateway services supports the business processes of 
+* filing a return, 
+* retrieving tax information for a customer
+* querying tax information for a customer
+* pre-population of information to assist with filing. 
+
+Key Features:
+-------------
+
+* [view Return schema](Latest/ReturnCommon.v1.xsd)
+* [view Return service build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf)
+
+Supporting schema
+-------------
+* [view Common schema](../Schema%20-%20Common/Common.v1.xsd)
+
+Products using this service:
+-------------
+* [Accounting Income Method (AIM) - Statement Filing](../Product%20-%20AIM)
+* [Goods and Services Tax (GST) - Return Filing](../Product%20-%20GST)
+* [Payday Filing](../Product%20-%20Payday%20Filing)
+
+Supporting services
+-------------
+* [Service - Identity and Access](../Service%20-%20Identity%20and%20Access/Latest/)

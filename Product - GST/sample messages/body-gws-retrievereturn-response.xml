@@ -1,0 +1,51 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+    <s:Header>
+        <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+    </s:Header>
+    <s:Body>
+        <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+            <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <b:RetrieveReturnResponseWrapper>
+                    <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                            <statusCode>0</statusCode>
+                            <errorMessage/>
+                        </statusMessage>
+                        <responseBody xsi:type="r:RetrieveReturnResponseBodyType" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1">
+                            <standardFields>
+                                <isNilReturn>false</isNilReturn>
+                            </standardFields>
+                            <formFields xmlns="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1">
+                                <gstSpecificFields>
+                                    <r:totalSales>1000.00</r:totalSales>
+                                    <r:totalSalesRestHomes>1000.00</r:totalSalesRestHomes>
+                                    <r:totalSalesHospitals>1000.00</r:totalSalesHospitals>
+                                    <r:zeroRatedSupplies>1000.00</r:zeroRatedSupplies>
+                                    <r:debitAdjustments>
+                                        <r:privateUsePeriodAdjustment>1000.00</r:privateUsePeriodAdjustment>
+                                        <r:privateUseOneOff>1000.00</r:privateUseOneOff>
+                                        <r:assetsAfterCease>1000.00</r:assetsAfterCease>
+                                        <r:entertainment>1000.00</r:entertainment>
+                                        <r:changeAccountingBasis>1000.00</r:changeAccountingBasis>
+                                        <r:exemptSupplies>1000.00</r:exemptSupplies>
+                                        <r:currentRateGSTAdjustments>1000.00</r:currentRateGSTAdjustments>
+                                        <r:other>1000.00</r:other>
+                                    </r:debitAdjustments>
+                                    <r:totalExpenses>1000.00</r:totalExpenses>
+                                    <r:creditAdjustments>
+                                        <r:useOfPrivateGoods>1000.00</r:useOfPrivateGoods>
+                                        <r:privateAssetsForBusiness>1000.00</r:privateAssetsForBusiness>
+                                        <r:changeAccountingBasis>1000.00</r:changeAccountingBasis>
+                                        <r:currentRateGSTCredits>1000.00</r:currentRateGSTCredits>
+                                        <r:other>1000.00</r:other>
+                                    </r:creditAdjustments>
+                                    <r:totalGST>3093.36</r:totalGST>
+                                </gstSpecificFields>
+                            </formFields>
+                        </responseBody>
+                    </retrieveReturnResponse>
+                </b:RetrieveReturnResponseWrapper>
+            </RetrieveReturnResult>
+        </RetrieveReturnResponse>
+    </s:Body>
+</s:Envelope>

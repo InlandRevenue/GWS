@@ -1,0 +1,32 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+	<s:Header>
+		<a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/PrepopResponse</a:Action>
+	</s:Header>
+	<s:Body>
+		<PrepopResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+			<PrepopResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/PrepopResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<b:PrepopResponseWrapper>
+					<prepopResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+						<statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+							<statusCode>0</statusCode>
+							<errorMessage/>
+						</statusMessage>
+						<responseBody xsi:type="r:PrepopResponseBodyType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1">
+							<r:accountId>123084217</r:accountId>
+							<r:periodEndDate>2017-03-31</r:periodEndDate>
+							<r:filingFrequency code="GST2M1">Two monthly - periods ending odd months</r:filingFrequency>
+							<r:dueDate>2017-05-08</r:dueDate>
+							<r:expectedMinorFormType>103D</r:expectedMinorFormType>
+							<r:multiBranch>false</r:multiBranch>
+							<r:provFiler>true</r:provFiler>
+							<r:provOption>RATIO</r:provOption>
+							<r:compulsory>true</r:compulsory>
+							<r:ratioTaxPercent>0.1</r:ratioTaxPercent>
+							<r:hospiceFiler>false</r:hospiceFiler>
+						</responseBody>
+					</prepopResponse>
+				</b:PrepopResponseWrapper>
+			</PrepopResult>
+		</PrepopResponse>
+	</s:Body>
+</s:Envelope>

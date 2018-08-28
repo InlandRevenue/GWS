@@ -1,6 +1,31 @@
+![IRD logo](../Images/IRlogo.gif)
+![Software Dev](../Images/SoftwareDev.png)
 
-This service is used by the following business process(es):
-* [Process - Transaction Data Services](https://github.com/InlandRevenue/Gateway-Services/tree/master/Service%20-%20TDS%20-%20Transaction%20Data%20Services)
+Intermediation Service
+=======================================
 
-See also these supporting services:
-* [Service - Identity and Access](https://github.com/InlandRevenue/Gateway-Services/tree/master/Service%20-%20Identity%20and%20Access)
+Intermediation is the process of linking an intermediary (such as a tax agent) to an individual or 
+organisation so the intermediary can act on their behalf for tax purposes. 
+While the Intermediation Gateway Service will eventually provide this linking feature, 
+initially it will only provide the ability to retrieve tax agent links already established in myIR. 
+
+Key Features:
+-------------
+
+* [view details](Latest/) for
+	- schemas and wsdls
+	- message samples
+	- build pack
+	
+Supporting schema
+-------------
+* [view Common schema](../Schema%20-%20Common/Common.v1.xsd)
+
+Products using this service:
+-------------
+* [Transaction Data Services](../Product%20-%20Transaction%20Data%20Services)
+
+Supporting services
+-------------
+* [Service - Identity and Access](../Service%20-%20Identity%20and%20Access/Latest/)
+* [Service - Software Intermediation](../Service%20-%20Software%20Intermediation)
