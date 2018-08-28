@@ -1,0 +1,65 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/File</wsa:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:ReturnFileRequestMsg>
+                <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
+                    <ret1:fileRequest xmlns:ret1="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1">
+                        <ret2:fileHeader xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                            <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                                <com:softwareProvider>SoftwareProvider</com:softwareProvider>
+                                <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
+                                <com:softwareRelease>1.0</com:softwareRelease>
+                            </com:softwareProviderData>
+                            <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1" IdentifierValueType="ACCIRD">123039858</com:identifier>
+                            <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">GST</com:accountType>
+                            <ret2:periodEndDate>2017-07-31</ret2:periodEndDate>
+                            <ret2:majorFormType>GST</ret2:majorFormType>
+                            <ret2:minorFormType>101A</ret2:minorFormType>
+                        </ret2:fileHeader>
+                        <ret2:fileBody xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                            <ret2:standardFields>
+                                <ret2:isNilReturn>false</ret2:isNilReturn>
+                                <ret2:isFinalReturn>true</ret2:isFinalReturn>
+                                <ret2:amendmentRequest>
+                                    <ret2:isAmended>false</ret2:isAmended>
+                                    <ret2:amendReason/>
+                                    <ret2:amendDetails/>
+                                </ret2:amendmentRequest>
+                            </ret2:standardFields>
+                            <ret2:formFields xsi:type="ret1:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <ret1:gstSpecificFields>
+                                    <ret1:totalSales>1000.00</ret1:totalSales>
+                                    <ret1:totalSalesRestHomes>1000.00</ret1:totalSalesRestHomes>
+                                    <ret1:totalSalesHospitals>1000.00</ret1:totalSalesHospitals>
+                                    <ret1:zeroRatedSupplies>1000.00</ret1:zeroRatedSupplies>
+                                    <ret1:debitAdjustments>
+                                        <ret1:privateUsePeriodAdjustment>1000.00</ret1:privateUsePeriodAdjustment>
+                                        <ret1:privateUseOneOff>1000.00</ret1:privateUseOneOff>
+                                        <ret1:assetsAfterCease>1000.00</ret1:assetsAfterCease>
+                                        <ret1:entertainment>1000.00</ret1:entertainment>
+                                        <ret1:changeAccountingBasis>1000.00</ret1:changeAccountingBasis>
+                                        <ret1:exemptSupplies>1000.00</ret1:exemptSupplies>
+                                        <ret1:currentRateGSTAdjustments>1000.00</ret1:currentRateGSTAdjustments>
+                                        <ret1:other>1000.00</ret1:other>
+                                    </ret1:debitAdjustments>
+                                    <ret1:totalExpenses>1000.00</ret1:totalExpenses>
+                                    <ret1:creditAdjustments>
+                                        <ret1:useOfPrivateGoods>1000.00</ret1:useOfPrivateGoods>
+                                        <ret1:privateAssetsForBusiness>1000.00</ret1:privateAssetsForBusiness>
+                                        <ret1:changeAccountingBasis>1000.00</ret1:changeAccountingBasis>
+                                        <ret1:currentRateGSTCredits>1000.00</ret1:currentRateGSTCredits>
+                                        <ret1:other>1000.00</ret1:other>
+                                    </ret1:creditAdjustments>
+                                    <ret1:totalGST>3093.36</ret1:totalGST>
+                                </ret1:gstSpecificFields>
+                            </ret2:formFields>
+                        </ret2:fileBody>
+                    </ret1:fileRequest>
+                </fil:FileRequestWrapper>
+            </ret:ReturnFileRequestMsg>
+        </ret:File>
+    </soap:Body>
+</soap:Envelope>
