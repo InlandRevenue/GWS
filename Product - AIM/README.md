@@ -33,6 +33,7 @@ Test Details:
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
 
 - Test Data
+	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
 	-
