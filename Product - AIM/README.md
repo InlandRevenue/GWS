@@ -30,6 +30,7 @@ Test Details:
 -----------------
 
 - Test Scenarios
+	- [Download test scenarios template](AIM%20-%20Returns%20Service%20-%20Test%20Scenarios.docx)
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
 
 - Test Data
