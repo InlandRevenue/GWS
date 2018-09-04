@@ -8,7 +8,7 @@ Key Features:
 -------------
 
 - Simulating GST filing operations
-	- [Test Scenarios and data](#test-details)
+	- [Test scenarios report template, mindmap and data](#test-details)
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
@@ -30,7 +30,7 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download test scenarios template](GST%20-%20Returns%20Service-%20Test%20Scenarios.docx)
+	- [Download test scenarios report template](GST%20-%20Return%20Service%20–%20Test%20Scenarios%20Report%20Template.docx)
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_GST.png)
 
 - Test Data

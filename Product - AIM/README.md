@@ -8,7 +8,7 @@ Key Features:
 -------------
 
 - Simulating AIM filing operations
-	- [Test Scenarios and data](#test-details)
+	- [Test scenarios report template, mindmap and data](#test-details)
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
@@ -30,8 +30,8 @@ Test Details:
 -----------------
 
 - Test Scenarios
-	- [Download test scenarios template](AIM%20-%20Returns%20Service%20-%20Test%20Scenarios.docx)
-	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_AIM.png)
+	- [Download test scenarios report template](AIM%20-%20Return%20Service%20–%20Test%20Scenarios%20Report%20Template.docx)
+	![Test Scenarios](images/AIM_Test_Scenarios_Mindmap.png)
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations

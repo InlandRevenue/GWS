@@ -8,7 +8,7 @@ Key Features:
 -------------
 
 - Simulating Employee Details (ED) filing operations
-	- [Test Scenarios and data](#test-details)
+	- [Test scenarios report template, mindmap and data](#test-details)
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
@@ -30,8 +30,8 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download test scenarios template](Payday%20Filing%20–%20Employee%20details%20Test%20Scenarios.docx)
-	![Test Scenarios](images/Emulated_Services_Coverage_Map-ES.png)
+	- [Download the test scenarios report template](Payday%20Filing%20–%20Employee%20Details%20–%20Test%20Scenarios%20Report%20Template.docx)
+	![Test Scenarios](images/Employee_Details_Test_Scenarios_Mind_Map.png)
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
