@@ -30,7 +30,7 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download test scenarios report template](GST%20-%20Return%20Service%20–%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download test scenarios report template](GST%20-%20Return%20Service%20-%20Test%20Scenarios%20Report%20Template.docx)
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_GST.png)
 
 - Test Data
