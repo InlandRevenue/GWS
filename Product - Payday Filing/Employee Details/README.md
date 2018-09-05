@@ -8,11 +8,9 @@ Key Features:
 -------------
 
 - Simulating Employee Details (ED) filing operations
-	- Test Scenarios
-	- Test Data
-    - Message samples (positive responses)
-    - Schema Validation
-    - Error Handling (Not Included)
+	- [Test scenarios report template, mindmap and data](#test-details)
+    - [Message samples](#message-samples-) - positive responses
+	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
@@ -28,23 +26,29 @@ Key Features:
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
-Features Details:
+Test Details:
 -----------------
 
-- Test Scenarios
-	![Test Scenarios](images/Emulated_Services_Coverage_Map-ES.png)
+- Test Scenarios 
+	- [Download the test scenarios report template](Payday%20Filing%20–%20Employee%20Details%20-%20Test%20Scenarios%20Report%20Template.docx)
+	![Test Scenarios](images/Employee_Details_Test_Scenarios_Mind_Map.png)
 
 - Test Data
-This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. Text in italics represents the name of the XML node in the request.
-	**To Add**
+	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
+	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
+	- Text in italics represents the name of the XML node in the request.
+	-
 	
-	Operation | Scenario ID | Data | 
-	RetrieveList | EMS_ES081 | Employee IRD (identifier): 123114116
-	Update | EMS_ES096 | Employee IRD (identifier): 123183711
-	Create | EMS_ES095 | Employee IRD (identifier): 123183711
+	Operation | Scenario ID | Data
+	--- | --- | ---
+	RetrieveList | EMS_ES081 | Employee IRD (*identifier*): 123114116
+	Update | EMS_ES096 | Employee IRD (*identifier*): 123183711
+	Create | EMS_ES095 | Employee IRD (*identifier*): 123183711
 	Update | EMS_ES099 | employmentStartDate: today's date
         
-- Message samples - simulating Employment Service Operations:
+Message samples :
+----------------- 
+- Simulating Employment Service Operations:
     - Create
         - Positive response
             - [request sample](sample%20messages/body-employment-create-request.xml)
