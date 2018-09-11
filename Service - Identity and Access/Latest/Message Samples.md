@@ -4,11 +4,15 @@
 Message Samples - OAuth requests and responses
 =======================================
 
+Note:
+- Parameters:
+        - {ServiceHostdomain}: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
+
 1. **Request Authorisation Code**  : Service consumer to IR
 	- Request sample
 		- Service provider will send a HTTP GET request to Auth Server, 
 			- Url format:
-				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=Test99999999&redirect_uri=https://myreturnuri/test/&scope=MYIR.Services&response_type=code
+				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=Test99999999&redirect_uri=https://myreturnuri/test/&scope=MYIR.Services&response_type=code
 		  
 2. **Authorisation Code response** : IR to Service consumer
 	- Success Response sample
@@ -19,7 +23,7 @@ Message Samples - OAuth requests and responses
 	- Exchange Authorisation Code for oAuth Access Token
 		- At this step as a service provider you need to send a HTTP POST request to Auth Server with Authorization Code and your client credentials
 			- Url format: 
-				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
+				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/access-token-requestheader.json)
 				- [request sample body](sample_messages/access-token-requestbody.txt)
 	
@@ -39,6 +43,11 @@ Message Samples - OAuth requests and responses
 	- Refresh token reply
 		- The Refresh token reply is the same as an authorisation code exchange for an Access token
 			- [response sample](sample_messages/refresh-token-reply.json)
+			
+	- Revoke consent request
+		- It may be prudent to revoke consent when testing in order to ensure the Service Provider software is correctly managing the Consent Management page being presented and Authorisation given
+			- Url format: 
+				> https://{ServiceHostdomain}/ms_oauth/oauth2/ui/oauthservice/showrevokeconsent 
 
 5. **Error response**
 	- [response sample](sample_messages/error-response.json)
@@ -47,7 +56,7 @@ Message Samples - OAuth requests and responses
 	- Validate token request 
 		- As a service provider you need to send a HTTP POST request to Auth Server with Access Token to validate your client credentials
 			- Url format:
-				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
+				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/validate-token-requestheader.json)
 				- [request sample body](sample_messages/validate-token-requestbody.json)
 
@@ -59,7 +68,7 @@ Message Samples - OAuth requests and responses
 	- Revoke token request 
 		- At this step as a service provider you need to send a HTTP POST request to Auth Server with Access Token OR Refresh Token to revoke your client credentials. 
 			- Url format:
-				> https://q.services.ird.govt.nz/ms_oauth/oauth2/endpoints/oauthservice/tokens
+				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
 				- [request sample header](sample_messages/revoke-token-requestheader.json)
 				- [request sample body](sample_messages/revoke-token-requestbody.json)
 	
