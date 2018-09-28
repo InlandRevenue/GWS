@@ -1,0 +1,26 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatus</wsa:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:RetrieveStatus xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:ReturnStatusRequestMsg>
+                <ret1:RetrieveStatusRequestWrapper xmlns:ret1="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusRequest">
+                    <ei:retrieveEIRequest xmlns:ei="urn:www.ird.govt.nz/GWS:types/ReturnEI.v1">
+                        <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                            <com:softwareProvider>SoftwareProvider</com:softwareProvider>
+                            <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
+                            <com:softwareRelease>1.0</com:softwareRelease>
+                        </com:softwareProviderData>
+                        <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1" IdentifierValueType="ACCIRD">123041607</com:identifier>
+                        <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">PSO</com:accountType>
+                        <ret2:periodEndDate xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">2018-05-31</ret2:periodEndDate>
+                        <ret2:majorFormType xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">EI</ret2:majorFormType>
+                        <ei:payDayDate>2018-04-10</ei:payDayDate>
+                        <ei:submissionKey>987654321</ei:submissionKey>
+                    </ei:retrieveEIRequest>
+                </ret1:RetrieveStatusRequestWrapper>
+            </ret:ReturnStatusRequestMsg>
+        </ret:RetrieveStatus>
+    </soap:Body>
+</soap:Envelope>

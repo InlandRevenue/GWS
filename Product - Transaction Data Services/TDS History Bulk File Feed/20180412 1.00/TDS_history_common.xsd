@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                IRD Business to business common data schema
+
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:nz.govt.ird.eservices.types.utility.common:0-6" targetNamespace="urn:nz.govt.ird.eservices.types.utility.common:0-6" elementFormDefault="qualified" attributeFormDefault="unqualified" xml:lang="en">
+	<!-- +++++++++++++++++++ Date and Time +++++++++++++++++++++++++++++ -->
+	<xsd:simpleType name="DateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Date in ISO format (YYYYMMDD). 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{4}[0|1]\d[0-3]\d"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ++++++++++++++++  Financial and Bank data ++++++++++++++++++++ -->
+	<xsd:simpleType name="MoneyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Signed monetary amount in dollars. No $ prefix or comma punctuation, 
+				two decimal places. e.g. 12345.67 -12345.67
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[+\-]?\d{1,11}(\.\d{2})?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- ++++++++++++++++++ IRD and DLN numbers ++++++++++++++++++++++ -->
+	<xsd:simpleType name="IrdNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				IRD number: 8 or 9 digit integer
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{8,9}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

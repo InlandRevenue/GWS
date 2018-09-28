@@ -1,0 +1,22 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:emp1="urn:www.ird.govt.nz/GWS:types/Employment"
+               xmlns:emp="https://services.ird.govt.nz/GWS/Employment/"
+               xmlns:cre="https://services.ird.govt.nz/GWS/Employment/:types/UpdateResponse"
+               xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+    <soap:Header/>
+    <soap:Body>
+        <emp:UpdateResponse>
+            <emp:UpdateResult>
+                <cre:UpdateResponseWrapper>
+                    <emp1:employmentResponse xmlns:emp1="urn:www.ird.govt.nz/GWS:types/Employment"
+                                             xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                        <com:statusMessage>
+                            <com:statusCode>0</com:statusCode>
+                            <com:errorMessage></com:errorMessage>
+                        </com:statusMessage>
+                    </emp1:employmentResponse>
+                </cre:UpdateResponseWrapper>
+            </emp:UpdateResult>
+        </emp:UpdateResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,19 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+    <s:Header>
+        <a:Action xmlns:a="http://www.w3.org/2005/08/addressing" s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/PrepopResponse</a:Action>
+    </s:Header>
+    <s:Body>
+        <PrepopResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+            <PrepopResult>
+                <b:PrepopResponseWrapper xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/PrepopResponse">
+                    <prepopResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                            <statusCode>111</statusCode>
+                            <errorMessage>Customer is ineligible for AIM Statement of Activity</errorMessage>
+                        </statusMessage>
+                    </prepopResponse>
+                </b:PrepopResponseWrapper>
+            </PrepopResult>
+        </PrepopResponse>
+    </s:Body>
+</s:Envelope>

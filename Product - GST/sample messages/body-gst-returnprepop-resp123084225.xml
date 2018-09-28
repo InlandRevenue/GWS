@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:a="http://www.w3.org/2005/08/addressing"
+               xmlns:ret="https://services.ird.govt.nz/GWS/Returns/"
+               xmlns:prep="https://services.ird.govt.nz/GWS/Returns/:types/PrepopResponse"
+               xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1"
+               xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1"
+               xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+    <soap:Header>
+        <a:Action soap:mustUnderstand="1">https://services.ird.govt.nz/GWS/Return/ReturnPrepop</a:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:PrepopResponse>
+            <!--Optional:-->
+            <ret:PrepopResult>
+                <prep:PrepopResponseWrapper>
+                    <prepopResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                        <com:statusMessage xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                            <com:statusCode>0</com:statusCode>
+                            <com:errorMessage></com:errorMessage>
+                        </com:statusMessage>
+                        <!--Optional:-->
+                        <responseBody xsi:type="r:PrepopResponseBodyType" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnGST.v1"
+                                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">							
+							<r:accountId>123084225</r:accountId>
+							<r:periodEndDate>2017-06-30</r:periodEndDate>
+							<r:filingFrequency code="GSTMO">Monthly</r:filingFrequency>
+							<r:dueDate>2017-07-28</r:dueDate>
+							<r:expectedMinorFormType>103H</r:expectedMinorFormType>
+							<r:multiBranch>false</r:multiBranch>
+							<r:provFiler>true</r:provFiler>
+							<r:provOption>RATIO</r:provOption>
+							<r:compulsory>true</r:compulsory>
+							<r:ratioTaxPercent>0.1</r:ratioTaxPercent>
+							<r:hospiceFiler>false</r:hospiceFiler>							
+                        </responseBody>
+                    </prepopResponse>
+                </prep:PrepopResponseWrapper>
+            </ret:PrepopResult>
+        </ret:PrepopResponse>
+    </soap:Body>
+</soap:Envelope>

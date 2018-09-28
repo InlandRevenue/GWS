@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation
+_______________________________________
+NAME: 	Common.xsd
+VER:		1.03
+ISSUER:	Inland Revenue Department
+DATE:		20/12/2017
+DESC:		This schema defines the common data types used accross the IRD hosted, Gateway Services.
+_______________________________________
+-->
+<xsd:schema xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:www.ird.govt.nz/GWS:types/Common.v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!--Money Types-->
+	<xsd:simpleType name="MoneyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">All values should be NZ dollar.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:fractionDigits value="2"/>
+			<xsd:minInclusive value="-99999999999.99"/>
+			<xsd:maxInclusive value="9999999999999.99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="MoneyTypePositive">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Decimal values accepting only positive amounts, including 0. Sometimes referred to as a Debit.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="MoneyType">
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="MoneyTypeNegative">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Decimal value accepting only negative amounts, including 0. sometimes referred to as a Credit.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="MoneyType">
+			<xsd:maxInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--Quantity Types-->
+	<xsd:simpleType name="QuantityType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Integer with set bounds</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="-99999999999"/>
+			<xsd:maxInclusive value="9999999999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="QuantityTypePositive">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Integer values accepting only positive amounts, including 0.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="QuantityType">
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="QuantityTypeNegative">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Integer value accepting only negative amounts, including 0.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="QuantityType">
+			<xsd:maxInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--Date/Time Types-->
+	<xsd:simpleType name="MonthType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+			Enumeration for noting the month based on the Gregorian calendar.
+        01: January
+        02: February
+        03: March
+        04: April
+        05: May
+        06: June
+        07: July
+        08: August
+        09: September
+        10: October
+        11: November
+        12: December
+		  </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="01"/>
+			<xsd:enumeration value="02"/>
+			<xsd:enumeration value="03"/>
+			<xsd:enumeration value="04"/>
+			<xsd:enumeration value="05"/>
+			<xsd:enumeration value="06"/>
+			<xsd:enumeration value="07"/>
+			<xsd:enumeration value="08"/>
+			<xsd:enumeration value="09"/>
+			<xsd:enumeration value="10"/>
+			<xsd:enumeration value="11"/>
+			<xsd:enumeration value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="YearType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type used to identify years in YYYY format.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:gYear">
+			<xsd:minInclusive value="1850"/>
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DateType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type use to confer a date. xsd:date is used as opposed to other options as the xsd:date type is standard across platforms.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:date">
+			<xsd:minExclusive value="1850-01-01"/>
+			<xsd:maxInclusive value="9999-12-31"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="DateTimeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type use to confer a datetime.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:dateTime">
+			<xsd:minExclusive value="1850-01-01T00:00:00Z"/>
+			<xsd:maxInclusive value="9999-12-31T00:00:00Z"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PercentageType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type used for percetages.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="100.0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--Other Types-->
+	<xsd:simpleType name="IRDNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Older style 8 digit IRD Numbers must be prepended with a zero.  No distinction is made between an entity level IRD Number (a prime IRD Number) and a branch or location level IRD Number (an "OSN").
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{9}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IdentifierValueTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Examples
+				IRD: Inland Revenue Dept. Number
+				ACCIRD: Account IRD
+				CST: Customer ID (Software Intermediaries only)
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IdentifierTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This type is define the attibute of the IdentifierType. It's defined separeately to allow defined the restriction.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:maxLength value="30"/>
+			<xsd:pattern value=".+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This type is utilised to contain various ID/identifiers.
+			    Example: <!--<cmn:identifier IdentifierValueType="ACCIRD">123123123</cmn:identifier>-->
+			    All IRD's should be of length 9. If an 8 digit IRD needs to be submitted a leading 0 must be added.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="IdentifierTypeType">
+				<xsd:attribute name="IdentifierValueType" type="IdentifierValueTypeType" use="required"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="AccountTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Example Account Types:
+					GST: GST
+					GSD: Goods sold in satisfaction of a debt
+					INC: Income tax
+					AIL: Approved issuer levy
+					CPR: Child support - custodian
+					CSE: Child support employer deductions
+					NCP: Child support - paying parent
+					SSC: Employer superannuation contribution tax
+					FBA: Fringe benefit tax - annual
+					FBI: Fringe benefit tax - income year
+					FBT: Fringe benefit tax
+					WPN: Foreign dividend - annual return
+					WPE: Foreign dividend - quarterly return
+					GMD: Gaming machine duty
+					ICA: Imputation credit account
+					KSE: KiwiSaver employee deductions
+					KSR: KiwiSaver employer contributions
+					KSS: KiwiSaver voluntary contributions
+					MAC: Maori authority credit
+					NRT: NRWT deductions
+					PAY: PAYE employer deductions
+					PIE: Portfolio investment entity tax
+					QCT: Qualifying company election tax
+					DWT: RWT deductions on dividends
+					RWT: RWT deductions on interest
+					IPE: RWT deductions on specified dividends
+					SLS: Student load borrower
+					SLE: Student load employer deductions
+					FAM: Working for Families Tax Credits
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[A-Z]{3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AccountIDType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+			This data type is for formatting account IDs. 
+			Example: 012012012GST001
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[0-9]{9}[A-Z]{3}[0-9]{3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TaxCodeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This field is used to submit tax codes for all different tax types.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountryType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">ISO 3166 alpha-3 standard country code</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:length value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--Name Types-->
+	<xsd:simpleType name="NameFirstType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">First name of an individual.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NameMiddleType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Middle name of an individual.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NameSurnameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Last name/surname of an individual.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NameTitleType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Last name/surname of an individual.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="2"/>
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="FormattedNameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type used for free-format names</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="250"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="NamePersonType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type used to convey the proper name of an individual.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="nameTitle" type="NameTitleType" minOccurs="0"/>
+			<xsd:element name="nameFirst" type="NameFirstType"/>
+			<xsd:element name="nameSurname" type="NameSurnameType"/>
+			<xsd:element name="nameMiddle" type="NameMiddleType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">If an individual has mutliple middle names only the most significant shoudl be used, or all names should be noted up to the character limit.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NamePersonNoMiddleType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type used to convey the proper name of an individual without middle name.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="nameFirst" type="NameFirstType"/>
+			<xsd:element name="nameSurname" type="NameSurnameType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="NameOrganisationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Free format organisation name.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="500"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="NameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type provide a choice between using a mutually exclusive indivual name or organisation name.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="person" type="NamePersonType"/>
+			<xsd:element name="organisation" type="NameOrganisationType"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--Contact Types-->
+	<xsd:simpleType name="EmailAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">An email address of the form x@y.z where x and y are alpha-numeric strings, z is an alphabet string, there is an embedded @ and no embedded whitespace or illegal characters.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]+)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CountryCodeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Standard 3 digit country code.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AreaNetworkPrefixType">
+		<xsd:annotation>
+			<xsd:documentation source="ITU-T/E.164" xml:lang="en">The area/network code</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{0,5}">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Up to 5 digits with non-zero first digit</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="LocalPhoneNumberType">
+		<xsd:annotation>
+			<xsd:documentation source="ITU-T/E.164" xml:lang="en">The local part of a phone number</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="(\d{1,15})">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Local part of a phone number is a string of up to 15 digits which can include leading zeroes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PhoneTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Should only be one of the following values: CELL (mobile), BSN (Business), HOM (HOME).
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="UnstructuredPhoneNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">An unstructured phone number. As serialised text it can be up to 15 digits with an optional leading plus sign and two internal delimiters. This form of phone number should be avoided in favour of the structured ITU-T/E.164 format</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PhoneExtensionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">A phone extension</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="(\d{1,9})">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">A phone extension, up to 9 digits</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="StructuredPhoneNumberType">
+		<xsd:annotation>
+			<xsd:documentation source="ITU-T/E.164" xml:lang="en">A phone number structured as per ITU-T/E.164</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="phoneType" type="PhoneTypeType"/>
+			<xsd:element name="country" type="CountryCodeType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The country code prefix to a phone number</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="areaCode" type="AreaNetworkPrefixType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The area or network code that prefaces a phone numner</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="number" type="LocalPhoneNumberType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The local part of a phone number</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="extension" type="PhoneExtensionType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">A phone extension number</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--Address Types-->
+	<xsd:simpleType name="UnitTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">A type of unit within a multi-tenancy complex such as "Apartment", "Floor", "Flat", "Counter"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="UnitNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The value that identifies the unit (i.e. the apartment, flat etc)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="UnitType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The NZ Post standard describes the unit type and id as distinct elements that must be presented on a single address line</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="type" type="UnitTypeType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">A type of addressable unit such as a floor, flat, apartment, unit etc</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="number" type="UnitNumberType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The value of the above addressable unit, the apartment number, floor number etc</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="NZPostCodeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The NZ Post post code is a 4 digit string which might have leading zeros.  The NZ Post standard requires that the post code must be presented on the same line as the town/city and must follow the town/city</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="\d{4}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SuburbType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The name of a suburb within a city or large town</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PropertyNameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The name of a building, campus, farm or multi-tenanted complex containing the above unit.   For example "Central Hospital", "University of Gotham", "MacDonald's Farm".  Typically displayed on its own line after the unit (if present) and above the delivery line.  The NZ Post address standard uses the term "Building Name" to describe this.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StreetAddressNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The number of an address on a street or other type of thoroughfare.  Usually a positive integer but can be a composite of a unit and number (e.g. "24C", "2/46").</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StreetAddressNameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The name of throughfare of numbered addresses such as a road, street, avenue, square, canal etc.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="StreetAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The number on a thoroughfare and name of that thoroughfare (e.g. street, road, square, mooring etc) where post can be delivered. The number might be a simple integer (e.g. "1","2"...) or a compound value such as "34B" or "1/67" and the name is a string such as "High Street", "4th Avenue", "Union Square" etc. The NZ Post standard describes the number and name as discrete elements but for an address to comply with the standard they must be concatenated on one line.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="streetNumber" type="StreetAddressNumberType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The number of a house, building, boat etc on a thoroughfare.  Can be a compressed unit e.g. "23B", "4/79"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="streetName" type="StreetAddressNameType">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">The name of a street, road, square or other thoroughfare e.g. "High St", "Union Square", "42nd Street"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="TownCityType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The name of a town or city where a street address or post office is located</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="StateProvinceType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This value will be the numeric or alpha representation of the country's state, province, or region.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+			<xsd:minLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="AddressType" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Represents a type of address that can be physically visited, or at which someone or something can reside, be delivered or dispatched. This is abstract and can be realised in a variety of forms such as a structured address, unstructured address, NZ postal address etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:complexType>
+	<xsd:complexType name="NZPostAddressType">
+		<xsd:annotation>
+			<xsd:documentation source="https://www.nzpost.co.nz/sites/default/files/uploads/shared/standards-guides/adv358-address-standards.pdf" xml:lang="en">NZ Post standards include the specification of a recipient, i.e. the name of a person and/or organisation.  The recipient information is not included in this definition, instead it is assumed that it will be prepended to the address if/when the address is used for delivery of post</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AddressType">
+				<xsd:sequence>
+					<xsd:element name="streetAddress" type="StreetAddressType"/>
+					<xsd:element name="unit" type="UnitType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">An addressable part of a multi-tenanted building or complex e.g. a floor, apartment, flat, unit, townhouse etc.  The unitType and unitValue are displayed together on one line (e.g. "Apartment 5"). The NZ Post specification makes a distinction between a floor and a unit (but only permits one or the other) whereas we treat a floor as a type of unit</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="townCity" type="TownCityType">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">The name of the town or city of either the recipient of the mail, or of the post office from which the recipient will collect their mail</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="postCode" type="NZPostCodeType">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">The post code formatted as per local standards. In NZ it is a 4 digit string.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="country" fixed="NZL">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">NZ Post standard applies to mail to be delivered within NZ only</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ForeignAddressType">
+		<xsd:complexContent>
+			<xsd:extension base="AddressType">
+				<xsd:sequence>
+					<xsd:element name="streetAddress" type="StreetAddressType"/>
+					<xsd:element name="unit" type="UnitType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">An addressable part of a multi-tenanted building or complex e.g. a floor, apartment, flat, unit, townhouse etc.  The unitType and unitValue are displayed together on one line (e.g. "Apartment 5"). The NZ Post specification makes a distinction between a floor and a unit (but only permits one or the other) whereas we treat a floor as a type of unit</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="townCity" type="TownCityType">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">The name of the town or city of either the recipient of the mail, or of the post office from which the recipient will collect their mail</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="stateProvince" type="StateProvinceType">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">This value will be the numeric or alpha representation of the country's state, province, or region.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="country" type="CountryType">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">Open country allows to name address outside NZL</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="FormattedAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Type used for free-format addresses. Should be used carefully.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="250"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="OpenAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">For use in incoming addresses. Allows any address type to be submitted.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="nzPostAddress" type="NZPostAddressType"/>
+			<xsd:element name="foreignAddress" type="ForeignAddressType"/>
+			<xsd:element name="freeFormAddress" type="FormattedAddressType"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--Banking Types-->
+	<xsd:complexType name="BankAccountType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Choice between all local and foreign banking standards.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element name="nzBankStandard" type="NZBankStandardType"/>
+			<xsd:element name="nzBankCreditUnion" type="NZCreditUnionType"/>
+			<xsd:element name="ausBankStandard" type="AUSBankStandardType"/>
+			<xsd:element name="usCanBankStandard" type="USCanBankStandardType"/>
+			<xsd:element name="swiftBicBankStandard" type="SwiftBankStandard"/>
+			<xsd:element name="ibanBankStandard" type="IBANBankingType"/>
+			<xsd:element name="swiftBic_IBANBankStandard" type="SwiftIBANBankingType"/>
+			<xsd:element name="otherBankStandard" type="OtherBankStandardType"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="NZBankAccountType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Used when dealing with only domestic bank accounts otherwise BankAccountType should be used.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="nzBankStandard" type="NZBankStandardType"/>
+			<xsd:element name="nzBankCreditUnion" type="NZCreditUnionType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SwiftIBANBankingType">
+		<xsd:annotation>
+			<xsd:documentation>This data type can be used when a swift/bic code needs to be submitted with an IBAN (example Central African Frank)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="swiftBICcode" type="SwiftBicCodeType"/>
+			<xsd:element name="twoCharCountryCode" type="TwoCharCountryCodeType"/>
+			<xsd:element name="checkDigit" type="CheckDigitType"/>
+			<xsd:element name="basicBankAccountNumber" type="BBANType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OtherBankStandardType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This field is for any bank accounts that do not fit any of the other banking data types.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="branch" type="OtherBranchType"/>
+			<xsd:element name="account" type="OtherAccountType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="OtherBranchType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This field is a generic field for branch identifiers and account prefixes</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[a-zA-Z0-9]{1,30}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="OtherAccountType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This field is a generic field for an account</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[a-zA-Z0-9]{1,34}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="USCanBankStandardType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Data type to represent the US and Canadian Routing/Account standard.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="routingNumber" type="USCanRoutingNumberType"/>
+			<xsd:element name="accountNumber" type="USCanAccountNumberType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="USCanRoutingNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The segment of the NZ bank account number that identifies the Bank</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{9}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="USCanAccountNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The segment of the NZ bank account number that identifies the Bank</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="6"/>
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="NZBankStandardType">
+		<xsd:sequence>
+			<!--check with dispersment team to verify all metadata needed is here. -->
+			<xsd:element name="bank" type="NZBankIdType"/>
+			<xsd:element name="branch" type="NZBranchCodeType"/>
+			<xsd:element name="account" type="NZBankAcctBaseNumberType"/>
+			<xsd:element name="suffix" type="NZBankAccountSuffixType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="NZCreditUnionType">
+		<xsd:annotation>
+			<xsd:documentation>Some credit unions do not require a reference number. For those credit unions, referenceNumber is not required.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="NZBankStandardType">
+				<xsd:sequence>
+					<xsd:element name="referenceNumber" type="NZCreditUnionReferenceType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="NZCreditUnionReferenceType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{12}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NZBankIdType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The segment of the NZ bank account number that identifies the Bank</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NZBranchCodeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The segment of the NZ bank account number that identifies the Branch</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{4}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NZBankAcctBaseNumberType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The main body of the bank account within the contaxt of the bank and branch</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{8}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="NZBankAccountSuffixType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The 2 or 3 digit suffix of the NZ bank account, usually indicates the type of account.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{4}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="AUSBankStandardType">
+		<xsd:sequence>
+			<!--check with dispersment team to verify all metadata needed is here. -->
+			<xsd:element name="bsb" type="BSBType"/>
+			<xsd:element name="account" type="AUSAccountType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="BSBType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The segment of the AUS bank account number that identifies the BSB</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="AUSAccountType">
+		<xsd:restriction base="xsd:token">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="SwiftBankStandard">
+		<xsd:sequence>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">This grouping is for banking with SwiftCodes</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="swiftBICcode" type="SwiftBicCodeType"/>
+			<xsd:element name="basicBankAccountNumber" type="BBANType"/>
+		</xsd:sequence>
+		<!--For all countries not validated, Only validate BIC Code-->
+	</xsd:complexType>
+	<xsd:complexType name="IBANBankingType">
+		<xsd:sequence>
+			<xsd:annotation>
+				<xsd:documentation xml:lang="en">This grouping is for IBAN banking standards.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:element name="twoCharCountryCode" type="TwoCharCountryCodeType"/>
+			<xsd:element name="checkDigit" type="CheckDigitType"/>
+			<xsd:element name="basicBankAccountNumber" type="BBANType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="TwoCharCountryCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[A-Z]{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="CheckDigitType">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[0-9]{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SwiftBicCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:maxLength value="11"/>
+			<xsd:minLength value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="BBANType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Datatype for a standard BBAN account</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SoftwareProviderType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This will be used for the StandardHeader to determine which company/software/ver is submitting the request</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SoftwarePlatformType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This will be used for the StandardHeader to determine which company/software/ver is submitting the request</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="SoftwareReleaseVersionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This will be used for the StandardHeader to determine which company/software/ver is submitting the request</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="SoftwareInformationType">
+		<xsd:sequence>
+			<xsd:element name="softwareProvider" type="SoftwareProviderType"/>
+			<xsd:element name="softwarePlatform" type="SoftwarePlatformType"/>
+			<xsd:element name="softwareRelease" type="SoftwareReleaseVersionType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--Header Types-->
+	<xsd:complexType name="HeaderType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">This header will be used across all gateway services. The account type is optional as some services will not require an account.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="softwareProviderData" type="SoftwareInformationType"/>
+			<xsd:element name="identifier" type="IdentifierType"/>
+			<xsd:element name="accountType" type="AccountTypeType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Type of account this return applies to. Optional for if the identifier type is ACCID, required for all other cases.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--Message Response Types-->
+	<xsd:complexType name="MessageStatusType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">The status code will always have a value returned, however the errorMessage will only be populated when an error message should be conveyed.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="statusCode" type="xsd:integer">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">Identifies the status of the message. 0 indicates a successful request. Positive integers correspond to expected error codes. A positive value is a known error code which should appear in the spreadsheet and "-1" indicates an undefined type of error.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="errorMessage" type="xsd:normalizedString">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+            Describes the error, in particular, its context. Blank on success.
+          </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="StandardResponseType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Defines the response for the standard operation.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="statusMessage" type="MessageStatusType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

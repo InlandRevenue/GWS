@@ -1,0 +1,170 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Account/Account/RetrieveAccountSummariesResponse</a:Action>
+   </s:Header>
+   <s:Body>
+      <RetrieveAccountSummariesResponse xmlns="https://services.ird.govt.nz/GWS/Account/">
+         <RetrieveAccountSummariesResult xmlns:b="https://services.ird.govt.nz/GWS/Account/:types/RetrieveAccountSummariesResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <b:RetrieveAccountSummariesResponseWrapper>
+               <retrieveAccountSummariesResponse xmlns="urn:www.ird.govt.nz/GWS:types/Account">
+                  <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                     <statusCode>0</statusCode>
+                     <errorMessage/>
+                  </statusMessage>
+                  <responseBody>
+                     <list>
+                        <header>
+                           <retrieveDate>2018-03-05T13:11:48</retrieveDate>
+                        </header>
+                        <account>
+                           <accountId>123-025-148-GST004</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>22 PRETORIA STREET LOWER HUTT 5018</formattedAddress>
+                           <formattedName>7 Days</formattedName>
+                           <filingFrequency>GST2M1</filingFrequency>
+                           <accountType>GST</accountType>
+                           <balance>678.20</balance>
+                           <forecastedBalance>678.20</forecastedBalance>
+                           <maxActivity>2018-01-09T14:44:31</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-025-148-RWT002</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>22 PRETORIA STREET LOWER HUTT 5018</formattedAddress>
+                           <formattedName>7 Days</formattedName>
+                           <filingFrequency>RWTMO</filingFrequency>
+                           <accountType>RWT</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-041-507-GST002</accountId>
+                           <commenceDate>2017-10-31</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>1 CAIRO STREET EBDENTOWN UPPER HUTT 5018</formattedAddress>
+                           <formattedName>I Want It All</formattedName>
+                           <filingFrequency>GST2M1</filingFrequency>
+                           <accountType>GST</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-074-475-FBT004</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>36 SHAKESPEARE AVENUE TRENTHAM UPPER HUTT 5018</formattedAddress>
+                           <formattedName>Break Thru Ltd</formattedName>
+                           <filingFrequency>FBT3M</filingFrequency>
+                           <accountType>FBT</accountType>
+                           <balance>3980.20</balance>
+                           <forecastedBalance>3990.97</forecastedBalance>
+                           <maxActivity>2017-12-20T09:20:30</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-085-299-AIL002</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>23 MURRAY STREET223355 WALLACEVILLE UPPER HUTT 5018</formattedAddress>
+                           <formattedName>BTOD2</formattedName>
+                           <filingFrequency>AILMO</filingFrequency>
+                           <accountType>AIL</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-085-299-DWT006</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>23 MURRAY STREET223355 WALLACEVILLE UPPER HUTT 5018</formattedAddress>
+                           <formattedName>BTOD2</formattedName>
+                           <filingFrequency>DWTMO</filingFrequency>
+                           <accountType>DWT</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-085-299-FBT003</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>23 MURRAY STREET223355 WALLACEVILLE UPPER HUTT 5018</formattedAddress>
+                           <formattedName>BTOD2</formattedName>
+                           <filingFrequency>FBT3M</filingFrequency>
+                           <accountType>FBT</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-085-302-AIL005</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>23 MURRAY STREET223355 WALLACEVILLE UPPER HUTT 5018</formattedAddress>
+                           <formattedName>BTOD2</formattedName>
+                           <filingFrequency>AILMO</filingFrequency>
+                           <accountType>AIL</accountType>
+                           <balance>255.63</balance>
+                           <forecastedBalance>255.63</forecastedBalance>
+                           <maxActivity>2017-12-21T08:47:28</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-085-582-GMD003</accountId>
+                           <commenceDate>2017-04-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>3 SUTHERLAND AVENUE UPPER HUTT 5018</formattedAddress>
+                           <formattedName>The Show Must Go On Ltd</formattedName>
+                           <filingFrequency>GMDMO</filingFrequency>
+                           <accountType>GMD</accountType>
+                           <balance>24121.19</balance>
+                           <forecastedBalance>24246.84</forecastedBalance>
+                           <maxActivity>2017-12-20T09:20:24</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-088-883-NRT008</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>1 WOOD STREET WALLACEVILLE UPPER HUTT 5018</formattedAddress>
+                           <formattedName>Audioslave</formattedName>
+                           <filingFrequency>NRTMO</filingFrequency>
+                           <accountType>NRT</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-090-365-RLT002</accountId>
+                           <commenceDate>2017-04-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>1 WOOD STREET WALLACEVILLE UPPER HUTT 5018</formattedAddress>
+                           <formattedName>Bleeding Out</formattedName>
+                           <filingFrequency>RLTMO</filingFrequency>
+                           <accountType>RLT</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                        <account>
+                           <accountId>123-092-139-GST003</accountId>
+                           <commenceDate>2017-01-01</commenceDate>
+                           <ceaseDate>9999-12-31</ceaseDate>
+                           <formattedAddress>101 HEWER CRESCENT NAENAE LOWER HUTT 5011</formattedAddress>
+                           <formattedName>Benefit Me</formattedName>
+                           <filingFrequency>GSTMO</filingFrequency>
+                           <accountType>GST</accountType>
+                           <balance>0.00</balance>
+                           <forecastedBalance>0.00</forecastedBalance>
+                           <maxActivity>1900-01-01T00:00:00</maxActivity>
+                        </account>
+                     </list>
+                  </responseBody>
+               </retrieveAccountSummariesResponse>
+            </b:RetrieveAccountSummariesResponseWrapper>
+         </RetrieveAccountSummariesResult>
+      </RetrieveAccountSummariesResponse>
+   </s:Body>
+</s:Envelope>
