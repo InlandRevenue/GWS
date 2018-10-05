@@ -30,14 +30,16 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download test scenarios report template](GST%20-%20Return%20Service%20-%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download test scenarios report template](GST%20-%20Return%20Service%20-%20Test%20Report%20Template.docx)
+	- GST Test Scenarios Mindmap
+	
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_GST.png)
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
-	- 
+	
 	
 	Operation | Scenario ID | Data
 	--- | --- | ---	
