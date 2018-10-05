@@ -30,7 +30,9 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Report%20Template.docx)
+	- Employment Information Test Scenarios Mindmap
+	
 	![Test Scenarios](images/Employment_Information_Test_Scenarios_Mind_Map.png)
 
 - Test Data
