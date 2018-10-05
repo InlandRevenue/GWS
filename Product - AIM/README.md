@@ -30,7 +30,8 @@ Test Details:
 -----------------
 
 - Test Scenarios
-	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
+	
 	![Test Scenarios](images/AIM_Test_Scenarios_Mindmap.png)
 
 - Test Data
