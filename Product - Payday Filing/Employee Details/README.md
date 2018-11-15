@@ -12,6 +12,9 @@ Key Features:
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
+- Business use cases
+	- [view on IR website](https://www.ird.govt.nz/resources/e/2/e2d9e606-76d3-44f7-9127-2584666b5f09/Payday+filing+-+Employee+details+business+use+cases.pdf)
+	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../../Service%20-%20Return/Latest/)
@@ -19,9 +22,6 @@ Key Features:
 	
 - Employment Service 
 	- [Download the build pack](Gateway%20Services%20Build%20Pack%20-%20Employment%20Service.pdf) to view data definitions of each operation and response status code definitions
-	
-- Business use cases 
-	- [view on IR website](https://www.ird.govt.nz/resources/e/2/e2d9e606-76d3-44f7-9127-2584666b5f09/Payday+filing+-+Employee+details+business+use+cases.pdf)
 	
 - Identity and Access Service
 	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
