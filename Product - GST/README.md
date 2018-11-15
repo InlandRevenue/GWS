@@ -12,6 +12,9 @@ Key Features:
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
+- Business use cases
+	- [view on IR website](https://www.ird.govt.nz/resources/8/9/89938b0d-09d4-49c9-8e4b-ad30527a9d56/GST+Business+use+cases.pdf)
+	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../Service%20-%20Return/Latest/)
