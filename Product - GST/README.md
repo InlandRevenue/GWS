@@ -12,6 +12,9 @@ Key Features:
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
+- Business use cases
+	- [view on IR website](https://www.ird.govt.nz/resources/8/9/89938b0d-09d4-49c9-8e4b-ad30527a9d56/GST+Business+use+cases.pdf)
+	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../Service%20-%20Return/Latest/)
@@ -30,14 +33,16 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download test scenarios report template](GST%20-%20Return%20Service%20-%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download test scenarios report template](GST%20-%20Return%20Service%20-%20Test%20Report%20Template.docx)
+	- GST Test Scenarios Mindmap
+	
 	![Test Scenarios](images/Emulated_Services_Coverage_Map-Return_GST.png)
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
-	- 
+	
 	
 	Operation | Scenario ID | Data
 	--- | --- | ---	
