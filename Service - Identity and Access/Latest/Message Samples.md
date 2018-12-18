@@ -13,6 +13,13 @@ Note:
 		- Service provider will send a HTTP GET request to Auth Server, 
 			- Url format:
 				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=Test99999999&redirect_uri=https://myreturnuri/test/&scope=MYIR.Services&response_type=code
+				
+	- The user will be asked to logon and for the very first login will be required to consent.
+	
+	- Revoke consent request
+		- This consent can be withdrawn. For testing purposes it is recommended to utilise the revoke consent to retest the first time login and consent scenario.
+			- Url format: 
+				> https://{ServiceHostdomain}/ms_oauth/oauth2/ui/oauthservice/showrevokeconsent 
 		  
 2. **Authorisation Code response** : IR to Service consumer
 	- Success Response sample
@@ -43,11 +50,6 @@ Note:
 	- Refresh token reply
 		- The Refresh token reply is the same as an authorisation code exchange for an Access token
 			- [response sample](sample_messages/refresh-token-reply.json)
-			
-	- Revoke consent request
-		- It may be prudent to revoke consent when testing in order to ensure the Service Provider software is correctly managing the Consent Management page being presented and Authorisation given
-			- Url format: 
-				> https://{ServiceHostdomain}/ms_oauth/oauth2/ui/oauthservice/showrevokeconsent 
 
 5. **Error response**
 	- [response sample](sample_messages/error-response.json)
