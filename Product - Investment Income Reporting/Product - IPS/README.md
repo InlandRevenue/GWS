@@ -11,13 +11,13 @@ Key Features:
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
-- Business use cases and worked examples
-	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-AIL-business-use-cases-worked-examples.pdf)
+- Business use cases
+	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-IPS-business-use-cases-worked-examples.pdf)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
 	- View and download the [return service Investment Income common xsd](../../Service%20-%20Return/Latest/)
-	- View and download the AIL return [xsd](ReturnAIL.v1.xsd) and [wsdl](ReturnsAILDevWsdl.wsdl) from this current directory
+	- View and download the IPS return [xsd](ReturnAIL.v1.xsd) and [wsdl](ReturnsIPSDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
