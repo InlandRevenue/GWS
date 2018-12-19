@@ -1,23 +1,23 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Approved issuer levy (AIL) Software Development Kit (SDK) for Investment Income Reporting
+Dividend withholding tax (DWT) Software Development Kit (SDK) for Investment Income Reporting
 =======================================
 
 Key Features:
 -------------
 
-- Simulating AIL filing operations
+- Simulating DWT filing operations
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-AIL-business-use-cases-worked-examples.pdf)
+	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-DWT-business-use-cases-worked-examples.pdf)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
-	- View and download the [return service Investment Income common xsd](../../Service%20-%20Return/Latest/)
-	- View and download the AIL return [xsd](ReturnAIL.v1.xsd) and [wsdl](ReturnsAILDevWsdl.wsdl) from this current directory
+	- View and download the [return service Investment Income reporting common xsd](../../Service%20-%20Return/Latest/)
+	- View and download the DWT return [xsd](ReturnDWT.v1.xsd) and [wsdl](ReturnsDWTDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
@@ -34,16 +34,16 @@ Key Features:
 - Simulating AIL Returns Operations:
     - File
         - Positive response
-            - [request sample](sample%20messages/body-ail-returnfile-request.xml)
-            - [response sample](sample%20messages/body-ail-returnfile-response.xml)
+            - [request sample](sample%20messages/body-dwt-returnfile-request.xml)
+            - [response sample](sample%20messages/body-dwt-returnfile-response.xml)
     - RetrieveStatus
         - Positive response
-            - [request sample](sample%20messages/body-ail-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-ail-returnstatus-response.xml)
+            - [request sample](sample%20messages/body-dwt-returnstatus-request.xml)
+            - [response sample](sample%20messages/body-dwt-returnstatus-response.xml)
     - RetrieveReturn
         - Positive response
-            - [request sample](sample%20messages/body-ail-retrievereturn-request.xml)
-            - [response sample](sample%20messages/body-ail-retrievereturn-response.xml)
+            - [request sample](sample%20messages/body-dwt-retrievereturn-request.xml)
+            - [response sample](sample%20messages/body-dwt-retrievereturn-response.xml)
 
             
 Requests Matching Logic
