@@ -1,23 +1,23 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Resident withholding tax (RWT) Software Development Kit (SDK) for Investment Income Reporting
+Non-resident withholding tax (NRT) Software Development Kit (SDK) for Investment Income Reporting
 =======================================
 
 Key Features:
 -------------
 
-- Simulating RWT filing operations
+- Simulating NRT filing operations
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-RWT-business-use-cases-worked-examples.pdf)
+	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-NRT-business-use-cases-worked-examples.pdf)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
 	- View and download the [return service Investment Income common xsd](../../Service%20-%20Return/Latest/)
-	- View and download the RWT return [xsd](ReturnRWT.v1.xsd) and [wsdl](ReturnsRWTDevWsdl.wsdl) from this current directory
+	- View and download the NRT return [xsd](ReturnNRT.v1.xsd) and [wsdl](ReturnsNRTDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
@@ -31,19 +31,19 @@ Key Features:
       Message samples :
 -----------------
 
-- Simulating RWT Returns Operations:
+- Simulating NRT Returns Operations:
     - File
         - Positive response
-            - [request sample](sample%20messages/body-rwt-returnfile-request.xml)
-            - [response sample](sample%20messages/body-rwt-returnfile-response.xml)
+            - [request sample](sample%20messages/body-nrt-returnfile-request.xml)
+            - [response sample](sample%20messages/body-nrt-returnfile-response.xml)
     - RetrieveStatus
         - Positive response
-            - [request sample](sample%20messages/body-rwt-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-rwt-returnstatus-response.xml)
+            - [request sample](sample%20messages/body-nrt-returnstatus-request.xml)
+            - [response sample](sample%20messages/body-nrt-returnstatus-response.xml)
     - RetrieveReturn
         - Positive response
-            - [request sample](sample%20messages/body-rwt-retrievereturn-request.xml)
-            - [response sample](sample%20messages/body-rwt-retrievereturn-response.xml)
+            - [request sample](sample%20messages/body-nrt-retrievereturn-request.xml)
+            - [response sample](sample%20messages/body-nrt-retrievereturn-response.xml)
 
             
 Requests Matching Logic
