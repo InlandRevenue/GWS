@@ -1,13 +1,13 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Approved issuer levy (AIL) Software Development Kit (SDK) for Investment Income Reporting
+Interest pay as you earn (IPS) Software Development Kit (SDK) for Investment Income Reporting
 =======================================
 
 Key Features:
 -------------
 
-- Simulating AIL filing operations
+- Simulating IPS filing operations
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
@@ -34,16 +34,16 @@ Key Features:
 - Simulating AIL Returns Operations:
     - File
         - Positive response
-            - [request sample](sample%20messages/body-ail-returnfile-request.xml)
-            - [response sample](sample%20messages/body-ail-returnfile-response.xml)
+            - [request sample](sample%20messages/body-ips-returnfile-request.xml)
+            - [response sample](sample%20messages/body-ips-returnfile-response.xml)
     - RetrieveStatus
         - Positive response
-            - [request sample](sample%20messages/body-ail-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-ail-returnstatus-response.xml)
+            - [request sample](sample%20messages/body-ips-returnstatus-request.xml)
+            - [response sample](sample%20messages/body-ips-returnstatus-response.xml)
     - RetrieveReturn
         - Positive response
-            - [request sample](sample%20messages/body-ail-retrievereturn-request.xml)
-            - [response sample](sample%20messages/body-ail-retrievereturn-response.xml)
+            - [request sample](sample%20messages/body-ips-retrievereturn-request.xml)
+            - [response sample](sample%20messages/body-ips-retrievereturn-response.xml)
 
             
 Requests Matching Logic
