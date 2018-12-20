@@ -1,5 +1,5 @@
-![IRD logo](../Images/IRlogo.gif)
-![Software Dev](../Images/SoftwareDev.png)
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
 
 Return Service - Investment Income Reporting
 =======================================
@@ -14,7 +14,7 @@ Key Features:
 -------------
 
 * [view Return schema for Investment Income Reporting](ReturnCommon.v2.xsd)
-* [view Return service build pack Investment Income Reporting](Gateway%20Services%20Build%20Pack%20-%20Return%20Service20-%20III.pdf)
+* [view Return service build pack Investment Income Reporting](Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf)
 
 Supporting schema
 -------------
