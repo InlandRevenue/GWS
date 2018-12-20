@@ -16,7 +16,7 @@ Key Features:
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common%20III/)
-	- View and download the [Return Service Investment Income Information common xsd](../Service%20-%20Return%20III/Latest/)
+	- View and download the [Return Service common xsd](../Service%20-%20Return%20III/Latest/)
 	- View and download the AIL return [xsd](ReturnAIL.v0.xsd) and [wsdl](AILDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information
