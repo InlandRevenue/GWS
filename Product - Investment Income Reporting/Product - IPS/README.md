@@ -17,7 +17,7 @@ Key Features:
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common%20III/)
 	- View and download the [Return Service common xsd](../Service%20-%20Return%20III/Latest/)
-	- View and download the IPS return [xsd](ReturnAIL.v0.xsd) and [wsdl](IPSDevWsdl.wsdl) from this current directory
+	- View and download the IPS return [xsd](ReturnIPS.v0.xsd) and [wsdl](IPSDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
