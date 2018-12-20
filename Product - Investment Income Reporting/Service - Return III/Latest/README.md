@@ -1,5 +1,5 @@
-![IRD logo](../../Images/IRlogo.gif)
-![Software Dev](../../Images/SoftwareDev.png)
+![IRD logo](../../../Images/IRlogo.gif)
+![Software Dev](../../../Images/SoftwareDev.png)
 
 Return Service - Investment Income Reporting
 =======================================
@@ -31,4 +31,4 @@ Products using this service:
 
 Supporting services
 -------------
-* [Service - Identity and Access](../../Service%20-%20Identity%20and%20Access/Latest/)
+* [Service - Identity and Access](../../../Service%20-%20Identity%20and%20Access/Latest/)

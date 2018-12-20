@@ -20,7 +20,7 @@ Key Features:
 	- View and download the NRT return [xsd](ReturnNRT.v0.xsd) and [wsdl](NRTDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information 
-	- [Download the build pack](../../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
 	
 - Identity and Access Services
 	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
