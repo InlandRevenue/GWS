@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rwt="urn:www.ird.govt.nz/GWS:types/ReturnRWT.v1" xmlns:tns="https://services.ird.govt.nz/GWS/Returns/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="Return" targetNamespace="https://services.ird.govt.nz/GWS/Returns/">
+	<wsp:Policy wsu:Id="WSHttpBinding_Return_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false"/>
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Strict/>
+							</wsp:Policy>
+						</sp:Layout>
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<wsam:Addressing>
+					<wsp:Policy>
+						<wsam:AnonymousResponses/>
+					</wsp:Policy>
+				</wsam:Addressing>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+	<wsdl:types>
+		<xsd:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/">
+			<xsd:element name="File">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q1="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest" minOccurs="1" name="ReturnFileRequestMsg" nillable="true" type="q1:FileRequestType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="FileResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q2="https://services.ird.govt.nz/GWS/Returns/:types/FileResponse" minOccurs="0" name="FileResult" nillable="true" type="q2:FileResponseType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrieveStatus">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q5="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusRequest" minOccurs="1" name="ReturnStatusRequestMsg" nillable="true" type="q5:ReturnStatusRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrieveStatusResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q6="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusResponse" minOccurs="0" name="RetrieveStatusResult" nillable="true" type="q6:RetrieveStatusResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrieveReturn">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q9="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnRequest" minOccurs="1" name="RetrieveReturnRequestMsg" nillable="true" type="q9:RetrieveReturnRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrieveReturnResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q10="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" minOccurs="0" name="RetrieveReturnResult" nillable="true" type="q10:RetrieveReturnResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnRWT.v1" schemaLocation="ReturnRWT.v0.xsd"/>
+			<xsd:complexType name="FileRequestType">
+				<xsd:sequence>
+					<xsd:element name="FileRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="rwt:fileRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="FileRequestType" nillable="true" type="tns:FileRequestType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/FileResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/FileResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="ReturnCommon.v2.xsd"/>
+			<xsd:complexType name="FileResponseType">
+				<xsd:sequence>
+					<xsd:element name="FileResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="rc:fileResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="FileResponseType" nillable="true" type="tns:FileResponseType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusRequest">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="ReturnCommon.v2.xsd"/>
+			<xsd:complexType name="ReturnStatusRequest">
+				<xsd:sequence>
+					<xsd:element name="RetrieveStatusRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="rc:retrieveFormInfoRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="ReturnStatusRequest" nillable="true" type="tns:ReturnStatusRequest"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="ReturnCommon.v2.xsd"/>
+			<xsd:complexType name="RetrieveStatusResponse">
+				<xsd:sequence>
+					<xsd:element name="RetrieveStatusResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="rc:retrieveStatusResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="RetrieveStatusResponse" nillable="true" type="tns:RetrieveStatusResponse"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnRequest">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="ReturnCommon.v2.xsd"/>		
+			<xsd:complexType name="RetrieveReturnRequest">
+				<xsd:sequence>
+					<xsd:element name="RetrieveReturnRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="rc:retrieveFormInfoRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="RetrieveReturnRequest" nillable="true" type="tns:RetrieveReturnRequest"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="ReturnCommon.v2.xsd"/>			
+			<xsd:complexType name="RetrieveReturnResponse">
+				<xsd:sequence>
+					<xsd:element name="RetrieveReturnResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="rc:retrieveReturnResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="RetrieveReturnResponse" nillable="true" type="tns:RetrieveReturnResponse"/>
+		</xsd:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="Return_File_InputMessage">
+		<wsdl:part name="parameters" element="tns:File"/>
+	</wsdl:message>
+	<wsdl:message name="Return_File_OutputMessage">
+		<wsdl:part name="parameters" element="tns:FileResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Return_RetrieveStatus_InputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveStatus"/>
+	</wsdl:message>
+	<wsdl:message name="Return_RetrieveStatus_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveStatusResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Return_RetrieveReturn_InputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveReturn"/>
+	</wsdl:message>
+	<wsdl:message name="Return_RetrieveReturn_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveReturnResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="Return">
+		<wsdl:documentation>
+This Returns service can be utilised for a number of returns tasks. For information regarding the proper use of this service, schemas, formatting of request and response types please refer to the Returns build pack provided during onboarding.
+</wsdl:documentation>
+		<wsdl:operation name="File">
+			<wsdl:documentation>
+				<summary>
+The ReturnFile operation allows the filing of several different return types. For more information reference the Returns directory provided at https://github.com/InlandRevenue/Gateway-Services/
+</summary>
+				<returns>
+ReturnFileResponse will contain a status and error message. See schema for more details.
+</returns>
+				<param name="ReturnFileRequestMsg">
+ReturnFileRequest will contain the return specific fields in XML format. See return specific schema for more details.
+</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Returns/Return/File" message="tns:Return_File_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Returns/Return/FileResponse" message="tns:Return_File_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveStatus">
+			<wsdl:documentation>
+				<summary>
+The ReturnStatus operation allows to query the status of a submitted return. For more information reference the Returns directory provided at https://github.com/InlandRevenue/Gateway-Services/
+</summary>
+				<returns>
+ReturnStatusResponse will contain the current status of the return in question. See schema for more details.
+</returns>
+				<param name="ReturnStatusRequestMsg">
+ReturnStatusRequest will contain identifying info for the requested return. See return specific schema for more details.
+</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatus" message="tns:Return_RetrieveStatus_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatusResponse" message="tns:Return_RetrieveStatus_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveReturn">
+			<wsdl:documentation>
+				<summary>
+The RetrieveReturn operation allows the retrieval of an entire return. For more information reference the Returns directory provided at https://github.com/InlandRevenue/Gateway-Services/
+</summary>
+				<returns>
+RetrieveReturnResponse will contain the requested return in XML format. See return specific schema for more details.
+</returns>
+				<param name="RetrieveReturnRequestMsg">
+RetrieveReturnRequest will contain identifying info for the requested return. See return specific schema for more details.
+</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturn" message="tns:Return_RetrieveReturn_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse" message="tns:Return_RetrieveReturn_OutputMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="WSHttpBinding_Return" type="tns:Return">
+		<wsp:PolicyReference URI="#WSHttpBinding_Return_policy"/>
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="File">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Returns/Return/File" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveStatus">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatus" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveReturn">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturn" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Return">
+		<wsdl:port name="WSHttpBinding_Return" binding="tns:WSHttpBinding_Return">
+			<soap12:address location="https://eservices-test-gateway.npnsp.ird.govt.nz:4046/secure/gateway/GWS/Returns/"/>
+			<wsa10:EndpointReference>
+				<wsa10:Address>
+https://eservices-test-gateway.npnsp.ird.govt.nz:4046/secure/gateway/GWS/Returns/
+</wsa10:Address>
+			</wsa10:EndpointReference>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

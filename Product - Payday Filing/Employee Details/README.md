@@ -12,6 +12,9 @@ Key Features:
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
+- Business use cases
+	- [view on IR website](https://www.ird.govt.nz/resources/e/2/e2d9e606-76d3-44f7-9127-2584666b5f09/Payday+filing+-+Employee+details+business+use+cases.pdf)
+	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../../Service%20-%20Return/Latest/)
@@ -30,7 +33,9 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download the test scenarios report template](Payday%20Filing%20–%20Employee%20Details%20-%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download the test scenarios report template](Payday%20Filing%20–%20Employee%20Details%20-%20Test%20Report%20Template.docx)
+	- Employee Details Test Scenarios Mindmap
+	
 	![Test Scenarios](images/Employee_Details_Test_Scenarios_Mind_Map.png)
 
 - Test Data

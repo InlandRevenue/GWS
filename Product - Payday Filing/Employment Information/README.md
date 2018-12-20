@@ -11,6 +11,9 @@ Key Features:
 	- [Test scenarios report template, mindmap and data](#test-details)
     - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
+
+- Business use cases
+	- [view on IR website](https://www.ird.govt.nz/resources/9/5/95275fd7-967a-4b87-877f-a8968807e45e/Payday+filing+-+Employment+Information+business+use+cases.pdf)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../../Schema%20-%20Common/)
@@ -30,7 +33,9 @@ Test Details:
 -----------------
 
 - Test Scenarios 
-	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Report%20Template.docx)
+	- Employment Information Test Scenarios Mindmap
+	
 	![Test Scenarios](images/Employment_Information_Test_Scenarios_Mind_Map.png)
 
 - Test Data

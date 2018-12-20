@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:		ReturnPIE.xsd
+	VER:		0.1
+	ISSUER:		Inland Revenue Department
+	DATE:		2018-10-25
+	DESC:		This schema defines the elements and related data types required for the Returns PIE Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnPIEp.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnPIEp.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnPIEp.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Import Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v1" schemaLocation="./Common.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" schemaLocation="./ReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--File Element-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:QuantityTypePositive" minOccurs="0"/>
+					<xsd:element name="includeAprilToFeb" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="totalInvestmentValue" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="grossIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="deductableExpenses" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="netLossIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="netLossLandIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="combinedLossIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="formationLoss" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="landLossBroughtForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="landLossClaimed" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="landLossCarryForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalLoss" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeRetained" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeExitedInvestors" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="investorExpenses" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalIncomeToAttribute" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalLossToAttribute" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeAttributedZero" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeAttributedLow" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeAttributedMid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeAttributedTop" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="lossAttributedZero" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="lossAttributedLow" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="lossAttributedMid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="lossAttributedTop" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="foreignTaxCredit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherTaxCredit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="imputationCredit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="residentWithholdingTax" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="taxLiability" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="taxPaymentExitedInvestors" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="netTaxPayable" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeAttributedNFI" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="taxPaidNFI" type="cmn:MoneyTypePositive" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--RetrieveReturn Structure-->
+	<!--RetrieveReturnRequestType is unique to PIE because a return can be filed multiple times during a period.-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RetrieveReturnPIERequestType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Defines the request for the RetrieveReturn operation for RWT. This retrieval type allows for a submissionKey to target a specific return in a period where multiple returns are allowed.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormInfoRequestType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:QuantityTypePositive" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="retrievePIERequest" type="RetrieveReturnPIERequestType"/>
+</xsd:schema>

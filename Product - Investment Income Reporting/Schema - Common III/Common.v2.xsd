@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Documentation
 _______________________________________
-NAME: 	Common.xsd
-VER:		1.03
-ISSUER:	Inland Revenue Department
-DATE:		20/12/2017
+NAME: 		Common.xsd
+VER:		1.05
+ISSUER:		Inland Revenue Department
+DATE:		26/10/2018
 DESC:		This schema defines the common data types used accross the IRD hosted, Gateway Services.
 _______________________________________
 -->
-<xsd:schema xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:www.ird.govt.nz/GWS:types/Common.v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xsd:schema xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:www.ird.govt.nz/GWS:types/Common.v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<!--Money Types-->
 	<xsd:simpleType name="MoneyType">
 		<xsd:annotation>
@@ -66,19 +66,19 @@ _______________________________________
 	<xsd:simpleType name="MonthType">
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">
-			Enumeration for noting the month based on the Gregorian calendar.
-        01: January
-        02: February
-        03: March
-        04: April
-        05: May
-        06: June
-        07: July
-        08: August
-        09: September
-        10: October
-        11: November
-        12: December
+				Enumeration for noting the month based on the Gregorian calendar.
+				01: January
+				02: February
+				03: March
+				04: April
+				05: May
+				06: June
+				07: July
+				08: August
+				09: September
+				10: October
+				11: November
+				12: December
 		  </xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:string">
@@ -128,10 +128,54 @@ _______________________________________
 			<xsd:documentation xml:lang="en">Type used for percetages.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:decimal">
-			<xsd:minInclusive value="0.0"/>
-			<xsd:maxInclusive value="100.0"/>
+			<xsd:minInclusive value="0.00"/>
+			<xsd:maxInclusive value="100.00"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<!-- STRING TYPES -->
+	<xsd:simpleType name="String6">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String12">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String30">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String50">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String100">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String255">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="255"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String1000">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="255"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--STRING END TYPES -->
 	<!--Other Types-->
 	<xsd:simpleType name="IRDNumberType">
 		<xsd:annotation>
@@ -245,6 +289,14 @@ _______________________________________
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:length value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Country2DigitType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">ISO 3166 alpha-3 standard country code</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:length value="2"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!--Name Types-->
@@ -725,7 +777,6 @@ _______________________________________
 	</xsd:simpleType>
 	<xsd:complexType name="NZBankStandardType">
 		<xsd:sequence>
-			<!--check with dispersment team to verify all metadata needed is here. -->
 			<xsd:element name="bank" type="NZBankIdType"/>
 			<xsd:element name="branch" type="NZBranchCodeType"/>
 			<xsd:element name="account" type="NZBankAcctBaseNumberType"/>
@@ -911,8 +962,15 @@ _______________________________________
 			<xsd:element name="errorMessage" type="xsd:normalizedString">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">
-            Describes the error, in particular, its context. Blank on success.
-          </xsd:documentation>
+					Decodes the error. Blank on success.
+				    </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="errorDescription" type="xsd:normalizedString" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+					Describes the particulars of the error.
+				    </xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -922,7 +980,7 @@ _______________________________________
 			<xsd:documentation xml:lang="en">Defines the response for the standard operation.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="statusMessage" type="MessageStatusType"/>
+			<xsd:element name="statusMessage" type="MessageStatusType" maxOccurs="200"/>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>
