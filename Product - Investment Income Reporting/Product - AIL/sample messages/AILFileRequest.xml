@@ -2,63 +2,48 @@
 <r:fileRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIL.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
 <rc:fileHeader>
 	<cmn:softwareProviderData>
-		<cmn:softwareProvider>a</cmn:softwareProvider>
-		<cmn:softwarePlatform>a</cmn:softwarePlatform>
-		<cmn:softwareRelease>a</cmn:softwareRelease>
+		<cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+		<cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+		<cmn:softwareRelease>v1</cmn:softwareRelease>
 	</cmn:softwareProviderData>
 	<cmn:identifier IdentifierValueType="IRD">123123123</cmn:identifier>
 	<cmn:accountType>AIL</cmn:accountType>
-	<rc:periodEndDate>9999-12-31</rc:periodEndDate>
+	<rc:periodEndDate>2018-12-31</rc:periodEndDate>
 	<rc:majorFormType>AIL</rc:majorFormType>
+	<rc:minorFormType>AIL</rc:minorFormType> 
 </rc:fileHeader>
 <rc:fileBody>
 	<rc:standardFields>
-		<rc:isNilReturn>true</rc:isNilReturn>
-		<rc:isFinalReturn>true</rc:isFinalReturn>
+		<rc:isNilReturn>false</rc:isNilReturn>
+		<rc:isFinalReturn>false</rc:isFinalReturn>
 		<rc:amendmentRequest>
-			<rc:isAmended>true</rc:isAmended>
-		<rc:amendReason/>
-		<rc:amendDetails>a</rc:amendDetails>
+			<rc:isAmended>false</rc:isAmended>
+			<rc:amendReason></rc:amendReason>
+			<rc:amendDetails></rc:amendReason>
 		</rc:amendmentRequest>
-		<rc:creditTransferRequest>
-			<rc:transferIRD>000000000</rc:transferIRD>
-			<rc:transferAccountType>AAA</rc:transferAccountType>
-			<rc:transferFilingPeriod>9999-12-31</rc:transferFilingPeriod>
-			<rc:associatedCustomer>true</rc:associatedCustomer>
-			<rc:transferAmount>0</rc:transferAmount>
-		</rc:creditTransferRequest>
 	</rc:standardFields>
 	<rc:formFields xsi:type="r:FormFieldsType">
-		<r:submissionKey>0</r:submissionKey>
-		<r:isReverseReplace>true</r:isReverseReplace>
+		<r:submissionKey>1684930560</r:submissionKey>
+		<r:isReverseReplace>false</r:isReverseReplace>
 		<r:lineItems>
-			<r:lineNumber>0</r:lineNumber>
-			<r:referenceId>a</r:referenceId>
-			<r:amendType>A</r:amendType>
-			<r:externalID>a</r:externalID>
-			<r:primaryIRD>000000000</r:primaryIRD>
-			<r:primaryDateOfBirth>9999-12-31</r:primaryDateOfBirth>
-			<r:primaryName>a</r:primaryName>
-			<r:primaryPhone>a</r:primaryPhone>
-			<r:primaryEmail>%@-.A</r:primaryEmail>
-			<r:primaryCountry>aaa</r:primaryCountry>
-			<r:primaryAddress>a</r:primaryAddress>
-			<r:bankAccount>
-			<rc:nzBankAccount>
-				<cmn:bank>00</cmn:bank>
-				<cmn:branch>0000</cmn:branch>
-				<cmn:account>00000000</cmn:account>
-				<cmn:suffix>0000</cmn:suffix>
-			</rc:nzBankAccount>
-			</r:bankAccount>
+			<r:referenceId>REF123</r:referenceId>
+			<r:externalID>EXT123</r:externalID>
+			<r:primaryIRD>123456789</r:primaryIRD>
+			<r:primaryDateOfBirth>1987-12-31</r:primaryDateOfBirth>
+			<r:primaryName>John Doe</r:primaryName>
+			<r:primaryPhone>027555555</r:primaryPhone>
+			<r:primaryEmail>example@domain.co.nz</r:primaryEmail>
+			<r:primaryCountry>NZ</r:primaryCountry>
+			<r:primaryAddress>123 St</r:primaryAddress>
 			<r:accountHolders>
-				<rc:IRD>000000000</rc:IRD>
-				<rc:dateOfBirth>9999-12-31</rc:dateOfBirth>
-				<rc:name>a</rc:name>
-				<rc:address>a</rc:address>
+				<rc:IRD>123456789</rc:IRD>
+				<rc:dateOfBirth>1977-12-31</rc:dateOfBirth>
+				<rc:name>Abe Smith</rc:name>
+				<rc:address></rc:address>
 			</r:accountHolders>
 			<r:incomeInformation>
-				<r:interestZeroRated>0</r:interestZeroRated>
+				<r:grossAmount>500.99</r:grossAmount>
+				<r:interestZeroRated>0.99</r:interestZeroRated>
 			</r:incomeInformation>
 		</r:lineItems>
 	</rc:formFields>
