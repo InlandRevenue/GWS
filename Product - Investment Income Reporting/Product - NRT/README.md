@@ -7,9 +7,6 @@ Non-resident withholding tax (NRT) Software Development Kit (SDK) for Investment
 Key Features:
 -------------
 
-- Simulating NRT filing operations
-	- [Requests Matching Logic](#requests-matching-logic)
-	
 - Business use cases
 	- [view on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/investment-income-reporting/investment-income-gateway/investment-income-reporting-through-gateway-services.html)
 	

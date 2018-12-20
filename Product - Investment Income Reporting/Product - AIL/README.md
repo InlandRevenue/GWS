@@ -7,9 +7,6 @@ Approved issuer levy (AIL) Software Development Kit (SDK) for Investment Income 
 Key Features:
 -------------
 
-- Simulating AIL filing operations
-	- [Requests Matching Logic](#requests-matching-logic)
-	
 - Business use cases
 	- [view on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/investment-income-reporting/investment-income-gateway/investment-income-reporting-through-gateway-services.html)
 	

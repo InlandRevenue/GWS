@@ -7,9 +7,6 @@ Resident withholding tax (RWT) Software Development Kit (SDK) for Investment Inc
 Key Features:
 -------------
 
-- Simulating RWT filing operations
-	- [Requests Matching Logic](#requests-matching-logic)
-	
 - Business use cases
 	- [view on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/investment-income-reporting/investment-income-gateway/investment-income-reporting-through-gateway-services.html)
 	
@@ -25,7 +22,7 @@ Key Features:
 	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
 	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
+	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation
 
             
 Requests Matching Logic

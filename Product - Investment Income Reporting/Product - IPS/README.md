@@ -7,9 +7,6 @@ Interest pay as you earn (IPS) Software Development Kit (SDK) for Investment Inc
 Key Features:
 -------------
 
-- Simulating IPS filing operations
-	- [Requests Matching Logic](#requests-matching-logic)
-	
 - Business use cases
 	- [view on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/investment-income-reporting/investment-income-gateway/investment-income-reporting-through-gateway-services.html)
 	
