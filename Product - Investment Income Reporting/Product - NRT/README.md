@@ -8,7 +8,6 @@ Key Features:
 -------------
 
 - Simulating NRT filing operations
-    - [Message samples](#message-samples) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Business use cases
@@ -27,23 +26,6 @@ Key Features:
 	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
-
-Message samples
------------------
-
-- Simulating NRT Returns Operations:
-    - File
-        - Positive response
-            - [request sample](sample%20messages/NRTFileRequest.xml)
-            - [response sample](sample%20messages/body-nrt-returnfile-response.xml)
-    - RetrieveStatus
-        - Positive response
-            - [request sample](sample%20messages/body-nrt-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-nrt-returnstatus-response.xml)
-    - RetrieveReturn
-        - Positive response
-            - [request sample](sample%20messages/NRTRetrieveReturnRequest.xml)
-            - [response sample](sample%20messages/body-nrt-retrievereturn-response.xml)
 
             
 Requests Matching Logic

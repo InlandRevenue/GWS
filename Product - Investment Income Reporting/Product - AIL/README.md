@@ -8,7 +8,6 @@ Key Features:
 -------------
 
 - Simulating AIL filing operations
-    - [Message samples](#message-samples-) - positive responses
 	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Business use cases
@@ -28,24 +27,7 @@ Key Features:
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
-Message samples :
------------------
-
-- Simulating AIL Returns Operations:
-    - File
-        - Positive response
-            - [request sample](sample%20messages/AILFileRequest.xml)
-            - [response sample](sample%20messages/body-ail-returnfile-response.xml)
-    - RetrieveStatus
-        - Positive response
-            - [request sample](sample%20messages/body-ail-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-ail-returnstatus-response.xml)
-    - RetrieveReturn
-        - Positive response
-            - [request sample](sample%20messages/AILRetrieveReturnRequest.xml)
-            - [response sample](sample%20messages/body-ail-retrievereturn-response.xml)
-
-            
+           
 Requests Matching Logic
 -----------------------
 
