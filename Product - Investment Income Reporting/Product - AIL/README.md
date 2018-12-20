@@ -12,7 +12,7 @@ Key Features:
 	- [Requests Matching Logic](#requests-matching-logic)
 	
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-AIL-business-use-cases-worked-examples.pdf)
+	- [view on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/investment-income-reporting/investment-income-gateway/investment-income-reporting-through-gateway-services.html)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common%20III/)
