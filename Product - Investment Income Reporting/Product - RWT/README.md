@@ -8,7 +8,7 @@ Key Features:
 -------------
 
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/investment-income-reporting/investment-income-gateway/investment-income-reporting-through-gateway-services.html)
+	- [Download and view](III%20-%20RWT%20-%20GWS%20business%20use%20cases.pdf)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common%20III/)
