@@ -8,7 +8,7 @@ Key Features:
 -------------
 
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/investment-income-reporting/investment-income-gateway/investment-income-reporting-through-gateway-services.html)
+	- [Download and view](III%20-%20RWT%20-%20GWS%20business%20use%20cases.pdf)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common%20III/)
@@ -23,7 +23,6 @@ Key Features:
 	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation
-
             
 Requests Matching Logic
 -----------------------

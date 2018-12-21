@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Documentation
 _______________________________________
-NAME: 	ReturnCommon.xsd
-VER:	1.1
+NAME: 	ReturnCommon.v2.xsd
+VER:	2.0
 ISSUER:	Inland Revenue Department
-DATE:	25/10/2018
+DATE:	20/12/2018
 DESC:	This schema defines the ReturnCommon data types used accross the IRD hosted, Gateway Services.
 _______________________________________
 -->
