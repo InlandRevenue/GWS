@@ -293,7 +293,7 @@ _______________________________________
 	</xsd:simpleType>
 	<xsd:simpleType name="Country2DigitType">
 		<xsd:annotation>
-			<xsd:documentation xml:lang="en">ISO 3166 alpha-3 standard country code</xsd:documentation>
+			<xsd:documentation xml:lang="en">ISO 3166 alpha-2 standard country code</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:length value="2"/>
