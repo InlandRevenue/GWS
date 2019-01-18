@@ -31,9 +31,9 @@ xmlns:a="http://www.w3.org/2005/08/addressing">
                         <rc:isNilReturn>false</rc:isNilReturn>
                         <rc:isFinalReturn>false</rc:isFinalReturn>
                         <rc:amendmentRequest>
-                           <rc:isAmended>true</rc:isAmended>
-                           <rc:amendReason>KEY</rc:amendReason>
-                           <rc:amendDetails>Error in gross amount paid.</rc:amendDetails>
+							<rc:isAmended>true</rc:isAmended>
+							<rc:amendReason>KEY</rc:amendReason>
+							<rc:amendDetails>Error in gross amount paid.</rc:amendDetails>
                         </rc:amendmentRequest>
                      </rc:standardFields>
                      <rc:formFields xsi:type="r:FormFieldsType">
@@ -51,10 +51,10 @@ xmlns:a="http://www.w3.org/2005/08/addressing">
 							<r:primaryCountry>NZ</r:primaryCountry>
 							<r:primaryAddress>123 Browns St, Suburb, City 0000</r:primaryAddress>
 							<r:incomeInformation>
-							  <rc:incomeType>NZINT</rc:incomeType>
-							  <rc:grossAmount>185.00</rc:grossAmount>
-							  <rc:deductedAmount>32.38</rc:deductedAmount>
-							  <rc:rate>17.5</rc:rate>
+								<rc:incomeType>NZINT</rc:incomeType>
+								<rc:grossAmount>185.00</rc:grossAmount>
+								<rc:deductedAmount>32.38</rc:deductedAmount>
+								<rc:rate>17.5</rc:rate>
 							</r:incomeInformation>
                         </r:lineItems>
                      </rc:formFields>

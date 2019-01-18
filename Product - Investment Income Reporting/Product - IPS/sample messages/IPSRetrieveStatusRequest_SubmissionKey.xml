@@ -8,19 +8,19 @@ xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
       <ret:RetrieveStatus>
          <ret:ReturnStatusRequestMsg>
             <ret1:RetrieveStatusRequestWrapper>
-               <rc:retrieveFormInfoRequest>
-                  <com:softwareProviderData>
-                     <com:softwareProvider>SoftwareProvider Company Ltd</com:softwareProvider>
-                     <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
-                     <com:softwareRelease>1.0</com:softwareRelease>
-                  </com:softwareProviderData>
-                  <com:identifier IdentifierValueType="IRD">012501250</com:identifier>
-                  <com:accountType>IPS</com:accountType>
-                  <rc:periodEndDate>2019-04-30</rc:periodEndDate>
-                  <rc:majorFormType>IPS</rc:majorFormType>
-                  <rc:minorFormType>IPS</rc:minorFormType>
-				  <rc:submissionKey>1199947776</rc:submissionKey>
-               </rc:retrieveFormInfoRequest>
+				<rc:retrieveFormInfoRequest>
+					<com:softwareProviderData>
+						<com:softwareProvider>SoftwareProvider Company Ltd</com:softwareProvider>
+						<com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
+						<com:softwareRelease>1.0</com:softwareRelease>
+					</com:softwareProviderData>
+					<com:identifier IdentifierValueType="IRD">012501250</com:identifier>
+					<com:accountType>IPS</com:accountType>
+					<rc:periodEndDate>2019-04-30</rc:periodEndDate>
+					<rc:majorFormType>IPS</rc:majorFormType>
+					<rc:minorFormType>IPS</rc:minorFormType>
+					<rc:submissionKey>1199947776</rc:submissionKey>
+				</rc:retrieveFormInfoRequest>
             </ret1:RetrieveStatusRequestWrapper>
          </ret:ReturnStatusRequestMsg>
       </ret:RetrieveStatus>

@@ -8,7 +8,7 @@ xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
       <ret:RetrieveReturn>
          <ret:RetrieveReturnRequestMsg>
             <ret1:RetrieveReturnRequestWrapper>
-               <rc:retrieveFormInfoRequest>
+				<rc:retrieveFormInfoRequest>
 					<com:softwareProviderData>
 						<com:softwareProvider>SoftwareProvider Company Ltd</com:softwareProvider>
 						<com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
@@ -20,7 +20,7 @@ xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
 					<rc:majorFormType>IPS</rc:majorFormType>
 					<rc:minorFormType>IPS</rc:minorFormType>
 					<rc:submissionKey>1199947776</r:submissionKey>
-               </rc:retrieveFormInfoRequest>
+				</rc:retrieveFormInfoRequest>
             </ret1:RetrieveReturnRequestWrapper>
          </ret:RetrieveReturnRequestMsg>
       </ret:RetrieveReturn>
