@@ -7,43 +7,22 @@ Non-resident withholding tax (NRT) Software Development Kit (SDK) for Investment
 Key Features:
 -------------
 
-- Simulating NRT filing operations
-    - [Message samples](#message-samples-) - positive responses
-	- [Requests Matching Logic](#requests-matching-logic)
-	
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-NRT-business-use-cases-worked-examples.pdf)
+	- [Download and view](III%20-%20NRT%20-%20GWS%20business%20use%20cases.pdf)
 	
 - Schemas and WSDLS
-	- View and download the [common xsd](../../Schema%20-%20Common/)
-	- View and download the [return service Investment Income common xsd](../../Service%20-%20Return/Latest/)
-	- View and download the NRT return [xsd](ReturnNRT.v1.xsd) and [wsdl](ReturnsNRTDevWsdl.wsdl) from this current directory
+	- View and download the [common xsd](../Schema%20-%20Common%20III/)
+	- View and download the [Return Service common xsd](../Service%20-%20Return%20III/Latest/)
+	- View and download the NRT return [xsd](ReturnNRT.v0.xsd) and [wsdl](NRTDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information 
-	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
 	
 - Identity and Access Services
 	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
 	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
-
-      Message samples :
------------------
-
-- Simulating NRT Returns Operations:
-    - File
-        - Positive response
-            - [request sample](sample%20messages/body-nrt-returnfile-request.xml)
-            - [response sample](sample%20messages/body-nrt-returnfile-response.xml)
-    - RetrieveStatus
-        - Positive response
-            - [request sample](sample%20messages/body-nrt-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-nrt-returnstatus-response.xml)
-    - RetrieveReturn
-        - Positive response
-            - [request sample](sample%20messages/body-nrt-retrievereturn-request.xml)
-            - [response sample](sample%20messages/body-nrt-retrievereturn-response.xml)
 
             
 Requests Matching Logic

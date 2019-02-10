@@ -1,13 +1,13 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Identity and Access Service
+Identity and Access Services
 =======================================
 
 Key Features:
 -------------
 
-* [View and download the Identity and Access Service Build Pack](Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) for details on 
+* [View and download the Identity and Access Services Build Pack](Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) for details on 
 	- the token auth implementation using OAuth 2.0
 	- desktop (native) application token auth 
 	- SSH Keys
