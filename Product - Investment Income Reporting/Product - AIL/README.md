@@ -7,12 +7,8 @@ Approved issuer levy (AIL) Software Development Kit (SDK) for Investment Income 
 Key Features:
 -------------
 
-- Simulating AIL filing operations
-    - [Message samples](#message-samples-) - positive responses
-	- [Requests Matching Logic](#requests-matching-logic)
-	
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/resources/xxx/III-AIL-business-use-cases-worked-examples.pdf)
+	- [Download and view](III%20-%20AIL%20-%20GWS%20business%20use%20cases.pdf)
 	
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common%20III/)
@@ -20,7 +16,7 @@ Key Features:
 	- View and download the AIL return [xsd](ReturnAIL.v0.xsd) and [wsdl](AILDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information
-	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
 	
 - Identity and Access Services
 	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
@@ -28,24 +24,7 @@ Key Features:
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
-Message samples :
------------------
-
-- Simulating AIL Returns Operations:
-    - File
-        - Positive response
-            - [request sample](sample%20messages/AILFileRequest.xml)
-            - [response sample](sample%20messages/body-ail-returnfile-response.xml)
-    - RetrieveStatus
-        - Positive response
-            - [request sample](sample%20messages/body-ail-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-ail-returnstatus-response.xml)
-    - RetrieveReturn
-        - Positive response
-            - [request sample](sample%20messages/AILRetrieveReturnRequest.xml)
-            - [response sample](sample%20messages/body-ail-retrievereturn-response.xml)
-
-            
+           
 Requests Matching Logic
 -----------------------
 

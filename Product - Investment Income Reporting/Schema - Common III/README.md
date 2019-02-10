@@ -1,5 +1,5 @@
-![IRD logo](../Images/IRlogo.gif)
-![Software Dev](../Images/SoftwareDev.png)
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
 
 Schema - Common for Investment Income Reporting
 =======================================
@@ -19,7 +19,5 @@ Products using this schema:
 
 Supporting services
 -------------
-* [Service - Identity and Access](../Service%20-%20Identity%20and%20Access/Latest/)
-* [Service - Intermediation](../Service%20-%20Intermediation)
-* [Service - Software Intermediation](../Service%20-%20Software%20Intermediation)
-* [Service - Return](../Service%20-%20Return)
+* [Service - Identity and Access](../../Service%20-%20Identity%20and%20Access/Latest/)
+* [Service - Return](../Service%20-%20Return%20III/Latest/)
