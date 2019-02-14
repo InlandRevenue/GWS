@@ -14,7 +14,7 @@ Key Features:
 -------------
 
 * [view Return schema](Latest/ReturnCommon.v1.xsd)
-* [view Return service build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service.pdf)
+* [view Return service build packs for AIM, GST and Payday Filing](Latest/)
 
 Supporting schema
 -------------
