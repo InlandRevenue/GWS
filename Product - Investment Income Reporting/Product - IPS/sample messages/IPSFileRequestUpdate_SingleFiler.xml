@@ -2,7 +2,7 @@
     <soap:Header>
         <a:Action>https://services.ird.govt.nz/GWS/Returns/Return/File</a:Action>
     </soap:Header>
-    <soap:Body xmlns:ret="https://services.ird.govt.nz/GWS/Returns/" xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest"xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIPS.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+    <soap:Body xmlns:ret="https://services.ird.govt.nz/GWS/Returns/" xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIPS.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
         <ret:File>
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper>
