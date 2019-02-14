@@ -29,7 +29,7 @@ Key Features:
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation
 
-- Find out about [Employee Information SDK, payday filing business rules and calculations](../)	
+- Find out about [Employee Information SDK, payday filing business rules and calculations](../)
 
 Test Details:
 -----------------
