@@ -104,7 +104,7 @@ Full authentication steps:
 			- {ServiceHostdomain}: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed. 
 		- Request headers MUST include:
 		> Authorization: Bearer {AuthAccessToken}            
-		- Request body is the actual service payload (please refer the request samples **#link**)
+		- Request body is the actual service payload
 			
 Sample curl commands:
 ----------------- 
