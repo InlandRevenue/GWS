@@ -108,24 +108,24 @@ Full authentication steps:
 			
 Sample curl commands:
 ----------------- 
-	- Steps to test the OAuth Flow
-		- Url format:
-        > http://{ServiceHostdomain}/{endpoint_actions}
-			
-	- Parameters:
-			- {ServiceHostdomain}: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
-		1. ** Request Auth Code **
-				- curl -v 'https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=TestClient1&redirect_uri=https://testpartner.ird.services/&scope=MYIR.Services&response_type=code' -c cookie.txt -D cookie_header.txt
-			- The above command writes out the session cookie to cookie.txt and its header to cookie_header.txt. Both of these files are used in the next command
-			
-        2. ** Get Auth Code **
-				- curl -v -X POST https://{ServiceHostdomain}/oam/server/auth_cred_submit -H 'content-type: application/x-www-form-urlencoded' -d 'userid=userid&password=password&login=Login' -b cookie.txt -c cookie.txt -D cookie_header.txt	
-			- The above command outputs the authorization_code as 'code=' onto the stdout/terminal in two places (1 or 2 like below) which needs to be used in the next command
-			
-		3.  ** Get Auth Token **
-				- curl -v -X POST 'https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens' -H 'content-type: application/x-www-form-urlencoded' -H 'Authorization: Basic VGVzdENsaWVudDE6VGVzdENsaWVudDFTZWNyZXQ=' -d 'redirect_uri=https%3A%2F%2Ftestpartner.ird.services%2F&grant_type=authorization_code&code={CODE_FROM_ABOVE_COMMAND}' -o token.txt
-			- The above command writes out the authentication token to token.txt. The token is used in GWS requests like the one below. The authorization header in the above command is the ClientId and ClientSecret base64 encoded.
-			
-		4. ** API call to Smoke Test EI (Prepop Operation) **
-				- curl -X POST 'https://{ServiceHostdomain}/gateway/GWS/Returns' -H 'Authorization: Bearer {TOKEN_FROM_ABOVE_COMMAND}' -H 'Content-Type: application/soap+xml' -d @prepoprequest.xml
-			- Authorization token is from the token.txt file in the previous step and prepoprequest.xml is from sample payload.
+- Steps to test the OAuth Flow
+	- Url format:
+	> http://{ServiceHostdomain}/{endpoint_actions}
+		
+- Parameters:
+		- {ServiceHostdomain}: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
+	1. ** Request Auth Code **
+			- curl -v 'https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=TestClient1&redirect_uri=https://testpartner.ird.services/&scope=MYIR.Services&response_type=code' -c cookie.txt -D cookie_header.txt
+		- The above command writes out the session cookie to cookie.txt and its header to cookie_header.txt. Both of these files are used in the next command
+		
+	2. ** Get Auth Code **
+			- curl -v -X POST https://{ServiceHostdomain}/oam/server/auth_cred_submit -H 'content-type: application/x-www-form-urlencoded' -d 'userid=userid&password=password&login=Login' -b cookie.txt -c cookie.txt -D cookie_header.txt	
+		- The above command outputs the authorization_code as 'code=' onto the stdout/terminal in two places (1 or 2 like below) which needs to be used in the next command
+		
+	3.  ** Get Auth Token **
+			- curl -v -X POST 'https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens' -H 'content-type: application/x-www-form-urlencoded' -H 'Authorization: Basic VGVzdENsaWVudDE6VGVzdENsaWVudDFTZWNyZXQ=' -d 'redirect_uri=https%3A%2F%2Ftestpartner.ird.services%2F&grant_type=authorization_code&code={CODE_FROM_ABOVE_COMMAND}' -o token.txt
+		- The above command writes out the authentication token to token.txt. The token is used in GWS requests like the one below. The authorization header in the above command is the ClientId and ClientSecret base64 encoded.
+		
+	4. ** API call to Smoke Test EI (Prepop Operation) **
+			- curl -X POST 'https://{ServiceHostdomain}/gateway/GWS/Returns' -H 'Authorization: Bearer {TOKEN_FROM_ABOVE_COMMAND}' -H 'Content-Type: application/soap+xml' -d @prepoprequest.xml
+		- Authorization token is from the token.txt file in the previous step and prepoprequest.xml is from sample payload.
