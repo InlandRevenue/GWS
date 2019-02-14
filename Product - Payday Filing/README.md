@@ -22,3 +22,9 @@ Employers will also need to submit through their software additional details for
 The employment information application programming interface (API) lets employers send us this information each pay cycle.
 
 * [View and download the Employee details SDK](Employee%20Details)
+
+# Payroll calculations and business rules
+
+* [View on IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/payday-product-api/payroll-calculations-and-business-rules/) the defined tax rates and thresholds, tax types business rules, and calculations required for specific tax codes
+
+* [Find out more about payday filing on IR website](https://www.ird.govt.nz/payroll-employers/returns-payments/payday-filing/) including how to make employee deduction payments
