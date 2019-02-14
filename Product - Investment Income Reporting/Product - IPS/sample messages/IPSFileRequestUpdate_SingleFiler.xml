@@ -1,12 +1,12 @@
-<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ret="https://services.ird.govt.nz/GWS/Returns/" xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest" xmlns:a="http://www.w3.org/2005/08/addressing">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
     <soap:Header>
         <a:Action>https://services.ird.govt.nz/GWS/Returns/Return/File</a:Action>
     </soap:Header>
-    <soap:Body>
+    <soap:Body xmlns:ret="https://services.ird.govt.nz/GWS/Returns/" xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest"xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIPS.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
         <ret:File>
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper>
-                    <r:fileRequest xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIPS.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                    <r:fileRequest>
                         <rc:fileHeader>
                             <cmn:softwareProviderData>
                                 <cmn:softwareProvider>SoftwareProvider Company Ltd</cmn:softwareProvider>
