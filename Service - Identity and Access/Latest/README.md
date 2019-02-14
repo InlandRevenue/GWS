@@ -23,3 +23,6 @@ Key Features:
 	- Validate token request and response
 	- Revoke token request and response
 	- Error response
+	
+* [View guide to managing myIR logon and gateway services access tokens](https://www.ird.govt.nz/software-providers/docs/managing/) on IR website
+	
