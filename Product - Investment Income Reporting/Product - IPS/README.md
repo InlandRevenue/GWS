@@ -18,12 +18,36 @@ Key Features:
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
 	
+- Simulating IPS filing operations
+    - [Message samples](#message-samples) - positive responses
+	- [Requests Matching Logic](#requests-matching-logic)
+
+	
 - Identity and Access Services
 	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
 	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
+Message samples
+-----------------
+
+- Simulating IPS Returns Operations:
+    - File
+		- [request sample](sample%20messages/IPSFileRequest.xml)
+        - [positive response sample](sample%20messages/IPSFileResponse.xml)
+	- File Amendment
+		- [request sample as single filer](sample%20messages/IPSFileRequestUpdate_SingleFiler.xml)
+		- [request sample as multi filer](sample%20messages/IPSFileRequestUpdate_MultiFiler.xml)
+        - [positive response sample](sample%20messages/IPSFileResponse.xml)
+    - RetrieveStatus
+	    - [request sample by period end date](sample%20messages/IPSRetrieveStatusRequest_PeriodEndDate.xml)
+		- [request sample by submission key](sample%20messages/IPSRetrieveStatusRequest_SubmissionKey.xml)
+        - [positive response sample](sample%20messages/IPSRetriveStatusResponse.xml)
+    - RetrieveReturn
+		- [request sample as single filer](sample%20messages/IPSRetrieveReturnRequest_SingleFiler.xml)
+		- [request sample as multi filer](sample%20messages/IPSRetrieveReturnRequest_MultiFiler.xml)
+        - [positive response sample](sample%20messages/IPSRetrieveReturnResponse.xml)
             
 Requests Matching Logic
 -----------------------
