@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<FileTransfers xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" TotalTransactionCount="2" TotalPeriodCount="19">
+  <FileTransfer FileName="WEEKLY_PROVIDER_1500069003_0_201903011122296221_NZT.zip" TransactionCount="2" PeriodCount="19">
+    <ChildFile FileName="WEEKLY_CUSTOMER_0_201903011122296846_NZT.xml" TransactionCount="0" PeriodCount="8" />
+    <ChildFile FileName="WEEKLY_AGENT_IRD_123149785_0_201903011122297471_NZT.xml" TransactionCount="2" PeriodCount="7" />
+    <ChildFile FileName="WEEKLY_PROVIDER_1500069003_0_201903011122296221_NZT_INTERMEDIATION.xml" TransactionCount="0" PeriodCount="0" />
+    <ChildFile FileName="WEEKLY_PROVIDER_1500069003_0_201903011122296221_NZT_SOFTWARE_INTERMEDIATION.xml" TransactionCount="0" PeriodCount="0" />
+    <ChildFile FileName="WEEKLY_AGENT_IRD_132123764_0_201903011122297002_NZT.xml" TransactionCount="0" PeriodCount="4" />
+  </FileTransfer>
+</FileTransfers>
