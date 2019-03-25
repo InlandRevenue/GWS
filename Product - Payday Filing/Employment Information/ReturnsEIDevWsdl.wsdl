@@ -175,13 +175,13 @@
 			<xs:element name="PrepopResponseType" nillable="true" type="tns:PrepopResponseType"/>
 		</xs:schema>
 		<xs:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusRequest">
-			<xs:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1" schemaLocation="ReturnCommon.v1.xsd"/>
+		<xs:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnEI.v1" schemaLocation="ReturnEI.v1.xsd"/>
 			<xs:complexType name="RetrieveStatusRequest">
 				<xs:sequence>
 					<xs:element name="RetrieveStatusRequestWrapper" nillable="true">
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element ref="rc:retrieveFormInfoRequest"/>
+								<xs:element ref="ei:retrieveEIRequest"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
