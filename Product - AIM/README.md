@@ -1,8 +1,8 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-AIM Returns Software Development Kit (SDK)
-=======================================
+AIM Returns Software Development Kit V2.0 (SDK)
+===============================================
 
 Key Features:
 -------------
@@ -18,10 +18,10 @@ Key Features:
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../Service%20-%20Return/Latest/)
-	- View and download the AIM return [xsd](ReturnAIM.v1.xsd) and [wsdl](ReturnsAIMDevWsdl.wsdl) from this current directory
+	- View and download the AIM return [xsd](ReturnAIM.v2.xsd) and [wsdl](ReturnsAIMDevWsdl.v2.wsdl) from this current directory
 	
 - Returns Service 
-	- [Download the build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20-%20V2.0.pdf) to view data definitions of each operation and response status code definitions
 	
 - Identity and Access Service
 	- [How to Integrate with OAuth](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
@@ -29,6 +29,18 @@ Key Features:
 	- [Message Samples](../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
+- New Features of AIM v2.0:	
+
+	- Changed to meet new legislation around mid-year entry. 
+	- File/prepop now allows for mid-year entry. 
+	- File has 3 new elements to declare:
+		- If the company is now earning over $5M 
+		- If the company is deciding to enter AIM mid-year 
+		- Declare any shareholders that the AIM company is paying provisional tax for.
+
+Prepop now returns and penalties or interest applied to the customer period. 
+
+	
 Test Details:
 -----------------
 

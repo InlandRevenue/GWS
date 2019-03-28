@@ -6,9 +6,10 @@ Schema - Common
 
 This schema defines the common data types used across the IR gateway services. 
 
-* [view Common schema](Common.v1.xsd)
+* [view Common schema v1](Common.v1.xsd)
+* [view Common schema v2](Common.v2.xsd)
 
-Products using this schema:
+Products using this Common schema:
 -------------
 * [Accounting Income Method (AIM) - Statement Filing](../Product%20-%20AIM)
 * [Goods and Services Tax (GST) - Return Filing](../Product%20-%20GST)
