@@ -9,12 +9,24 @@ This schema defines the common data types used across the IR gateway services.
 * [view Common schema v1](Common.v1.xsd)
 * [view Common schema v2](Common.v2.xsd)
 
-Products using this Common schema:
+Products using Common schema v1:
 -------------
-* [Accounting Income Method (AIM) - Statement Filing](../Product%20-%20AIM)
 * [Goods and Services Tax (GST) - Return Filing](../Product%20-%20GST)
 * [Payday Filing](../Product%20-%20Payday%20Filing)
 * [Transaction Data Services](../Product%20-%20Transaction%20Data%20Services)
+
+Products using Common schema v2:
+-------------
+* [Accounting Income Method (AIM) - Statement Filing](../Product%20-%20AIM)
+
+Investment Income Reporting using version 2
+-------------
+* [Approved issuer levy (AIL) - Return Filing](../Product%20-%20Investment%20Income%20Reporting/Product%20-%20AIL)
+* [Dividend withholding tax (DWT) - Return Filing](../Product%20-%20Investment%20Income%20Reporting/Product%20-%20DWT)
+* [Interest pay as you earn (IPS) - Return Filing](../Product%20-%20Investment%20Income%20Reporting/Product%20-%20IPS)
+* [Non-resident withholding tax (NRT) - Return Filing](../Product%20-%20Investment%20Income%20Reporting/Product%20-%20NRT)
+* [Resident withholding tax (RWT) - Return Filing](../Product%20-%20Investment%20Income%20Reporting/Product%20-%20RWT)
+* Portfolio investment entities (PIE) attributed income - Return filing - to be provided late 2019
 
 Supporting services
 -------------
