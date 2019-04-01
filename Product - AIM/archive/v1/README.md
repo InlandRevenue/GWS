@@ -18,7 +18,7 @@ Key Documentation:
 	- View and download the AIM return [xsd](ReturnAIM.v1.xsd) and [wsdl](ReturnsAIMDevWsdl.v1.wsdl) from this current directory
 	
 - Return Service 
-	- [Download the Return Service AIM v1.0 build pack](../../Service%20-%20Return/Archive/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20-%20v1.0.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Return Service AIM v1.0 build pack](../../Service%20-%20Return/Archive/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20v1.0.pdf) to view data definitions of each operation and response status code definitions
 
 - Message Samples
     - [View Message samples for requests and positive responses](#message-samples)		
