@@ -78,7 +78,8 @@ Mock Environment Information:
 
 - AIM Mock Scenarios Mindmap
 	
-	![Mock Scenarios](images/AIM_Mock_Scenarios_Mindmap.png)
+	- [View Larger Image](images/AIM_Mock_Scenarios_Mindmap.png) 
+	![Mock Scenarios](images/AIM_Mock_Scenarios_Mindmap.png) 
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
@@ -126,6 +127,6 @@ Test Environment Information:
 
 - Test Scenarios
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
-	- AIM Test Scenarios Mindmap
+	- AIM Test Scenarios Mindmap [View Larger Image](images/AIM_Test_Scenarios_Mindmap.png)
 	
 	![Test Scenarios](images/AIM_Test_Scenarios_Mindmap.png)
