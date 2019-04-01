@@ -6,16 +6,18 @@
         <ret:Prepop xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:ReturnPrepopRequestMsg>
                 <prep:PrepopRequestWrapper xmlns:prep="https://services.ird.govt.nz/GWS/Returns/:types/PrepopRequest">
-                    <ret1:retrieveFormInfoRequest xmlns:ret1="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
-                        <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
+                    <ret1:retrieveFormInfoRequest xmlns:ret1="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v2">
+                        <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
                             <com:softwareProvider>SoftwareProvider</com:softwareProvider>
                             <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
-                            <com:softwareRelease>1.0</com:softwareRelease>
+                            <com:softwareRelease>v2</com:softwareRelease>
                         </com:softwareProviderData>
-                        <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1" IdentifierValueType="ACCIRD">123090918</com:identifier>
-                        <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">INC</com:accountType>
-                        <ret1:periodEndDate>2019-03-31</ret1:periodEndDate>
-                        <ret1:majorFormType>SOA</ret1:majorFormType>
+                        <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2" IdentifierValueType="ACCIRD">123090918</com:identifier>
+                        <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">INC</com:accountType>
+                        <ret2:periodEndDate xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">2020-03-31</ret2:periodEndDate>
+                        <ret2:majorFormType xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">SOA</ret2:majorFormType>
+                        <ret2:minorFormType xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">SOA_2</ret2:minorFormType>
+                        <ret1:midYearEntry>false</ret1:midYearEntry>
                     </ret1:retrieveFormInfoRequest>
                 </prep:PrepopRequestWrapper>
             </ret:ReturnPrepopRequestMsg>

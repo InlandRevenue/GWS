@@ -1,21 +1,10 @@
-![IRD logo](../Images/IRlogo.gif)
-![Software Dev](../Images/SoftwareDev.png)
+![IRD logo](../../../Images/IRlogo.gif)
+![Software Dev](../../../Images/SoftwareDev.png)
 
-AIM Returns Software Development Kit (SDK)
+AIM Returns Software Development Kit(SDK)
 ===============================================
 
-# Release version 2.0
-
-New Features:
--------------
-	- Changed to meet new legislation around mid-year entry. 
-	- File/prepop now 
-		- allows for mid-year entry.
-		- returns penalties or interest applied to the customer period. 
-	- File has 3 new elements to declare:
-		- If the company is now earning over $5M 
-		- If the company is deciding to enter AIM mid-year 
-		- Declare any shareholders that the AIM company is paying provisional tax for.
+# Release version 1.0
 
 Key Documentation:
 -------------
@@ -24,12 +13,12 @@ Key Documentation:
 	- [view on IR website](https://www.ird.govt.nz/resources/5/0/50d56274-2a12-46ac-a9e3-a4a84d3f47bc/aim-business-use-cases-worked-examples.pdf)
 	
 - Schemas and WSDLS
-	- View and download the [common v2 xsd](../Schema%20-%20Common/)
-	- View and download the [return service common v2 xsd](../Service%20-%20Return/Latest/)
-	- View and download the AIM return [xsd](ReturnAIM.v2.xsd) and [wsdl](ReturnsAIMDevWsdl.v2.wsdl) from this current directory
+	- View and download the [common v1 xsd](../../../Schema%20-%20Common/)
+	- View and download the [return service common v1 xsd](../../../Service%20-%20Return/Latest/)
+	- View and download the AIM return [xsd](ReturnAIM.v1.xsd) and [wsdl](ReturnsAIMDevWsdl.v1.wsdl) from this current directory
 	
 - Return Service 
-	- [Download the Return Service AIM v2.0 build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20-%20V2.0.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Return Service AIM v1.0 build pack](../../../Service%20-%20Return/Archive/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20v1.0.pdf) to view data definitions of each operation and response status code definitions
 
 - Message Samples
     - [View Message samples for requests and positive responses](#message-samples)		
@@ -39,13 +28,13 @@ Key Documentation:
 	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
 	
 - Test Environment Information
-	- [Test scenarios report template and mindmap](#test-environment-information)
+	- [Test scenarios report template, mindmap and data](#test-environment-information)
 	
 - Identity and Access Service
-	- [How to Integrate with OAuth](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Sample curl commands](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
-	- [Message Samples](../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
+	- [How to Integrate with OAuth](../../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
+	- [Sample curl commands](../../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
+	- [Message Samples](../../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
+	- [Download the build pack](../../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
 
 Message samples:
@@ -78,7 +67,7 @@ Mock Environment Information:
 
 - AIM Mock Scenarios Mindmap
 	
-	![Mock Scenarios](images/AIM_Mock_Scenarios_Mindmap.png)
+	![Mock Scenarios](../../images/AIM_Mock_Scenarios_Mindmap.png)
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
@@ -128,4 +117,4 @@ Test Environment Information:
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
 	- AIM Test Scenarios Mindmap
 	
-	![Test Scenarios](images/AIM_Test_Scenarios_Mindmap.png)
+	![Test Scenarios](../../images/AIM_Test_Scenarios_Mindmap.png)
