@@ -62,6 +62,31 @@ _______________________________________
 			<xsd:maxInclusive value="0"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="Quantity32Type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Integer with set bounds</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="-2147483648"/>
+			<xsd:maxInclusive value="2147483647"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Quantity32TypePositive">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Integer values accepting only positive amounts, including 0.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="QuantityType">
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Quantity32TypeNegative">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Integer value accepting only negative amounts, including 0.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="QuantityType">
+			<xsd:maxInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<!--Date/Time Types-->
 	<xsd:simpleType name="MonthType">
 		<xsd:annotation>
@@ -161,6 +186,12 @@ _______________________________________
 		<xsd:restriction base="xsd:string">
 			<xsd:minLength value="1"/>
 			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="String250">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="250"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="String255">
@@ -446,6 +477,7 @@ _______________________________________
 		<xsd:restriction base="xsd:string">
 			<xsd:minLength value="1"/>
 			<xsd:maxLength value="30"/>
+			<xsd:pattern value="[+]?([0-9- ]*)$"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PhoneExtensionType">
