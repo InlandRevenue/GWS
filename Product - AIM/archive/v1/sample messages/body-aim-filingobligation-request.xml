@@ -6,16 +6,15 @@
         <ret:RetrieveFilingObligations xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:FilingObligationsRequestMsg>
                 <fil:RetrieveFilingObligationsRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveFilingObligationsRequest">
-                    <ret2:retrieveFilingObligationsRequest xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
-                        <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                    <ret2:retrieveFilingObligationsRequest xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                        <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
                             <com:softwareProvider>SoftwareProvider</com:softwareProvider>
                             <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
-                            <com:softwareRelease>v2</com:softwareRelease>
+                            <com:softwareRelease>1.0</com:softwareRelease>
                         </com:softwareProviderData>
-                        <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2" IdentifierValueType="ACCIRD">123090918</com:identifier>
-                        <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">INC</com:accountType>
+                        <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1" IdentifierValueType="ACCIRD">123090918</com:identifier>
+                        <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">INC</com:accountType>
                         <ret2:majorFormType>SOA</ret2:majorFormType>
-                        <ret2:minorFormType>SOA_2</ret2:minorFormType>
                     </ret2:retrieveFilingObligationsRequest>
                 </fil:RetrieveFilingObligationsRequestWrapper>
             </ret:FilingObligationsRequestMsg>

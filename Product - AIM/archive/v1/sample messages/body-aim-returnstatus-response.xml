@@ -6,15 +6,13 @@
         <RetrieveStatusResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
             <RetrieveStatusResult>
                 <b:RetrieveStatusResponseWrapper xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusResponse">
-                    <retrieveStatusResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
-                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                    <retrieveStatusResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v1">
                             <statusCode>0</statusCode>
                             <errorMessage/>
                         </statusMessage>
                         <responseBody>
-                            <returnStatus>
-                                <status code="SUB">Submitted</status>
-                            </returnStatus>
+                            <status code="SUB">Submitted</status>
                         </responseBody>
                     </retrieveStatusResponse>
                 </b:RetrieveStatusResponseWrapper>
