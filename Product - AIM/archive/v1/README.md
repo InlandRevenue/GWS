@@ -67,6 +67,7 @@ Mock Environment Information:
 
 - AIM Mock Scenarios Mindmap
 	
+	[View Larger Image](../../images/AIM_Mock_Scenarios_Mindmap.png)
 	![Mock Scenarios](../../images/AIM_Mock_Scenarios_Mindmap.png)
 
 - Test Data
@@ -115,6 +116,6 @@ Test Environment Information:
 
 - Test Scenarios
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
-	- AIM Test Scenarios Mindmap
+	- AIM Test Scenarios Mindmap [View Larger Image](../../images/AIM_Test_Scenarios_Mindmap.png)
 	
 	![Test Scenarios](../../images/AIM_Test_Scenarios_Mindmap.png)
