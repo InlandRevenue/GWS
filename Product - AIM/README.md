@@ -129,4 +129,4 @@ Test Environment Information:
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
 	- AIM Test Scenarios Mindmap - [view larger image](images/AIM_v2_Test_Scenarios_Mindmap.png)
 	
-	![Test Scenarios](images/AIM_Test_Scenarios_Mindmap.png)
+	![Test Scenarios](images/AIM_v2_Test_Scenarios_Mindmap.png)
