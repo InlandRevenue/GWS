@@ -1,7 +1,7 @@
 ![IRD logo](../../../Images/IRlogo.gif)
 ![Software Dev](../../../Images/SoftwareDev.png)
 
-AIM Returns Software Development Kit V1.0 (SDK)
+AIM Returns Software Development Kit(SDK)
 ===============================================
 
 # Release version 1.0
@@ -17,8 +17,8 @@ Key Documentation:
 	- View and download the [return service common v1 xsd](../../../Service%20-%20Return/Latest/)
 	- View and download the AIM return [xsd](ReturnAIM.v1.xsd) and [wsdl](ReturnsAIMDevWsdl.v1.wsdl) from this current directory
 	
-- Returns Service 
-	- [Download the Return Service AIM v1.0 build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20-%20V2.0.pdf) to view data definitions of each operation and response status code definitions
+- Return Service 
+	- [Download the Return Service AIM v1.0 build pack](../../Service%20-%20Return/Archive/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20-%20v1.0.pdf) to view data definitions of each operation and response status code definitions
 
 - Message Samples
     - [View Message samples for requests and positive responses](#message-samples)		
@@ -67,7 +67,7 @@ Mock Environment Information:
 
 - AIM Mock Scenarios Mindmap
 	
-	![Mock Scenarios](../images/AIM_Mock_Scenarios_Mindmap.png)
+	![Mock Scenarios](../../images/AIM_Mock_Scenarios_Mindmap.png)
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
@@ -91,7 +91,7 @@ Mock Environment Information:
 	 | | | *periodEndDate*: 2017-11-30 
 
             
-- Mock Environment - Requests Matching Logic:
+Mock Environment - Requests Matching Logic:
 -----------------
 
 - ReadMe Page - (default) port 8080 of root path of Welcome Page
@@ -117,4 +117,4 @@ Test Environment Information:
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
 	- AIM Test Scenarios Mindmap
 	
-	![Test Scenarios](../images/AIM_Test_Scenarios_Mindmap.png)
+	![Test Scenarios](../../images/AIM_Test_Scenarios_Mindmap.png)
