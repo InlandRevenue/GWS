@@ -1,25 +1,24 @@
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
     <soap:Header>
-        <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/File</wsa:Action>
+        <add:Action xmlns:add="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/File</add:Action>
     </soap:Header>
     <soap:Body>
         <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
-                    <ret1:fileRequest xmlns:ret1="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v2">
-                        <ret2:fileHeader xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
-                            <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                    <ret1:fileRequest xmlns:ret1="urn:www.ird.govt.nz/GWS:types/ReturnAIM.v1">
+                        <ret2:fileHeader xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
+                            <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">
                                 <com:softwareProvider>SoftwareProvider</com:softwareProvider>
                                 <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
-                                <com:softwareRelease>v2</com:softwareRelease>
+                                <com:softwareRelease>v1</com:softwareRelease>
                             </com:softwareProviderData>
-                            <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2" IdentifierValueType="ACCIRD">123081420</com:identifier>
-                            <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">INC</com:accountType>
-                            <ret2:periodEndDate>2019-09-30</ret2:periodEndDate>
+                            <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1" IdentifierValueType="ACCIRD">123081420</com:identifier>
+                            <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v1">INC</com:accountType>
+                            <ret2:periodEndDate>2018-09-30</ret2:periodEndDate>
                             <ret2:majorFormType>SOA</ret2:majorFormType>
-                            <ret2:minorFormType>SOA_2</ret2:minorFormType>
                         </ret2:fileHeader>
-                        <ret2:fileBody xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                        <ret2:fileBody xmlns:ret2="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v1">
                             <ret2:standardFields>
                                 <ret2:isNilReturn>false</ret2:isNilReturn>
                                 <ret2:amendmentRequest>
@@ -29,9 +28,7 @@
                                 </ret2:amendmentRequest>
                             </ret2:standardFields>
                             <ret2:formFields xsi:type="ret1:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                <ret1:midYearEntry>false</ret1:midYearEntry>
-                                <ret1:overFiveMillion>false</ret1:overFiveMillion>
-                                <ret1:aimInstalmentDate>2019-10-29</ret1:aimInstalmentDate>
+                                <ret1:aimInstalmentDate>2018-10-29</ret1:aimInstalmentDate>
                                 <ret1:grossSalesAndServiceIncome>1000.00</ret1:grossSalesAndServiceIncome>
                                 <ret1:openingStock>1002.00</ret1:openingStock>
                                 <ret1:purchases>1003.00</ret1:purchases>
@@ -95,25 +92,11 @@
                                         <ret1:description>test</ret1:description>
                                     </ret1:adjustments>
                                 </ret1:otherAdjustments>
-                                <ret1:yearToDateProvTaxLiability>6500.00</ret1:yearToDateProvTaxLiability>
-                                <ret1:thisInstalment>1000.00</ret1:thisInstalment>
+                                <ret1:yearToDateProvTaxLiability>1068.00</ret1:yearToDateProvTaxLiability>
+                                <ret1:thisInstalment>1069.00</ret1:thisInstalment>
                                 <ret1:shareholderProvTax>1070.00</ret1:shareholderProvTax>
-                                <ret1:refundAmount>0.00</ret1:refundAmount>
-                                <ret1:refundIndicator>false</ret1:refundIndicator>
-                                <ret1:creditRecipientList>
-                                    <ret1:creditRecipient>
-                                        <ret1:recipientIrdNumber>132176167</ret1:recipientIrdNumber>
-                                        <ret1:indicatorType>A</ret1:indicatorType>
-                                    </ret1:creditRecipient>
-                                    <ret1:creditRecipient>
-                                        <ret1:recipientIrdNumber>132176183</ret1:recipientIrdNumber>
-                                        <ret1:indicatorType>D</ret1:indicatorType>
-                                    </ret1:creditRecipient>
-                                    <ret1:creditRecipient>
-                                        <ret1:recipientIrdNumber>132176191</ret1:recipientIrdNumber>
-                                        <ret1:indicatorType>E</ret1:indicatorType>
-                                    </ret1:creditRecipient>
-                                </ret1:creditRecipientList>
+                                <ret1:refundAmount>750.00</ret1:refundAmount>
+                                <ret1:refundIndicator>true</ret1:refundIndicator>
                             </ret2:formFields>
                         </ret2:fileBody>
                     </ret1:fileRequest>
