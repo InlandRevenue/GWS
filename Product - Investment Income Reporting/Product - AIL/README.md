@@ -11,8 +11,8 @@ Key Documentation:
 	- [Download and view](III%20-%20AIL%20-%20GWS%20business%20use%20cases.pdf)
 	
 - Schemas and WSDLS
-	- View and download the [common v2 xsd](../../Schema%20-%20Common/)
-	- View and download the [return service common v2 xsd](../../Service%20-%20Return/Latest/)
+	- View and download the [common v2 xsd](../../Schema%20-%20Common/Common.v2.xsd)
+	- View and download the [return service common v2 xsd](../../Service%20-%20Return/Latest/ReturnCommon.v2.xsd)
 	- View and download the AIL return [xsd](ReturnAIL.v0.xsd) and [wsdl](AILDevWsdl.wsdl) from this current directory
 	
 - Return Service - Investment Income Reporting
