@@ -25,6 +25,8 @@
                                 <rc:isFinalReturn>false</rc:isFinalReturn>
                                 <rc:amendmentRequest>
                                     <rc:isAmended>false</rc:isAmended>
+                                    <rc:amendReason/>
+                                    <rc:amendDetails/>
                                 </rc:amendmentRequest>
                             </rc:standardFields>
                             <rc:formFields xsi:type="r:FormFieldsType">
@@ -64,7 +66,7 @@
                                     <r:primaryAddress>123 Browns St, Suburb, City 0000</r:primaryAddress>
                                     <r:incomeInformation>
                                         <rc:grossAmount>1055.41</rc:grossAmount>
-                                        <rc:interestZeroRated>105.54</rc:interestZeroRated>
+                                        <r:interestZeroRated>105.54</r:interestZeroRated>
                                     </r:incomeInformation>
                                 </r:lineItems>
                             </rc:formFields>
