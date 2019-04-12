@@ -1,0 +1,26 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+    <soap:Header>
+        <a:Action>https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturn</a:Action>
+    </soap:Header>
+    <soap:Body xmlns:ret="https://services.ird.govt.nz/GWS/Returns/" xmlns:ret1="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnRequest" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2"
+    xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
+        <ret:RetrieveReturn>
+            <ret:RetrieveReturnRequestMsg>
+                <ret1:RetrieveReturnRequestWrapper>
+                    <rc:retrieveFormInfoRequest>
+                        <com:softwareProviderData>
+                            <com:softwareProvider>SoftwareProvider Company Ltd</com:softwareProvider>
+                            <com:softwarePlatform>SoftwarePlatform</com:softwarePlatform>
+                            <com:softwareRelease>1.0</com:softwareRelease>
+                        </com:softwareProviderData>
+                        <com:identifier IdentifierValueType="IRD">012501250</com:identifier>
+                        <com:accountType>AIL</com:accountType>
+                        <rc:periodEndDate>2019-04-30</rc:periodEndDate>
+                        <rc:majorFormType>AIL</rc:majorFormType>
+                        <rc:minorFormType>AIL</rc:minorFormType>
+                    </rc:retrieveFormInfoRequest>
+                </ret1:RetrieveReturnRequestWrapper>
+            </ret:RetrieveReturnRequestMsg>
+        </ret:RetrieveReturn>
+    </soap:Body>
+</soap:Envelope>

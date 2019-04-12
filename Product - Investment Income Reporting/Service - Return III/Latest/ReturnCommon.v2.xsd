@@ -63,7 +63,7 @@ _______________________________________
 						<xsd:simpleType>
 							<xsd:restriction base="xsd:normalizedString">
 								<xsd:minLength value="1"/>
-								<xsd:maxLength value="4"/>
+								<xsd:maxLength value="6"/>
 							</xsd:restriction>
 						</xsd:simpleType>
 					</xsd:element>
@@ -118,7 +118,7 @@ _______________________________________
 	<xsd:complexType name="FileResponseBodyType">
 		<xsd:sequence>
 			<xsd:element name="gatewayId" type="xsd:normalizedString"/>
-			<xsd:element name="submissionKey" type="cmn:QuantityTypePositive" minOccurs="0"/>
+			<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:element name="fileResponse" type="FileResponseType">
@@ -158,7 +158,7 @@ _______________________________________
 						<xsd:simpleType>
 							<xsd:restriction base="xsd:normalizedString">
 								<xsd:minLength value="1"/>
-								<xsd:maxLength value="3"/>
+								<xsd:maxLength value="6"/>
 							</xsd:restriction>
 						</xsd:simpleType>
 					</xsd:element>
@@ -172,6 +172,11 @@ _______________________________________
 			<xsd:element name="isNilReturn" type="xsd:boolean" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	<xsd:complexType name="RetrieveReturnResponseBodyType" abstract="true">
+		<xsd:sequence>
+			<xsd:element name="standardFields" type="RetrieveStandardFieldsType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
 	<xsd:complexType name="RetrieveReturnResponseType">
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">Defines the response for the RetrieveReturn operation.</xsd:documentation>
@@ -183,11 +188,6 @@ _______________________________________
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:complexType name="RetrieveReturnResponseBodyType" abstract="true">
-		<xsd:sequence>
-			<xsd:element name="standardFields" type="RetrieveStandardFieldsType"/>
-		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:element name="retrieveReturnResponse" type="RetrieveReturnResponseType"/>
 	<!--FilingObligations-->
@@ -219,6 +219,17 @@ _______________________________________
 							<xsd:restriction base="xsd:normalizedString">
 								<xsd:minLength value="1"/>
 								<xsd:maxLength value="3"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="minorFormType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">The minor form type of this return. (ex. ANN)</xsd:documentation>
+						</xsd:annotation>
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:normalizedString">
+								<xsd:minLength value="1"/>
+								<xsd:maxLength value="6"/>
 							</xsd:restriction>
 						</xsd:simpleType>
 					</xsd:element>
@@ -262,7 +273,7 @@ _______________________________________
 	<xsd:complexType name="ReturnStatusType">
 		<xsd:sequence>
 			<xsd:element name="status" type="CodeStringType"/>
-			<xsd:element name="submissionKey" type="cmn:QuantityTypePositive"/>
+			<xsd:element name="submissionKey" type="cmn:QuantityTypePositive" minOccurs="0"/>
 			<xsd:element name="majorFormType" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">The major form type of this return</xsd:documentation>
@@ -281,7 +292,7 @@ _______________________________________
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:normalizedString">
 						<xsd:minLength value="1"/>
-						<xsd:maxLength value="3"/>
+						<xsd:maxLength value="6"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
@@ -379,18 +390,12 @@ _______________________________________
 			<xsd:element name="email" type="cmn:EmailAddressType" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="InvestmentBankAccount">
-		<xsd:choice>
-			<xsd:element name="nzBankAccount" type="cmn:NZBankStandardType"/>
-			<xsd:element name="freeFormBankAccount" type="cmn:String255"/>
-		</xsd:choice>
-	</xsd:complexType>
 	<xsd:complexType name="Income">
 		<xsd:sequence>
 			<xsd:element name="incomeType" type="cmn:String6" minOccurs="0"/>
-			<xsd:element name="grossAmount" type="cmn:MoneyTypePositive"/>
+			<xsd:element name="grossAmount" type="cmn:MoneyType"/>
 			<xsd:element name="deductedAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
-			<xsd:element name="rate" type="cmn:PercentageType" minOccurs="0"/>
+			<xsd:element name="rate" type="cmn:MoneyType" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:simpleType name="LineItemAmendType">

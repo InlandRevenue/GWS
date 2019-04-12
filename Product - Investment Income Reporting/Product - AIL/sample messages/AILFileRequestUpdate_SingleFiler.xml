@@ -1,0 +1,57 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+    <soap:Header>
+        <a:Action>https://services.ird.govt.nz/GWS/Returns/Return/File</a:Action>
+    </soap:Header>
+    <soap:Body xmlns:ret="https://services.ird.govt.nz/GWS/Returns/" xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIL.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+        <ret:File>
+            <ret:ReturnFileRequestMsg>
+                <fil:FileRequestWrapper>
+                    <r:fileRequest>
+                        <rc:fileHeader>
+                            <cmn:softwareProviderData>
+                                <cmn:softwareProvider>SoftwareProvider Company Ltd</cmn:softwareProvider>
+                                <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+                                <cmn:softwareRelease>1.0</cmn:softwareRelease>
+                            </cmn:softwareProviderData>
+                            <cmn:identifier IdentifierValueType="IRD">012501250</cmn:identifier>
+                            <cmn:accountType>AIL</cmn:accountType>
+                            <rc:periodEndDate>2019-04-30</rc:periodEndDate>
+                            <rc:majorFormType>AIL</rc:majorFormType>
+                            <rc:minorFormType>AIL</rc:minorFormType>
+                        </rc:fileHeader>
+                        <rc:fileBody>
+                            <rc:standardFields>
+                                <rc:isNilReturn>false</rc:isNilReturn>
+                                <rc:isFinalReturn>false</rc:isFinalReturn>
+                                <rc:amendmentRequest>
+                                    <rc:isAmended>true</rc:isAmended>
+                                    <rc:amendReason>KEY</rc:amendReason>
+                                    <rc:amendDetails>Error in gross amount paid.</rc:amendDetails>
+                                </rc:amendmentRequest>
+                            </rc:standardFields>
+                            <rc:formFields xsi:type="r:FormFieldsType">
+                                <r:isReverseReplace>false</r:isReverseReplace>
+                                <r:lineItems>
+                                    <r:referenceId>LineItemAB</r:referenceId>
+                                    <r:amendType>U</r:amendType>
+                                    <r:externalID>BankAccountXYY</r:externalID>
+                                    <r:primaryIRD>012301235</r:primaryIRD>
+                                    <r:primaryDateOfBirth>1980-11-01</r:primaryDateOfBirth>
+                                    <r:primaryName>Kyle Brown</r:primaryName>
+                                    <r:primaryPhone>0429392939</r:primaryPhone>
+                                    <r:primaryEmail>name2@bcompany.co.nz</r:primaryEmail>
+                                    <r:primaryCountry>NZ</r:primaryCountry>
+                                    <r:primaryAddress>123 Browns St, Suburb, City 0000</r:primaryAddress>
+                                    <r:incomeInformation>
+                                        <rc:grossAmount>1045.21</rc:grossAmount>
+                                        <r:interestZeroRated>104.52</r:interestZeroRated>
+                                    </r:incomeInformation>
+                                </r:lineItems>
+                            </rc:formFields>
+                        </rc:fileBody>
+                    </r:fileRequest>
+                </fil:FileRequestWrapper>
+            </ret:ReturnFileRequestMsg>
+        </ret:File>
+    </soap:Body>
+</soap:Envelope>

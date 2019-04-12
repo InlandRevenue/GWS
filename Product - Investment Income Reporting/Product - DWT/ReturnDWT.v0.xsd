@@ -52,7 +52,6 @@
 			<xsd:element name="primaryEmail" type="cmn:EmailAddressType" minOccurs="0"/>
 			<xsd:element name="primaryCountry" type="cmn:Country2DigitType" minOccurs="0"/>
 			<xsd:element name="primaryAddress" type="cmn:FormattedAddressType" minOccurs="0"/>
-			<xsd:element name="bankAccount" type="rc:InvestmentBankAccount" minOccurs="0"/>
 			<xsd:element name="accountHolders" type="rc:Recipient" minOccurs="0" maxOccurs="500"/>
 			<xsd:element name="incomeInformation" type="DWTIncomeType" maxOccurs="100"/>
 		</xsd:sequence>
