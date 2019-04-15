@@ -3,7 +3,7 @@
 
 # Investment Income Reporting - Testing Information
 
-The testing details provided on this page is applicable for all of the following invest income reporting tax types
+- The testing details provided on this page is applicable for all of the following invest income reporting tax types
 	- Approved Issuer Levey (AIL)
 	- Dividend Withholding Tax (DWT)
 	- Interest Pay as you go (IPS)
@@ -14,9 +14,6 @@ The testing details provided on this page is applicable for all of the following
 	- [Mindmap and test data](#mock-environment-information)
 	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
 	
-- Test Environment Information
-	- [Test scenarios report template and mindmap](#test-environment-information)
-
 Mock Environment Information:
 -----------------
 
@@ -93,12 +90,3 @@ Mock Environment - Requests Matching Logic:
 - Then the service operation specific validations are carried out and returned with appropriate response (per mind map).
 
 - Unmatched requests will return an appropriate HTTP response status
-
-Test Environment Information:
------------------
-
-- Test Scenarios
-	- [Download test scenarios report template](IIR%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
-	- IIR Test Scenarios Mindmap - [view larger image](images/IIR_Test_Scenarios_Mindmap.png)
-	
-	![Test Scenarios](images/IIR_Test_Scenarios_Mindmap.png)
