@@ -1,0 +1,434 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:int="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" name="Intermediation" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/">
+	<wsp:Policy wsu:Id="WSHttpBinding_Intermediation_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false"/>
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256/>
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Strict/>
+							</wsp:Policy>
+						</sp:Layout>
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<wsam:Addressing>
+					<wsp:Policy>
+						<wsam:AnonymousResponses/>
+					</wsp:Policy>
+				</wsam:Addressing>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+	<wsdl:types>
+		<xsd:schema elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/">
+			<xsd:element name="RetrieveClientList">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q1="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientListRequest" minOccurs="1" name="RetrieveClientListRequestMsg" nillable="true" type="q1:RetrieveClientListRequestType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrieveClientListResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q2="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientListResponse" minOccurs="0" name="RetrieveClientListResult" nillable="true" type="q2:RetrieveClientListResponseType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Link">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q3="https://services.ird.govt.nz/GWS/Intermediation/:types/LinkRequest" minOccurs="1" name="LinkRequestMsg" nillable="true" type="q3:LinkIntermediationRequestType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="LinkResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q4="https://services.ird.govt.nz/GWS/Intermediation/:types/LinkResponse" minOccurs="0" name="LinkResult" nillable="true" type="q4:LinkIntermediationResponseType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Delink">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q5="https://services.ird.govt.nz/GWS/Intermediation/:types/DelinkRequest" minOccurs="1" name="DelinkRequestMsg" nillable="true" type="q5:DelinkIntermediationRequestType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DelinkResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q6="https://services.ird.govt.nz/GWS/Intermediation/:types/DelinkResponse" minOccurs="0" name="DelinkResult" nillable="true" type="q6:DelinkIntermediationResponseType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrieveClient">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q7="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientRequest" minOccurs="1" name="RetrieveClientRequestMsg" nillable="true" type="q7:RetrieveClientRequestType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrieveClientResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q8="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientResponse" minOccurs="0" name="RetrieveClientResult" nillable="true" type="q8:RetrieveClientResponseType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Update">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q9="https://services.ird.govt.nz/GWS/Intermediation/:types/UpdateRequest" minOccurs="1" name="UpdateRequestMsg" nillable="true" type="q9:UpdateIntermediationRequestType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="UpdateResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element xmlns:q10="https://services.ird.govt.nz/GWS/Intermediation/:types/UpdateResponse" minOccurs="0" name="UpdateResult" nillable="true" type="q10:UpdateIntermediationResponseType"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientListRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientListRequest">
+		<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="RetrieveClientListRequestType">
+				<xsd:sequence>
+					<xsd:element name="RetrieveClientListRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:retrieveClientListRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="RetrieveClientListRequestType" nillable="true" type="tns:RetrieveClientListRequestType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientListResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientListResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="RetrieveClientListResponseType">
+				<xsd:sequence>
+					<xsd:element name="RetrieveClientListResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:retrieveClientListResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="RetrieveClientListResponseType" nillable="true" type="tns:RetrieveClientListResponseType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/LinkRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/LinkRequest">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="LinkIntermediationRequestType">
+				<xsd:sequence>
+					<xsd:element name="LinkRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:linkRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="LinkIntermediationRequestType" nillable="true" type="tns:LinkIntermediationRequestType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/LinkResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/LinkResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="LinkIntermediationResponseType">
+				<xsd:sequence>
+					<xsd:element name="LinkResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:linkResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="LinkIntermediationResponseType" nillable="true" type="tns:LinkIntermediationResponseType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/DelinkRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/DelinkRequest">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="DelinkIntermediationRequestType">
+				<xsd:sequence>
+					<xsd:element name="DelinkRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:delinkRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="DelinkIntermediationRequestType" nillable="true" type="tns:DelinkIntermediationRequestType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/DelinkResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/DelinkResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="DelinkIntermediationResponseType">
+				<xsd:sequence>
+					<xsd:element name="DelinkResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:delinkResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="DelinkIntermediationResponseType" nillable="true" type="tns:DelinkIntermediationResponseType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientRequest">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="RetrieveClientRequestType">
+				<xsd:sequence>
+					<xsd:element name="RetrieveClientRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:retrieveClientRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="RetrieveClientRequestType" nillable="true" type="tns:RetrieveClientRequestType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/RetrieveClientResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="RetrieveClientResponseType">
+				<xsd:sequence>
+					<xsd:element name="RetrieveClientResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:retrieveClientResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="RetrieveClientResponseType" nillable="true" type="tns:RetrieveClientResponseType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/UpdateRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/UpdateRequest">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="UpdateIntermediationRequestType">
+				<xsd:sequence>
+					<xsd:element name="UpdateRequestWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:updateRequest"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="UpdateIntermediationRequestType" nillable="true" type="tns:UpdateIntermediationRequestType"/>
+		</xsd:schema>
+		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Intermediation/:types/UpdateResponse" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Intermediation/:types/UpdateResponse">
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Intermediation.v1" schemaLocation="Intermediation.v1.xsd"/>
+			<xsd:complexType name="UpdateIntermediationResponseType">
+				<xsd:sequence>
+					<xsd:element name="UpdateResponseWrapper" nillable="true">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element ref="int:updateResponse"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="UpdateIntermediationResponseType" nillable="true" type="tns:UpdateIntermediationResponseType"/>
+		</xsd:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/">
+			<xs:element name="anyType" nillable="true" type="xs:anyType"/>
+			<xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+			<xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+			<xs:element name="boolean" nillable="true" type="xs:boolean"/>
+			<xs:element name="byte" nillable="true" type="xs:byte"/>
+			<xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+			<xs:element name="decimal" nillable="true" type="xs:decimal"/>
+			<xs:element name="double" nillable="true" type="xs:double"/>
+			<xs:element name="float" nillable="true" type="xs:float"/>
+			<xs:element name="int" nillable="true" type="xs:int"/>
+			<xs:element name="long" nillable="true" type="xs:long"/>
+			<xs:element name="QName" nillable="true" type="xs:QName"/>
+			<xs:element name="short" nillable="true" type="xs:short"/>
+			<xs:element name="string" nillable="true" type="xs:string"/>
+			<xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+			<xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+			<xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+			<xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+			<xs:element name="char" nillable="true" type="tns:char"/>
+			<xs:simpleType name="char">
+				<xs:restriction base="xs:int"/>
+			</xs:simpleType>
+			<xs:element name="duration" nillable="true" type="tns:duration"/>
+			<xs:simpleType name="duration">
+				<xs:restriction base="xs:duration">
+					<xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+					<xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+					<xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="guid" nillable="true" type="tns:guid"/>
+			<xs:simpleType name="guid">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:attribute name="FactoryType" type="xs:QName"/>
+			<xs:attribute name="Id" type="xs:ID"/>
+			<xs:attribute name="Ref" type="xs:IDREF"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="Intermediation_RetrieveClientList_InputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveClientList"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_RetrieveClientList_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveClientListResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_Link_InputMessage">
+		<wsdl:part name="parameters" element="tns:Link"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_Link_OutputMessage">
+		<wsdl:part name="parameters" element="tns:LinkResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_Delink_InputMessage">
+		<wsdl:part name="parameters" element="tns:Delink"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_Delink_OutputMessage">
+		<wsdl:part name="parameters" element="tns:DelinkResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_RetrieveClient_InputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveClient"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_RetrieveClient_OutputMessage">
+		<wsdl:part name="parameters" element="tns:RetrieveClientResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_Update_InputMessage">
+		<wsdl:part name="parameters" element="tns:Update"/>
+	</wsdl:message>
+	<wsdl:message name="Intermediation_Update_OutputMessage">
+		<wsdl:part name="parameters" element="tns:UpdateResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="Intermediation">
+		<wsdl:documentation>
+The Intermediation service can be utilised to link to clients, delink from clients, and get client information. For information regarding the proper use of this service, schemas, formatting of request and response types please refer to the documentation provided during onboarding.
+</wsdl:documentation>
+		<wsdl:operation name="RetrieveClientList">
+			<wsdl:documentation>
+				<summary>For use of the RetrieveClientList operation please reference the Intermediation directory provided at https://github.com/InlandRevenue/Gateway-Services/</summary>
+				<returns>RetrieveClientListResponse will have a repeating list of clients and account information. See schema for more details.</returns>
+				<param name="RetrieveClientListRequestMsg">RetrieveClientListRequest will contain agency identifying fields in XML format. See Intermediation specific schema for more details.</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/RetrieveClientList" message="tns:Intermediation_RetrieveClientList_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/RetrieveClientListResponse" message="tns:Intermediation_RetrieveClientList_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="Link">
+			<wsdl:documentation>
+				<summary>For use of the Link operation please reference the Intermediation directory provided at https://github.com/InlandRevenue/Gateway-Services/</summary>
+				<returns>Link will have a status message for a successful or failed link call. See schema for more details.</returns>
+				<param name="LinkRequestMsg">Link will contain agency fields and client fields in XML format. See Intermediation specific schema for more details.</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/Link" message="tns:Intermediation_Link_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/LinkResponse" message="tns:Intermediation_Link_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="Delink">
+			<wsdl:documentation>
+				<summary>For use of the Delink operation please reference the Intermediation directory provided at https://github.com/InlandRevenue/Gateway-Services/</summary>
+				<returns>Delink will have a status message for a successful or failed delink call. See schema for more details.</returns>
+				<param name="DelinkRequestMsg">Delink will contain agency fields and client fields in XML format. See Intermediation specific schema for more details.</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/Delink" message="tns:Intermediation_Delink_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/DelinkResponse" message="tns:Intermediation_Delink_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveClient">
+			<wsdl:documentation>
+				<summary>For use of the RetrieveClient operation please reference the Intermediation directory provided at https://github.com/InlandRevenue/Gateway-Services/</summary>
+				<returns>RetrieveClientResponse will have a repeating list of clients and account information. See schema for more details.</returns>
+				<param name="RetrieveClientRequestMsg">RetrieveClientRequest will contain agency identifying fields in XML format. See Intermediation specific schema for more details.</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/RetrieveClient" message="tns:Intermediation_RetrieveClient_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/RetrieveClientResponse" message="tns:Intermediation_RetrieveClient_OutputMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="Update">
+			<wsdl:documentation>
+				<summary>For use of the Update operation please reference the Intermediation directory provided at https://github.com/InlandRevenue/Gateway-Services/</summary>
+				<returns>Update will have a status message for a successful or failed delink call. See schema for more details.</returns>
+				<param name="UpdateRequestMsg">Update will contain agency fields and client fields in XML format. See Intermediation specific schema for more details.</param>
+			</wsdl:documentation>
+			<wsdl:input wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/Update" message="tns:Intermediation_Update_InputMessage"/>
+			<wsdl:output wsam:Action="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/UpdateResponse" message="tns:Intermediation_Update_OutputMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="WSHttpBinding_Intermediation" type="tns:Intermediation">
+		<wsp:PolicyReference URI="#WSHttpBinding_Intermediation_policy"/>
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="RetrieveClientList">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/RetrieveClientList" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Link">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/Link" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Delink">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/Delink" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="RetrieveClient">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/RetrieveClient" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="Update">
+			<soap12:operation soapAction="https://services.ird.govt.nz/GWS/Intermediation/Intermediation/Update" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Intermediation">
+		<wsdl:port name="WSHttpBinding_Intermediation" binding="tns:WSHttpBinding_Intermediation">
+			<soap12:address location="https://eservices-test-gateway.npnsp.ird.govt.nz:4046/secure/gateway/GWS/Intermediation/"/>
+			<wsa10:EndpointReference>
+				<wsa10:Address>https://eservices-test-gateway.npnsp.ird.govt.nz:4046/secure/gateway/GWS/Intermediation/</wsa10:Address>
+			</wsa10:EndpointReference>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
