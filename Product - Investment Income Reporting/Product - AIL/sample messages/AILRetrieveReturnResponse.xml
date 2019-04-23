@@ -15,6 +15,11 @@
                             <standardFields>
                                 <isNilReturn>false</isNilReturn>
                                 <isFinalReturn>false</isFinalReturn>
+                                <rc:amendmentRequest>
+                                    <rc:isAmended>false</rc:isAmended>
+                                    <rc:amendReason/>
+                                    <rc:amendDetails/>
+                                </rc:amendmentRequest>
                             </standardFields>
                             <r:formFields xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
                                 <r:submissionKey>1199947772</r:submissionKey>
@@ -38,10 +43,8 @@
                                         <rc:email>name2@acompany.co.nz</rc:email>
                                     </r:accountHolders>
                                     <r:incomeInformation>
-                                        <rc:incomeType>NZINT</rc:incomeType>
                                         <rc:grossAmount>2071.80</rc:grossAmount>
-                                        <rc:interestZeroRated>0.00</rc:interestZeroRated>
-                                        <rc:rate>2</rc:rate>
+                                        <r:interestZeroRated>0.00</r:interestZeroRated>
                                     </r:incomeInformation>
                                 </r:lineItems>
                                 <r:lineItems>
@@ -56,10 +59,8 @@
                                     <r:primaryCountry>NZ</r:primaryCountry>
                                     <r:primaryAddress>123 Browns St, Suburb, City 0000</r:primaryAddress>
                                     <r:incomeInformation>
-                                        <rc:incomeType>NZINT</rc:incomeType>
                                         <rc:grossAmount>1055.41</rc:grossAmount>
-                                        <rc:interestZeroRated>105.54</rc:interestZeroRated>
-                                        <rc:rate>0</rc:rate>
+                                        <r:interestZeroRated>105.54</r:interestZeroRated>
                                     </r:incomeInformation>
                                 </r:lineItems>
                             </r:formFields>
