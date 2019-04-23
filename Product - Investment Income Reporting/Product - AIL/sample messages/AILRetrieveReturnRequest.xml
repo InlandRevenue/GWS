@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rc:retrieveFormInfoRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <cmn:softwareProviderData>
+        <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+        <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+        <cmn:softwareRelease>v1</cmn:softwareRelease>
+    </cmn:softwareProviderData>
+    <cmn:identifier IdentifierValueType="ACCIRD">123452305</cmn:identifier>
+    <cmn:accountType>AIL</cmn:accountType>
+    <rc:periodEndDate>2019-04-30</rc:periodEndDate>
+    <rc:majorFormType>AIL</rc:majorFormType>
+    <rc:submissionKey>0</rc:submissionKey>
+</rc:retrieveFormInfoRequest>
