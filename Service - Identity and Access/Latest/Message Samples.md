@@ -185,7 +185,7 @@ Content-Type: application/json
 
 ## Validate Access Token
 
-This service will validate an Access Token. 
+This service will Validate an Access Token. 
 
 * ```grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt```
 * ```oracle_token_action=validate```
@@ -193,7 +193,7 @@ This service will validate an Access Token.
 * ```assertion=``` - _current access/refresh token_
 * ```oracle_token_attrs_retrieval=prn exp```
 
-### Example POST request to validate a Access Token:
+### Example POST request to Validate a Access Token:
 
 ```http
 POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
