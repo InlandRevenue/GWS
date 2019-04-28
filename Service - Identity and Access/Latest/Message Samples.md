@@ -1,79 +1,293 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Message Samples - OAuth requests and responses
-=======================================
+# Message Samples - OAuth Requests and Responses
 
-Note:
-- Parameters:
-        - {ServiceHostdomain}: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
+##### Table of Contents
+* [URL EndPoint Parameter](#URLEndPointParameter) 
+* [Request Authorisation Code](#RequestAuthorisationCode)
+* [Exchange Authorisation Code for an Authorisation Token](#ExchangeAuthorisationCodeforanAccessToken)
+* [Request Refresh Token](#RequestRefreshToken)
+* [Validate Access Token](#ValidateAccessToken)
+* [Revoke Token Request](#RevokeTokenRequest)
+* [Error Response](#ErrorResponse)
 
-1. **Request Authorisation Code**  : Service consumer to IR
-	- Request sample
-		- Service provider will send a HTTP GET request to Auth Server, 
-			- Url format:
-				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize?client_id=Test99999999&redirect_uri=https://myreturnuri/test/&scope=MYIR.Services&response_type=code
-				
-	- The user will be asked to logon and for the very first login will be required to consent.
-	
-	- Revoke consent request
-		- This consent can be withdrawn. For testing purposes it is recommended to utilise the revoke consent to retest the first time login and consent scenario.
-			- Url format: 
-				> https://{ServiceHostdomain}/ms_oauth/oauth2/ui/oauthservice/showrevokeconsent 
-		  
-2. **Authorisation Code response** : IR to Service consumer
-	- Success Response sample
-		- Url format
-		  > https://myreturnuri/test/?code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJvcmFjbGUub2F1dGgucmVkaXJlY3QtdXJpIjoiaHR0cHM6Ly9qZW5raW5zLmtpd2lzYXZlci5pcmQuZGlnaXRhbHBhcnRuZXIuc2VydmljZXMvIiwic3ViIjpudWxsLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkIjoic2FtbXkzOTAiLCJpc3MiOiJJbmxhbmRSZXZlbnVlIiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJPQXV0aFNlcnZpY2VQcm9maWxlIiwiaWF0IjoxNTAyMzIxNDI3LCJvcmFjbGUub2F1dGgudGtfY29udGV4dCI6ImF6YyIsImV4cCI6MTUwMjM1MDIyNywicHJuIjpudWxsLCJqdGkiOiJhNDg2ZTU1Ny0zZTc1LTQ3ZmYtODk0NC1hNTcxZWNlYzgzNmYiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJUZXN0MzAyMDY0OTIiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.NTBu3R-JwaaOWfvMdWAHqY7Ji3YI3I-bSTXqx6jauqEUhswLmAG6cbpGaSky50ECbHNv2skU8WVZ0RYv67KPgITGXJz0ZKSjqOgiZ0R4kFCZ7asN8yjIzXgxwWk4mPXL5E02u24-VMbr_hrNZYDZbakOpz4uY6UlSSNECmw0ac8
 
-3. **Request Access token** : Service consumer to IR
-	- Exchange Authorisation Code for oAuth Access Token
-		- At this step as a service provider you need to send a HTTP POST request to Auth Server with Authorization Code and your client credentials
-			- Url format: 
-				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
-				- [request sample header](sample_messages/access-token-requestheader.json)
-				- [request sample body](sample_messages/access-token-requestbody.txt)
-	
-	- Success Response – Access Token sent
-		- The response contains the Access Token and expiry time.
-			- [response sample](sample_messages/access-token-response.json)
-	
-		- If refresh tokens are used this is also returned
-			- [response sample with refresh](sample_messages/access-token-refresh-token-response.json)
-	
-4. **Request Refresh token** : Service consumer to IR
-	- Refresh request
-		- At this step as a service provider you need to send a HTTP POST request to the Auth Server with the Refresh Token and your client credentials
-			- [request sample header](sample_messages/refresh-token-requestheader.json)
-			- [request sample body](sample_messages/refresh-token-requestbody.txt)
+<a name="URLEndPointParameter"/>
 
-	- Refresh token reply
-		- The Refresh token reply is the same as an authorisation code exchange for an Access token
-			- [response sample](sample_messages/refresh-token-reply.json)
+## URL Endpoint Parameter:
 
-5. **Error response**
-	- [response sample](sample_messages/error-response.json)
+#### Parameters:
+**{ServiceHostDomain}**: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
 
-6. **Validate token request** : Service consumer to IR
-	- Validate token request 
-		- As a service provider you need to send a HTTP POST request to Auth Server with Access Token to validate your client credentials
-			- Url format:
-				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
-				- [request sample header](sample_messages/validate-token-requestheader.json)
-				- [request sample body](sample_messages/validate-token-requestbody.json)
+|Environment | Hostname/URL *{ServiceHostDomain}* |
+|:---:|---|
+| Mock | http://mock-oauth.ird.digitalpartner.services |
+| Testing R2 | http://s.services.ird.govt.nz |
+| Testing R3 | http://q.services.ird.govt.nz |
+| Production | http://services.ird.govt.nz  |
 
-	- Validate  token reply 
-		- [response sample](sample_messages/validate-token-response.json)
-		- [error response sample](sample_messages/validate-token-error-response.json)
+<a name="RequestAuthorisationCode"/>
 
-7. **Revoke token request** : Service consumer to IR
-	- Revoke token request 
-		- At this step as a service provider you need to send a HTTP POST request to Auth Server with Access Token OR Refresh Token to revoke your client credentials. 
-			- Url format:
-				> https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
-				- [request sample header](sample_messages/revoke-token-requestheader.json)
-				- [request sample body](sample_messages/revoke-token-requestbody.json)
-	
-	- Revoke token reply 
-		- [response sample](sample_messages/revoke-token-response.json)
-		- [error response sample](sample_messages/revoke-token-error-response.json)
+## Request Authorisation Code:
+
+Software Provider will send a **HTTP GET** request to Auth Server URL format:
+
+```http
+https://{ServiceHostDomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize
+ ?client_id=xyzComp_FooBar
+ &redirect_uri=https://mycompdomain.com/returnpath
+ &scope=MYIR.Services
+ &response_type=code
+ &state=2d0fcc2d-8f7a-4f27-8bea-976cb86bd409
+ &logout=true
+```
+Here’s each query parameter explained:
+* ```client_id=``` - The public identifier (ClientID) for the application, obtained when the developer first registered the application. 
+* ```redirect_uri=``` - Tells the authorization server where to send the user back to after they approve the request.
+* ```scope=MYIR.Services``` - MYIR.Services, strings indicating which permissions the application is requesting. 
+* ```grant_type=authorisation_code``` - This tells the token endpoint that the application is using the Authorization Code grant type.
+* ```state=``` - **Recommended.** The software provider's application generates a random string and includes it in the request. It should then check that the same value is returned after the user authorises the app. 
+* ```logout=``` **Optional.** To enable a user to use a different myIR login, setting the value to ```“true”``` will force the logout of any user currently logged in. This avoids having to close a browser or wait 15 minutes to timeout an existing user login. 
+This will force the re-display of the login page and request the input of a new myIR 
+account to login. 
+The value of ```“false”``` or absence of this 
+parameter will not force logout. 
+
+When the user visits this URL, the authorization server will present them with a login prompt asking if they would like to authorise this application’s request.
+The user will be asked to "Authorise Concent" for the very first login.
+
+> NOTE: 
+> * Keep the state parameter less than 200 characters long. 
+> * Don't include special characters: ```~ ! & %``` in the state parameter.
+
+
+#### Successful Redirect Back to the Application:
+
+If the user approves the request, the authorisation server will redirect the browser back to the redirect_uri specified by the application, adding a code and state to the query string.
+
+For example, the user will be redirected back to a URL such as:
+```http
+https://mycompdomain.com/returnpath
+ ?code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJvcmFjbGUub2F1dGgucmVkaXJlY3QtdXJpIjoiaHR0cHM6Ly9qZW5raW5zLmtpd2lzYXZlci5pcmQuZGlnaXRhbHBhcnRuZXIuc2VydmljZXMvIiwic3ViIjpudWxsLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkIjoic2FtbXkzOTAiLCJpc3MiOiJJbmxhbmRSZXZlbnVlIiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJPQXV0aFNlcnZpY2VQcm9maWxlIiwiaWF0IjoxNTAyMzIxNDI3LCJvcmFjbGUub2F1dGgudGtfY29udGV4dCI6ImF6YyIsImV4cCI6MTUwMjM1MDIyNywicHJuIjpudWxsLCJqdGkiOiJhNDg2ZTU1Ny0zZTc1LTQ3ZmYtODk0NC1hNTcxZWNlYzgzNmYiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJUZXN0MzAyMDY0OTIiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.NTBu3R-JwaaOWfvMdWAHqY7Ji3YI3I-bSTXqx6jauqEUhswLmAG6cbpGaSky50ECbHNv2skU8WVZ0RYv67KPgITGXJz0ZKSjqOgiZ0R4kFCZ7asN8yjIzXgxwWk4mPXL5E02u24-VMbr_hrNZYDZbakOpz4uY6UlSSNECmw0ac8
+ &state=2d0fcc2d-8f7a-4f27-8bea-976cb86bd409
+```
+The ```state``` value will be the same value that the application initially set in the request. The application is expected to check that the state in the redirect matches the state it originally set. 
+The ```code``` is the authorization code generated by the authorization server. 
+>NOTE: This code is relatively short-lived, typically lasting only 15 minutes.
+
+<a name="ExchangeAuthorisationCodeforanAccessToken"/>
+
+## Exchange Authorisation Code for an Access Token
+
+Now that the application has the authorization code, it can use that to get an access token.
+
+At this step the Software Provider needs to send a **HTTP POST** request to Auth Server with Authorization Code and your client credentials.
+
+* ```code=``` - The application includes the authorization code it was given in the redirect.
+* ```redirect_uri=``` - The same redirect URI that was used when requesting the code.
+* ```grant_type=authorization_code``` - This tells the token endpoint that the application is using the Authorization Code grant type.
+
+The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
+```http 
+Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
+```
+### Example POST request:
+```http
+POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
+Host: {ServiceHostDomain}
+Content-Type: application/x-www-form-urlencoded
+Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+
+redirect_uri=https://mycompdomain.com/returnpath
+&code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJvcmFjbGUub2F1dGgucmVkaXJlY3QtdXJpIjoiaHR0cHM6Ly9qZW5raW5zLmtpd2lzYXZlci5pcmQuZGlnaXRhbHBhcnRuZXIuc2VydmljZXMvIiwic3ViIjpudWxsLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkIjoic2FtbXkzOTAiLCJpc3MiOiJJbmxhbmRSZXZlbnVlIiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJPQXV0aFNlcnZpY2VQcm9maWxlIiwiaWF0IjoxNTAyMzIxNDI3LCJvcmFjbGUub2F1dGgudGtfY29udGV4dCI6ImF6YyIsImV4cCI6MTUwMjM1MDIyNywicHJuIjpudWxsLCJqdGkiOiJhNDg2ZTU1Ny0zZTc1LTQ3ZmYtODk0NC1hNTcxZWNlYzgzNmYiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJUZXN0MzAyMDY0OTIiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.NTBu3R-JwaaOWfvMdWAHqY7Ji3YI3I-bSTXqx6jauqEUhswLmAG6cbpGaSky50ECbHNv2skU8WVZ0RYv67KPgITGXJz0ZKSjqOgiZ0R4kFCZ7asN8yjIzXgxwWk4mPXL5E02u24-VMbr_hrNZYDZbakOpz4uY6UlSSNECmw0ac8
+&redirect_uri=https://mycompdomain.com/returnpath
+&grant_type=authorization_code
+```
+
+The token endpoint will verify all the parameters in the request, ensuring the 
+code hasn’t expired and that the client ID and secret match. If everything checks out, it will generate an access token and return it in the response!
+
+### Example of a successful token exchange: 
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "expires_in":28800,
+  "token_type":"Bearer",
+  "access_token":"MTQ0NjJkZmQ5OTM2...NDE1ZTZjNGZmZjI3",
+  "refresh_token":"IwOGYzYTlmM2YxOT...Q5MGE3YmNmMDFkNTVk"
+}
+```
+
+### Example of a failed token exchange:
+```http
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+
+{
+   "error": "invalid_grant",
+   "error_description": "Invalid Grant: grant_type=refresh_token"
+}
+```
+
+The Authorisation Code flow is complete! The application now has an access token it can use when making requests thought the gateway services.
+
+>NOTE:
+> The OAuth Access Token has a time to live of 8 hours.  
+
+<a name="RequestRefreshToken"/>
+
+## Request Refresh Token
+
+In normal use it is expected that the Access Token will be re-used while it is active and the 
+client will make several calls using this Access Token. If the Access Token has expired, the client can request another Access Token using the Refresh Token and client credentials. 
+The Refresh Token is granted as part of the Cloud Authorisation Service, the client will need to 
+hold this and when required can be exchanged for a new Access and Refresh Token granting 
+longer term use.  
+
+* ```grant_type=``` - The grant type is required and takes the value refresh_token 
+* ```refresh_token=``` - The refresh_token field contains the Refresh Token 
+The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
+```http 
+Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
+```
+### Example POST request:
+```http
+POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
+Host: {ServiceHostDomain}
+Content-Type: application/x-www-form-urlencoded
+Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+
+grant_type=refresh_token
+&refresh_token=IwOGYzYTlmM2YxOTiojsd098sdjowe08f450j87j98sf4978h6af49j876ase45gj0789das45d089j
+```
+
+### Example of a successful token refresh:
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+   "expires_in": 28800,
+   "token_type": "Bearer",
+   "access_token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiJUUjI0NTczNzczIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZCI6IlRSMjQ1NzM3NzMiLCJpc3MiOiJJbmxhbmRSZXZlbnVlIiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJPQXV0aFNlcnZpY2VQcm9maWxlIiwiaWF0IjoxNTEzMTE0NzY4LCJvcmFjbGUub2F1dGgucHJuLmlkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwiZXhwIjoxNTEzMTQzNTY4LCJwcm4iOiJUUjI0NTczNzczIiwianRpIjoiMTkzNWEyZjktZGYwNi00NzA1LWI5MDMtYmQ1ZTY5NzIwZjE2Iiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJNWU9CMTI3NTQyMSIsIm9yYWNsZS5vYXV0aC5zY29wZSI6Ik1ZSVIuU2VydmljZXMiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.vMo0b_H8ZeC09xcfDHoyRl50eqk0GeYdake99NrIvzcxUCsRtHbwMmgnBvzy45yL6T07-jfBlgRx3Tzt0MP-Gc7OKx-ma_s2SCD39m_q1by9nX_x7BWKFNGMM9gJl7jYTF6sWP6nNJCJWXfilfHJVuRchenyW4Lv8sVTKGPbQOQ",
+   "refresh_token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOm51bGwsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZF90eXBlIjoiTERBUF9VSUQiLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWQiOiJUUjI0NTczNzczIiwiaXNzIjoiSW5sYW5kUmV2ZW51ZSIsIm9yYWNsZS5vYXV0aC5ydC50dGMiOiJyZXNvdXJjZV9hY2Nlc3NfdGsiLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6Ik9BdXRoU2VydmljZVByb2ZpbGUiLCJpYXQiOjE1MTMxMTQ3NjgsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVmcmVzaF90b2tlbiIsImV4cCI6MTUxMzE0MzU2OCwicHJuIjpudWxsLCJqdGkiOiI2ZTQwOTIwNC05ZDkzLTRmM2ItYmMzNi1iMjZhMmMxZjA1YjYiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJNWU9CMTI3NTQyMSIsInVzZXIudGVuYW50Lm5hbWUiOiJEZWZhdWx0RG9tYWluIiwib3JhY2xlLm9hdXRoLmlkX2RfaWQiOiIxMjM0NTY3OC0xMjM0LTEyMzQtMTIzNC0xMjM0NTY3ODkwMTIifQ.imUbjnAHZ4w2oENBMktN_-tsMf71Uzn0RIKI7Ef9mK3ezkcTdaCc8LNPplYVB8-oGnjV87GjEdLU0gE6rr7Vsu0pnPxJJrxQTlKAeiX2w6H-BTwux97l8oniV-E6VXb5eALWcOM33Htc9SHHOjglMNzyTl76-yq1F4TU3eueAG8",
+   
+}
+```
+
+>NOTE:
+> The OAuth Refresh Access Token has a time to live of 6 months. 
+
+<a name="ValidateAccessToken"/>
+
+## Validate Access Token
+
+This service will validate an Access Token. 
+
+* ```grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt```
+* ```oracle_token_action=validate```
+* ```scope=MYIR.Services```
+* ```assertion=``` - _current access/refresh token_
+* ```oracle_token_attrs_retrieval=prn exp```
+
+### Example POST request to validate a Access Token:
+
+```http
+POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
+Host: {ServiceHostDomain}
+Content-Type: application/x-www-form-urlencoded
+Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+
+grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt
+&oracle_token_action=validate
+&scope=MYIR.Services
+&assertion=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiJDbGllbnQwMDgiLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkIjoiQ2xpZW50MDA4IiwiaXNzIjoiSW5sYW5kUmV2ZW51ZSIsIm9yYWNsZS5vYXV0aC5zdmNfcF9uIjoiT0F1dGhTZXJ2aWNlUHJvZmlsZSIsImlhdCI6MTUxOTMzOTExMCwib3JhY2xlLm9hdXRoLnBybi5pZF90eXBlIjoiTERBUF9VSUQiLCJvcmFjbGUub2F1dGgudGtfY29udGV4dCI6InJlc291cmNlX2FjY2Vzc190ayIsImV4cCI6MTUxOTM2NzkxMCwicHJuIjoiQ2xpZW50MDA4IiwianRpIjoiZjgwOTEzNGEtZTE3Ny00OGMwLWJjNDQtMzJmMDg3NDQxMTUxIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJUZXN0MzAyMDY0OTIiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwidXNlci50ZW5hbnQubmFtZSI6IkRlZmF1bHREb21haW4iLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6IjEyMzQ1Njc4LTEyMzQtMTIzNC0xMjM0LTEyMzQ1Njc4OTAxMiJ9.3PeIiEFSftcY482O74TjEDovYObjbEcjF_rqH8JMmqJgLLiBV4oDxkj3hlak4jX4NuG-mpLw7E2BYiFfuS2LtRo9R1oko-CO9F5JALxMD5MVxtb2KQFxrhiF-n1PFZhJzQydcHOkmBBxZDDN6OciS4SfeEm6s1iN46QldbunwYM
+&oracle_token_attrs_retrieval=prn exp
+```
+
+### Example of a successful response:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+   "successful": true,
+   "oracle_token_attrs_retrieval": {
+      "exp": 1519367910,
+      "prn": "Client008"
+   }
+} 
+```
+<a name="RevokeTokenRequest"/>
+
+## Revoke Token Request
+
+A token revoke process is available that will allow the client to revoke the acquired access token or refresh token. 
+
+* ```grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt```
+* ```oracle_token_action=delete```
+* ```scope=MYIR.Services```
+* ```assertion=``` - _current access/refresh token_  
+
+### Example POST request to Revoke an Access Token:
+
+```http
+POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
+Host: {ServiceHostDomain}
+Content-Type: application/x-www-form-urlencoded
+Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+
+grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt
+&oracle_token_action=delete
+&assertion=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOm51bGwsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZF90eXBlIjoiTERBUF9VSUQiLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWQiOiJUUjI0NTczNzczIiwiaXNzIjoiSW5sYW5kUmV2ZW51ZSIsIm9yYWNsZS5vYXV0aC5ydC50dGMiOiJyZXNvdXJjZV9hY2Nlc3NfdGsiLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6Ik9BdXRoU2VydmljZVByb2ZpbGUiLCJpYXQiOjE1MTMxMTM0OTgsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVmcmVzaF90b2tlbiIsImV4cCI6MTUxMzE0MjI5OCwicHJuIjpudWxsLCJqdGkiOiJmNDZmMTU1YS1jNGU4LTRkYTktOTFkMy0zMjUxZTIyNDNhNjgiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJNWU9CMTI3NTQyMSIsInVzZXIudGVuYW50Lm5hbWUiOiJEZWZhdWx0RG9tYWluIiwib3JhY2xlLm9hdXRoLmlkX2RfaWQiOiIxMjM0NTY3OC0xMjM0LTEyMzQtMTIzNC0xMjM0NTY3ODkwMTIifQ.bsqzeC1BWEAireUWCLq3ZGhbSjcb6jrkfbV7F8lLuujVMF7xlGkOMoSLx9DSN_ePPE4z7PeDbz3igF269siiuplkitbA6JZiR6DRs3pl9ED3MCjwzp4_DVxXuip0K0FOamwOwzyROzSupjYsEEkJhkG0ur2SGdTnjHFyXFoleoU
+```
+
+### Example successful response:
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{“successful”:true}
+```
+
+### Example failed responses:
+```http
+HTTP/1.1 400 OK
+Content-Type: application/json
+
+{
+   "error": "invalid_grant",
+   "error_description": "Cannot terminate invalid token."
+}
+```
+```http
+HTTP/1.1 400 OK
+Content-Type: application/json
+
+{
+   "error": "invalid_request",
+   "error_description": "Invalid token action: deleted"
+}
+```
+
+<a name="ErrorResponse"/>
+
+## Error Response:
+
+If validation errors are found, a JSON response containing error codes and descriptions is sent. Following are some error codes and their descriptions: 
+
+|HTTP code |Error Type  |Description |
+|:---:|-|-|
+|400 Bad Request / 401 Unauthorized |```invalid_redirect_uri```  |Redirect URI mismatch with Software Provider's app  | 
+| |```Invalid client ID```  |API Key contains invalid information  |
+| |```Invalid client_id or client_secret```  |API Secret contains invalid information  |
+| |```invalid_client```  | Business partner identifier invalid  |
+| |```invalid_scope```  |Requested scope is invalid, unknown, or malformed  | 
+| | ```server_error```  |Authentication - Runtime processing error  |
+| | ```access_denied``` |End-user denied authorisation  |
+| 500 Internal Server Error| ```InternalError```  |An internal and unexpected error occurred   |
+| 504 Gateway Timeout | ```GatewayError```  |Gateway did not receive a timely response from the upstream server  |
