@@ -49,7 +49,11 @@ Parameters:
 * ```{ClientID}``` a valid client identifier, see [Valid Clients](#mock-valid-clients) table below
 * ```{RedirectURI}``` Client Application's redirect URI
 <<<<<<< HEAD
+<<<<<<< HEAD
 * ```{State}``` **Recommended** e.g. GUID, random string value created by the Client Application
+=======
+* ```{State}``` **Recomended** e.g. GUID, random string value created by the Client Application
+>>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
 =======
 * ```{State}``` **Recomended** e.g. GUID, random string value created by the Client Application
 >>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
@@ -68,7 +72,11 @@ Parameters:
 >
 > * The consent page and redirection pages are skipped in this emulated service.
 <<<<<<< HEAD
+<<<<<<< HEAD
 > * The Testing & Production environments, the on-boarding team will provide you with your Client ID and Client Secret.
+=======
+> * The Testing & Production environements, the onboaring team will provide you with your Client ID and Client Secret.
+>>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
 =======
 > * The Testing & Production environements, the onboaring team will provide you with your Client ID and Client Secret.
 >>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
@@ -115,7 +123,11 @@ Parameters:
 * ```{RedirectURI}``` Client Application's redirect URI
 * ```{AuthorizationCode}``` the Authorization Code to be used for retrieving an access token	
 <<<<<<< HEAD
+<<<<<<< HEAD
 * ```{State}``` **Recommended** e.g. GUID, random string value created by the client application 
+=======
+* ```{State}``` **Recomended** e.g. GUID, random string value created by the client application 
+>>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
 =======
 * ```{State}``` **Recomended** e.g. GUID, random string value created by the client application 
 >>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
