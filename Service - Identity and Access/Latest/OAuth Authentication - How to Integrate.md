@@ -48,7 +48,11 @@ https://{ServiceHostdomain}:{AuthServicePort}/ms_oauth/oauth2/endpoints/oauthser
 Parameters:
 * ```{ClientID}``` a valid client identifier, see [Valid Clients](#mock-valid-clients) table below
 * ```{RedirectURI}``` Client Application's redirect URI
+<<<<<<< HEAD
 * ```{State}``` **Recommended** e.g. GUID, random string value created by the Client Application
+=======
+* ```{State}``` **Recomended** e.g. GUID, random string value created by the Client Application
+>>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
 			
 <a name="mock-valid-clients"/>        
 
@@ -63,7 +67,11 @@ Parameters:
 >Note:
 >
 > * The consent page and redirection pages are skipped in this emulated service.
+<<<<<<< HEAD
 > * The Testing & Production environments, the on-boarding team will provide you with your Client ID and Client Secret.
+=======
+> * The Testing & Production environements, the onboaring team will provide you with your Client ID and Client Secret.
+>>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
 
 ### URL format:
 ```http 
@@ -106,7 +114,11 @@ https://{RedirectURI}?code={AuthorizationCode}&state={State}
 Parameters:
 * ```{RedirectURI}``` Client Application's redirect URI
 * ```{AuthorizationCode}``` the Authorization Code to be used for retrieving an access token	
+<<<<<<< HEAD
 * ```{State}``` **Recommended** e.g. GUID, random string value created by the client application 
+=======
+* ```{State}``` **Recomended** e.g. GUID, random string value created by the client application 
+>>>>>>> 15a8e8d42d1ec8da3bee244c66b8d8d1aca1d859
 
 **5.** Client Application retrieves OAuth Access Token by sending Authorization Code as well as client application's credentials
 
