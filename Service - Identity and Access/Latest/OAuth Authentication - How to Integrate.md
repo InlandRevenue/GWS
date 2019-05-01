@@ -36,6 +36,7 @@ Customer accesses the Client Application via a browser. They take an action that
 The Client Application invokes the OAuth Server to get access token, the customer's browser is redirected to myIR login page.
 	At this step as a service provider you need to send a ```HTTP GET``` request to OAuth Server, URL format as below:
 
+##### URL Format:
 ```http
 https://{ServiceHostdomain}:{AuthServicePort}/ms_oauth/oauth2/endpoints/oauthservice/authorize
 ?client_id={ClientID}
@@ -46,19 +47,23 @@ https://{ServiceHostdomain}:{AuthServicePort}/ms_oauth/oauth2/endpoints/oauthser
 ```
  
 Parameters:
-* ```{ClientID}``` a valid client identifier, see [Valid Clients](#mock-valid-clients) table below
+* ```{ClientID}``` a valid client identifier
 * ```{RedirectURI}``` Client Application's redirect URI
 * ```{State}``` **Optional, but recommended** e.g. GUID, random string value created by the Client Application as a method of maintaining state. 
 			
+> Note:
+>
+> For the Test and Production environements, the onboaring team will provide you with your Client ID and Client Secret.
+
 ### Step 3. Submit Login Credentials
 User submits credentials and autothorise consent -  At this step the Client Application will need to send a ```HTTP POST``` request to OAuth Server.
 
 >Note:
 >
-> * **The consent page and redirection pages are skipped in this mock environment (emulated service).**
-> * **For the Test and Production environements, the onboaring team will provide you with your Client ID and Client Secret.**
+> The consent page and redirection pages are skipped in this mock environment (emulated service).
 
-#### URL format:
+
+##### URL Format:
 ```http 
 https://{ServiceHostdomain}/oam/server/auth_cred_submit
 ```
@@ -89,9 +94,9 @@ userid={CustomerUserID}
 ```
 
 Parameters:
-<a name="MockValidClients" />        
-* ```{CustomerUserID}``` myIR User ID
-* ```{CustomerUserPassword}``` myIR Password
+
+* ```{CustomerUserID}```: myIR User ID
+* ```{CustomerUserPassword}```: myIR Password
 
 ### Step 4. Redirect to Client Application
 Authorization Code returns to Client Application by a ```HTTP 302 redirection``` to the ```{redirectURI}```.
@@ -102,9 +107,9 @@ https://{RedirectURI}?code={AuthorizationCode}&state={State}
 ```
 
 Parameters:
-* ```{RedirectURI}``` Client Application's redirect URI
-* ```{AuthorizationCode}``` The Authorization Code to be used for retrieving an access token	
-* ```{State}``` The matching string value which was origninally created by the Client Application 
+* ```{RedirectURI}```: Client Application's redirect URI
+* ```{AuthorizationCode}```: The Authorization Code to be used for retrieving an access token	
+* ```{State}```: The matching string value which was origninally created by the Client Application 
 
 ### Step 5. Exchange Authorization Code for an Access Token
 Client Application retrieves OAuth Access Token by submits a ```HTTP POST``` request using the Authorization Code as well as client application's credentials
@@ -125,9 +130,6 @@ Parameters:
 >  Authorization: Basic {ClientApplicationEncodedCredentials}
 >  Content-Type: application/x-www-form-urlencoded
 >  ``` 
-
-Parameters:
-
 
 #### Request HTTP header and body: 
 ```http 
