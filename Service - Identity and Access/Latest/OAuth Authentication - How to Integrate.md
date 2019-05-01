@@ -116,16 +116,18 @@ https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
 		
 Parameters:
 * ```{ServiceHostdomain}```: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
+* ```{ClientApplicationEncodedCredentials}```: the encoded client application's credentials, must be Base64 encoded. 
 
-> Note:
-> * Request HTTP header MUST include:
->   ```http
->   Authorization: Basic {ClientApplicationEncodedCredentials}
->   Content-Type: application/x-www-form-urlencoded
->   ``` 
+>Note:
+>
+>Request HTTP header must include:
+>  ```http
+>  Authorization: Basic {ClientApplicationEncodedCredentials}
+>  Content-Type: application/x-www-form-urlencoded
+>  ``` 
 
 Parameters:
-* ```{ClientApplicationEncodedCredentials}```: the encoded client application's credentials, must be Base64 encoded. 
+
 
 #### Request HTTP header and body: 
 ```http 
