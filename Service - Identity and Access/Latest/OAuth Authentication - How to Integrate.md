@@ -107,7 +107,7 @@ Parameters:
 * ```{State}``` The matching string value which was origninally created by the Client Application 
 
 ### Step 5. Exchange Authorization Code for an Access Token
-Client Application retrieves OAuth Access Token by submits a ```HTTP POST``` request using the  Authorization Code as well as client application's credentials
+Client Application retrieves OAuth Access Token by submits a ```HTTP POST``` request using the Authorization Code as well as client application's credentials
 
 #### URL Format:
 ```http
