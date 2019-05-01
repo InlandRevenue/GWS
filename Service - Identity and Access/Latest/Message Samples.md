@@ -91,7 +91,7 @@ At this step the Software Provider needs to send a **HTTP POST** request to Auth
 
 * ```code=``` - The application includes the authorization code it was given in the redirect.
 * ```redirect_uri=``` - The same redirect URI that was used when requesting the code.
-* ```grant_type=authorization_code``` - This tells the token endpoint that the application is using the Authorization Code grant type.
+* ```grant_type=authorization_code=``` - This tells the token endpoint that the application is using the Authorization Code grant type.
 
 The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
 ```http 
