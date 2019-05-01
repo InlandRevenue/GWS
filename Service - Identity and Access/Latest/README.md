@@ -14,14 +14,15 @@ Key Features:
 
 * OAuth Authentication - [How to Integrate](OAuth%20Authentication%20-%20How%20to%20Integrate.md)
 	- Simulating Authentication Flow
-	- Sample Curl commands
+	- Full Authentication Steps
 
 * [Message Samples](Message%20Samples.md) - OAuth requests and responses provided for
-	- Authorisation code request and response
-	- Access token request and response
-	- Refresh token request and response
-	- Validate token request and response
-	- Revoke token request and response
+    - URL EndPoint Parameter 
+	- Request Authorisation Code
+	- Exchange Authorisation Code for an Authorisation Token
+	- Request Refresh Token
+	- Validate Access Token
+	- Revoke Token Request
 	- Error response
 	
 * [View guide to managing myIR logon and gateway services access tokens](https://www.ird.govt.nz/software-providers/docs/managing/) on IR website
