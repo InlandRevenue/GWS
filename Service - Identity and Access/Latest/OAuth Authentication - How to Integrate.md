@@ -49,16 +49,16 @@ https://{ServiceHostdomain}:{AuthServicePort}/ms_oauth/oauth2/endpoints/oauthser
 Parameters:
 * ```{ClientID}``` a valid client identifier
 * ```{RedirectURI}``` Client Application's redirect URI
-* ```{State}``` **Optional, but recommended** e.g. GUID, random string value created by the Client Application as a method of maintaining state. 
+* ```{State}``` **Optional, but recommended** e.g. GUID, arbitrary unique string value created by the Client Application as a method of maintaining state. 
 			
-> Note:
+> NOTE: 
 >
 > For the Test and Production environements, the onboaring team will provide you with your Client ID and Client Secret.
 
 ### Step 3. Submit Login Credentials
 User submits credentials and autothorise consent -  At this step the Client Application will need to send a ```HTTP POST``` request to OAuth Server.
 
->Note:
+>NOTE: 
 >
 > The consent page and redirection pages are skipped in this mock environment (emulated service).
 
@@ -71,7 +71,7 @@ https://{ServiceHostdomain}/oam/server/auth_cred_submit
 Parameter:
 * ```{ServiceHostdomain}```: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed. 
 
->Note:
+>NOTE: 
 >
 >The production environmnet does not require IP address whitelisting.
 		
@@ -123,7 +123,7 @@ Parameters:
 * ```{ServiceHostdomain}```: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
 * ```{ClientApplicationEncodedCredentials}```: the encoded client application's credentials, must be Base64 encoded. 
 
->Note:
+>NOTE: 
 >
 >Request HTTP header must include:
 >  ```http

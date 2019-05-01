@@ -59,7 +59,12 @@ The user will be asked to "Authorise Concent" for the very first login.
 
 > NOTE: 
 > * Keep the state parameter less than 200 characters long. 
-> * Don't include special characters: ```~ ! & %``` in the state parameter.
+> * The ```state``` parameter can include the following characters:
+> 	* ```a-z```
+>	* ```A-Z```
+>	* ```0-9```
+>	* ```- . ? , : ' / \ + = $ #_``` 
+
 
 
 #### Successful Redirect Back to the Application:
