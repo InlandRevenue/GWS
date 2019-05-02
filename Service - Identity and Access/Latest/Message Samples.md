@@ -27,6 +27,8 @@
 | Testing R3 | http://q.services.ird.govt.nz |
 | Production | http://services.ird.govt.nz  |
 
+>**Please note that theses Hostnames are subject to change.** 
+
 <a name="RequestAuthorisationCode"/>
 
 ## Request Authorisation Code:
@@ -43,12 +45,12 @@ https://{ServiceHostDomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize
  &logout=true
 ```
 Here’s each query parameter explained:
-* ```client_id=``` - The public identifier (ClientID) for the application, obtained when the developer first registered the application. 
-* ```redirect_uri=``` - Tells the authorization server where to send the user back to after they approve the request.
-* ```scope=MYIR.Services``` - MYIR.Services, strings indicating which permissions the application is requesting. 
-* ```grant_type=authorisation_code``` - This tells the token endpoint that the application is using the Authorization Code grant type.
-* ```state=``` - **Recommended.** The software provider's application generates a random string and includes it in the request. It should then check that the same value is returned after the user authorises the app. 
-* ```logout=``` **Optional.** To enable a user to use a different myIR login, setting the value to ```“true”``` will force the logout of any user currently logged in. This avoids having to close a browser or wait 15 minutes to timeout an existing user login. 
+* ```client_id```: - The public identifier (ClientID) for the application, obtained when the developer first registered the application. 
+* ```redirect_uri```: - Tells the authorization server where to send the user back to after they approve the request.
+* ```scope=MYIR.Services```: - MYIR.Services, strings indicating which permissions the application is requesting. 
+* ```grant_type=authorisation_code```: - This tells the token endpoint that the application is using the Authorization Code grant type.
+* ```state```: - **Recommended.** The software provider's application generates a random string and includes it in the request. It should then check that the same value is returned after the user authorises the app. 
+* ```logout=```: **Optional.** To enable a user to use a different myIR login, setting the value to ```“true”``` will force the logout of any user currently logged in. This avoids having to close a browser or wait 15 minutes to timeout an existing user login. 
 This will force the re-display of the login page and request the input of a new myIR 
 account to login. 
 The value of ```“false”``` or absence of this 
@@ -74,7 +76,7 @@ If the user approves the request, the authorisation server will redirect the bro
 For example, the user will be redirected back to a URL such as:
 ```http
 https://mycompdomain.com/returnpath
- ?code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJvcmFjbGUub2F1dGgucmVkaXJlY3QtdXJpIjoiaHR0cHM6Ly9qZW5raW5zLmtpd2lzYXZlci5pcmQuZGlnaXRhbHBhcnRuZXIuc2VydmljZXMvIiwic3ViIjpudWxsLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkIjoic2FtbXkzOTAiLCJpc3MiOiJJbmxhbmRSZXZlbnVlIiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJPQXV0aFNlcnZpY2VQcm9maWxlIiwiaWF0IjoxNTAyMzIxNDI3LCJvcmFjbGUub2F1dGgudGtfY29udGV4dCI6ImF6YyIsImV4cCI6MTUwMjM1MDIyNywicHJuIjpudWxsLCJqdGkiOiJhNDg2ZTU1Ny0zZTc1LTQ3ZmYtODk0NC1hNTcxZWNlYzgzNmYiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJUZXN0MzAyMDY0OTIiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.NTBu3R-JwaaOWfvMdWAHqY7Ji3YI3I-bSTXqx6jauqEUhswLmAG6cbpGaSky50ECbHNv2skU8WVZ0RYv67KPgITGXJz0ZKSjqOgiZ0R4kFCZ7asN8yjIzXgxwWk4mPXL5E02u24-VMbr_hrNZYDZbakOpz4uY6UlSSNECmw0ac8
+ ?code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXV...hrNZYDZbakOpz4uY6UlSSNECmw0ac8
  &state=2d0fcc2d-8f7a-4f27-8bea-976cb86bd409
 ```
 The ```state``` value will be the same value that the application initially set in the request. The application is expected to check that the state in the redirect matches the state it originally set. 
@@ -89,9 +91,9 @@ Now that the application has the authorization code, it can use that to get an a
 
 At this step the Software Provider needs to send a **HTTP POST** request to Auth Server with Authorization Code and your client credentials.
 
-* ```code=``` - The application includes the authorization code it was given in the redirect.
-* ```redirect_uri=``` - The same redirect URI that was used when requesting the code.
-* ```grant_type=authorization_code=``` - This tells the token endpoint that the application is using the Authorization Code grant type.
+* ```code```:  The application includes the authorization code it was given in the redirect.
+* ```redirect_uri```:  The URL must match exactly the redirect_uri passed to `/ms_oauth/oauth2/endpoints/oauthservice/authorize`
+* ```grant_type``` - This must be ```authorization_code```
 
 The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
 ```http 
@@ -138,7 +140,19 @@ Content-Type: application/json
 
 The Authorisation Code flow is complete! The application now has an access token it can use when making requests thought the gateway services.
 
+### Get Auth Token using cURL:
+
+```php
+curl --verbose --request POST \
+  --user "{ClientID}:{ClientSecret}"
+  --url "https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens" \
+  --header "content-type: application/x-www-form-urlencoded" \
+  --data "grant_type=authorization_code&redirect_uri=https%3A%2F%2Ftestpartner.ird.services%2F" \
+  --output token.txt 
+```
+
 >NOTE:
+>
 > The OAuth Access Token has a time to live of 8 hours.  
 
 <a name="RequestRefreshToken"/>
@@ -151,8 +165,8 @@ The Refresh Token is granted as part of the Cloud Authorisation Service, the cli
 hold this and when required can be exchanged for a new Access and Refresh Token granting 
 longer term use.  
 
-* ```grant_type=``` - The grant type is required and takes the value refresh_token 
-* ```refresh_token=``` - The refresh_token field contains the Refresh Token 
+* ```grant_type=```:  The grant type is required and takes the value refresh_token 
+* ```refresh_token=```:  The refresh_token field contains the Refresh Token 
 The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
 ```http 
 Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
@@ -189,7 +203,7 @@ Content-Type: application/json
 
 ## Validate Access Token
 
-This service will Validate an Access Token. 
+This service will Validate an Access Token. Once your Application receives a request with a Bearer Access Token, the first thing you can do is to validate the token.
 
 * ```grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt```
 * ```oracle_token_action=validate```
@@ -230,11 +244,10 @@ Content-Type: application/json
 
 ## Revoke Token Request
 
-A token revoke process is available that will allow the client to revoke the acquired access token or refresh token. 
+A token revoke process is available that will allow the client to revoke the acquired access token or refresh token. This is used to enable a "log out" feature in clients, allowing the authorization server to clean up any security credentials associated with the authorization.
 
 * ```grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt```
 * ```oracle_token_action=delete```
-* ```scope=MYIR.Services```
 * ```assertion=``` - _current access/refresh token_  
 
 ### Example POST request to Revoke an Access Token:
@@ -255,12 +268,14 @@ grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-{“successful”:true}
+{
+   “successful”:true
+}
 ```
 
 ### Example failed responses:
 ```http
-HTTP/1.1 400 OK
+HTTP/1.1 400 Bad Request
 Content-Type: application/json
 
 {
@@ -268,8 +283,9 @@ Content-Type: application/json
    "error_description": "Cannot terminate invalid token."
 }
 ```
+
 ```http
-HTTP/1.1 400 OK
+HTTP/1.1 400 Bad Request
 Content-Type: application/json
 
 {
