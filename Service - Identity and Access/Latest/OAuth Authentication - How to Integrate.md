@@ -55,7 +55,7 @@ Parameters:
 			
 > NOTE: 
 >
-> For the Test and Production environements, the onboaring team will provide you with your Client ID and Client Secret.
+> For the Test and Production environments, the onboaring team will provide you with your Client ID and Client Secret.
 
 ### Step 3. Submit Login Credentials
 User submits credentials and autothorise consent -  At this step the Client Application will need to send a ```HTTP POST``` request to OAuth Server.
@@ -181,7 +181,6 @@ Authentication: Bearer {AuthAccessToken}
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">...</soap>
 ```
 
-
 ##### Native Desktop Application:
 ```php
 curl --request POST \ 
@@ -212,7 +211,8 @@ Parameters:
 
 >Note:
 >
->Access tokens must be kept confidential in transit and in storage. The only parties that should ever see the access token are the application itself, the authorization server, and resource server. The application should ensure the storage of the access token is not accessible to other applications on the same device. The access token can only be used over an https connection, since passing it over a non-encrypted channel would make it trivial for third parties to intercept.
+>* Access tokens must be kept confidential in transit and in storage. The only parties that should ever see the access token are the application itself, the authorization server, and resource server. The application should ensure the storage of the access token is not accessible to other applications on the same device. The access token can only be used over an https connection, since passing it over a non-encrypted channel would make it trivial for third parties to intercept.
+>* The example cURL commands is just an example of consuming the prepop operation. Read the required Build Pack documentation for more information on consuming the required service.
 
 <a name="Other-OAuth-Functionality"/>
 
