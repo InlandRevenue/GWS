@@ -108,12 +108,12 @@ Content-Type: application/x-www-form-urlencoded
 Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
 
 redirect_uri=https://mycompdomain.com/returnpath
-&code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJvcmFjbGUub2F1dGgucmVkaXJlY3QtdXJpIjoiaHR0cHM6Ly9qZW5raW5zLmtpd2lzYXZlci5pcmQuZGlnaXRhbHBhcnRuZXIuc2VydmljZXMvIiwic3ViIjpudWxsLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkIjoic2FtbXkzOTAiLCJpc3MiOiJJbmxhbmRSZXZlbnVlIiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJPQXV0aFNlcnZpY2VQcm9maWxlIiwiaWF0IjoxNTAyMzIxNDI3LCJvcmFjbGUub2F1dGgudGtfY29udGV4dCI6ImF6YyIsImV4cCI6MTUwMjM1MDIyNywicHJuIjpudWxsLCJqdGkiOiJhNDg2ZTU1Ny0zZTc1LTQ3ZmYtODk0NC1hNTcxZWNlYzgzNmYiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJUZXN0MzAyMDY0OTIiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.NTBu3R-JwaaOWfvMdWAHqY7Ji3YI3I-bSTXqx6jauqEUhswLmAG6cbpGaSky50ECbHNv2skU8WVZ0RYv67KPgITGXJz0ZKSjqOgiZ0R4kFCZ7asN8yjIzXgxwWk4mPXL5E02u24-VMbr_hrNZYDZbakOpz4uY6UlSSNECmw0ac8
+&code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6In...-VMbr_hrNZYDZbakOpz4uY6UlSSNECmw0ac8
 &grant_type=authorization_code
 ```
 
 The token endpoint will verify all the parameters in the request, ensuring the 
-code hasn’t expired and that the client ID and secret match. If everything checks out, it will generate an access token and return it in the response!
+code hasn’t expired and that the Client ID and Client Secret match. If everything checks out, it will generate an access token and return it in the response!
 
 ### Example of a successful token exchange: 
 ```http
@@ -183,7 +183,7 @@ Content-Type: application/x-www-form-urlencoded
 Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
 
 grant_type=refresh_token
-&refresh_token=IwOGYzYTlmM2YxOTiojsd098sdjowe08f450j87j98sf4978h6af49j876ase45gj0789das45d089j
+&refresh_token=IwOGYzYTlmM2YxOTiojsd098sdjowe08f450j87j98sf497...8h6af49j876ase45gj0789das45d089j
 ```
 
 ### Example of a successful token refresh:
