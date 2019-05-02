@@ -91,11 +91,14 @@ Now that the application has the authorization code, it can use that to get an a
 
 At this step the Software Provider needs to send a **HTTP POST** request to Auth Server with Authorization Code and your client credentials.
 
+Form Fields:
+
 * ```code```:  The application includes the authorization code it was given in the redirect.
 * ```redirect_uri```:  The URL must match exactly the redirect_uri passed to `/ms_oauth/oauth2/endpoints/oauthservice/authorize`
 * ```grant_type``` - This must be ```authorization_code```
 
 The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
+
 ```http 
 Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
 ```
@@ -165,8 +168,11 @@ The Refresh Token is granted as part of the Cloud Authorisation Service, the cli
 hold this and when required can be exchanged for a new Access and Refresh Token granting 
 longer term use.  
 
-* ```grant_type=```:  The grant type is required and takes the value refresh_token 
-* ```refresh_token=```:  The refresh_token field contains the Refresh Token 
+Form Fields:
+
+* ```grant_type```:  The grant type is required and takes the value ```refresh_token``` 
+* ```refresh_token```:  The refresh_token field contains the Refresh Token 
+
 The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
 ```http 
 Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
@@ -190,8 +196,8 @@ Content-Type: application/json
 {
    "expires_in": 28800,
    "token_type": "Bearer",
-   "access_token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiJUUjI0NTczNzczIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZCI6IlRSMjQ1NzM3NzMiLCJpc3MiOiJJbmxhbmRSZXZlbnVlIiwib3JhY2xlLm9hdXRoLnN2Y19wX24iOiJPQXV0aFNlcnZpY2VQcm9maWxlIiwiaWF0IjoxNTEzMTE0NzY4LCJvcmFjbGUub2F1dGgucHJuLmlkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwiZXhwIjoxNTEzMTQzNTY4LCJwcm4iOiJUUjI0NTczNzczIiwianRpIjoiMTkzNWEyZjktZGYwNi00NzA1LWI5MDMtYmQ1ZTY5NzIwZjE2Iiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJNWU9CMTI3NTQyMSIsIm9yYWNsZS5vYXV0aC5zY29wZSI6Ik1ZSVIuU2VydmljZXMiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.vMo0b_H8ZeC09xcfDHoyRl50eqk0GeYdake99NrIvzcxUCsRtHbwMmgnBvzy45yL6T07-jfBlgRx3Tzt0MP-Gc7OKx-ma_s2SCD39m_q1by9nX_x7BWKFNGMM9gJl7jYTF6sWP6nNJCJWXfilfHJVuRchenyW4Lv8sVTKGPbQOQ",
-   "refresh_token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOm51bGwsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZF90eXBlIjoiTERBUF9VSUQiLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWQiOiJUUjI0NTczNzczIiwiaXNzIjoiSW5sYW5kUmV2ZW51ZSIsIm9yYWNsZS5vYXV0aC5ydC50dGMiOiJyZXNvdXJjZV9hY2Nlc3NfdGsiLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6Ik9BdXRoU2VydmljZVByb2ZpbGUiLCJpYXQiOjE1MTMxMTQ3NjgsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVmcmVzaF90b2tlbiIsImV4cCI6MTUxMzE0MzU2OCwicHJuIjpudWxsLCJqdGkiOiI2ZTQwOTIwNC05ZDkzLTRmM2ItYmMzNi1iMjZhMmMxZjA1YjYiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJNWU9CMTI3NTQyMSIsInVzZXIudGVuYW50Lm5hbWUiOiJEZWZhdWx0RG9tYWluIiwib3JhY2xlLm9hdXRoLmlkX2RfaWQiOiIxMjM0NTY3OC0xMjM0LTEyMzQtMTIzNC0xMjM0NTY3ODkwMTIifQ.imUbjnAHZ4w2oENBMktN_-tsMf71Uzn0RIKI7Ef9mK3ezkcTdaCc8LNPplYVB8-oGnjV87GjEdLU0gE6rr7Vsu0pnPxJJrxQTlKAeiX2w6H-BTwux97l8oniV-E6VXb5eALWcOM33Htc9SHHOjglMNzyTl76-yq1F4TU3eueAG8",
+   "access_token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1d...CJWXfilfHJVuRchenyW4Lv8sVTKGPbQOQ",
+   "refresh_token": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino...LWcOM33Htc9SHHOjglMNzyTl76-yq1F4TU3eueAG8",
    
 }
 ```
@@ -205,11 +211,13 @@ Content-Type: application/json
 
 This service will Validate an Access Token. Once your Application receives a request with a Bearer Access Token, the first thing you can do is to validate the token.
 
-* ```grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt```
-* ```oracle_token_action=validate```
-* ```scope=MYIR.Services```
-* ```assertion=``` - _current access/refresh token_
-* ```oracle_token_attrs_retrieval=prn exp```
+Form Fields:
+
+* ```grant_type```: is ```oracle-idm:/oauth/grant-type/resource-access-token/jwt```
+* ```oracle_token_action```: is ```validate```
+* ```scope```: is ```MYIR.Services```  
+* ```assertion```: - _current access/refresh token_
+* ```oracle_token_attrs_retrieval```: is ```prn exp```
 
 ### Example POST request to Validate a Access Token:
 
@@ -222,7 +230,7 @@ Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
 grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt
 &oracle_token_action=validate
 &scope=MYIR.Services
-&assertion=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiJDbGllbnQwMDgiLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkIjoiQ2xpZW50MDA4IiwiaXNzIjoiSW5sYW5kUmV2ZW51ZSIsIm9yYWNsZS5vYXV0aC5zdmNfcF9uIjoiT0F1dGhTZXJ2aWNlUHJvZmlsZSIsImlhdCI6MTUxOTMzOTExMCwib3JhY2xlLm9hdXRoLnBybi5pZF90eXBlIjoiTERBUF9VSUQiLCJvcmFjbGUub2F1dGgudGtfY29udGV4dCI6InJlc291cmNlX2FjY2Vzc190ayIsImV4cCI6MTUxOTM2NzkxMCwicHJuIjoiQ2xpZW50MDA4IiwianRpIjoiZjgwOTEzNGEtZTE3Ny00OGMwLWJjNDQtMzJmMDg3NDQxMTUxIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJUZXN0MzAyMDY0OTIiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwidXNlci50ZW5hbnQubmFtZSI6IkRlZmF1bHREb21haW4iLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6IjEyMzQ1Njc4LTEyMzQtMTIzNC0xMjM0LTEyMzQ1Njc4OTAxMiJ9.3PeIiEFSftcY482O74TjEDovYObjbEcjF_rqH8JMmqJgLLiBV4oDxkj3hlak4jX4NuG-mpLw7E2BYiFfuS2LtRo9R1oko-CO9F5JALxMD5MVxtb2KQFxrhiF-n1PFZhJzQydcHOkmBBxZDDN6OciS4SfeEm6s1iN46QldbunwYM
+&assertion=eyJhbGciOiJSUzUxMiIsInR5cCI...S4SfeEm6s1iN46QldbunwYM
 &oracle_token_attrs_retrieval=prn exp
 ```
 
@@ -246,9 +254,11 @@ Content-Type: application/json
 
 A token revoke process is available that will allow the client to revoke the acquired access token or refresh token. This is used to enable a "log out" feature in clients, allowing the authorization server to clean up any security credentials associated with the authorization.
 
-* ```grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt```
-* ```oracle_token_action=delete```
-* ```assertion=``` - _current access/refresh token_  
+Form Fields:
+
+* ```grant_type```: is ```oracle-idm/oauth/grant-type/resource-access-token/jwt```
+* ```oracle_token_action```:  is ```delete```
+* ```assertion```: - _current access/refresh token_  
 
 ### Example POST request to Revoke an Access Token:
 
@@ -260,7 +270,7 @@ Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
 
 grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt
 &oracle_token_action=delete
-&assertion=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ino5VFR1R2pHSVJNd01pQjRaUGxjbzhDZ3JlOCIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOm51bGwsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZF90eXBlIjoiTERBUF9VSUQiLCJvcmFjbGUub2F1dGgudXNlcl9vcmlnaW5faWQiOiJUUjI0NTczNzczIiwiaXNzIjoiSW5sYW5kUmV2ZW51ZSIsIm9yYWNsZS5vYXV0aC5ydC50dGMiOiJyZXNvdXJjZV9hY2Nlc3NfdGsiLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6Ik9BdXRoU2VydmljZVByb2ZpbGUiLCJpYXQiOjE1MTMxMTM0OTgsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVmcmVzaF90b2tlbiIsImV4cCI6MTUxMzE0MjI5OCwicHJuIjpudWxsLCJqdGkiOiJmNDZmMTU1YS1jNGU4LTRkYTktOTFkMy0zMjUxZTIyNDNhNjgiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJNWUlSLlNlcnZpY2VzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJNWU9CMTI3NTQyMSIsInVzZXIudGVuYW50Lm5hbWUiOiJEZWZhdWx0RG9tYWluIiwib3JhY2xlLm9hdXRoLmlkX2RfaWQiOiIxMjM0NTY3OC0xMjM0LTEyMzQtMTIzNC0xMjM0NTY3ODkwMTIifQ.bsqzeC1BWEAireUWCLq3ZGhbSjcb6jrkfbV7F8lLuujVMF7xlGkOMoSLx9DSN_ePPE4z7PeDbz3igF269siiuplkitbA6JZiR6DRs3pl9ED3MCjwzp4_DVxXuip0K0FOamwOwzyROzSupjYsEEkJhkG0ur2SGdTnjHFyXFoleoU
+&assertion=eyJhbGciOiJSUzUxMiIsInR5cC...kG0ur2SGdTnjHFyXFoleoU
 ```
 
 ### Example successful response:
