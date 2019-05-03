@@ -18,32 +18,38 @@
 ## URL Endpoint Parameter:
 
 #### Parameters:
-**{ServiceHostDomain}**: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
+```{ServiceHostDomain}```: this is IR's Gateway Service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
 
-|Environment | Hostname/URL *{ServiceHostDomain}* |
-|:---:|---|
-| Mock | http://mock-oauth.ird.digitalpartner.services |
-| Testing R2 | http://s.services.ird.govt.nz |
-| Testing R3 | http://q.services.ird.govt.nz |
-| Production | http://services.ird.govt.nz  |
+|Environment |```{ServiceHostDomain}``` Hostname |
+|-|-|
+| Mock | ```https://mock-oauth.ird.digitalpartner.services``` |
+| Testing R2 | ```https://s.services.ird.govt.nz``` |
+| Testing R3 | ```https://q.services.ird.govt.nz``` |
+| Testing R3.1  | ```https://test4.services.ird.govt.nz``` |
+| Production | ```https://services.ird.govt.nz```  |
 
->**Please note that theses Hostnames are subject to change.** 
+>Note:
+>
+>These hostnames are subject to change. 
 
-<a name="RequestAuthorisationCode"/>
+<a name="RequestAuthorisationCode" />
 
 ## Request Authorisation Code:
 
-Software Provider will send a **HTTP GET** request to Auth Server URL format:
+Software Provider will send a ```HTTP GET``` request via a Browser to Authorisation Server. 
+
+#### URL format:
 
 ```http
 https://{ServiceHostDomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize
  ?client_id=xyzComp_FooBar
- &redirect_uri=https://mycompdomain.com/returnpath
+ &redirect_uri=https://mycompdomain.com/returnpath/oAuthCallBack
  &scope=MYIR.Services
  &response_type=code
  &state=2d0fcc2d-8f7a-4f27-8bea-976cb86bd409
  &logout=true
 ```
+
 Here’s each query parameter explained:
 * ```client_id```: The public identifier (ClientID) for the application which is obtained from the onboarding team. 
 * ```redirect_uri```: Tells the authorization server where to send the user back to after they approve the request.
@@ -60,10 +66,11 @@ The user will be asked to "Authorise Concent" for the very first login.
 > Note: 
 > * Keep the state parameter less than 200 characters long. 
 > * The ```state``` parameter can include the following characters:
-> 	* ```a-z```
->	* ```A-Z```
->	* ```0-9```
->	* ```- . ? , : ' / \ + = $ #_``` 
+>     * ```a-z```
+>	   * ```A-Z```
+>	   * ```0-9```
+>     * ```- . ? , : ' / \ + = $ #_``` 
+>     * The ```space ``` character (ASCII 32, %20) should also be avoided. 
 
 
 
