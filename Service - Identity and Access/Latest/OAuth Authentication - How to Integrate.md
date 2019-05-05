@@ -16,14 +16,17 @@
 * [Call the API Gateway Service](#Call-the-API-Gateway-Service)
 * [Other OAuth Functionality](#Other-OAuth-Functionality)
 
-### URL Endpoints:
+### URL Authentication Endpoints:
 
-|Environment |{ServiceHostdomain} 
+|Environment |{ServiceHostdomain}|
 |-|-|
-| Test | https://test4.services.ird.govt.nz | 
-| Test | https://s.services.ird.govt.nz | 
-| Test | https://q.services.ird.govt.nz | 
-| Production | https://services.ird.govt.nz | 
+| Test | https://s.services.ird.govt.nz |
+| Test | https://test4.services.ird.govt.nz |
+| Production | https://services.ird.govt.nz |
+
+>Note:
+>
+>The Onboarding Team will advise which Service Host Domain to use for OAuth during the testing development.
 
 <a name="simulating-authentication-flow"/>
 
@@ -129,7 +132,7 @@ Parameters:
 
 <a name="Call-the-API-Gateway-Service"/>
 
-## Step 6. Call the Gateway Service
+### Step 6. Call the Gateway Service
 
 Once the Access Token has been obtained it can be used to make calls to the Gateway Service by passing it as a Bearer Token in the Authorization header of the ```HTTP POST``` request.
 
