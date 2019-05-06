@@ -76,7 +76,7 @@ Message samples :
             - [response sample](sample%20messages/body-employment-retrievelist-response.xml)
 
 - Mock URL Endpoint
-    - https://mock-intermediation.ird.digitalpartner.services/
+    - https://mock-es.ird.digitalpartner.services/
 
 - Test URL Endpoint
     - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/

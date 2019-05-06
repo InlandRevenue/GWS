@@ -118,3 +118,6 @@ Production URL Endpoint
 -----------------
 - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
 - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/	
+
+- (Cloud) SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+- (Native Desktop) SOAP WSDL: https://services.ird.govt.nz/gateway2/gws/returns/?wsdl
