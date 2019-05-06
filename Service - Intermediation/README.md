@@ -17,7 +17,7 @@ Key Features:
 
 - Schemas and WSDLS
 	- View and download the [Common v2 xsd](../Schema%20-%20Common/Common.v2.xsd)
-	- View and download the IPS return [XSD](Latest/Intermediation.v1.xsd) and [WSDL](Latest/IntermediationDevWsdl.v1.wsdl) from this current directory
+	- View and download the Intermediation [XSD](Latest/Intermediation.v1.xsd) and [WSDL](Latest/IntermediationDevWsdl.v1.wsdl) from this current directory
 	
 Supporting services
 -------------
