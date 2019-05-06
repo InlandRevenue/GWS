@@ -12,20 +12,16 @@ initially it will only provide the ability to retrieve tax agent links already e
 Key Features:
 -------------
 
-* [view details](Latest/) for
-	- schemas and wsdls
-	- message samples
-	- build pack
+- Gateway Service -  Intermediation Service 
+	- [Download the build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Intermediation%20Service.pdf) to view data definitions of each operation and response status code definitions
+
+- Schemas and WSDLS
+	- View and download the [Common v2 xsd](../Schema%20-%20Common/Common.v2.xsd)
+	- View and download the IPS return [XSD](Latest/Intermediation.v1.xsd) and [WSDL](Latest/IntermediationDevWsdl.v1.wsdl) from this current directory
 	
-Supporting schema
--------------
-* [view Common schema](../Schema%20-%20Common/Common.v2.xsd)
-
-Products using this service:
--------------
-* [Transaction Data Services](../Product%20-%20Transaction%20Data%20Services)
-
 Supporting services
 -------------
 * [Service - Identity and Access](../Service%20-%20Identity%20and%20Access/Latest/)
 * [Service - Software Intermediation](../Service%20-%20Software%20Intermediation)
+* [Product - Payday Filing](../Product%20-%20Payday%20Filing)
+* [Product - GST](../Product%20-%20GST)

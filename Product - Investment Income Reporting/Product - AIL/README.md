@@ -13,7 +13,7 @@ Key Documentation:
 - Schemas and WSDLS
 	- View and download the [common v2 xsd](../../Schema%20-%20Common/Common.v2.xsd)
 	- View and download the [return service common v2 xsd](../../Service%20-%20Return/Latest/ReturnCommon.v2.xsd)
-	- View and download the AIL return [xsd](ReturnAIL.v0.xsd) and [wsdl](AILDevWsdl.wsdl) from this current directory
+	- View and download the AIL return [XSD](ReturnAIL.v0.xsd) and [WSDL](AILDevWsdl.wsdl) from this current directory
 	
 - Return Service - Investment Income Reporting
 	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
@@ -30,7 +30,6 @@ Key Documentation:
 
 - Identity and Access Services
 	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
@@ -53,3 +52,14 @@ Message samples
 		- [request sample as single filer](sample%20messages/AILRetrieveReturnRequest_SingleFiler.xml)
 		- [request sample as multi filer](sample%20messages/AILRetrieveReturnRequest_MultiFiler.xml)
         - [positive response sample](sample%20messages/AILRetrieveReturnResponse.xml)
+
+- Mock URL Endpoint
+    - https://mock-aim.ird.digitalpartner.services/ 
+
+- Test URL Endpoint
+    - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
+    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+            
+- Production URL Endpoint
+    - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
+    - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/

@@ -45,7 +45,7 @@
 In our gateway services environments OAuth service is used, so as a service provider you would need to trigger customer's behaviour to complete this OAuth flow.
 
 ### Step 1. Service Request 
-Customer accesses the Client Application via a browser. They take an action that requires access to myIR Gateway Services.
+Customer accesses the Client Application via a web browser. They take an action that requires access to myIR Gateway Services.
 
 ### Step 2. Request Authorisation Code
 The Client Application invokes the OAuth Server to get Authorisation code, the customer's browser is redirected to myIR login page. The service provider needs to send a ```HTTP GET``` request via the Browser request to OAuth Server, using URL format as below:
@@ -70,7 +70,7 @@ Parameters:
 > For the Test and Production environments, the onboaring team will provide you with your Client ID and Client Secret.
 
 ### Step 3. Submit Login Credentials
-User submits myIR Usernname & Password and authorise consent via the user's browser.
+User submits myIR Usernname & Password and authorise consent via the user's web browser.
 
 >Note: 
 >

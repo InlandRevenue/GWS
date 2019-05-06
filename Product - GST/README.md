@@ -25,9 +25,12 @@ Key Features:
 	
 - Identity and Access Service
 	- [How to Integrate with OAuth](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Sample curl commands](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
 	- [Message Samples](../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
+
+Supporting Services
+-------------
+* [Service - Intermediation](../Service%20-%20Intermediation)
 
 Test Details:
 -----------------
@@ -43,19 +46,19 @@ Test Details:
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
 	
-	
-	Operation | Scenario ID | Data
-	--- | --- | ---	
-	File | EMS_GST013 | Customer IRD (*identifier*): 123090918
-	File | EMS_GST012 | Customer IRD (*identifier*): 123039456
-	Prepop | EMS_GST027 | Customer IRD (*identifier*): 123039858 
-	Prepop | EMS_GST028 | Customer IRD (*identifier*): 123084226 
-	Prepop | EMS_GST029 | Customer IRD (*identifier*): 123084217
-	Prepop | EMS_GST030 | Customer IRD (*identifier*): 123088077
-	Prepop | EMS_GST031 | Customer IRD (*identifier*): 123070054 
-	Prepop | EMS_GST032 | Customer IRD (*identifier*): 123101294
-	Prepop | EMS_GST033 | Customer IRD (*identifier*): 123084225
-	Prepop | EMS_GST034 | Customer IRD (*identifier*): 123080106 
+	    
+	|Operation | Scenario ID | Data|
+	|-|-|-|
+	|File | EMS_GST013 | Customer IRD (*identifier*): 123090918|
+	|File | EMS_GST012 | Customer IRD (*identifier*): 123039456|
+	|Prepop | EMS_GST027 | Customer IRD (*identifier*): 123039858 |
+	|Prepop | EMS_GST028 | Customer IRD (*identifier*): 123084226 |
+	|Prepop | EMS_GST029 | Customer IRD (*identifier*): 123084217|
+	|Prepop | EMS_GST030 | Customer IRD (*identifier*): 123088077|
+	|Prepop | EMS_GST031 | Customer IRD (*identifier*): 123070054 |
+	|Prepop | EMS_GST032 | Customer IRD (*identifier*): 123101294|
+	|Prepop | EMS_GST033 | Customer IRD (*identifier*): 123084225 |
+    |Prepop | EMS_GST034 | Customer IRD (*identifier*): 123080106 |
         
 Message samples :
 -----------------  
@@ -82,20 +85,13 @@ Message samples :
             - [response sample](sample%20messages/body-gst-retrievereturn-response.xml)
 
             
-Requests Matching Logic
------------------------
+- Mock URL Endpoint            
+    - https://mock-gst.ird.digitalpartner.services/gateway/GWS/Returns
 
-- ReadMe Page - (default) port 8080 of root path of Welcome Page
-- Authentication mappings - (default) port 8443 of following paths:
-    - /ms_oauth/oauth2/endpoints/oauthservice/authorize
-    - /oam/server/auth_cred_submit
-    - /ms_oauth/oauth2/endpoints/oauthservice/tokens
-- Returns Service Mappings - (default) port 8080 of path "/gateway/GWS/Returns":
-    - /gateway/GWS/Returns?wsdl - wsdl is not available, returning http 200 only
-    - /gateway/GWS/Returns - Authentication validation will be performed at first:
-        - if fail then return Authentication Errors
-        - if pass then:
-            - XML validation will be performed:
-                - if fail then return XML Validation Errors
-                - if pass then return positive responses
-- Default Mapping - Very last matching logic to handle all other requests by returning 404 error when no matching found
+- Test URL Endpoint
+    - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
+    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+            
+- Production URL Endpoint
+    - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
+    - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/   
