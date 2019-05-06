@@ -26,10 +26,8 @@ Key Features:
 - Mock URL Endpoint:            
     - https://mock-iir.ird.digitalpartner.services/gateway/GWS/Returns/
 
-- Test URL Endpoint:
-    - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
-    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
-            
-- Production URL Endpoint:
-    - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
-    - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/
+- Investment Income Reporting:
+	- [Testing Information](../Test%20Details%20-%20IIR/README.md)
+	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
+	- [Test URL Endpoints](../Test%20Details%20-%20IIR/README.md#test-environment-information)
+	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)	

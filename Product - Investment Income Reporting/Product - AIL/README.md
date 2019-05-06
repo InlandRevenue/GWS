@@ -33,7 +33,13 @@ Key Documentation:
 	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
 	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
 
-Message samples
+- Investment Income Reporting:
+	- [Testing Information](../Test%20Details%20-%20IIR/README.md)
+	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
+	- [Test URL Endpoints](../Test%20Details%20-%20IIR/README.md#test-environment-information)
+	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)	
+
+Message samples:
 -----------------
 
 - Simulating AIL Returns Operations:
@@ -53,13 +59,4 @@ Message samples
 		- [request sample as multi filer](sample%20messages/AILRetrieveReturnRequest_MultiFiler.xml)
         - [positive response sample](sample%20messages/AILRetrieveReturnResponse.xml)
 
-- Mock URL Endpoint
-    - https://mock-aim.ird.digitalpartner.services/ 
 
-- Test URL Endpoint
-    - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
-    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
-            
-- Production URL Endpoint
-    - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
-    - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/

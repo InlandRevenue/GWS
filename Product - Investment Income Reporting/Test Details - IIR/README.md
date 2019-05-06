@@ -14,6 +14,14 @@
 	- [Mindmap and test data](#mock-environment-information)
 	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
 	
+- Test Environment Information
+	- [Test scenarios report template and mindmap](#test-environment-information)
+	- [Test Environment URLs](#test-urls)
+
+- Production Environment Information
+	- [Production Environment URLs](#production-environment-information)
+	
+	
 Mock Environment Information:
 -----------------
 
@@ -65,24 +73,28 @@ Mock Environment Information:
 	III-ES-002 | Authentication | - | set invalid authentication token
 
 			
-Mock Environment - Requests Matching Logic:
+Mock Environment:
 -----------------
 
+- Mock URLs:
+	- Mock Emulated Services	-	https://mock-iir.ird.digitalpartner.services/ 
+	- Mock URL Endpoint			- 	https://mock-iir.ird.digitalpartner.services/gateway/GWS/Returns/
+
 - Returns Service Mappings - (default) port 443 of path "/gateway/GWS/Returns":
-	- /gateway/GWS/Returns?wsdl - wsdl is not available, returning http 200 only.
+	- /gateway/GWS/Returns?wsdl - WSDL is not available, returning HTTP 200 only.
 	
-- WS-addressing action header value of the incoming request is mapped to an endpoint:
+- WS-addressing ```action``` header value of the incoming request is mapped to an endpoint:
 	- FileReturns 		-	https://services.ird.govt.nz/GWS/Returns/Return/File
 	- RetrieveReturns 	-	https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturn
 	- RetrieveStatus 	-	https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatus
 	 
 - Authentication: 
-	- Authentication is based on the outcome of OAuth token validation (using new OAuth emlator)
+	- Authentication is based on the outcome of OAuth token validation (using new OAuth emulator)
 	- Incoming requests should include "Authorization" header with the OAuth token value
-	- Incase of missing token, emulated service would respond with error statusCode 2
+	- In case of missing token, emulated service would respond with error statusCode 2
 
 - Schema Validations:
-	- incase of failure xml validation failure response (error code 21)
+	- In case of failure XML validation failure response (error code 21)
 
 - Account type value is then verified to asses it is valid III product request.
 	- if not, an invalid account type error is returned.
@@ -90,3 +102,27 @@ Mock Environment - Requests Matching Logic:
 - Then the service operation specific validations are carried out and returned with appropriate response (per mind map).
 
 - Unmatched requests will return an appropriate HTTP response status
+
+
+
+Test Environment Information:
+-----------------
+
+- Test URL Endpoint:
+    - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
+    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+	
+- Test WSDL URL Endpoint:
+	- Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/?wsdl
+
+Production Environment Information:
+-----------------  
+
+- Production URL Endpoint:
+    - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
+    - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/
+	
+- Production WSDL URL Endpoint:
+	- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+    - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/?wsdl	
