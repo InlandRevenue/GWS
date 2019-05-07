@@ -24,20 +24,21 @@ Key Documentation:
 - Mock Environment Information
 	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)
 	- [Requests Matching Logic](../Test%20Details%20-%20IIR/README.md#mock-environment-requests-matching-logic)
+	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
 
 - Test Environment Information
 	- [Test scenarios report template and mindmap](../Test%20Details%20-%20IIR/README.md#test-environment-information)
+	- [Test URL Endpoints](../Test%20Details%20-%20IIR/README.md#test-environment-information)
+
+- Production Environment Information
+	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)
 
 - Identity and Access Services
-	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
+	- [Identity and Access Services](../../Service%20-%20Identity%20and%20Access/Latest/)
 
 - Investment Income Reporting:
 	- [Testing Information](../Test%20Details%20-%20IIR/README.md)
-	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
-	- [Test URL Endpoints](../Test%20Details%20-%20IIR/README.md#test-environment-information)
-	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)	
+		
 
 Message samples:
 -----------------
