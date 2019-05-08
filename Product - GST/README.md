@@ -23,10 +23,8 @@ Key Features:
 - Returns Service 
 	- [Download the build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20GST.pdf) to view data definitions of each operation and response status code definitions
 	
-- Identity and Access Service
-	- [How to Integrate with OAuth](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Message Samples](../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
+- Identity and Access Services
+	- [Identity and Access Services](../../Service%20-%20Identity%20and%20Access/Latest/)   
 
 Supporting Services
 -------------
