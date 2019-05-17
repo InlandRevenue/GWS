@@ -103,7 +103,7 @@ curl --request POST \
 Parameters:
 * ```{PartnersCert}``` Client certificate file
 * ```{PartnersKey}```  Private key file name
-* ```{AuthAccessToken}``` Authorization Access Token is from the ```token.txt``` file in Step 5. **Exchange Authorization Code for an Access Token**
+* ```{AuthAccessToken}``` Authorization Access Token is from Step 5. **Exchange Authorization Code for an Access Token**
 
 >Note:
 >
