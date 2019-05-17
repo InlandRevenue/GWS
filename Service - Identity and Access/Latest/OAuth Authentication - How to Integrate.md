@@ -18,11 +18,7 @@
 
 ### URL Authentication Endpoints:
 
-|Environment |{ServiceHostdomain}|
-|-|-|
-| Test | https://s.services.ird.govt.nz |
-| Test | https://test4.services.ird.govt.nz |
-| Production | https://services.ird.govt.nz |
+ 
 
 >Note:
 >
@@ -48,26 +44,7 @@ In our gateway services environments OAuth service is used, so as a service prov
 Customer accesses the Client Application via a web browser. They take an action that requires access to myIR Gateway Services.
 
 ### Step 2. Request Authorisation Code
-The Client Application invokes the OAuth Server to get Authorisation code, the customer's browser is redirected to myIR login page. The service provider needs to send a ```HTTP GET``` request via the Browser request to OAuth Server, using URL format as below:
-
-##### URL Format:
-```http
-https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/authorize
-  ?client_id={ClientID}
-  &redirect_uri={RedirectURI}
-  &scope=MYIR.Services
-  &response_type=code
-  &state={State}
-```
- 
-Parameters:
-* ```{ClientID}```: a valid client identifier
-* ```{RedirectURI}```: Client Application's redirect URI
-* ```{State}```: **Optional, but recommended** e.g. GUID, arbitrary unique string value created by the Client Application as a method of maintaining state. See the [Message Samples](Message%20Samples.md) or the [Indentiy and Build Pack](Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) for further details.
-			
-> Note: 
->
-> For the Test and Production environments, the onboaring team will provide you with your Client ID and Client Secret.
+The Client Application invokes the OAuth Server to get Authorisation code, the customer's browser is redirected to myIR login page. The service provider needs to send a ```HTTP GET``` request via the Browser request to OAuth Server. See [Authorisation Code Message Sample](Message%20Samples.md#RequestAuthorisationCode)
 
 ### Step 3. Submit Login Credentials
 User submits myIR Usernname & Password and authorise consent via the user's web browser.
@@ -77,58 +54,10 @@ User submits myIR Usernname & Password and authorise consent via the user's web 
 > The consent page and redirection pages are skipped in this mock environment (emulated service).
 
 ### Step 4. Redirect to Client Application
-Authorization Code returns to Client Application by a ```HTTP 302 redirection``` to the ```{redirectURI}```.
-
-#### Response URL Format:
-```http
-https://{RedirectURI}?code={AuthorizationCode}&state={State}
-```
-
-Parameters:
-* ```{RedirectURI}```: Client Application's redirect URI. Must match exactly as provided in Step 2.
-* ```{AuthorizationCode}```: The Authorization Code to be used for retrieving an access token	
-* ```{State}```: The matching string value which was origninally created by the Client Application 
+Authorization Code returns to Client Application by a ```HTTP 302 redirection``` to the ```{redirectURI}```. [Redirect Back to the  Application Message Sample](Message%20Samples.md#RedirectBacktotheApplication)
 
 ### Step 5. Exchange Authorization Code for an Access Token
-Client Application retrieves OAuth Access Token by submits a ```HTTP POST``` request using the Authorization Code as well as client application's credentials
-
-#### OAuth token URL endpoint:
-```http
-https://{ServiceHostdomain}/ms_oauth/oauth2/endpoints/oauthservice/tokens
-```
-#### Request HTTP header and body: 
-```http 
-POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
-Host: {ServiceHostDomain}
-Content-Type: application/x-www-form-urlencoded
-Authentication: Basic {ClientApplicationEncodedCredentials}
-
-redirect_uri={RedirectURI}
-&code={AuthorizationCode}
-&grant_type=authorization_code
-```
-
-Parameters:
-* ```{ServiceHostdomain}```: this is IR's gateway service environment specific domain that is accessed after your endpoint IP / CIDR range is white-listed.
-* ```{ClientApplicationEncodedCredentials}```: the encoded client application's credentials, must be Base64 encoded. See the [Message Samples](Message%20Samples.md) or the [Indentiy and Build Pack](Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) for further details.
-
-Parameters:
-* ```{RedirectURI}```: Client Application's redirect URI. **URI must be URL-encoded.**
-* ```{AuthorizationCode}```: the Authorization Code retrieved from previouse step
-
-Response HTTP Header and body format as below: 
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-    "expires_in":28800,
-    "token_type":"Bearer",
-    "access_token":"{AuthAccessToken}"
-}
-```
-Parameters:
-* ```{AuthAccessToken}```: is the access token string value which is then used in consuming the Gateway Services. 
+Client Application retrieves OAuth Access Token by submiting a ```HTTP POST``` request using the Authorization Code as well as client application's credentials. See [Exchange Authorization Code for an Access Token Sample](Message%20Samples.md#ExchangeAuthorisationCodeforanAccessToken)
 
 <a name="Call-the-API-Gateway-Service"/>
 
