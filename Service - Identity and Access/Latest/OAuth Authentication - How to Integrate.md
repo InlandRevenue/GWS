@@ -13,7 +13,6 @@
     * Step 4. Redirect to Client Application
     * Step 5. Exchange Authorization Code for an Access Token
     * Step 6. Call the Gateway Service
-* [Call the API Gateway Service](#Call-the-API-Gateway-Service)
 * [Other OAuth Functionality](#Other-OAuth-Functionality)
 
 ### URL Authentication Endpoints:
