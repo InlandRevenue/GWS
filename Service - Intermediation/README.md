@@ -4,10 +4,13 @@
 Intermediation Service
 =======================================
 
-Intermediation is the process of linking an intermediary (such as a tax agent) to an individual or 
-organisation so the intermediary can act on their behalf for tax purposes. 
-While the Intermediation Gateway Service will eventually provide this linking feature, 
-initially it will only provide the ability to retrieve tax agent links already established in myIR. 
+Intermediation is the process of linking a business intermediary (such as a tax agent, 
+bookkeeper, payroll bureau, payroll intermediary etc) to an individual or organisation 
+so the intermediary can act on their behalf for tax purposes. 
+
+The Intermediation Gateway Service provides the ability for intermediaries to:
+- manage links to clients (link, delink and update) 
+- retrieve clients and client lists that are already established.
 
 Key Features:
 -------------
@@ -22,6 +25,3 @@ Key Features:
 Supporting services
 -------------
 * [Service - Identity and Access](../Service%20-%20Identity%20and%20Access/Latest/)
-* [Service - Software Intermediation](../Service%20-%20Software%20Intermediation)
-* [Product - Payday Filing](../Product%20-%20Payday%20Filing)
-* [Product - GST](../Product%20-%20GST)
