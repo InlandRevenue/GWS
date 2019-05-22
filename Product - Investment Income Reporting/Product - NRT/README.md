@@ -1,11 +1,9 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Non-resident withholding tax (NRT) Software Development Kit (SDK) for Investment Income Reporting
-=======================================
+# Non-resident withholding tax (NRT) Software Development Kit (SDK) for Investment Income Reporting
 
-Key Features:
--------------
+## Key Documentation:
 
 - Business use cases
 	- [Download and view](III%20-%20NRT%20-%20GWS%20business%20use%20cases.pdf)
@@ -14,12 +12,16 @@ Key Features:
 	- View and download the [common v2 xsd](../Schema%20-%20Common%20III/)
 	- View and download the [Return Service common v2 xsd](../Service%20-%20Return%20III/Latest/)
 	- View and download the NRT return [XSD](ReturnNRT.v0.xsd) and [WSDL](NRTDevWsdl.wsdl) from this current directory
-	
-- Returns Service - Investment Income Information 
+
+ - Returns Service - Investment Income Information 
 	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
-	
+
+## Supporting Services 
+
 - Identity and Access Services
-	- [Identity and Access Services](../../Service%20-%20Identity%20and%20Access/Latest/)
+	- Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)
+
+## Environment Information:
 
 - Mock Environment Information
 	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)

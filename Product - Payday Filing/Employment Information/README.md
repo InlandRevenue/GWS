@@ -4,7 +4,7 @@
 Employment Information (EI) Returns Software Development Kit (SDK)
 =======================================
 
-Key Features:
+Key Documentation:
 -------------
 
 - Simulating Employment Information (EI) filing operations
@@ -23,18 +23,26 @@ Key Features:
 - Returns Service 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20EI.pdf) to view data definitions of each operation and response status code definitions
 	
-- Identity and Access Service
-	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation
+## Environments Information: 
+
+- Mock Environment Information
+	- [Mindmap and test data](#mock-environment-information)
+	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
+	
+- Test Environment Information
+	- [Test scenarios report template and mindmap](#test-environment-information)
+
+- Production Environment Information
+	- [Production URL Endpoint](#Production-URL-Endpoint)
 
 - Find out about [Employee Details SDK, payday filing business rules and calculations](../)
 
-Supporting Services
+Supporting Services:
 -------------
+* [Service: Identity and Access – view how to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
 * [Service - Intermediation](../Service%20-%20Intermediation)	
 
-Test Details:
+Test Environment Information:
 -----------------
 
 - Test Scenarios 

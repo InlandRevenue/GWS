@@ -1,11 +1,9 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Approved issuer levy (AIL) Software Development Kit (SDK) for Investment Income Reporting
-=======================================
+# Approved issuer levy (AIL) Software Development Kit (SDK) for Investment Income Reporting
 
-Key Documentation:
--------------
+## Key Documentation:
 
 - Business use cases
 	- [Download and view](III%20-%20AIL%20-%20GWS%20business%20use%20cases.pdf)
@@ -21,6 +19,8 @@ Key Documentation:
 - Message Samples
     - [View Message samples for requests and positive responses](#message-samples)
 
+## Environment Information: 
+
 - Mock Environment Information
 	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)
 	- [Requests Matching Logic](../Test%20Details%20-%20IIR/README.md#mock-environment-requests-matching-logic)
@@ -33,15 +33,11 @@ Key Documentation:
 - Production Environment Information
 	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)
 
-- Identity and Access Services
-	- [Identity and Access Services](../../Service%20-%20Identity%20and%20Access/Latest/)
+## Supporting Services:
 
-- Investment Income Reporting:
-	- [Testing Information](../Test%20Details%20-%20IIR/README.md)
-		
+- Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)
 
-Message samples:
------------------
+## Message Samples:
 
 - Simulating AIL Returns Operations:
     - File

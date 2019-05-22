@@ -34,19 +34,22 @@ Key Documentation:
 - Message Samples
     - [View Message samples for requests and positive responses](#message-samples)		
 	
+## Environment Information: 
+
 - Mock Environment Information
 	- [Mindmap and test data](#mock-environment-information)
 	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
 	
 - Test Environment Information
 	- [Test scenarios report template and mindmap](#test-environment-information)
-	
-- Identity and Access Services
-	- [Identity and Access Services](../../Service%20-%20Identity%20and%20Access/Latest/) 
 
+- Production Environment Information
+	- [Production URL Endpoint](#Production-URL-Endpoint)	
+	
 Supporting services
 -------------
-* [Service - Intermediation](../Service%20-%20Intermediation)
+* [Service: Identity and Access – view how to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
+* [Service: Intermediation – view schemas, WSDLs, and build pack](../Service%20-%20Intermediation)
 
 Message samples:
 -----------------
@@ -108,7 +111,6 @@ Test Environment Information:
 - Test Scenarios
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
 	- AIM Test Scenarios Mindmap - [view larger image](images/AIM_v2_Test_Scenarios_Mindmap.png)
-	
 	![Test Scenarios](images/AIM_v2_Test_Scenarios_Mindmap.png)
 
             

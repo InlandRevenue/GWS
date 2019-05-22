@@ -18,17 +18,28 @@ Key Features:
 - Schemas and WSDLS
 	- View and download the [common xsd](../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../Service%20-%20Return/Latest/)
-	- View and download the GST return [xsd](ReturnGST.v1.xsd) and [wsdl](ReturnsGSTDevWsdl.v1.wsdl) from this current directory
+	- View and download the GST return [XSD](ReturnGST.v1.xsd) and [WSDL](ReturnsGSTDevWsdl.v1.wsdl) from this current directory
 	
 - Returns Service 
 	- [Download the build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20GST.pdf) to view data definitions of each operation and response status code definitions
 	
-- Identity and Access Services
-	- [Identity and Access Services](../../Service%20-%20Identity%20and%20Access/Latest/)   
+## Environments Information: 
 
-Supporting Services
+- Mock Environment Information
+	- [Mindmap and test data](#mock-environment-information)
+	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
+	
+- Test Environment Information
+	- [Test URL Endpoint](#Test URL Endpoint)
+
+- Production Environment Information
+	- [Production URL Endpoint](#Production-URL-Endpoint)	
+
+
+Supporting services
 -------------
-* [Service - Intermediation](../Service%20-%20Intermediation)
+* [Service: Identity and Access – view how to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
+* [Service: Intermediation – view schemas, WSDLs, and build pack](../Service%20-%20Intermediation)
 
 Test Details:
 -----------------
