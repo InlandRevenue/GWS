@@ -3,7 +3,6 @@
 
 # Resident withholding tax (RWT) Software Development Kit (SDK) for Investment Income Reporting
 
-
 ## Key Documentation:
 
 - Business use cases

@@ -8,14 +8,14 @@ AIM Returns Software Development Kit (SDK)
 
 New Features:
 -------------
-	- Changed to meet new legislation around mid-year entry. 
-	- File/prepop now 
-		- allows for mid-year entry.
-		- returns penalties or interest applied to the customer period. 
-	- File has 3 new elements to declare:
-		- If the company is now earning over $5M 
-		- If the company is deciding to enter AIM mid-year 
-		- Declare any shareholders that the AIM company is paying provisional tax for.
+* Changed to meet new legislation around mid-year entry. 
+* File/prepop now 
+	* allows for mid-year entry.
+	* returns penalties or interest applied to the customer period. 
+* File has 3 new elements to declare:
+	* If the company is now earning over $5M 
+	* If the company is deciding to enter AIM mid-year 
+	* Declare any shareholders that the AIM company is paying provisional tax for.
 
 Key Documentation:
 -------------
