@@ -95,9 +95,9 @@
 	|RetrieveStatus | EMS_AIM065 | Customer IRD (*identifier*): 123090918 |
 	| | | | *periodEndDate*: 2019-12-31 |
 	|RetrieveStatus | EMS_AIM066 | Customer IRD (*identifier*): 123090918
-	 | | | *periodEndDate*: 2017-12-31 |
+	| | | | *periodEndDate*: 2017-12-31 |
 	|RetrieveStatus | EMS_AIM034 | Customer IRD (*identifier*): 123090918 (two-monthly even filer)
-	 | | | *periodEndDate*: 2017-11-30 |
+	| | | | *periodEndDate*: 2017-11-30 |
 
 ## Test Environment Information:
 
