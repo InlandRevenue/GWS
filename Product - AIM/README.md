@@ -1,13 +1,12 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-AIM Returns Software Development Kit (SDK)
-===============================================
+# AIM Returns Software Development Kit (SDK)
 
-# Release version 2.0
+## Release version 2.0
 
-New Features:
--------------
+## New Features:
+
 * Changed to meet new legislation around mid-year entry. 
 * File/prepop now 
 	* allows for mid-year entry.
@@ -17,13 +16,12 @@ New Features:
 	* If the company is deciding to enter AIM mid-year 
 	* Declare any shareholders that the AIM company is paying provisional tax for.
 
-Key Documentation:
--------------
+## Key Documentation:
 
 - Business use cases and worked examples
 	- [view on IR website](https://www.ird.govt.nz/resources/5/0/50d56274-2a12-46ac-a9e3-a4a84d3f47bc/aim-business-use-cases-worked-examples.pdf)
 	
-- Schemas and WSDLS
+- Schemas and WSDLs
 	- View and download the [common v2 xsd](../Schema%20-%20Common/)
 	- View and download the [return service common v2 xsd](../Service%20-%20Return/Latest/)
 	- View and download the AIM return [XSD](ReturnAIM.v2.xsd) and [WSDL](ReturnsAIMDevWsdl.v2.wsdl) from this current directory
@@ -46,13 +44,12 @@ Key Documentation:
 - Production Environment Information
 	- [Production URL Endpoint](#Production-URL-Endpoint)	
 	
-Supporting services
--------------
+## Supporting services
+
 * [Service: Identity and Access – view how to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
 * [Service: Intermediation – view schemas, WSDLs, and build pack](../Service%20-%20Intermediation)
 
-Message samples:
------------------
+## Message samples:
 
 - Simulating AIM Returns Operations:
     - PrePop
@@ -76,8 +73,7 @@ Message samples:
             - [request sample](sample%20messages/body-aim-retrievereturn-request.xml)
             - [response sample](sample%20messages/body-aim-retrievereturn-response.xml)
 
-Mock Environment Information:
------------------
+## Mock Environment Information:
 
 - AIM Mock Scenarios Mindmap
 	
@@ -89,9 +85,8 @@ Mock Environment Information:
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
 
-
-	|Operation | Scenario ID | Data|
-	|--- | --- | ---|
+	|Operation|Scenario ID| Data|
+	|--- |--- | --- |
 	|File | EMS_AIM0183 | Customer IRD (*identifier*): 123090918|
 	|RetrieveFilingObligations | EMS_AIM042 | Customer IRD (*identifier*): 123064887 |
 	|Prepop | EMS_AIM054 | Customer IRD (*identifier*): abcdefgh |
@@ -105,8 +100,7 @@ Mock Environment Information:
 	|RetrieveStatus | EMS_AIM034 | Customer IRD (*identifier*): 123090918 (two-monthly even filer)
 	 | | | *periodEndDate*: 2017-11-30 |
 
-Test Environment Information:
------------------
+## Test Environment Information:
 
 - Test Scenarios
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
@@ -114,8 +108,8 @@ Test Environment Information:
 	![Test Scenarios](images/AIM_v2_Test_Scenarios_Mindmap.png)
 
             
-Production URL Endpoint
------------------
+## Production URL Endpoint:
+
 - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
 - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/	
 
