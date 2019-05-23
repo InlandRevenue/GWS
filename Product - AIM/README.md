@@ -93,11 +93,76 @@
 	|Prepop | EMS_AIM059 | Customer IRD (*identifier*): 123066081 |
 	|RetrieveReturn | EMS_AIM028 | Customer IRD (*identifier*): 123081420 |
 	|RetrieveStatus | EMS_AIM065 | Customer IRD (*identifier*): 123090918 |
-	| | | | *periodEndDate*: 2019-12-31 |
+	 | |  *periodEndDate*: 2019-12-31 |
 	|RetrieveStatus | EMS_AIM066 | Customer IRD (*identifier*): 123090918
-	| | | | *periodEndDate*: 2017-12-31 |
-	|RetrieveStatus | EMS_AIM034 | Customer IRD (*identifier*): 123090918 (two-monthly even filer)
-	| | | | *periodEndDate*: 2017-11-30 |
+	 | |  *periodEndDate*: 2017-12-31 |
+	|RetrieveStatus | EMS_AIM034 | Customer IRD (*identifier*): 123090918 (two-monthly even filer)|
+	| | | *periodEndDate*: 2017-11-30 |
+
+<table>
+	<thead>
+		<th>Operation</th>
+		<th>Scenario ID</th>
+		<th>Data</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>File</td>
+			<td>EMS_AIM0183</td>
+			<td>Customer IRD (*identifier*): 123090918</td>
+		</tr>
+		<tr>
+			<td>RetrieveFilingObligations</td>
+			<td>EMS_AIM042</td>
+			<td>Customer IRD (*identifier*): 123064887</td>
+		</tr>
+		<tr>
+			<td>Prepop</td>
+			<td>EMS_AIM054</td>
+			<td>Customer IRD (*identifier*): abcdefgh</td>
+		</tr>		
+		<tr>
+			<td>Prepop</td>
+			<td>EMS_AIM063</td>
+			<td>Customer IRD (identifier): 123064887</td>
+		</tr>
+		<tr>
+			<td>Prepop</td>
+			<td>EMS_AIM059</td>
+			<td>Customer IRD (identifier): 123066081</td>
+		</tr>				
+		<tr>
+			<td>RetrieveReturn</td>
+			<td>EMS_AIM028</td>
+			<td>Customer IRD (identifier): 123081420</td>
+		</tr>	
+		<tr>
+			<td></td>
+			<td></td>
+			<td>periodEndDate: 2019-12-31</td>
+		</tr>	
+		<tr>
+			<td>RetrieveReturn</td>
+			<td>EMS_AIM066</td>
+			<td>Customer IRD (identifier): 123090918</td>
+		</tr>	
+		<tr>
+			<td></td>
+			<td></td>
+			<td>periodEndDate: 2019-12-31</td>
+		</tr>		
+		<tr>
+			<td>RetrieveReturn</td>
+			<td>EMS_AIM034</td>
+			<td>Customer IRD (identifier): 123090918 (two-monthly even filer)</td>
+		</tr>	
+		<tr>
+			<td></td>
+			<td></td>
+			<td>periodEndDate: 2017-11-30</td>
+		</tr>								
+	</tbody>
+</table>
 
 ## Test Environment Information:
 
