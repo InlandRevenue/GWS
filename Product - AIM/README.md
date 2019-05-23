@@ -19,7 +19,7 @@
 ## Key Documentation:
 
 - Business use cases and worked examples
-	- [view on IR website](https://www.ird.govt.nz/resources/5/0/50d56274-2a12-46ac-a9e3-a4a84d3f47bc/aim-business-use-cases-worked-examples.pdf)
+	- [view on IR website](https://www.classic.ird.govt.nz/resources/5/0/50d56274-2a12-46ac-a9e3-a4a84d3f47bc/aim-business-use-cases-worked-examples.pdf)
 	
 - Schemas and WSDLs
 	- View and download the [common v2 xsd](../Schema%20-%20Common/)
@@ -34,20 +34,18 @@
 	
 ## Environment Information: 
 
-- Mock Environment Information
-	- [Mindmap and test data](#mock-environment-information)
-	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
+- [Mock Environment Information - Emulated Serices, Mindmap and test data](#mock-environment-information)
 	
-- Test Environment Information
-	- [Test scenarios report template and mindmap](#test-environment-information)
+- [Test Environment Information - Test Scenarios, mindmap and URL Endpoints](#test-environment-information)
 
-- Production Environment Information
-	- [Production URL Endpoint](#Production-URL-Endpoint)	
+- [Production Environment Information - URL Endpoint](#Production-URL-Endpoint)	
 	
 ## Supporting services
 
 * Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 * Service: Intermediation – view [Schemas, WSDLs, and build pack](../Service%20-%20Intermediation/)
+
+---
 
 ## Message samples:
 
@@ -75,6 +73,9 @@
 
 ## Mock Environment Information:
 
+* Mock Emulated Services 
+	* https://mock-aim.ird.digitalpartner.services
+
 - AIM Mock Scenarios Mindmap
 	- [View larger image](images/AIM_Mock_Scenarios_Mindmap.png) 
 	![Mock Scenarios](images/AIM_Mock_Scenarios_Mindmap.png) 
@@ -83,6 +84,7 @@
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
 	- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses. 
 	- Text in italics represents the name of the XML node in the request.
+	-
 	
 	Operation | Scenario ID | Data
 	--- | --- | ---
@@ -101,10 +103,16 @@
 
 ## Test Environment Information:
 
+* Test URL Endpoint
+	* Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
+	* Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+
 - Test Scenarios
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
 	- AIM Test Scenarios Mindmap - [view larger image](images/AIM_v2_Test_Scenarios_Mindmap.png)
 	![Test Scenarios](images/AIM_v2_Test_Scenarios_Mindmap.png)
+
+
 
             
 ## Production URL Endpoint:
