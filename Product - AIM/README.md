@@ -76,7 +76,6 @@
 ## Mock Environment Information:
 
 - AIM Mock Scenarios Mindmap
-	
 	- [View larger image](images/AIM_Mock_Scenarios_Mindmap.png) 
 	![Mock Scenarios](images/AIM_Mock_Scenarios_Mindmap.png) 
 
@@ -86,7 +85,7 @@
 	- Text in italics represents the name of the XML node in the request.
 
 	|Operation|Scenario ID| Data|
-	|--- |--- | --- |
+	|-|-|-|
 	|File | EMS_AIM0183 | Customer IRD (*identifier*): 123090918|
 	|RetrieveFilingObligations | EMS_AIM042 | Customer IRD (*identifier*): 123064887 |
 	|Prepop | EMS_AIM054 | Customer IRD (*identifier*): abcdefgh |
