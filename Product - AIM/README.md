@@ -38,7 +38,7 @@
 	
 - [Test Environment Information - Test Scenarios, mindmap and URL Endpoints](#test-environment-information)
 
-- [Production Environment Information - URL Endpoint](#Production-URL-Endpoint)	
+- [Production Environment Information - URL Endpoints](#Production-Environment-Information)	
 	
 ## Supporting services
 
@@ -115,7 +115,7 @@
 
 
             
-## Production URL Endpoint:
+## Production Environment Information:
 
 - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
 - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/	
