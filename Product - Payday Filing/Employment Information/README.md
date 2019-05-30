@@ -1,19 +1,16 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-Employment Information (EI) Returns Software Development Kit (SDK)
-=======================================
+# Employment Information (EI) Returns Software Development Kit (SDK)
 
-Key Documentation:
--------------
+## Key Documentation:
 
 - Simulating Employment Information (EI) filing operations
-	- [Test scenarios report template, mindmap and data](#test-details)
-    - [Message samples](#message-samples-) - positive responses
-	- [Requests Matching Logic](#requests-matching-logic)
+	- [Test scenarios report template, mindmap and data](#Mock-Environment-Information)
+    - [Message samples](#message-samples) - positive responses
 
 - Business use cases
-	- [view on IR website](https://www.ird.govt.nz/resources/9/5/95275fd7-967a-4b87-877f-a8968807e45e/Payday+filing+-+Employment+Information+business+use+cases.pdf)
+	- [view on IR website](https://www.classic.ird.govt.nz/resources/9/5/95275fd7-967a-4b87-877f-a8968807e45e/Payday+filing+-+Employment+Information+business+use+cases.pdf)
 	
 - Schemas and WSDLs
 	- View and download the [common xsd](../../Schema%20-%20Common/)
@@ -22,28 +19,25 @@ Key Documentation:
 	
 - Returns Service 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20EI.pdf) to view data definitions of each operation and response status code definitions
-	
-## Environments Information: 
 
-- Mock Environment Information
-	- [Mindmap and test data](#mock-environment-information)
-	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
-	
-- Test Environment Information
-	- [Test scenarios report template and mindmap](#test-environment-information)
+## Environment Information: 
 
-- Production Environment Information
-	- [Production URL Endpoint](#Production-URL-Endpoint)
-
+- [Mock Environment Information - Emulated Serices](#mock-environment-information)
+- [Test Environment Information - Test Scenarios, mindmap and URL Endpoints](#test-environment-information)
+- [Production Environment Information - URL Endpoints](#Production-Environment-Information)	
 - Find out about [Employee Details SDK, payday filing business rules and calculations](../)
 
-Supporting Services:
--------------
-* [Service: Identity and Access – view how to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
-* [Service - Intermediation](../Service%20-%20Intermediation)	
+## Supporting Services:
 
-Test Environment Information:
------------------
+* Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
+* Service: Intermediation [Service - Intermediation](../Service%20-%20Intermediation)	
+
+---
+
+## Mock Environment Information:
+
+- Mock URL Endpoint
+    - https://mock-ei.ird.digitalpartner.services/ 
 
 - Test Scenarios 
 	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Report%20Template.docx)
@@ -76,8 +70,8 @@ Test Environment Information:
 
    
 
-Message samples :
------------------
+## Message samples:
+
 
 - Simulating EI Returns Operations:
     - PrePop
@@ -101,13 +95,15 @@ Message samples :
             - [request sample](sample%20messages/body-ei-retrievereturn-request.xml)
             - [response sample](sample%20messages/body-ei-retrievereturn-response.xml)
 
-- Mock URL Endpoint
-    - https://mock-ei.ird.digitalpartner.services/ 
-
-- Test URL Endpoint
-    - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
-    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+## Test Environment Information:
+	
+* Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
+* Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+* Cloud SOAP WSDL: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+* Native Desktop SOAP WSDL: https://test3.services.ird.govt.nz/gateway2/gws/returns/?wsdl	
             
-- Production URL Endpoint
-    - Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
-    - Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/
+## Production Environment Information:
+* Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
+* Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/   
+* Cloud SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+* Native Desktop SOAP WSDL https://services.ird.govt.nz/gateway2/gws/returns/?wsdl  
