@@ -18,7 +18,6 @@
 
 - Mock Environment Information
 	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)
-	- [Requests Matching Logic](../Test%20Details%20-%20IIR/README.md#mock-environment-requests-matching-logic)
 	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
 
 - Test Environment Information
@@ -28,10 +27,10 @@
 - Production Environment Information
 	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)	 
 
-- Investment Income Reporting:
-	- [Testing Information](../Test%20Details%20-%20IIR/README.md)
-	
+
 ## Supporting services:
 
 - Returns Service - Investment Income Information 
 	- Service - Identity and Access – view [how to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Return%20III/Latest/) 
+
+---

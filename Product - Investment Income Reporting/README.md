@@ -21,7 +21,7 @@ Find out about:
 - the key changes for [investment income on the IR website](https://www.ird.govt.nz/investment-income)
 - [investment income reporting on the IR website](https://www.ird.govt.nz/software-providers/explore-products-contents/)
 
- Identity and Access Services:
-- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation
+## Supporting Services:
+
+* Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
+* Service: Intermediation [Service - Intermediation](../Service%20-%20Intermediation)
