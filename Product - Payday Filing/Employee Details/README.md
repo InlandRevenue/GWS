@@ -4,34 +4,44 @@
 Employee Details (ED) Software Development Kit (SDK)
 =======================================
 
-Key Features:
+Key Documentation:
 -------------
 
 - Simulating Employee Details (ED) filing operations
 	- [Test scenarios report template, mindmap and data](#test-details)
-    - [Message samples](#message-samples-) - positive responses
-	- [Requests Matching Logic](#requests-matching-logic)
+    - [Message samples](#message-samples) - positive responses
 	
 - Business use cases
 	- [view on IR website](https://www.ird.govt.nz/resources/e/2/e2d9e606-76d3-44f7-9127-2584666b5f09/Payday+filing+-+Employee+details+business+use+cases.pdf)
 	
-- Schemas and WSDLS
+- Schemas and WSDLs
 	- View and download the [common xsd](../../Schema%20-%20Common/)
 	- View and download the [return service common xsd](../../Service%20-%20Return/Latest/)
-	- View and download the Employee Details (ED) [xsd](Employment.xsd) and [wsdl](EmploymentDevWsdl.wsdl) from this current directory
+	- View and download the Employee Details (ED) [XSD](Employment.xsd) and [WSDL](EmploymentDevWsdl.wsdl) from this current directory
 	
 - Employment Service 
 	- [Download the build pack](Gateway%20Services%20Build%20Pack%20-%20Employment%20Service.pdf) to view data definitions of each operation and response status code definitions
 	
-- Identity and Access Service
-	- [How to Integrate with OAuth](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Sample curl commands](../../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
-	- [Message Samples](../../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-	- [Download the build pack](../../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation
+## Environment Information: 
+
+- Mock Environment Information
+	- [Mindmap and test data](#mock-environment-information)
+	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
+	
+- Test Environment Information
+	- [Test scenarios report template and mindmap](#test-environment-information)
+
+- Production Environment Information
+	- [Production URL Endpoint](#Production-URL-Endpoint)	
 
 - Find out about [Employee Information SDK, payday filing business rules and calculations](../)
 
-Test Details:
+Supporting Services:
+-------------
+* [Service: Identity and Access – view how to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
+* [Service: Intermediation – view schemas, WSDLs, and build pack](../Service%20-%20Intermediation)
+
+Test Environment Information:
 -----------------
 
 - Test Scenarios 
@@ -53,7 +63,7 @@ Test Details:
 	Create | EMS_ES095 | Employee IRD (*identifier*): 123183711
 	Update | EMS_ES099 | employmentStartDate: today's date
         
-Message samples :
+Message samples:
 ----------------- 
 - Simulating Employment Service Operations:
     - Create
@@ -73,21 +83,17 @@ Message samples :
             - [request sample](sample%20messages/body-employment-retrievelist-request.xml)
             - [response sample](sample%20messages/body-employment-retrievelist-response.xml)
 
-            
-Requests Matching Logic
------------------------
+- Mock URL Endpoint
+    - https://mock-es.ird.digitalpartner.services/
 
-- ReadMe Page - (default) port 8080 of root path of Welcome Page
-- Authentication mappings - (default) port 8443 of following paths:
-    - /ms_oauth/oauth2/endpoints/oauthservice/authorize
-    - /oam/server/auth_cred_submit
-    - /ms_oauth/oauth2/endpoints/oauthservice/tokens
-- Returns Service Mappings - (default) port 8080 of path "/gateway/GWS/Returns":
-    - /gateway/GWS/Returns?wsdl - wsdl is not available, returning http 200 only
-    - /gateway/GWS/Returns - Authentication validation will be performed at first:
-        - if fail then return Authentication Errors
-        - if pass then:
-            - XML validation will be performed:
-                - if fail then return XML Validation Errors
-                - if pass then return positive responses
-- Default Mapping - Very last matching logic to handle all other requests by returning 404 error when no matching found
+- Test URL Endpoint
+    - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/employment/
+    - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/employment/
+            
+Production URL Endpoint
+-----------------
+- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/employment/
+- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/employment/	
+
+- (Cloud) SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/employment/?wsdl
+- (Native Desktop) SOAP WSDL: https://services.ird.govt.nz/gateway2/gws/employment/?wsdl
