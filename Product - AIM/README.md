@@ -1,32 +1,30 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-AIM Returns Software Development Kit (SDK)
-===============================================
+# AIM Returns Software Development Kit (SDK)
 
-# Release version 2.0
+#### Release version 2.0
 
-New Features:
--------------
-	- Changed to meet new legislation around mid-year entry. 
-	- File/prepop now 
-		- allows for mid-year entry.
-		- returns penalties or interest applied to the customer period. 
-	- File has 3 new elements to declare:
-		- If the company is now earning over $5M 
-		- If the company is deciding to enter AIM mid-year 
-		- Declare any shareholders that the AIM company is paying provisional tax for.
+## New Features:
 
-Key Documentation:
--------------
+* Changed to meet new legislation around mid-year entry. 
+* File/prepop now 
+	* allows for mid-year entry.
+	* returns penalties or interest applied to the customer period. 
+* File has 3 new elements to declare:
+	* If the company is now earning over $5M 
+	* If the company is deciding to enter AIM mid-year 
+	* Declare any shareholders that the AIM company is paying provisional tax for.
+
+## Key Documentation:
 
 - Business use cases and worked examples
-	- [view on IR website](https://www.ird.govt.nz/resources/5/0/50d56274-2a12-46ac-a9e3-a4a84d3f47bc/aim-business-use-cases-worked-examples.pdf)
+	- [view on IR website](https://www.classic.ird.govt.nz/resources/5/0/50d56274-2a12-46ac-a9e3-a4a84d3f47bc/aim-business-use-cases-worked-examples.pdf)
 	
-- Schemas and WSDLS
+- Schemas and WSDLs
 	- View and download the [common v2 xsd](../Schema%20-%20Common/)
 	- View and download the [return service common v2 xsd](../Service%20-%20Return/Latest/)
-	- View and download the AIM return [xsd](ReturnAIM.v2.xsd) and [wsdl](ReturnsAIMDevWsdl.v2.wsdl) from this current directory
+	- View and download the AIM return [XSD](ReturnAIM.v2.xsd) and [WSDL](ReturnsAIMDevWsdl.v2.wsdl) from this current directory
 	
 - Return Service 
 	- [Download the Return Service AIM v2.0 build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20-%20V2.0.pdf) to view data definitions of each operation and response status code definitions
@@ -34,21 +32,20 @@ Key Documentation:
 - Message Samples
     - [View Message samples for requests and positive responses](#message-samples)		
 	
-- Mock Environment Information
-	- [Mindmap and test data](#mock-environment-information)
-	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
-	
-- Test Environment Information
-	- [Test scenarios report template and mindmap](#test-environment-information)
-	
-- Identity and Access Service
-	- [How to Integrate with OAuth](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md)
-	- [Sample curl commands](../Service%20-%20Identity%20and%20Access/Latest/OAuth%20Authentication%20-%20How%20to%20Integrate.md) - for testing the OAuth flow
-	- [Message Samples](../Service%20-%20Identity%20and%20Access/Latest/) - OAuth requests and responses
-	- [Download the build pack](../Service%20-%20Identity%20and%20Access/Latest/Build%20pack%20-%20Identity%20and%20Access%20Services.pdf) - for OAuth 2.0 implementation   
+## Environment Information: 
 
+- [Mock Environment Information - Emulated Services, Mindmap and Test data](#mock-environment-information)
+	
+- [Test Environment Information - Test Scenarios Report Template, Mindmap and URL Endpoints](#test-environment-information)
 
-Message samples:
+- [Production Environment Information - URL Endpoints](#Production-Environment-Information)	
+	
+## Supporting services
+
+* Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
+* Service: Intermediation – view [Schemas, WSDLs, and build pack](../Service%20-%20Intermediation/)
+
+## Message samples:
 -----------------
 
 - Simulating AIM Returns Operations:
@@ -73,12 +70,14 @@ Message samples:
             - [request sample](sample%20messages/body-aim-retrievereturn-request.xml)
             - [response sample](sample%20messages/body-aim-retrievereturn-response.xml)
 
-Mock Environment Information:
+## Mock Environment Information:
 -----------------
 
+* Mock Emulated Services URL
+	* https://mock-aim.ird.digitalpartner.services
+
 - AIM Mock Scenarios Mindmap
-	
-	- [View larger image](images/AIM_Mock_Scenarios_Mindmap.png) 
+	- [View larger image](images/AIM_Mock_Scenarios_Mindmap.png)
 	![Mock Scenarios](images/AIM_Mock_Scenarios_Mindmap.png) 
 
 - Test Data
@@ -102,31 +101,24 @@ Mock Environment Information:
 	RetrieveStatus | EMS_AIM034 | Customer IRD (*identifier*): 123090918 (two-monthly even filer)
 	 | | | *periodEndDate*: 2017-11-30 
 
-            
-Mock Environment - Requests Matching Logic:
+## Test Environment Information:
 -----------------
 
-- ReadMe Page - (default) port 8080 of root path of Welcome Page
-- Authentication mappings - (default) port 8443 of following paths:
-	- /ms_oauth/oauth2/endpoints/oauthservice/authorize
-	- /oam/server/auth_cred_submit
-	- /ms_oauth/oauth2/endpoints/oauthservice/tokens
-- Returns Service Mappings - (default) port 8080 of path "/gateway/GWS/Returns":
-	- /gateway/GWS/Returns?wsdl - wsdl is not available, returning http 200 only
-	- /gateway/GWS/Returns - Authentication validation will be performed at first:
-		- if fail then return Authentication Errors
-		- if pass then:
-			- XML validation will be performed:
-				- if fail then return XML Validation Errors
-				- if pass then return positive responses
-- Default Mapping - Very last matching logic to handle all other requests by returning 404 error when no matching found
-
-
-Test Environment Information:
------------------
-
-- Test Scenarios
+* Test Scenarios
 	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
 	- AIM Test Scenarios Mindmap - [view larger image](images/AIM_v2_Test_Scenarios_Mindmap.png)
-	
 	![Test Scenarios](images/AIM_v2_Test_Scenarios_Mindmap.png)
+
+* Test URL Endpoint
+	* Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
+	* Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+
+## Production Environment Information:
+-----------------
+
+* Production URL Endpoints
+
+	- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
+	- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/
+	- (Cloud) SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+	- (Native Desktop) SOAP WSDL: https://services.ird.govt.nz/gateway2/gws/returns/?wsdl
