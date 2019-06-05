@@ -16,10 +16,10 @@
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
 	
-- Simulating IPS filing operations
-    - [Message samples](#message-samples) - positive responses
+- Message Samples
+    - [View Message samples for requests and positive responses](#message-samples)
 
-## Environment Information: 
+## Environment Information:
 
 - Mock Environment Information
 	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)
@@ -36,9 +36,8 @@
 
 - Service: Identity and Access – view[ How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)   
 
----
-
 ## Message Samples:
+-----------------
 
 - File
     - [request sample](sample%20messages/IPSFileRequest.xml)

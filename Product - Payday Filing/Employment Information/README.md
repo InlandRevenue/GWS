@@ -5,10 +5,6 @@
 
 ## Key Documentation:
 
-- Simulating Employment Information (EI) filing operations
-	- [Test scenarios report template, mindmap and data](#Mock-Environment-Information)
-    - [Message samples](#message-samples) - positive responses
-
 - Business use cases
 	- [view on IR website](https://www.classic.ird.govt.nz/resources/9/5/95275fd7-967a-4b87-877f-a8968807e45e/Payday+filing+-+Employment+Information+business+use+cases.pdf)
 	
@@ -20,27 +16,56 @@
 - Returns Service 
 	- [Download the build pack](../../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20EI.pdf) to view data definitions of each operation and response status code definitions
 
+- Message Samples
+    - [View Message samples for requests and positive responses](#message-samples)
+
+- Find out about [Employee Details SDK, payday filing business rules and calculations](../)
+
 ## Environment Information: 
 
 - [Mock Environment Information - Emulated Serices](#mock-environment-information)
+
 - [Test Environment Information - Test Scenarios, mindmap and URL Endpoints](#test-environment-information)
+
 - [Production Environment Information - URL Endpoints](#Production-Environment-Information)	
-- Find out about [Employee Details SDK, payday filing business rules and calculations](../)
 
 ## Supporting Services:
 
 * Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
 * Service: Intermediation [Service - Intermediation](../Service%20-%20Intermediation)	
 
----
+## Message samples:
+-----------------
+
+- Simulating EI Returns Operations:
+    - PrePop
+        - Positive response
+            - [request sample](sample%20messages/body-ei-returnprepop-request.xml)
+            - [response sample](sample%20messages/body-ei-returnprepop-response.xml)
+    - File
+        - Positive response
+            - [request sample](sample%20messages/body-ei-returnfile-request.xml)
+            - [response sample](sample%20messages/body-ei-returnfile-response.xml)
+    - RetrieveStatus
+        - Positive response
+            - [request sample](sample%20messages/body-ei-returnstatus-request.xml)
+            - [response sample](sample%20messages/body-ei-returnstatus-response.xml)
+    - RetrieveFilingObligations
+        - Positive response
+            - [request sample](sample%20messages/body-ei-filingobligation-request.xml)
+            - [response sample](sample%20messages/body-ei-filingobligation-response.xml)
+    - RetrieveReturn
+        - Positive response
+            - [request sample](sample%20messages/body-ei-retrievereturn-request.xml)
+            - [response sample](sample%20messages/body-ei-retrievereturn-response.xml)
 
 ## Mock Environment Information:
+-----------------
 
 - Mock URL Endpoint
     - https://mock-ei.ird.digitalpartner.services/ 
 
-- Test Scenarios 
-	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Report%20Template.docx)
+- Test Scenarios
 	- Employment Information Test Scenarios Mindmap
 	
 	![Test Scenarios](images/Employment_Information_Test_Scenarios_Mind_Map.png)
@@ -68,42 +93,24 @@
 	| | | | *payDayDate*: 2018-12-10|
 	| | | | *submissionKey*: 987654321|
 
-   
-
-## Message samples:
-
-
-- Simulating EI Returns Operations:
-    - PrePop
-        - Positive response
-            - [request sample](sample%20messages/body-ei-returnprepop-request.xml)
-            - [response sample](sample%20messages/body-ei-returnprepop-response.xml)
-    - File
-        - Positive response
-            - [request sample](sample%20messages/body-ei-returnfile-request.xml)
-            - [response sample](sample%20messages/body-ei-returnfile-response.xml)
-    - RetrieveStatus
-        - Positive response
-            - [request sample](sample%20messages/body-ei-returnstatus-request.xml)
-            - [response sample](sample%20messages/body-ei-returnstatus-response.xml)
-    - RetrieveFilingObligations
-        - Positive response
-            - [request sample](sample%20messages/body-ei-filingobligation-request.xml)
-            - [response sample](sample%20messages/body-ei-filingobligation-response.xml)
-    - RetrieveReturn
-        - Positive response
-            - [request sample](sample%20messages/body-ei-retrievereturn-request.xml)
-            - [response sample](sample%20messages/body-ei-retrievereturn-response.xml)
 
 ## Test Environment Information:
-	
-* Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
-* Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
-* Cloud SOAP WSDL: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
-* Native Desktop SOAP WSDL: https://test3.services.ird.govt.nz/gateway2/gws/returns/?wsdl	
+-----------------
+
+* Test Scenarios
+	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Report%20Template.docx)
+
+* Test URL Endpoints
+	- Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
+	- Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
+	- Cloud SOAP WSDL: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+	- Native Desktop SOAP WSDL: https://test3.services.ird.govt.nz/gateway2/gws/returns/?wsdl
             
 ## Production Environment Information:
-* Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
-* Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/   
-* Cloud SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
-* Native Desktop SOAP WSDL https://services.ird.govt.nz/gateway2/gws/returns/?wsdl  
+-----------------
+
+* Production URL Endpoints
+	- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
+	- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/
+	- Cloud SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+	- Native Desktop SOAP WSDL https://services.ird.govt.nz/gateway2/gws/returns/?wsdl

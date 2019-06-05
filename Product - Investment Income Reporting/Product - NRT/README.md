@@ -32,6 +32,4 @@
 	- [Test URL Endpoints](../Test%20Details%20-%20IIR/README.md#test-environment-information)
 
 - Production Environment Information
-	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)	 
-
----
+	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)
