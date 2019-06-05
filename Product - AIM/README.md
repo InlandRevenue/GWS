@@ -29,15 +29,14 @@
 - Return Service 
 	- [Download the Return Service AIM v2.0 build pack](../Service%20-%20Return/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20AIM%20-%20V2.0.pdf) to view data definitions of each operation and response status code definitions
 
-	
 - Message Samples
     - [View Message samples for requests and positive responses](#message-samples)		
 	
 ## Environment Information: 
 
-- [Mock Environment Information - Emulated Serices, Mindmap and test data](#mock-environment-information)
+- [Mock Environment Information - Emulated Services, Mindmap and Test data](#mock-environment-information)
 	
-- [Test Environment Information - Test Scenarios, mindmap and URL Endpoints](#test-environment-information)
+- [Test Environment Information - Test Scenarios Report Template, Mindmap and URL Endpoints](#test-environment-information)
 
 - [Production Environment Information - URL Endpoints](#Production-Environment-Information)	
 	
@@ -46,9 +45,8 @@
 * Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 * Service: Intermediation – view [Schemas, WSDLs, and build pack](../Service%20-%20Intermediation/)
 
----
-
 ## Message samples:
+-----------------
 
 - Simulating AIM Returns Operations:
     - PrePop
@@ -73,12 +71,13 @@
             - [response sample](sample%20messages/body-aim-retrievereturn-response.xml)
 
 ## Mock Environment Information:
+-----------------
 
-* Mock Emulated Services 
+* Mock Emulated Services URL
 	* https://mock-aim.ird.digitalpartner.services
 
 - AIM Mock Scenarios Mindmap
-	- [View larger image](images/AIM_Mock_Scenarios_Mindmap.png) 
+	- [View larger image](images/AIM_Mock_Scenarios_Mindmap.png)
 	![Mock Scenarios](images/AIM_Mock_Scenarios_Mindmap.png) 
 
 - Test Data
@@ -103,23 +102,23 @@
 	 | | | *periodEndDate*: 2017-11-30 
 
 ## Test Environment Information:
+-----------------
+
+* Test Scenarios
+	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
+	- AIM Test Scenarios Mindmap - [view larger image](images/AIM_v2_Test_Scenarios_Mindmap.png)
+	![Test Scenarios](images/AIM_v2_Test_Scenarios_Mindmap.png)
 
 * Test URL Endpoint
 	* Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
 	* Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
 
-- Test Scenarios
-	- [Download test scenarios report template](AIM%20-%20Return%20Sevice%20-%20Test%20Report%20Template.docx)
-	- AIM Test Scenarios Mindmap - [view larger image](images/AIM_v2_Test_Scenarios_Mindmap.png)
-	![Test Scenarios](images/AIM_v2_Test_Scenarios_Mindmap.png)
-
-
-
-            
 ## Production Environment Information:
+-----------------
 
-- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
-- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/	
+* Production URL Endpoints
 
-- (Cloud) SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
-- (Native Desktop) SOAP WSDL: https://services.ird.govt.nz/gateway2/gws/returns/?wsdl
+	- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
+	- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/
+	- (Cloud) SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
+	- (Native Desktop) SOAP WSDL: https://services.ird.govt.nz/gateway2/gws/returns/?wsdl
