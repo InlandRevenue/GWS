@@ -76,7 +76,7 @@
 			</xsd:element>
 		</xsd:schema>
 		<xsd:schema xmlns:tns="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest" elementFormDefault="qualified" targetNamespace="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
-			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnRWT.v1" schemaLocation="ReturnRWT.v1.xsd"/>
+			<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnRWT.v1" schemaLocation="ReturnRWT.v0.xsd"/>
 			<xsd:complexType name="FileRequestType">
 				<xsd:sequence>
 					<xsd:element name="FileRequestWrapper" nillable="true">

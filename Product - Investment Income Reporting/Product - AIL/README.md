@@ -11,7 +11,7 @@
 - Schemas and WSDLS
 	- View and download the [common v2 xsd](../../Schema%20-%20Common/Common.v2.xsd)
 	- View and download the [return service common v2 xsd](../../Service%20-%20Return/Latest/ReturnCommon.v2.xsd)
-	- View and download the AIL return [XSD](ReturnAIL.v0.xsd) and [WSDL](AILDevWsdl.wsdl) from this current directory
+	- View and download the AIL return [XSD](ReturnAIL.v1.xsd) and [WSDL](AILDevWsdl.wsdl) from this current directory
 	
 - Return Service - Investment Income Reporting
 	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
