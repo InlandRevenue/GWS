@@ -9,9 +9,9 @@
 	- [Download and view](III%20-%20RWT%20-%20GWS%20business%20use%20cases.pdf)
 	
 - Schemas and WSDLs
-	- View and download the [Common v2 xsd](../Schema%20-%20Common%20III/)
+	- View and download the [common v2 xsd](../../Schema%20-%20Common/Common.v2.xsd)
 	- View and download the [Return Service common v2 xsd](../Service%20-%20Return%20III/Latest/)
-	- View and download the RWT return [XSD](ReturnRWT.v0.xsd) and [WSDL](RWTDevWsdl.wsdl) from this current directory
+	- View and download the RWT return [XSD](ReturnRWT.v1.xsd) and [WSDL](RWTDevWsdl.wsdl) from this current directory
 	
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions

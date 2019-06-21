@@ -9,9 +9,9 @@
 	* [Download and view](III%20-%20DWT%20-%20GWS%20business%20use%20cases.pdf)
 	
 * Schemas and WSDLs
-	* View and download the [Common v2 xsd](../Schema%20-%20Common%20III/)
+	* View and download the [common v2 xsd](../../Schema%20-%20Common/Common.v2.xsd)
 	* View and download the [Return Service common v2 xsd](../Service%20-%20Return%20III/Latest/)
-	* View and download the DWT return [XSD](ReturnDWT.v0.xsd) and [WSDL](DWTDevWsdl.wsdl) from this current directory
+	* View and download the DWT return [XSD](ReturnDWT.v1.xsd) and [WSDL](DWTDevWsdl.wsdl) from this current directory
 	
 ## Environment Information:
 
