@@ -22,10 +22,8 @@
 
 |Environment |```{ServiceHostDomain}``` Hostname |
 |-|-|
-| Mock | ```https://mock-oauth.ird.digitalpartner.services``` |
-| Testing R2 | ```https://s.services.ird.govt.nz``` |
-| Testing R3 | ```https://q.services.ird.govt.nz``` |
-| Testing R3.1  | ```https://test4.services.ird.govt.nz``` |
+| Mock (DPS) | ```https://mock-oauth.ird.digitalpartner.services``` |
+| Test (DTE) | ```https://test4.services.ird.govt.nz``` |
 | Production | ```https://services.ird.govt.nz```  |
 
 >Note:
