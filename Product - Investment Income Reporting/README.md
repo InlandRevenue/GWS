@@ -23,5 +23,5 @@ Find out about:
 
 ## Supporting Services:
 
-* Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
+* Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 * Service: Intermediation [Service - Intermediation](../Service%20-%20Intermediation)
