@@ -75,7 +75,7 @@ _______________________________________
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">Integer values accepting only positive amounts, including 0.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="QuantityType">
+		<xsd:restriction base="Quantity32Type">
 			<xsd:minInclusive value="0"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -83,7 +83,7 @@ _______________________________________
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">Integer value accepting only negative amounts, including 0.</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="QuantityType">
+		<xsd:restriction base="Quantity32Type">
 			<xsd:maxInclusive value="0"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -158,6 +158,12 @@ _______________________________________
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!-- STRING TYPES -->
+	<xsd:simpleType name="String3">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:simpleType name="String6">
 		<xsd:restriction base="xsd:string">
 			<xsd:minLength value="1"/>
@@ -330,6 +336,14 @@ _______________________________________
 			<xsd:length value="2"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="CurrencyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">ISO 4217 alpha-3 standard currency code</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:length value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
 	<!--Name Types-->
 	<xsd:simpleType name="NameFirstType">
 		<xsd:annotation>
@@ -477,7 +491,6 @@ _______________________________________
 		<xsd:restriction base="xsd:string">
 			<xsd:minLength value="1"/>
 			<xsd:maxLength value="30"/>
-			<xsd:pattern value="[+]?([0-9\- ]*)$"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PhoneExtensionType">
