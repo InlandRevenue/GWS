@@ -2,10 +2,10 @@
 <!-- Documentation
 _______________________________________
 NAME: 	TDSCommon.v1.xsd
-VER:		1.00
+VER:	1.01
 ISSUER:	Inland Revenue Department
-DATE:		20/12/2017
-DESC:		This schema defines the Transaction Data Services Common data types used accross the Transactions and Account Gateway Services..
+DATE:	12/03/2018
+DESC:	This schema defines the Transaction Data Services Common data types used accross the Transactions and Account Gateway Services.
 _______________________________________
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/TDSCommon" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v1" xmlns:trn="urn:www.ird.govt.nz/GWS:types/TDSCommon" targetNamespace="urn:www.ird.govt.nz/GWS:types/TDSCommon" elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -22,14 +22,14 @@ _______________________________________
 			<xsd:element name="transactionID" type="TransactionIDType"/>
 			<xsd:element name="transferType" type="TransferTypeType"/>
 			<xsd:element name="otherAccountID" type="cmn:IRDNumberType"/>
-			<xsd:element name="otherAccountType" type="cmn:AccountTypeType"/>
-			<xsd:element name="otherPeriod" type="cmn:DateType"/>
+			<xsd:element name="otherAccountType" type="cmn:AccountTypeType" minOccurs="0"/>
+			<xsd:element name="otherPeriod" type="cmn:DateType" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
 	<xsd:simpleType name="TransferTypeType">
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:minLength value="1"/>
-			<xsd:maxLength value="12"/>
+			<xsd:maxLength value="100"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:complexType name="TDSBankAccountType">
