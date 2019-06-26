@@ -57,10 +57,10 @@
                                         <rc:grossAmount>6000.00</rc:grossAmount>
                                         <rc:deductedAmount>300.00</rc:deductedAmount>
                                         <rc:rate>33.00</rc:rate>
-                                        <rc:imputationCredits>1680.00</rc:imputationCredits>
-                                        <rc:creditRatio>28.00</rc:creditRatio>
-                                        <rc:australianDividendsPaid>false</rc:australianDividendsPaid>
-                                        <rc:australianExchangeRate>0</rc:australianExchangeRate>
+                                        <r:imputationCredits>1680.00</r:imputationCredits>
+                                        <r:creditRatio>28.00</r:creditRatio>
+                                        <r:australianDividendsPaid>false</r:australianDividendsPaid>
+                                        <r:australianExchangeRate>0</r:australianExchangeRate>
                                     </r:incomeInformation>
                                 </r:lineItems>
                                 <r:lineItems>
@@ -81,10 +81,10 @@
                                         <rc:grossAmount>2200.00</rc:grossAmount>
                                         <rc:deductedAmount>110.00</rc:deductedAmount>
                                         <rc:rate>33.00</rc:rate>
-                                        <rc:imputationCredits>616.00</rc:imputationCredits>
-                                        <rc:creditRatio>28.00</rc:creditRatio>
-                                        <rc:australianDividendsPaid>false</rc:australianDividendsPaid>
-                                        <rc:australianExchangeRate>0</rc:australianExchangeRate>
+                                        <r:imputationCredits>616.00</r:imputationCredits>
+                                        <r:creditRatio>28.00</r:creditRatio>
+                                        <r:australianDividendsPaid>false</r:australianDividendsPaid>
+                                        <r:australianExchangeRate>0</r:australianExchangeRate>
                                     </r:incomeInformation>
                                 </r:lineItems>
                             </rc:formFields>

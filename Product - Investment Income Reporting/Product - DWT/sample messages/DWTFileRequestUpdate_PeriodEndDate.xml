@@ -50,10 +50,10 @@
                                         <rc:grossAmount>2200.00</rc:grossAmount>
                                         <rc:deductedAmount>176.00</rc:deductedAmount>
                                         <rc:rate>33.00</rc:rate>
-                                        <rc:imputationCredits>550.00</rc:imputationCredits>
-                                        <rc:creditRatio>25.00</rc:creditRatio>
-                                        <rc:australianDividendsPaid>false</rc:australianDividendsPaid>
-                                        <rc:australianExchangeRate>0</rc:australianExchangeRate>
+                                        <r:imputationCredits>550.00</r:imputationCredits>
+                                        <r:creditRatio>25.00</r:creditRatio>
+                                        <r:australianDividendsPaid>false</r:australianDividendsPaid>
+                                        <r:australianExchangeRate>0</r:australianExchangeRate>
                                     </r:incomeInformation>
                                 </r:lineItems>
                             </rc:formFields>
