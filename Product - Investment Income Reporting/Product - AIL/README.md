@@ -44,16 +44,16 @@
 		- [request sample](sample%20messages/AILFileRequest.xml)
         - [positive response sample](sample%20messages/AILFileResponse.xml)
 	- File Amendment
-		- [request sample as single filer](sample%20messages/AILFileRequestUpdate_SingleFiler.xml)
-		- [request sample as multi filer](sample%20messages/AILFileRequestUpdate_MultiFiler.xml)
+		- [request sample by period end date](sample%20messages/AILFileRequestUpdate_PeriodEndDate.xml)
+		- [request sample by submission key](sample%20messages/AILFileRequestUpdate_SubmissionKey.xml)
         - [positive response sample](sample%20messages/AILFileResponse.xml)
     - RetrieveStatus
 	    - [request sample by period end date](sample%20messages/AILRetrieveStatusRequest_PeriodEndDate.xml)
 		- [request sample by submission key](sample%20messages/AILRetrieveStatusRequest_SubmissionKey.xml)
         - [positive response sample](sample%20messages/AILRetriveStatusResponse.xml)
     - RetrieveReturn
-		- [request sample as single filer](sample%20messages/AILRetrieveReturnRequest_SingleFiler.xml)
-		- [request sample as multi filer](sample%20messages/AILRetrieveReturnRequest_MultiFiler.xml)
+		- [request sample by period end date](sample%20messages/AILRetrieveReturnRequest_PeriodEndDate.xml)
+		- [request sample by submission key](sample%20messages/AILRetrieveReturnRequest_SubmissionKey.xml)
         - [positive response sample](sample%20messages/AILRetrieveReturnResponse.xml)
 
 
