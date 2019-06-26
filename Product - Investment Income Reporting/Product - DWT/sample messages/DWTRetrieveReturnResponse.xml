@@ -1,0 +1,84 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+    <s:Header>
+        <a:Action xmlns:a="http://www.w3.org/2005/08/addressing" s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+    </s:Header>
+    <s:Body>
+        <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+            <RetrieveReturnResult>
+                <b:RetrieveReturnResponseWrapper xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse">
+                    <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                            <statusCode>0</statusCode>
+                            <errorMessage/>
+                        </statusMessage>
+                        <responseBody xsi:type="r:RetrieveReturnResponseBodyType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <r:formFields xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnDWT.v1">
+                                <r:submissionKey>1767055360</r:submissionKey>
+                                <r:lineItems>
+                                    <r:lineNumber>5318302753</r:lineNumber>
+                                    <<r:referenceId>LineItemAA</r:referenceId>
+                                    <r:externalID>BankAccountXYZ</r:externalID>
+                                    <r:primaryIRD>012301243</r:primaryIRD>
+                                    <r:primaryDateOfBirth>1997-12-31</r:primaryDateOfBirth>
+                                    <r:primaryName>John Smith</r:primaryName>
+                                    <r:primaryPhone>0429392939</r:primaryPhone>
+                                    <r:primaryEmail>name1@acompany.co.nz</r:primaryEmail>
+                                    <r:primaryCountry>NZ</r:primaryCountry>
+                                    <r:primaryAddress>123 Smiths St, Suburb, City 0000</r:primaryAddress>
+                                    <r:numberShares>100</r:numberShares>
+                                    <r:paymentDate>2019-04-25</r:paymentDate>
+                                    <r:dividendDeclaredDate>2019-04-01</r:dividendDeclaredDate>
+                                    <r:bonusIssue>false</r:bonusIssue>
+                                    <r:accountHolders>
+                                        <rc:irdNumber>012341202</rc:irdNumber>
+                                        <rc:dateOfBirth>1970-10-15</rc:dateOfBirth>
+                                        <rc:name>Polly Smith</rc:name>
+                                        <rc:address>10 Smiths St, Suburb, City 0000</rc:address>
+                                        <rc:phone>0215554555</rc:phone>
+                                        <rc:email>name2@acompany.co.nz</rc:email>
+                                    </r:accountHolders>
+                                    <r:incomeInformation>
+                                        <rc:incomeType>DIVIDN</rc:incomeType>
+										<rc:grossAmount>6000.00</rc:grossAmount>
+                                        <rc:deductedAmount>300.00</rc:deductedAmount>
+                                        <rc:rate>33.00</rc:rate>
+                                        <r:imputationCredits>1680.00</r:imputationCredits>
+                                        <r:creditRatio>28.00</r:creditRatio>
+                                        <r:australianDividendsPaid>false</r:australianDividendsPaid>
+                                        <r:australianExchangeRate>0</r:australianExchangeRate>
+                                    </r:incomeInformation>
+                                </r:lineItems>
+                                <r:lineItems>
+                                    <r:lineNumber>5318303710</r:lineNumber>
+                                    <r:referenceId>LineItemAB</r:referenceId>
+                                    <r:externalID>BankAccountXYY</r:externalID>
+                                    <r:primaryIRD>012301235</r:primaryIRD>
+                                    <r:primaryDateOfBirth>1980-11-01</r:primaryDateOfBirth>
+                                    <r:primaryName>Kyle Brown</r:primaryName>
+                                    <r:primaryPhone>0429392939</r:primaryPhone>
+                                    <r:primaryEmail>name2@bcompany.co.nz</r:primaryEmail>
+                                    <r:primaryCountry>NZ</r:primaryCountry>
+                                    <r:primaryAddress>123 Browns St, Suburb, City 0000</r:primaryAddress>
+                                    <r:numberShares>75</r:numberShares>
+                                    <r:paymentDate>2019-04-25</r:paymentDate>
+                                    <r:dividendDeclaredDate>2019-04-01</r:dividendDeclaredDate>
+                                    <r:bonusIssue>false</r:bonusIssue>
+                                    <r:incomeInformation>
+                                        <rc:incomeType>DIVIDN</rc:incomeType>
+										<rc:grossAmount>2200.00</rc:grossAmount>
+                                        <rc:deductedAmount>110.00</rc:deductedAmount>
+                                        <rc:rate>33.00</rc:rate>
+                                        <r:imputationCredits>616.00</r:imputationCredits>
+                                        <r:creditRatio>28.00</r:creditRatio>
+                                        <r:australianDividendsPaid>false</r:australianDividendsPaid>
+                                        <r:australianExchangeRate>0</r:australianExchangeRate>
+                                    </r:incomeInformation>
+                                </r:lineItems>
+                            </r:formFields>
+                        </responseBody>
+                    </retrieveReturnResponse>
+                </b:RetrieveReturnResponseWrapper>
+            </RetrieveReturnResult>
+        </RetrieveReturnResponse>
+    </s:Body>
+</s:Envelope>

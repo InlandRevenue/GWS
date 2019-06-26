@@ -1,0 +1,97 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ret="https://services.ird.govt.nz/GWS/Returns/" xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest" xmlns:a="http://www.w3.org/2005/08/addressing">
+    <soap:Header>
+        <a:Action>https://services.ird.govt.nz/GWS/Returns/Return/File</a:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:File>
+            <ret:ReturnFileRequestMsg>
+                <fil:FileRequestWrapper>
+                    <r:fileRequest xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnDWT.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                        <rc:fileHeader>
+                            <cmn:softwareProviderData>
+                                <cmn:softwareProvider>SoftwareProvider Company Ltd</cmn:softwareProvider>
+                                <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+                                <cmn:softwareRelease>1.0</cmn:softwareRelease>
+                            </cmn:softwareProviderData>
+                            <cmn:identifier IdentifierValueType="IRD">012501250</cmn:identifier>
+                            <cmn:accountType>DWT</cmn:accountType>
+                            <rc:periodEndDate>2019-04-30</rc:periodEndDate>
+                            <rc:majorFormType>DWT</rc:majorFormType>
+                            <rc:minorFormType>DWT</rc:minorFormType>
+                        </rc:fileHeader>
+                        <rc:fileBody>
+                            <rc:standardFields>
+                                <rc:isNilReturn>false</rc:isNilReturn>
+                                <rc:isFinalReturn>false</rc:isFinalReturn>
+                                <rc:amendmentRequest>
+                                    <rc:isAmended>false</rc:isAmended>
+                                    <rc:amendReason/>
+                                    <rc:amendDetails/>
+                                </rc:amendmentRequest>
+                            </rc:standardFields>
+                            <rc:formFields xsi:type="r:FormFieldsType">
+                                <r:isReverseReplace>false</r:isReverseReplace>
+                                <r:lineItems>
+                                    <r:referenceId>LineItemAA</r:referenceId>
+                                    <r:externalID>BankAccountXYZ</r:externalID>
+                                    <r:primaryIRD>012301243</r:primaryIRD>
+                                    <r:primaryDateOfBirth>1997-12-31</r:primaryDateOfBirth>
+                                    <r:primaryName>John Smith</r:primaryName>
+                                    <r:primaryPhone>0429392939</r:primaryPhone>
+                                    <r:primaryEmail>name1@acompany.co.nz</r:primaryEmail>
+                                    <r:primaryCountry>NZ</r:primaryCountry>
+                                    <r:primaryAddress>123 Smiths St, Suburb, City 0000</r:primaryAddress>
+                                    <r:numberShares>100</r:numberShares>
+                                    <r:paymentDate>2019-04-25</r:paymentDate>
+                                    <r:dividendDeclaredDate>2019-04-01</r:dividendDeclaredDate>
+                                    <r:bonusIssue>false</r:bonusIssue>
+                                    <r:accountHolders>
+                                        <rc:irdNumber>012341202</rc:irdNumber>
+                                        <rc:dateOfBirth>1970-10-15</rc:dateOfBirth>
+                                        <rc:name>Polly Smith</rc:name>
+                                        <rc:address>10 Smiths St, Suburb, City 0000</rc:address>
+                                        <rc:phone>0215554555</rc:phone>
+                                        <rc:email>name2@acompany.co.nz</rc:email>
+                                    </r:accountHolders>
+                                    <r:incomeInformation>
+                                        <rc:grossAmount>6000.00</rc:grossAmount>
+                                        <rc:deductedAmount>300.00</rc:deductedAmount>
+                                        <rc:rate>33.00</rc:rate>
+                                        <r:imputationCredits>1680.00</r:imputationCredits>
+                                        <r:creditRatio>28.00</r:creditRatio>
+                                        <r:australianDividendsPaid>false</r:australianDividendsPaid>
+                                        <r:australianExchangeRate>0</r:australianExchangeRate>
+                                    </r:incomeInformation>
+                                </r:lineItems>
+                                <r:lineItems>
+                                    <r:referenceId>LineItemAB</r:referenceId>
+                                    <r:externalID>BankAccountXYY</r:externalID>
+                                    <r:primaryIRD>012301235</r:primaryIRD>
+                                    <r:primaryDateOfBirth>1980-11-01</r:primaryDateOfBirth>
+                                    <r:primaryName>Kyle Brown</r:primaryName>
+                                    <r:primaryPhone>0429392939</r:primaryPhone>
+                                    <r:primaryEmail>name2@bcompany.co.nz</r:primaryEmail>
+                                    <r:primaryCountry>NZ</r:primaryCountry>
+                                    <r:primaryAddress>123 Browns St, Suburb, City 0000</r:primaryAddress>
+                                    <r:numberShares>75</r:numberShares>
+                                    <r:paymentDate>2019-04-25</r:paymentDate>
+                                    <r:dividendDeclaredDate>2019-04-01</r:dividendDeclaredDate>
+                                    <r:bonusIssue>false</r:bonusIssue>
+                                    <r:incomeInformation>
+                                        <rc:grossAmount>2200.00</rc:grossAmount>
+                                        <rc:deductedAmount>110.00</rc:deductedAmount>
+                                        <rc:rate>33.00</rc:rate>
+                                        <r:imputationCredits>616.00</r:imputationCredits>
+                                        <r:creditRatio>28.00</r:creditRatio>
+                                        <r:australianDividendsPaid>false</r:australianDividendsPaid>
+                                        <r:australianExchangeRate>0</r:australianExchangeRate>
+                                    </r:incomeInformation>
+                                </r:lineItems>
+                            </rc:formFields>
+                        </rc:fileBody>
+                    </r:fileRequest>
+                </fil:FileRequestWrapper>
+            </ret:ReturnFileRequestMsg>
+        </ret:File>
+    </soap:Body>
+</soap:Envelope>
