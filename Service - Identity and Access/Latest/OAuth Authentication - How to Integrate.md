@@ -56,7 +56,7 @@ User submits myIR Usernname & Password and authorise consent via the user's web 
 Authorization Code returns to Client Application by a ```HTTP 302 redirection``` to the ```{redirectURI}```. [Redirect Back to the  Application Message Sample](Message%20Samples.md#RedirectBacktotheApplication)
 
 ### Step 5. Exchange Authorization Code for an Access Token
-Client Application retrieves OAuth Access Token by submiting a ```HTTP POST``` request using the Authorization Code as well as client application's credentials. See [Exchange Authorization Code for an Access Token Sample](Message%20Samples.md#ExchangeAuthorisationCodeforanAccessToken)
+Client Application retrieves OAuth Access Token by submitting a ```HTTP POST``` request using the Authorization Code as well as client application's credentials. See [Exchange Authorization Code for an Access Token Sample](Message%20Samples.md#ExchangeAuthorisationCodeforanAccessToken)
 
 <a name="Call-the-API-Gateway-Service"/>
 
@@ -71,7 +71,7 @@ Access tokens are the thing that applications use to make Gateway Service reques
 POST gateway/GWS/Returns/ HTTP/1.1
 Host: {ServiceHostDomain}
 Content-Type: application/soap+xml
-Authentication: Bearer {AuthAccessToken}
+Authorization: Bearer {AuthAccessToken}
 
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">...</soap>
 ```
