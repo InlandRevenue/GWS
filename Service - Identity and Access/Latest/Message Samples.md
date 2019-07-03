@@ -59,7 +59,7 @@ This will force the re-display of the login page and request the input of a new 
 parameter will not force logout. 
 
 When the user visits this URL, the authorization server will present them with a login prompt asking if they would like to authorise this application’s request.
-The user will be asked to "Authorise Concent" for the very first login.
+The user will be asked to "Authorise Consent" for the very first login.
 
 > Note: 
 > * Keep the state parameter less than 200 characters long. 
@@ -177,16 +177,16 @@ Form Fields:
 * ```grant_type```:  The grant type is required and takes the value ```refresh_token``` 
 * ```refresh_token```:  The refresh_token field contains the Refresh Token 
 
-The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
+The HTTP Header must include a Authorization header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
 ```http 
-Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
+Authorization: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
 ```
 ### Example POST request:
 ```http
 POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
 Host: {ServiceHostDomain}
 Content-Type: application/x-www-form-urlencoded
-Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+Authorization: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
 
 grant_type=refresh_token
 &refresh_token=IwOGYzYTlmM2YxOTiojsd098sdjowe08f450j87j98sf497...8h6af49j876ase45gj0789das45d089j
@@ -230,7 +230,7 @@ Form Fields:
 POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
 Host: {ServiceHostDomain}
 Content-Type: application/x-www-form-urlencoded
-Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+Authorization: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
 
 grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt
 &oracle_token_action=validate
@@ -257,7 +257,7 @@ Content-Type: application/json
 
 ## Revoke Token Request
 
-A token revoke process is available that will allow the client to revoke the acquired access token or refresh token. This is used to enable a "log out" feature in clients, allowing the authorization server to clean up any security credentials associated with the authorization.
+A token revoke process is available that will allow the client to revoke the acquired access token or refresh token. This is used to enable a "log out" feature in clients, allowing the authorisation server to clean up any security credentials associated with the authorisation.
 
 Form Fields:
 
@@ -271,7 +271,7 @@ Form Fields:
 POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
 Host: {ServiceHostDomain}
 Content-Type: application/x-www-form-urlencoded
-Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+Authorization: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
 
 grant_type=oracle-idm:/oauth/grant-type/resource-access-token/jwt
 &oracle_token_action=delete
