@@ -101,17 +101,17 @@ Form Fields:
 * ```redirect_uri```:  The URL must match exactly the redirect_uri passed to `/ms_oauth/oauth2/endpoints/oauthservice/authorize`
 * ```grant_type``` - This must be ```authorization_code```
 
-The HTTP Header must include a Authentication header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
+The HTTP Header must include a Authorization header: ```"Basic " + Base64Encode( ClientID + ':' + ClientSecret)```: 
 
 ```http 
-Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
+Authorization: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ=
 ```
 ### Example POST request:
 ```http
 POST /ms_oauth/oauth2/endpoints/oauthservice/tokens HTTP/1.1
 Host: {ServiceHostDomain}
 Content-Type: application/x-www-form-urlencoded
-Authentication: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
+Authorization: Basic eHl6Q29tcF9Gb29CYXI6Q2xpZW50U2VjcmV0UGFzc3dvcmQ= 
 
 redirect_uri=https://mycompdomain.com/returnpath
 &code=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6In...-VMbr_hrNZYDZbakOpz4uY6UlSSNECmw0ac8
