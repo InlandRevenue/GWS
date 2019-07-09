@@ -74,14 +74,12 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 
 ## Supporting Services:
 
-* Service: Identity and Access - view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/) 
+* Service: Identity and Access - view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 
 ## Test Environment Information:
 
 * Test Scenarios
 	- [Download test scenarios report template](Intermediation%20Service%20-%20Test%20Scenarios%20Report%20Template.docx)
-
-
 
 * Test Environment URL Endpoints
 	
