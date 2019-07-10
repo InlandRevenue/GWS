@@ -37,7 +37,7 @@
 
 ## Full Authentication Steps:
 
-In our gateway services environments OAuth service is used, so as a service provider you would need to trigger customer's behavior to complete this OAuth flow.
+In our gateway services environments OAuth service is used, so as a service provider you would need to trigger customer's behaviour to complete this OAuth flow.
 
 ### Step 1. Service Request 
 Customer accesses the Client Application via a web browser. They take an action that requires access to myIR Gateway Services.
