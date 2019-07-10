@@ -11,29 +11,35 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 - manage links to clients (link, delink and update) 
 - retrieve clients and client lists that are already established.
 
-## Key Features:
+## Key Documentation:
 
-- Gateway Service -  Intermediation Service 
+- Schemas and WSDLs:
+	- View and download the [Common v2 xsd](../Schema%20-%20Common/Common.v2.xsd)
+	- View and download the Intermediation [XSD](Latest/Intermediation.v1.xsd) and [WSDL](Latest/IntermediationDevWsdl.v1.wsdl)
+	
+- Intermediation Service 
 	- [Download the build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Intermediation%20Service.pdf) to view data definitions of each operation and response status code definitions
 
+## Environment Information: 	
+	
 - [Mock Environment Information](#Mock-Environment-Information)
-- [Supporting Services](#Supporting-Services)
 - [Test Environment Information](#Test-Environment-Information)
 - [Production Environment Information](#Production-Environment-Information)
 
- - Schemas and WSDLs:
-	- View and download the [Common v2 xsd](../Schema%20-%20Common/Common.v2.xsd)
-	- View and download the Intermediation [XSD](Latest/Intermediation.v1.xsd) and [WSDL](Latest/IntermediationDevWsdl.v1.wsdl) from this current directory-
+## Supporting Services:
+
+* Service: Identity and Access - view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 
 ---
 
 ## Mock Environment Information:
+-----------------
 
 * Mock Emulated Services URL
 	* https://mock-int.ird.digitalpartner.services/ 
 
 * Test Scenarios 	
-	- Intermediation Inforamtion  Test Scenarios Mindmap
+	- Intermediation Information Test Scenarios Mindmap
 	![Test Scenarios](images/Intermediation-test-scenarios.png)	
 
 * Test Data
@@ -72,11 +78,10 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 | 132269289 | AIL,AIP,EMP,FAM,FBT,GSD,GST,INC,IPS,NRT,REB,RWT,SLS |
 
 
-## Supporting Services:
 
-* Service: Identity and Access - view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 
 ## Test Environment Information:
+-----------------
 
 * Test Scenarios
 	- [Download test scenarios report template](Intermediation%20Service%20-%20Test%20Scenarios%20Report%20Template.docx)
@@ -89,6 +94,7 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 	* Native Desktop SOAP WSDL: https://test3.services.ird.govt.nz/gateway2/gws/intermediation/?wsdl
             
 ## Production Environment Information:
+-----------------
 
 * Production URL Endpoints
 
