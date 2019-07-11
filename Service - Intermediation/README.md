@@ -77,7 +77,7 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 | 132260958 | AIL,AIP,DWT,EMP,FBT,GMD,GSD,INC,IPS,MPO,NRT,PIE,RLT,RWT |
 | 132269289 | AIL,AIP,EMP,FAM,FBT,GSD,GST,INC,IPS,NRT,REB,RWT,SLS |
 
-## Sample Messages
+## Messages Samples
 
 * RetrieveClient
 	* [RetrieveClient Request](sample%20messages/RetrieveClient-request.xml)
