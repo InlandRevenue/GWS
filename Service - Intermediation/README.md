@@ -79,25 +79,25 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 
 ## Sample Messages
 
-* RetrieveList
-	* RetrieveList Request
-	* RetrieveList Response
+* RetrieveClient
+	* [RetrieveClient Request](sample%20messages/RetrieveClient-request.xml)
+	* [RetrieveClient Response](sample%20messages/RetrieveClient-response.xml)
 
 * RetrieveClientList
-	* RetrieveClientList Request
-	* RetrieveClientList Response
+	* [RetrieveClientList Request](sample%20messages/RetriveClientList-request.xml)
+	* [RetrieveClientList Response](sample%20messages/RetriveClientList-response.xml)
 
 * Link
-	* Link Request
-	* Link Response
+	* [Link Request](sample%20messages/Link-request.xml)
+	* [Link Response](sample%20messages/Link-response.xml)
 
 * Delink
-	* Delink Request
-	* Delink Response
+	* [Delink Request](sample%20messages/Delink-request.xml)
+	* [Delink Response](sample%20messages/Delink-response.xml)
 
 * Update
-	* Update Request
-	* Update Response
+	* [Update Request](sample%20messages/Update-request.xml)
+	* [Update Response](sample%20messages/Update-response.xml)
 
 
 
@@ -125,4 +125,3 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 	- (Cloud) SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/intermediation/?wsdl
 	- (Native Desktop) SOAP WSDL: https://services.ird.govt.nz/gateway2/gws/intermediation/?wsdl
 	
-##	
