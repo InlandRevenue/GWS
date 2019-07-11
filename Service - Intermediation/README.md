@@ -77,6 +77,28 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 | 132260958 | AIL,AIP,DWT,EMP,FBT,GMD,GSD,INC,IPS,MPO,NRT,PIE,RLT,RWT |
 | 132269289 | AIL,AIP,EMP,FAM,FBT,GSD,GST,INC,IPS,NRT,REB,RWT,SLS |
 
+## Sample Messages
+
+* RetrieveList
+	* RetrieveList Request
+	* RetrieveList Response
+
+* RetrieveClientList
+	* RetrieveClientList Request
+	* RetrieveClientList Response
+
+* Link
+	* Link Request
+	* Link Response
+
+* Delink
+	* Delink Request
+	* Delink Response
+
+* Update
+	* Update Request
+	* Update Response
+
 
 
 
@@ -102,3 +124,5 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 	- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/intermediation/
 	- (Cloud) SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/intermediation/?wsdl
 	- (Native Desktop) SOAP WSDL: https://services.ird.govt.nz/gateway2/gws/intermediation/?wsdl
+	
+##	
