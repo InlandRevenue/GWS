@@ -21,7 +21,7 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 	- [Download the build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Intermediation%20Service.pdf) to view data definitions of each operation and response status code definitions
 	
 * Message Samples
-	* [View message samples for requests and positive responses](#Messages-Samples)
+	* [View message samples for requests and positive responses](#Message-Samples)
 
 
 ## Environment Information: 	
@@ -81,7 +81,7 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 | 132260958 | AIL,AIP,DWT,EMP,FBT,GMD,GSD,INC,IPS,MPO,NRT,PIE,RLT,RWT |
 | 132269289 | AIL,AIP,EMP,FAM,FBT,GSD,GST,INC,IPS,NRT,REB,RWT,SLS |
 
-## Messages Samples
+## Message Samples
 
 * RetrieveClient
 	* [RetrieveClient Request](sample%20messages/RetrieveClient-request.xml)
