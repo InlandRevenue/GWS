@@ -19,6 +19,10 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 	
 - Intermediation Service 
 	- [Download the build pack](Latest/Gateway%20Services%20Build%20Pack%20-%20Intermediation%20Service.pdf) to view data definitions of each operation and response status code definitions
+	
+* Message Samples
+	* [View message samples for requests and positive responses](#Messages-Samples)
+
 
 ## Environment Information: 	
 	
