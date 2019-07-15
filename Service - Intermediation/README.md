@@ -34,6 +34,28 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 
 * Service: Identity and Access - view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 
+## Message Samples
+
+* RetrieveClient
+	* [RetrieveClient Request](sample%20messages/RetrieveClient-request.xml)
+	* [RetrieveClient Response](sample%20messages/RetrieveClient-response.xml)
+
+* RetrieveClientList
+	* [RetrieveClientList Request](sample%20messages/RetriveClientList-request.xml)
+	* [RetrieveClientList Response](sample%20messages/RetriveClientList-response.xml)
+
+* Link
+	* [Link Request](sample%20messages/Link-request.xml)
+	* [Link Response](sample%20messages/Link-response.xml)
+
+* Delink
+	* [Delink Request](sample%20messages/Delink-request.xml)
+	* [Delink Response](sample%20messages/Delink-response.xml)
+
+* Update
+	* [Update Request](sample%20messages/Update-request.xml)
+	* [Update Response](sample%20messages/Update-response.xml)
+
 ---
 
 ## Mock Environment Information:
@@ -81,27 +103,7 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 | 132260958 | AIL,AIP,DWT,EMP,FBT,GMD,GSD,INC,IPS,MPO,NRT,PIE,RLT,RWT |
 | 132269289 | AIL,AIP,EMP,FAM,FBT,GSD,GST,INC,IPS,NRT,REB,RWT,SLS |
 
-## Message Samples
 
-* RetrieveClient
-	* [RetrieveClient Request](sample%20messages/RetrieveClient-request.xml)
-	* [RetrieveClient Response](sample%20messages/RetrieveClient-response.xml)
-
-* RetrieveClientList
-	* [RetrieveClientList Request](sample%20messages/RetriveClientList-request.xml)
-	* [RetrieveClientList Response](sample%20messages/RetriveClientList-response.xml)
-
-* Link
-	* [Link Request](sample%20messages/Link-request.xml)
-	* [Link Response](sample%20messages/Link-response.xml)
-
-* Delink
-	* [Delink Request](sample%20messages/Delink-request.xml)
-	* [Delink Response](sample%20messages/Delink-response.xml)
-
-* Update
-	* [Update Request](sample%20messages/Update-request.xml)
-	* [Update Response](sample%20messages/Update-response.xml)
 
 
 
