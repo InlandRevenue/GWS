@@ -35,6 +35,7 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 * Service: Identity and Access - view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 
 ## Message Samples
+---
 
 * RetrieveClient
 	* [RetrieveClient Request](sample%20messages/RetrieveClient-request.xml)
@@ -56,7 +57,7 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 	* [Update Request](sample%20messages/Update-request.xml)
 	* [Update Response](sample%20messages/Update-response.xml)
 
----
+
 
 ## Mock Environment Information:
 -----------------
