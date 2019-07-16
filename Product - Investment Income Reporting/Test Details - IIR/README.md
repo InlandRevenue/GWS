@@ -27,8 +27,8 @@ Mock Environment Information:
 
 - Investment Income Reporting Mock Scenarios Mindmap
 	
-	- [View larger image](images/IIR_Mock_Scenarios_Mindmap.png)
-	![Mock Scenarios](images/IIR_Mock_Scenarios_Mindmap.png)
+	- [View larger image](images/IIR-mockServiceScope-scenarios.png)
+	![Mock Scenarios](images/IIR-mockServiceScope-scenarios.png)
 
 - Test Data
 	- The following test data can be tested in our Mock Services environment when submitting requests to the service operations for the following invest income reporting tax types (AIL / DWT/ IPS/ NT / RWT)
@@ -48,29 +48,32 @@ Mock Environment Information:
 		
 	- This following table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
 	- Text in italics represents the name of the XML node in the request.
-	-
 	
-	Scenario ID | Test Module | Example Data | Remarks
-	--- | --- | --- | ---
-	III-ES-004 | Operation - File | Customer IRD (*identifier*): 132145202 | set valid IRD number / identifier value
-	III-ES-005 | Operation - File | Reference ID: 11 | set reference Id, amendType: U
-	III-ES-006 | Operation - File | Line Number: 5312572871 | set lineNumber, amendType: D
-	III-ES-007 | Operation - File | Customer IRD (*identifier*): 132145202 | amendType: A
-	 | | | 
-	III-ES-008 | Operation - Retrieve Return | Submission Key: 294502400 | include submissionKey
-	 | | | 
-	III-ES-009 | Operation - Retrieve Status | Submission Key: 1333370880 | include submissionKey
-	III-ES-010 | Operation - Retrieve Status | - | do not set submission key in request
-	 | | | 
-	III-ES-011 | Error Handling | minorFormType: " | set empty value for minorFormType
-	III-ES-012 | Error Handling | identifier: 123456789 | set Identifier value
-	III-ES-013 | Error Handling | - | include creditTransferRequest element in request payload
-	III-ES-014 | Error Handling | - | no submission key in retrieve request payload
-	III-ES-015 | Error Handling | - | no submission key in amend request payload
-	III-ES-016 | Error Handling | majorFormType: '' minorFormType: '' | set empty value for majorFormType and minorFormType
-	 | | | 
-	III-ES-001 | Authentication | - | set no authentication token
-	III-ES-002 | Authentication | - | set invalid authentication token
+	
+
+| Test ID | Test Module  | Example Data | Remarks |
+| --- | --- | --- | --- |
+| <span style="white-space: nowrap;">IIR-ES-001</span> |  Authentication            | -                      |  Set no authentication token |
+| IIR-ES-002 |  Authentication            | -                      |  Set invalid authentication |token |
+| IIR-ES-004 |  File Operation            | `132145202`               |  Set valid IRD number / |identifier value |
+| IIR-ES-005 |  File Operation            | `11`                      |  Set reference Id, amendType 'U' |
+| IIR-ES-006 |  File Operation            | `5312572871`              |  Set lineNumber, amendType 'D' |
+| IIR-ES-007 |  File Operation            | `132145202`               |  AmendType 'A' |
+| IIR-ES-008 |  Retrieve Return Operation | `294502400`               |  Include submissionKey |
+| IIR-ES-009 |  Retrieve Status Operation | `1333370880`              |  Include submissionKey |
+| IIR-ES-010 |  Retrieve Status Operation | -                     |  Do not set submission key |in request |
+| IIR-ES-011 |  Error Handling            | minorFormType: `''`         |  Set empty value for |minorFormType |
+| IIR-ES-012 |  Error Handling            | Identifier: `123456789` |  Set Identifier value |
+| IIR-ES-013 |  Error Handling            | -                     |  Include  |creditTransferRequest element in request payload |
+| IIR-ES-014 |  Error Handling            | -                     |  No submission key in retrieve request payload |
+| IIR-ES-015 |  Error Handling            | -                     |  No submission key in amend request payload |
+| IIR-ES-016 |  Error Handling            | minorFormType: `''` majorFormType: `''`|  Set empty value for majorFormType and minorFormType |
+| IIR-ES-017 |  Error Handling            | TaxType: `NRT`incomeType: `NRDIV` |  No dividend fields in request  |
+| IIR-ES-018 |  Error Handling            | TaxType: `NRT`incomeType: `NRINT` |  any valid NRT income type other than NRDIV<br/>but with dividend fields |
+| IIR-ES-019 |  Error Handling            | - |  NRT (incomeType: NRDIV) / DWT request <br/>with missing number share field |
+| IIR-ES-020 |  Error Handling            | - |  NRT (incomeType: NRDIV) / DWT request <br/>with missing dividend declared date field |
+| IIR-ES-021 |  Error Handling            | - |  NRT (incomeType: NRDIV) / DWT request <br/>with  missing payment date field | 
+
 
 			
 Mock Environment:
@@ -100,10 +103,7 @@ Mock Environment:
 	- if not, an invalid account type error is returned.
 
 - Then the service operation specific validations are carried out and returned with appropriate response (per mind map).
-
 - Unmatched requests will return an appropriate HTTP response status
-
-
 
 Test Environment Information:
 -----------------
