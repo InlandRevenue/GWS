@@ -1,15 +1,18 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-# Transaction Data Services (TDS) 
+Transaction Data Services (TDS) 
+=======================================
 
 The TDS is a suite of business services that provides access to IR customers transaction data for consumption by software packages.  In turn these packages present that data to their users. 
 Financial transaction data includes amounts assessed and associated credits or debits.  There is no data sent associated with the details of how an assessment has been calculated
 
-## TDS Build Packs
- * View and Download [TDS Bulk File Feed - Build Pack](/TDS%20Bulk%20File%20Feed%20-%20Build%20Pack.pdf)
+Overview
+-------------
 
-#### The Overview and Transition build pack includes: 
+View [details in the TDS Overview](TDS%20Overview%20and%20Transition/Latest)
+
+* The Overview and Transition build pack includes: 
 	* fundamental concepts for interacting parties using the TDS
 	* overview of the bulk file feed, real time feed and history feed services
 	* data models and business rules
@@ -17,24 +20,37 @@ Financial transaction data includes amounts assessed and associated credits or d
 	* business use cases
 	* delegations and permissions in using TDS.
 
-* View and Download [TDS Real Time - Build Pack](TDS%20Real%20Time%20-%20Build%20Pack.pdf)
-* View and Download [TDS Bulk File Feed - Build Pack](TDS%20Real%20Time%20-%20Build%20Pack.pdf)
-* View and Download [TDS Filing Frequencies by Release](TDS%20Filing%20Frequencies%20by%20Release.pdf)
+* Scenarios for 
+	* TDS Data Conversion
+	* TDS Data 
 
-## TDS Data Senarios
-* The [Data Scenarios](Data%20Scenarios/) includes:
-	* TDS Overview and Transition Data Conversion Scenarios
-	* TDS Overview and Transition Data Scenarios
-	* TDS Overview and Transition Release 3 Data Scenarios
+Key services
+-------------
 
-## WSDL and XSD schemas
+* **Service - TDS Bulk File Feed** - [view details](TDS%20Bulk%20File%20Feed/Latest/) for
+	- schemas
+	- test data
+	- build pack
+	
+* **Service - TDS Real-Time** - [view details](TDS%20Real-Time/Latest/) for
+	- schemas
+	- message samples
+	- test data
+	- build pack
+	
+* **Service - TDS History Bulk File Feed** - [view details](TDS%20History%20Bulk%20File%20Feed/Latest/) for
+	- schemas
+	- test data
+	- build pack
+	
+Supporting schema
+-------------
+* [view Common schema](../Schema%20-%20Common/Common.v1.xsd)
 
-* [TDS WSDL and XSD schemas](WSDL%20and%20XSD/)
-* View and Download [Common Schema v1](../Schema%20-%20Common/Common.v1.xsd)
-
-## Supporting services
+Supporting services
+-------------
 * [Service - Intermediation](../Service%20-%20Intermediation)
 * [Service - Software Intermediation](../Service%20-%20Software%20Intermediation)
 * [Service - Identity and Access](../Service%20-%20Identity%20and%20Access/Latest)
 
-
+![TDS Build Packs](Images/TDSBuildPacks.PNG)
