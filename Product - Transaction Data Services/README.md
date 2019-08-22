@@ -7,22 +7,17 @@ The TDS is a suite of business services that provides access to IR customers tra
 Financial transaction data includes amounts assessed and associated credits or debits.  There is no data sent associated with the details of how an assessment has been calculated
 
 ## TDS Build Packs
- * View and Download [TDS Bulk File Feed - Build Pack](/TDS%20Bulk%20File%20Feed%20-%20Build%20Pack.pdf)
 
-#### The Overview and Transition build pack includes: 
-	* fundamental concepts for interacting parties using the TDS
-	* overview of the bulk file feed, real time feed and history feed services
-	* data models and business rules
-	* data scenarios and data conversion from the TAWS
-	* business use cases
-	* delegations and permissions in using TDS.
-
-* View and Download [TDS Real Time - Build Pack](TDS%20Real%20Time%20-%20Build%20Pack.pdf)
-* View and Download [TDS Bulk File Feed - Build Pack](TDS%20Real%20Time%20-%20Build%20Pack.pdf)
-* View and Download [TDS Filing Frequencies by Release](TDS%20Filing%20Frequencies%20by%20Release.pdf)
+| PDF Build Pack | Document Overview|
+| --- | --- |
+|  [TDS Overview and Transition ](/TDS%20Overview%20and%20Transition%20-%20Build%20Pack.pdf) | This document is provided to Software Providers to support their use of Transaction Data Services (TDS). It<br/>•  provides an high level business overview of TDS to enable an understanding of the service being offered<br/>•  describes the data being made available through the services<br/>•  describes the permission model |
+| [TDS Real Time ](TDS%20Bulk%20File%20Feed%20-%20Build%20Pack.pdf)| This document is provided to Software Providers to support the build and use of the Transaction Data Service (TDS) Real Time web services. It also describes the relationship with other build packs, architecture of the technical solution, schemas (file formats), and endpoints; it also provides sample payloads.|
+| [TDS Bulk File Feed](TDS%20Real%20Time%20-%20Build%20Pack.pdf) |This document is provided to software providers to support the build and use of the Transaction Data Service (TDS) Real Time web services. <br/>  It also describes the relationship with other build packs, the architecture of the technical solution, schemas (file formats), end points, and sample payloads.  | 
+| [TDS Filing Frequencies by Release](TDS%20Filing%20Frequencies%20by%20Release.pdf) | Table of TDS Filing Frequencies by Release |  
 
 ## TDS Data Senarios
-* The [Data Scenarios](Data%20Scenarios/) includes:
+* View and Download [Data Scenarios](Data%20Scenarios/)
+#### The Data Scenarios includes:
 	* TDS Overview and Transition Data Conversion Scenarios
 	* TDS Overview and Transition Data Scenarios
 	* TDS Overview and Transition Release 3 Data Scenarios
