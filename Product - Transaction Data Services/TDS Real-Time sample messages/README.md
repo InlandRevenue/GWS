@@ -1,8 +1,7 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-# Transaction Data Services  
-## Real-Time Sample Messages
+# Transaction Data Services Real-Time Sample Messages
 
 * Retrieve Account Summaries
 	* [Request](RetrieveAccountSummariesRequest.xml)
