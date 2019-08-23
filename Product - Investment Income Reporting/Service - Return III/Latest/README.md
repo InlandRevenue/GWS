@@ -18,7 +18,7 @@ Key Features:
 
 Supporting schema
 -------------
-* [view Common schema](../../Schema%20-%20Common%20III/Common.v2.xsd)
+* [view Common schema v.2](../../../Schema%20-%20Common/Common.v2.xsd)
 
 Products using this service:
 -------------
@@ -27,7 +27,7 @@ Products using this service:
 * [Interest pay as you earn (IPS) - Return Filing](../../Product%20-%20IPS)
 * [Non-resident withholding tax (NRT) - Return Filing](../../Product%20-%20NRT)
 * [Resident withholding tax (RWT) - Return Filing](../../Product%20-%20RWT)
-* Portfolio investment entities (PIE) attributed income - Return filing - to be provided by end of January 2019
+* Portfolio investment entities (PIE) attributed income - Return filing - to be provided late 2019
 
 Supporting services
 -------------
