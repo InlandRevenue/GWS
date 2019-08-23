@@ -1,0 +1,23 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveFilingObligations</wsa:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:RetrieveFilingObligations xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:FilingObligationsRequestMsg>
+                <fil:RetrieveFilingObligationsRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveFilingObligationsRequest">
+                    <rc:retrieveFilingObligationsRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                        <cmn:softwareProviderData>
+                            <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+                            <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+                            <cmn:softwareRelease>1.0</cmn:softwareRelease>
+                        </cmn:softwareProviderData>
+                        <cmn:identifier IdentifierValueType="ACCIRD">132306907</cmn:identifier>
+                        <cmn:accountType>INC</cmn:accountType>
+                        <rc:majorFormType>INC</rc:majorFormType>
+                    </rc:retrieveFilingObligationsRequest>
+                </fil:RetrieveFilingObligationsRequestWrapper>
+            </ret:FilingObligationsRequestMsg>
+        </ret:RetrieveFilingObligations>
+    </soap:Body>
+</soap:Envelope>

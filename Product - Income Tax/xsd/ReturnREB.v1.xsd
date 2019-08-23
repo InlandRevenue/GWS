@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnREB.xsd
+	VER:			2.0
+	ISSUER:			Inland Revenue Department
+	DATE:			5/04/2019
+	DESC:			This schema defines the elements and related data types required for the Income Tax IR526 Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnREB.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnREB.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnREB.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="schoolKindergartenDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="partnerSchoolKindergartenDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="religiousOrganisationDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="partnerReligiousOrganisationDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="doneeOrganisationDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="partnerDoneeOrganisationDonations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalReceiptAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="taxCreditClaimAmount" type="cmn:MoneyTypeNegative" minOccurs="0"/>
+					<xsd:element name="partnerIRD" type="cmn:IRDNumberType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--RetrieveReturnRequestType is unique for Indvidual Income Tax-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End RetrieveReturnRequestType-->
+</xsd:schema>

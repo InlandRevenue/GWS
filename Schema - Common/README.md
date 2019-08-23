@@ -17,6 +17,7 @@ Products using Common schema v1:
 
 Products using Common schema v2:
 -------------
+* [Income Tax](../Product%20-%20Income%20Tax/)
 * [Accounting Income Method (AIM) - Statement Filing](../Product%20-%20AIM)
 * [Investment Income Reporting (IIR)](../Product%20-%20Investment%20Income%20Reporting/)
     * [Approved issuer levy (AIL) - Return Filing](../Product%20-%20Investment%20Income%20Reporting/Product%20-%20AIL)

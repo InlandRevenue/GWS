@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnIR215.xsd
+	VER:			1
+	ISSUER:			Inland Revenue Department
+	DATE:			29/06/2019
+	DESC:			This schema defines the elements and related data types required for the Returns Estate/Trust Income Tax 2019 Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR215.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR215.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR215.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" schemaLocation="./IncomeReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains income tax return common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="childIncomeDetails" type="ChildIncomeListType" minOccurs="0"/>
+					<xsd:element name="partnersName" type="cmn:String255" minOccurs="0"/>
+					<xsd:element name="partnersIrdNumber" type="cmn:IRDNumberType" minOccurs="0"/>
+					<xsd:element name="partnersCountry" type="cmn:CountryType" minOccurs="0"/>
+					<xsd:element name="partnersPassiveIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="otherPaymentDetails" type="OtherPaymentListType" minOccurs="0"/>
+					<xsd:element name="retirementContributions" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="depreciationRecovered" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="nonResidentForeignSourcedIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="distributionFromTrusts" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="employerProvidedVehicle" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="voucherAndOtherSTCF" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="nonLockedInPIEIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="pensionsAndAnnuities" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="distributionsFromRetirementSavings" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="taxExemptOverseasPensions" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="taxExemptIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="incomeFromPIE" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="attributableTrusteeIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="attributableFringeBenefits" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="amountOfLosses" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="incomeEqualisationMainSchemeDeposits" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="incomeEqualisationMainSchemeRefunds" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="slIncomeEqualisationMainSchemeRefunds" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="attributedIncomeMajorShareholderCC" type="CompanyIncomeType" minOccurs="0"/>
+					<xsd:element name="attributedDependentIncomeMajorShareholderCC" type="CompanyIncomeType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<xsd:complexType name="ChildIncomeListType">
+		<xsd:sequence>
+			<xsd:element name="childIncome" type="ChildIncomeType" minOccurs="0" maxOccurs="200000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ChildIncomeType">
+		<xsd:sequence>
+			<xsd:element name="childName" type="cmn:String255" minOccurs="0"/>
+			<xsd:element name="sharedCareIndicator" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="childIrdNumber" type="cmn:IRDNumberType" minOccurs="0"/>
+			<xsd:element name="passiveIncome" type="cmn:MoneyType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OtherPaymentListType">
+		<xsd:sequence>
+			<xsd:element name="otherPayment" type="OtherPaymentType" minOccurs="0" maxOccurs="200000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OtherPaymentType">
+		<xsd:sequence>
+			<xsd:element name="paymentType" type="cmn:String255" minOccurs="0"/>
+			<xsd:element name="paymentAmount" type="cmn:MoneyType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CompanyIncomeType">
+		<xsd:sequence>
+			<xsd:element name="netIncomeForCompanyIncomeYear" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="percentageOfSharesHeld" type="cmn:PercentageType" minOccurs="0"/>
+			<xsd:element name="totalDividendsPaidByCompany" type="cmn:MoneyType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--RetrieveReturnRequestType is unique for Indvidual Income Tax-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End RetrieveReturnRequestType-->
+</xsd:schema>

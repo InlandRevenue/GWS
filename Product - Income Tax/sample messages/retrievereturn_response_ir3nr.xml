@@ -1,0 +1,102 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveReturnResponseWrapper>
+                            <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r3NR="urn:www.ird.govt.nz/GWS:types/ReturnIR3NR.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xsi:type="r3NR:RetrieveReturnResponseBodyType">
+                                    <rc:standardFields>
+                                        <rc:isNilReturn>false</rc:isNilReturn>
+                                    </rc:standardFields>
+                                    <r3NR:formFields>
+                                        <r3NR:submissionKey>1263943680</r3NR:submissionKey>
+                                        <r3NR:nzSuperIndicator>false</r3NR:nzSuperIndicator>
+                                        <r3NR:totalInterestRWT>0</r3NR:totalInterestRWT>
+                                        <r3NR:totalInterest>0</r3NR:totalInterest>
+                                        <r3NR:nrwtOnTotalInterest>0</r3NR:nrwtOnTotalInterest>
+                                        <r3NR:totalDividendCredits>0</r3NR:totalDividendCredits>
+                                        <r3NR:totalDividends>0</r3NR:totalDividends>
+                                        <r3NR:nrwtOnTotalDividends>0</r3NR:nrwtOnTotalDividends>
+                                        <r3NR:totalWitholdingTaxOnRoyalties>0</r3NR:totalWitholdingTaxOnRoyalties>
+                                        <r3NR:totalRoyalties>0</r3NR:totalRoyalties>
+                                        <r3NR:nrwtOnTotalRoyalties>0</r3NR:nrwtOnTotalRoyalties>
+                                        <r3NR:totalTaxCredits>0</r3NR:totalTaxCredits>
+                                        <r3NR:totalNRWT>0</r3NR:totalNRWT>
+                                        <r3NR:nzIncomeWithTaxDeducted>
+                                            <ic:totalTaxPaid>0</ic:totalTaxPaid>
+                                            <ic:totalIncome>0</ic:totalIncome>
+                                        </r3NR:nzIncomeWithTaxDeducted>
+                                        <r3NR:maoriAuthorityDistributions>
+                                            <ic:totalMACredits>1000.00</ic:totalMACredits>
+                                            <ic:totalMADistributions>1000.00</ic:totalMADistributions>
+                                        </r3NR:maoriAuthorityDistributions>
+                                        <r3NR:pieIncome>
+                                            <ic:totalTaxCredits>0</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r3NR:pieIncome>
+                                        <r3NR:partnershipIncome>
+                                            <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r3NR:partnershipIncome>
+                                        <r3NR:estateTrustIncome>
+                                            <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r3NR:estateTrustIncome>
+                                        <r3NR:ltcIncome>
+                                            <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r3NR:ltcIncome>
+                                        <r3NR:ltcNonAllowableDeductions>0</r3NR:ltcNonAllowableDeductions>
+                                        <r3NR:ltcPriorYearNonAllowableDeductionsClaimed>0</r3NR:ltcPriorYearNonAllowableDeductionsClaimed>
+                                        <r3NR:ltcAdjustedIncome>1000.00</r3NR:ltcAdjustedIncome>
+                                        <r3NR:otherCredits>4000.00</r3NR:otherCredits>
+                                        <r3NR:netRentalIncome>1000.00</r3NR:netRentalIncome>
+                                        <r3NR:selfEmployedIncome>1000.00</r3NR:selfEmployedIncome>
+                                        <r3NR:otherIncome>1000.00</r3NR:otherIncome>
+                                        <r3NR:saleOfProperty>0</r3NR:saleOfProperty>
+                                        <r3NR:rlwtCredit>0</r3NR:rlwtCredit>
+                                        <r3NR:otherExpenses>1000.00</r3NR:otherExpenses>
+                                        <r3NR:lossesBroughtForward>0</r3NR:lossesBroughtForward>
+                                        <r3NR:lossesClaimedThisYear>0</r3NR:lossesClaimedThisYear>
+                                        <r3NR:totalTaxableIncome>7000</r3NR:totalTaxableIncome>
+                                        <r3NR:workedInNZ>true</r3NR:workedInNZ>
+                                        <r3NR:incomeEarned>1000.00</r3NR:incomeEarned>
+                                        <r3NR:weeksWorked>3</r3NR:weeksWorked>
+                                        <r3NR:daysWorked>21</r3NR:daysWorked>
+                                        <r3NR:arrivalDate>2018-05-01</r3NR:arrivalDate>
+                                        <r3NR:departureDate>2018-05-21</r3NR:departureDate>
+                                        <r3NR:imputationBroughtForward>0.00</r3NR:imputationBroughtForward>
+                                        <r3NR:taxOnTaxableIncome>735.00</r3NR:taxOnTaxableIncome>
+                                        <r3NR:residualIncomeTax>-3265.00</r3NR:residualIncomeTax>
+                                        <r3NR:earlyPaymentDiscountEligibility>false</r3NR:earlyPaymentDiscountEligibility>
+                                        <r3NR:overpaymentProvisionalTax>1000.00</r3NR:overpaymentProvisionalTax>
+                                        <r3NR:provisionalTax>
+                                            <ic:provisionalTaxOption>STD</ic:provisionalTaxOption>
+                                            <ic:provisionalTaxPayable>1000</ic:provisionalTaxPayable>
+                                            <ic:provisionalTaxStartDate>2019-01-01</ic:provisionalTaxStartDate>
+                                        </r3NR:provisionalTax>
+                                        <r3NR:partYearReturnIndicator>false</r3NR:partYearReturnIndicator>
+                                        <r3NR:dateLeftNZ>2019-12-01</r3NR:dateLeftNZ>
+                                        <r3NR:timePlannedToBeAway>string</r3NR:timePlannedToBeAway>
+                                    </r3NR:formFields>
+                                </responseBody>
+                            </retrieveReturnResponse>
+                        </b:RetrieveReturnResponseWrapper>
+                    </RetrieveReturnResult>
+                </RetrieveReturnResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

@@ -1,0 +1,55 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveReturnResponseWrapper>
+                            <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r8J="urn:www.ird.govt.nz/GWS:types/ReturnIR8J.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xsi:type="r8J:RetrieveReturnResponseBodyType">
+                                    <rc:standardFields>
+                                        <rc:isNilReturn>false</rc:isNilReturn>
+                                    </rc:standardFields>
+                                    <r8J:formFields>
+                                        <r8J:submissionKey>1263943680</r8J:submissionKey>
+                                        <r8J:openingBalance>0.00</r8J:openingBalance>
+                                        <r8J:incomeTaxPaid>1000.00</r8J:incomeTaxPaid>
+                                        <r8J:totalFDPPaid>1000.00</r8J:totalFDPPaid>
+                                        <r8J:totalRWTOnInterest>1000.00</r8J:totalRWTOnInterest>
+                                        <r8J:imputationAndFDPCredits>1000.00</r8J:imputationAndFDPCredits>
+                                        <r8J:otherCredits>1000.00</r8J:otherCredits>
+                                        <r8J:incomeTaxRefunded>1000.00</r8J:incomeTaxRefunded>
+                                        <r8J:totalFDPRefunds>1000.00</r8J:totalFDPRefunds>
+                                        <r8J:imputationCreditsAttached>1000.00</r8J:imputationCreditsAttached>
+                                        <r8J:otherDebits>1000.00</r8J:otherDebits>
+                                        <r8J:closingBalance>-1000.00</r8J:closingBalance>
+                                        <r8J:furtherIncomeTaxPayable>0.00</r8J:furtherIncomeTaxPayable>
+                                        <r8J:fdpReturn>
+                                            <r8J:fdpOpeningBalance>1000.00</r8J:fdpOpeningBalance>
+                                            <r8J:fdpPaid>1000.00</r8J:fdpPaid>
+                                            <r8J:fdpCreditsAttachedReceived>1000.00</r8J:fdpCreditsAttachedReceived>
+                                            <r8J:fdpCreditsAttachedPaid>1000.00</r8J:fdpCreditsAttachedPaid>
+                                            <r8J:fdpRefunded>1000.00</r8J:fdpRefunded>
+                                            <r8J:fdpOtherDebits>1000.00</r8J:fdpOtherDebits>
+                                            <r8J:fdpClosingBalance>2000.00</r8J:fdpClosingBalance>
+                                        </r8J:fdpReturn>
+                                    </r8J:formFields>
+                                </responseBody>
+                            </retrieveReturnResponse>
+                        </b:RetrieveReturnResponseWrapper>
+                    </RetrieveReturnResult>
+                </RetrieveReturnResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>
