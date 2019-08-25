@@ -76,7 +76,11 @@ The Intermediation Gateway Service provides the ability for intermediaries to:
 > The following intermediary, client lists and linked clients are provided by the emulated service:
 
 | *Intermediary id* | *Client list type* | *List id* | *List id type* | *Refund Account* | *Client Id* | *Linked* |
+<<<<<<< HEAD
 | --- | --- | --- | --- | --- | --- | --- | --- | 
+=======
+| --- | --- | --- | --- | --- | --- | --- | 
+>>>>>>> fbe6d86c3a72fb8a7f889ee9c07e7b4ff87e1034
 |132261132|Tax Agent|132261132|LSTID|No|132260737|AIL,AIP,EMP,FAM,FBT,GSD,GST,INC,IPS,NRT,REB,RLT,RWT,SLS|
 | |Tax Agent|132261555|LSTID|Yes|132260818|AIL,AIP,DWT,EMP,FBT,GMD,GSD,GST,INC,IPS,MPO,NRT,PIE,RLT,RWT|
 | | | | | | 132260806|REB|
