@@ -39,10 +39,10 @@ to be submitted on amendment.
 
 | Entity Type | Primary Form | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years suppported| Attachment Forms   |
 | --- | --- | --- | :---: | :---: | :---: | :---: | :---: | --- |
-| Individual   | Individual income tax return| [ReturnIR3.v1.xsd](ReturnIR3.v1.xsd)| `3` | Primary | Single | 1 | 2013+ | 
+| Individual   | Individual income tax return| [ReturnIR3.v1.xsd](ReturnIR3.v1.xsd)| `3` | Primary | Single | 1 | 2013+ | * 10 <br/> * 833 <br/> * 44E <br/> * 4J <br/> * CFC|
 | | Auto-calc return | [ReturnAUTO.v1.xsd](ReturnAUTO.v1.xsd) | `CALC`  | Primary | Single | 1 | 2019+ |
 |Individual   | Non-resident income tax return |[ReturnIR3NR.v1.xsd](ReturnIR3NR.v1.xsd)| `3NR` | Primary or attachment | Single | 1 | 2013+ |
-|Company  | Companies income tax return |[ReturnIR4.v1.xsd](ReturnIR4.v1.xsd)| `4` | Primary | Single |1 | 2013+ | * 10 <br/> * 833 <br/> * 44E <br/> * 4J <br/> * CFC|
+|Company  | Companies income tax return |[ReturnIR4.v1.xsd](ReturnIR4.v1.xsd)| `4` | Primary | Single |1 | 2013+ | * 10 <br/> * 833 <br/> * 44E <br/> * 4J <br/> * CFC  |
 | Company  | Annual imputation return |[ReturnIR4J.v1.xsd](ReturnIR4J.v1.xsd)| `4J` | Primary | Single |1 | 2013+ |
 |Trust or estate | Estate or trust income tax return| [ReturnIR6.v1.xsd](ReturnIR6.v1.xsd)| `6` | Primary | Single |1 | 2013+ |
 | Partnerships and look-through companies | Partnership and LTCs income tax return| [ReturnIR7.v1.xsd](ReturnIR7.v1.xsd)| `7` | Primary | Single |1 | 2015+ |
