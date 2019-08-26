@@ -39,10 +39,10 @@ to be submitted on amendment.
 
 | Entity Type | Primary Form | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years suppported| Attachment Forms   |
 | --- | --- | --- | :---: | :---: | :---: | :---: | :---: | --- |
-| Individual   | Individual income tax return| [ReturnIR3.v1.xsd](ReturnIR3.v1.xsd)| `3` | Primary | Single | 1 | 2013+ | * 10 <br/> * 833 <br/> * 44E <br/> * 4J <br/> * CFC|
+| Individual   | Individual income tax return| [ReturnIR3.v1.xsd](ReturnIR3.v1.xsd)| `3` | Primary | Single | 1 | 2013+ | <ul><li>10</li><li>833</li><li>3F</li><li>3B </li><li>3R</li><li>3K</li><li>307</li><li>308</li><li>215</li><li>CFC</li></ul>|
 | | Auto-calc return | [ReturnAUTO.v1.xsd](ReturnAUTO.v1.xsd) | `CALC`  | Primary | Single | 1 | 2019+ |
 |Individual   | Non-resident income tax return |[ReturnIR3NR.v1.xsd](ReturnIR3NR.v1.xsd)| `3NR` | Primary or attachment | Single | 1 | 2013+ |
-|Company  | Companies income tax return |[ReturnIR4.v1.xsd](ReturnIR4.v1.xsd)| `4` | Primary | Single |1 | 2013+ | * 10 <br/> * 833 <br/> * 44E <br/> * 4J <br/> * CFC  |
+|Company  | Companies income tax return |[ReturnIR4.v1.xsd](ReturnIR4.v1.xsd)| `4` | Primary | Single |1 | 2013+ |<ul><li>10</li><li>833</li><li>44E</li><li>4J</li><li>CFC</li></ul>  |
 | Company  | Annual imputation return |[ReturnIR4J.v1.xsd](ReturnIR4J.v1.xsd)| `4J` | Primary | Single |1 | 2013+ |
 |Trust or estate | Estate or trust income tax return| [ReturnIR6.v1.xsd](ReturnIR6.v1.xsd)| `6` | Primary | Single |1 | 2013+ |
 | Partnerships and look-through companies | Partnership and LTCs income tax return| [ReturnIR7.v1.xsd](ReturnIR7.v1.xsd)| `7` | Primary | Single |1 | 2015+ |
@@ -60,7 +60,7 @@ to be submitted on amendment.
 | | Schedule of beneficiary’s estate or trust income |[ReturnIR307.v1.xsd](ReturnIR307.v1.xsd)| `307` | Primary | Multiple |1 | 2013+ |
 | | Branch equivalent tax account return| [ReturnIR308.v1.xsd](ReturnIR308.v1.xsd)| `308` | Primary | Single |1 | 2013+ |
 | | Property sale information |[ReturnIR833.v1.xsd](ReturnIR833.v1.xsd)| `833` | Primary or attachment | Single |1 | 2016+ |
-| | Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `PTS` | Attachment | Single |1 | 2013+ |
+| | Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `CFC ` | Attachment | Single |1 | 2013+ |
     
 [More infomation of filing a Tax Return](https://www.ird.govt.nz/activities/file-an-income-tax-return)
 	
