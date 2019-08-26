@@ -35,32 +35,33 @@ For most forms, only one is allowed to be submitted per period. Some form types,
 can be submitted multiple times in the same period, in which case a submissionKey is required 
 to be submitted on amendment.  
 
-### XSD return files
+### XSD Return Files
 
-| Description | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years suppported| 
-| --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Individual income tax return| [ReturnIR3.v1.xsd](ReturnIR3.v1.xsd)| `3` | Primary | Single | 1 | 2013+ |
-| Auto-calc return | [ReturnAUTO.v1.xsd](ReturnAUTO.v1.xsd) | `CALC`  | Primary | Single | 1 | 2019+ |
-| Non-resident income tax return |[ReturnIR3NR.v1.xsd](ReturnIR3NR.v1.xsd)| `3NR` | Primary or attachment | Single | 1 | 2013+ |
-| Companies income tax return |[ReturnIR4.v1.xsd](ReturnIR4.v1.xsd)| `4` | Primary | Single |1 | 2013+ |
-| Annual imputation return |[ReturnIR4J.v1.xsd](ReturnIR4J.v1.xsd)| `4J` | Primary | Single |1 | 2013+ |
-| Estate or trust income tax return| [ReturnIR6.v1.xsd](ReturnIR6.v1.xsd)| `6` | Primary | Single |1 | 2013+ |
-| Partnership and LTCs income tax return| [ReturnIR7.v1.xsd](ReturnIR7.v1.xsd)| `7` | Primary | Single |1 | 2015+ |
-| Māori authorities income tax return |[ReturnIR8.v1.xsd](ReturnIR8.v1.xsd)| `8` | Primary | Single |1 | 2015+ |
-| Māori authorities credit account return |[ReturnIR8J.v1.xsd](ReturnIR8J.v1.xsd)| `8J` | Primary | Single |1 | 2015+ |
-| Clubs or societies income tax return| [ReturnIR9.v1.xsd](ReturnIR9.v1.xsd)| `9` | Primary | Single |1 | 2015+ |
-| Superannuation funds income tax return |[ReturnIR44.v1.xsd](ReturnIR44.v1.xsd)| `44` | Primary | Single |1 | 2015+ |
-| Group investment fund return |[ReturnIR44E.v1.xsd](ReturnIR44E.v1.xsd)| `44E` | Primary | Single |1 | 2013+ |
-| Farming income |[ReturnIR3F.v1.xsd](ReturnIR3F.v1.xsd)| `3F` | Primary | Single |1 | 2013+ |
-| Schedule of business income |[ReturnIR3B.v1.xsd](ReturnIR3B.v1.xsd)| `3B` | Primary | Single |1 | 2013+ |
-| Rental income schedule| [ReturnIR3R.v1.xsd](ReturnIR3R.v1.xsd)| `3R` | Primary | Multiple |1 | 2013+ |
-| Sale or disposal of financial arrangements |[ReturnIR3K.v1.xsd](ReturnIR3K.v1.xsd)| `3K` | Primary | Multiple |1 | 2013+ |
-| Financial statements summary |[ReturnIR10.v1.xsd](ReturnIR10.v1.xsd)| `10` | Primary | Single |1 | 2013+ |
-| Adjust your income |[ReturnIR215.v1.xsd](ReturnIR215.v1.xsd) | `215` | Primary | Single |1 | 2015+ |
-| Schedule of beneficiary’s estate or trust income |[ReturnIR307.v1.xsd](ReturnIR307.v1.xsd)| `307` | Primary | Multiple |1 | 2013+ |
-| Branch equivalent tax account return| [ReturnIR308.v1.xsd](ReturnIR308.v1.xsd)| `308` | Primary | Single |1 | 2013+ |
-| Property sale information |[ReturnIR833.v1.xsd](ReturnIR833.v1.xsd)| `833` | Primary or attachment | Single |1 | 2016+ |
-| Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `PTS` | Attachment | Single |1 | 2013+ |
+| Entity Type | Primary Form | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years suppported| Attachment Forms   |
+| --- | --- | --- | :---: | :---: | :---: | :---: | :---: | --- |
+| Individual   | Individual income tax return| [ReturnIR3.v1.xsd](ReturnIR3.v1.xsd)| `3` | Primary | Single | 1 | 2013+ | 
+| | Auto-calc return | [ReturnAUTO.v1.xsd](ReturnAUTO.v1.xsd) | `CALC`  | Primary | Single | 1 | 2019+ |
+|Individual   | Non-resident income tax return |[ReturnIR3NR.v1.xsd](ReturnIR3NR.v1.xsd)| `3NR` | Primary or attachment | Single | 1 | 2013+ |
+|Company  | Companies income tax return |[ReturnIR4.v1.xsd](ReturnIR4.v1.xsd)| `4` | Primary | Single |1 | 2013+ | * 10 <br/> * 833 <br/> * 44E <br/> * 4J <br/> * CFC|
+| Company  | Annual imputation return |[ReturnIR4J.v1.xsd](ReturnIR4J.v1.xsd)| `4J` | Primary | Single |1 | 2013+ |
+|Trust or estate | Estate or trust income tax return| [ReturnIR6.v1.xsd](ReturnIR6.v1.xsd)| `6` | Primary | Single |1 | 2013+ |
+| Partnerships and look-through companies | Partnership and LTCs income tax return| [ReturnIR7.v1.xsd](ReturnIR7.v1.xsd)| `7` | Primary | Single |1 | 2015+ |
+| Māori authority| Māori authorities income tax return |[ReturnIR8.v1.xsd](ReturnIR8.v1.xsd)| `8` | Primary | Single |1 | 2015+ |
+| Māori authority| Māori authorities credit account return |[ReturnIR8J.v1.xsd](ReturnIR8J.v1.xsd)| `8J` | Primary | Single |1 | 2015+ |
+| Clubs and Societies | Clubs or societies income tax return| [ReturnIR9.v1.xsd](ReturnIR9.v1.xsd)| `9` | Primary | Single |1 | 2015+ |
+| Group investment fund | Superannuation funds income tax return |[ReturnIR44.v1.xsd](ReturnIR44.v1.xsd)| `44` | Primary | Single |1 | 2015+ |
+| Group investment fund| Group investment fund return |[ReturnIR44E.v1.xsd](ReturnIR44E.v1.xsd)| `44E` | Primary | Single |1 | 2013+ |
+| individual| Farming income |[ReturnIR3F.v1.xsd](ReturnIR3F.v1.xsd)| `3F` | Primary | Single |1 | 2013+ |
+| individual| Schedule of business income |[ReturnIR3B.v1.xsd](ReturnIR3B.v1.xsd)| `3B` | Primary | Single |1 | 2013+ |
+|individual | Rental income schedule| [ReturnIR3R.v1.xsd](ReturnIR3R.v1.xsd)| `3R` | Primary | Multiple |1 | 2013+ |
+| | Sale or disposal of financial arrangements |[ReturnIR3K.v1.xsd](ReturnIR3K.v1.xsd)| `3K` | Primary | Multiple |1 | 2013+ |
+| Financial | Financial statements summary |[ReturnIR10.v1.xsd](ReturnIR10.v1.xsd)| `10` | Primary | Single |1 | 2013+ |
+| | Adjust your income |[ReturnIR215.v1.xsd](ReturnIR215.v1.xsd) | `215` | Primary | Single |1 | 2015+ |
+| | Schedule of beneficiary’s estate or trust income |[ReturnIR307.v1.xsd](ReturnIR307.v1.xsd)| `307` | Primary | Multiple |1 | 2013+ |
+| | Branch equivalent tax account return| [ReturnIR308.v1.xsd](ReturnIR308.v1.xsd)| `308` | Primary | Single |1 | 2013+ |
+| | Property sale information |[ReturnIR833.v1.xsd](ReturnIR833.v1.xsd)| `833` | Primary or attachment | Single |1 | 2016+ |
+| | Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `PTS` | Attachment | Single |1 | 2013+ |
     
+[More infomation of filing a Tax Return](https://www.ird.govt.nz/activities/file-an-income-tax-return)
 	
     * [ReturnREB.v1.xsd](ReturnREB.v1.xsd)

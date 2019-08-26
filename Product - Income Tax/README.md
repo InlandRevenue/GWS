@@ -14,6 +14,12 @@
     * View and download the [return service common xsd](../Service%20-%20Return/Latest/)
     * View and download the [common xsd](../Schema%20-%20Common/)
 
+* [Income profile types and related forms](#Income-profile-types-and-related-forms)
+
+* [Income Tax Form Types](#Income-Tax-Form-Types) 
+
+* [Sample request and responses](#Sample-request-and-responses)
+
 - Returns Service 
 	- Download and view the [Return Service Income Tax build pack](Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20INC.pdf) to view data definitions of each operation and response status code definitions
 
@@ -40,7 +46,7 @@
 | Net losses brought forward |   Individual income tax return - **IR3** _Prepop_ <br/> Non-resident income tax return - **IR3NR**|
 | Excess imputation credits | Individual income tax return - **IR3** _Prepop_ |
 | NZ income with tax deducted  | Individual income tax return - **IR3** _Prepop_ |
-| NZ interest  | Companies income tax return - **IR4** <br/> Estate or trust income tax return - **IR6** <br/> Partnership and LTCs income tax return - **IR7** <br/> Māori authorities income tax return - **IR8** <br/> Clubs or societies income tax return - IR9| 
+| NZ interest  | Companies income tax return - **IR4** <br/> Estate or trust income tax return - **IR6** <br/> Partnership and LTCs income tax return - **IR7** <br/> Māori authorities income tax return - **IR8** <br/> Clubs or societies income tax return - **IR9**| 
 | NZ dividends |Companies income tax return - **IR4**<br/>Estate or trust income tax return - **IR6**<br/>Māori authorities income tax return - **IR8**<br/> |
 | Income from partnership, estate or trust  |Companies income tax return - **IR4**<br/> Estate or trust income tax return - **IR6**|
 | Losses brought from previous years | Companies income tax return - **IR4** <br/> Estate or trust income tax return - **IR6** <br/> Māori authorities income tax return - **IR8** <br/> Clubs or societies income tax return - **IR9** |
@@ -72,6 +78,51 @@ income - IR307
 * Controlled foreign investment - CFC
 * Individual income tax return - PTS  
 > Note: PTS Individual income tax return RetrieveReturn and RetrieveStatus for income years prior to 2019 
+
+## Sample request and responses
+
+- File
+    - [IR3 File request (with all applicable attachments)](sample%20messages/file_request_ir3_all_attachments.xml)
+    - [IR3NR File request](sample%20messages/file_request_ir3nr_standalone.xml)
+    - [IR4 File request (with all applicable attachments)](sample%20messages/file_request_ir4_all_attachments.xml)
+    - [IR4J File request](sample%20messages/file_request_ir4j_standalone.xml)
+    - [IR6 File request](sample%20messages/file_request_ir6_standalone.xml)
+    - [IR7L File request](sample%20messages/file_request_ir7l_standalone.xml)
+    - [IR7P File request](sample%20messages/file_request_ir7p_standalone.xml)
+    - [IR8 File request](sample%20messages/file_request_ir8_standalone.xml)
+    - [IR8J File request](sample%20messages/file_request_ir8j_standalone.xml)
+    - [IR9 File request](sample%20messages/file_request_ir9_standalone.xml)
+    - [IR44 File request](sample%20messages/file_request_ir44_standalone.xml)
+    - [IR526 File request](sample%20messages/file_request_ir526_standalone.xml)
+    - [File Response](sample%20messages/file_response.xml)
+- RetrieveReturn
+    - [RetrieveReturn request](sample%20messages/retrievereturn_request.xml)
+    - [IR3 RetrieveReturn response](sample%20messages/retrievereturn_response_ir3.xml)
+    - [IR3NR RetrieveReturn response](sample%20messages/retrievereturn_response_ir3nr.xml)
+    - [IR4 RetrieveReturn response](sample%20messages/retrievereturn_response_ir4.xml)
+    - [IR4J RetrieveReturn response](sample%20messages/retrievereturn_response_ir4j.xml)
+    - [IR6 RetrieveReturn response](sample%20messages/retrievereturn_response_ir6.xml)
+    - [IR7L RetrieveReturn response](sample%20messages/retrievereturn_response_ir7l.xml)
+    - [IR7P RetrieveReturn response](sample%20messages/retrievereturn_response_ir7p.xml)
+    - [IR8 RetrieveReturn response](sample%20messages/retrievereturn_response_ir8.xml)
+    - [IR8J RetrieveReturn response](sample%20messages/retrievereturn_response_ir8j.xml)
+    - [IR9 RetrieveReturn response](sample%20messages/retrievereturn_response_ir9.xml)
+    - [IR44 RetrieveReturn response](sample%20messages/retrievereturn_response_ir44.xml)
+    - [IR526 RetrieveReturn request](sample%20messages/retrievereturn_request_ir526.xml)
+    - [IR526 RetrieveReturn response](sample%20messages/retrievereturn_response_ir526.xml)
+- RetrieveReturn
+    - [RetrieveStatus request](sample%20messages/retrievestatus_request.xml)
+    - [RetrieveStatus response](sample%20messages/retrievestatus_response.xml)
+    - [IR526 RetrieveStatus request](sample%20messages/retrievestatus_request_ir526.xml)
+    - [IR526 RetrieveStatus response](sample%20messages/retrievestatus_response_ir526.xml)
+- Prepop
+    - [Prepop request](sample%20messages/prepop_request.xml)
+    - [Prepop response (Individual customer)](sample%20messages/prepop_response_individual.xml)
+    - [Prepop response (Non-Individual customer)](sample%20messages/prepop_response_nonindividual.xml)
+- RetrieveFilingObligations
+    - [RetrieveFilingObligations request](sample%20messages/retrievefilingobligations_request.xml)
+    - [RetrieveFilingObligations response](sample%20messages/retrievefilingobligations_response.xml)
+
 
 ## Mock Environment Information
 ---
@@ -239,48 +290,6 @@ income - IR307
     </tbody>
 </table>
     
-- Sample request and responses
-    - File
-        - [IR3 File request (with all applicable attachments)](sample%20messages/file_request_ir3_all_attachments.xml)
-        - [IR3NR File request](sample%20messages/file_request_ir3nr_standalone.xml)
-        - [IR4 File request (with all applicable attachments)](sample%20messages/file_request_ir4_all_attachments.xml)
-        - [IR4J File request](sample%20messages/file_request_ir4j_standalone.xml)
-        - [IR6 File request](sample%20messages/file_request_ir6_standalone.xml)
-        - [IR7L File request](sample%20messages/file_request_ir7l_standalone.xml)
-        - [IR7P File request](sample%20messages/file_request_ir7p_standalone.xml)
-        - [IR8 File request](sample%20messages/file_request_ir8_standalone.xml)
-        - [IR8J File request](sample%20messages/file_request_ir8j_standalone.xml)
-        - [IR9 File request](sample%20messages/file_request_ir9_standalone.xml)
-        - [IR44 File request](sample%20messages/file_request_ir44_standalone.xml)
-        - [IR526 File request](sample%20messages/file_request_ir526_standalone.xml)
-        - [File Response](sample%20messages/file_response.xml)
-    - RetrieveReturn
-        - [RetrieveReturn request](sample%20messages/retrievereturn_request.xml)
-        - [IR3 RetrieveReturn response](sample%20messages/retrievereturn_response_ir3.xml)
-        - [IR3NR RetrieveReturn response](sample%20messages/retrievereturn_response_ir3nr.xml)
-        - [IR4 RetrieveReturn response](sample%20messages/retrievereturn_response_ir4.xml)
-        - [IR4J RetrieveReturn response](sample%20messages/retrievereturn_response_ir4j.xml)
-        - [IR6 RetrieveReturn response](sample%20messages/retrievereturn_response_ir6.xml)
-        - [IR7L RetrieveReturn response](sample%20messages/retrievereturn_response_ir7l.xml)
-        - [IR7P RetrieveReturn response](sample%20messages/retrievereturn_response_ir7p.xml)
-        - [IR8 RetrieveReturn response](sample%20messages/retrievereturn_response_ir8.xml)
-        - [IR8J RetrieveReturn response](sample%20messages/retrievereturn_response_ir8j.xml)
-        - [IR9 RetrieveReturn response](sample%20messages/retrievereturn_response_ir9.xml)
-        - [IR44 RetrieveReturn response](sample%20messages/retrievereturn_response_ir44.xml)
-        - [IR526 RetrieveReturn request](sample%20messages/retrievereturn_request_ir526.xml)
-        - [IR526 RetrieveReturn response](sample%20messages/retrievereturn_response_ir526.xml)
-    - RetrieveReturn
-        - [RetrieveStatus request](sample%20messages/retrievestatus_request.xml)
-        - [RetrieveStatus response](sample%20messages/retrievestatus_response.xml)
-        - [IR526 RetrieveStatus request](sample%20messages/retrievestatus_request_ir526.xml)
-        - [IR526 RetrieveStatus response](sample%20messages/retrievestatus_response_ir526.xml)
-    - Prepop
-        - [Prepop request](sample%20messages/prepop_request.xml)
-        - [Prepop response (Individual customer)](sample%20messages/prepop_response_individual.xml)
-        - [Prepop response (Non-Individual customer)](sample%20messages/prepop_response_nonindividual.xml)
-    - RetrieveFilingObligations
-        - [RetrieveFilingObligations request](sample%20messages/retrievefilingobligations_request.xml)
-        - [RetrieveFilingObligations response](sample%20messages/retrievefilingobligations_response.xml)
 
 
 ## Test Environment Information:
