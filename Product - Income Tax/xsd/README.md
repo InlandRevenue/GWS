@@ -37,7 +37,7 @@ to be submitted on amendment.
 
 ### XSD Return Files
 
-| Entity Type | Primary Form | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years suppported| Attachment Forms   |
+| Entity Type | Primary Form | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years supported| Attachment Forms   |
 | --- | --- | --- | :---: | :---: | :---: | :---: | :---: | --- |
 | Individual   | Individual income tax return| [ReturnIR3.v1.xsd](ReturnIR3.v1.xsd)| `3` | Primary | Single | 1 | 2013+ | <ul><li>10</li><li>833</li><li>3F</li><li>3B </li><li>3R</li><li>3K</li><li>307</li><li>308</li><li>215</li><li>CFC</li></ul>|
 | | Auto-calc return | [ReturnAUTO.v1.xsd](ReturnAUTO.v1.xsd) | `CALC`  | Primary | Single | 1 | 2019+ |
