@@ -13,11 +13,13 @@ the evening of each business day.
 ## Key Features:
 * View and download [build packs for Push Notifications](Gateway%20Services%20Build%20Pack%20-%20Push%20Notifications.pdf)
 
-## Sample XML Files
-* [Agent File and Customer File](Sample%20Files/Agent%20File%20and%20Customer%20File.xml)
-* [Intermediation File](Sample%20Files/Intermediation%20File.xml)
-* [Control File](Sample%20Files/Control%20File.xml)
-* [Software Intermediation File](Sample%20Files/Software%20Intermediation%20File.xml) 
+## Sample Notification XML Files
+* File Transfer Zip File `PSN_DAILY_PROVIDER_1500131086_3456933072_3456625734_201904151848065112_NZD.zip`:
+    * Child Files:
+        *  [Customer File](Sample%20Files/PSN_DAILY_CUSTOMER_3456933072_3456625734_201904151848067017_NZD.xml) `PSN_DAILY_CUSTOMER_3456933072_3456625734_201904151848067017_NZD.xml`
+        * [Intermediation File](Sample%20Files/PSN_DAILY_PROVIDER_1500131086_3456933072_3456625734_201904151848065112_NZD_INTERMEDIATION.xml)	`PSN_DAILY_PROVIDER_1500131086_3456933072_3456625734_201904151848065112_NZD_INTERMEDIATION.xml` __To Be Confirmed__
+        * [Software Intermediation File](PSN_DAILY_PROVIDER_1500131086_3456612467_3456822335_201904151034148527_SOFTWARE_INTERMEDIATION.xml) `PSN_DAILY_PROVIDER_1500131086_3456612467_3456822335_201904151034148527_SOFTWARE_INTERMEDIATION.xml` __To Be Confirmed__ 
+* Complimenting (Sibling) [Control File](Sample%20Files/PSN_DAILY_PROVIDER_1500131086_3456933072_3456625734_201904151848072877_NZD_CONTROL.xml) `PSN_DAILY_PROVIDER_1500131086_3456933072_3456625734_201904151848072877_NZD_CONTROL.xml`
 
 
 ## Products using this service:
