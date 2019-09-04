@@ -43,15 +43,15 @@
 					<xsd:element name="totalESSIncome" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="taxDeductedFromACCPayment" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="grossACCPayments" type="cmn:MoneyType" minOccurs="0"/>
-					<xsd:element name="paymentsPassedToCaregiverAt105" type="cmn:MoneyType" minOccurs="0"/>
-					<xsd:element name="paymentsPassedToCaregiverAt225" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="paymentsPassedToCaregiverAtRate1" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="paymentsPassedToCaregiverAtRate2" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="taxDeductedFromSchedularPayments" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="grossSchedularPayments" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="schedularExpenses" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="interestIncome" type="ic:IncomeWithTaxPaidType" minOccurs="0"/>
 					<xsd:element name="dividendIncome" type="ic:DividendIncomeType" minOccurs="0"/>
 					<xsd:element name="dividendsAsInterestIncome" type="ic:DividendIncomeType" minOccurs="0"/>
-					<xsd:element name="maoriAuthorityDistributions" type="ic:DividendIncomeType" minOccurs="0"/>
+					<xsd:element name="maoriAuthorityDistributions" type="MADistributionCalcType" minOccurs="0"/>
 					<xsd:element name="pieIncome" type="ic:IncomeWithTaxCreditType" minOccurs="0"/>
 					<xsd:element name="nonBusinessExpenses" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="imputationBroughtForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
@@ -67,6 +67,13 @@
 	</xsd:complexType>
 	<!--End Override FormFieldsType-->
 	<!--Begin Specific File Data Types-->
+  <xsd:complexType name="MADistributionCalcType">
+    <xsd:sequence>
+      <xsd:element name="totalMACredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="totalMARWTCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="totalMADistributions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
 	<xsd:complexType name="CalculatedFieldsType">
 		<xsd:sequence>
 			<xsd:element name="netPaymentsPassedToCaregiver" type="cmn:MoneyType" minOccurs="0"/>

@@ -3,7 +3,7 @@
 	NAME:			ReturnIR4.xsd
 	VER:			1
 	ISSUER:			Inland Revenue Department
-	DATE:			29/06/2019
+	DATE:			03/09/2019
 	DESC:			This schema defines the elements and related data types required for the Returns IR4 2019 Gateway Service.
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR4.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR4.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR4.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -59,7 +59,7 @@
 					<xsd:element name="residualIncomeTax" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="provisionalTax" type="ic:ProvisionalTaxType" minOccurs="0"/>
 					<xsd:element name="paymentsMadeToNonResidents" type="xsd:boolean" minOccurs="0"/>
-					<xsd:element name="witholdingTaxDeducted" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="withholdingTaxDeducted" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="foreignIncomeDisclosure" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="repurchasedRedeemedCancelledShares" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="foreignSourcedDividends" type="xsd:boolean" minOccurs="0"/>
