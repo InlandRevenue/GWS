@@ -21,7 +21,7 @@ The [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd) imports the [ReturnCo
 [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd) also includes the `prepopResponse` element. This is because the `prepopResponse` is common between all income tax form types. 
 
 * View and download Income Return Common [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd)
-* Download all [XSDs](Bundle-IncTax-XSD.zip)
+* Download all XSDs in a bundled zip file [Bundle-IncTax-XSD.zip](Bundle-IncTax-XSD.zip)
 	
 ## XSD Schemas	
 
