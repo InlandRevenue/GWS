@@ -3,8 +3,6 @@
 
 # Income Tax - XML Schema Definition 
 
-## Schema
-
 All schemas for the Return Service import a [Common.v2.xsd](../../Schema%20-%20Common/Common.v2.xsd) which has some data types specific to Inland Revenue. This [Common.v2.xsd](../../Schema%20-%20Common/Common.v2.xsd) will be used in other Gateway Services outside of the `/Returns/` namespace so it must be kept up-to-date, without numerous redundant versions remaining.  
  
 The [ReturnCommon.v2.xsd](../../Service%20-%20Return/Latest/ReturnCommon.v2.xsd) imports the [Common.v2.xsd](../../Schema%20-%20Common/Common.v2.xsd) and creates data types to be used 
@@ -14,7 +12,7 @@ The reason for adding root-level elements in the [ReturnCommon.v2.xsd](../../Ser
  
 Importing from [ReturnCommon.v2.xsd](../../Service%20-%20Return/Latest/ReturnCommon.v2.xsd) will be schemas that require more fine grained detail. These will primarily define the request for the `File` operation, the response for `RetrieveReturn` and the response for `Prepop`.  
  
-### Income Return Common XSD
+## Income Return Common XSD
 
 The [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd) imports the [ReturnCommon.v2.xsd](../../Service%20-%20Return/Latest/ReturnCommon.v2.xsd) and [Common.v2.xsd](../../Schema%20-%20Common/Common.v2.xsd) and creates data types used across many of the specific income tax schemas.
 
@@ -64,8 +62,8 @@ to be submitted on amendment.
 | | Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `CFC ` | Attachment | Single |1 | 2013+ |
 | | Tax credit claim (IR526) | [ReturnREB.v1.xsd](ReturnREB.v1.xsd) | `REB` | | 1| |    
 
-| | |
 
-* [More infomation of filing a Tax Return](https://www.ird.govt.nz/activities/file-an-income-tax-return)
+
+* More information of filing a Tax Return can be found [here](https://www.ird.govt.nz/activities/file-an-income-tax-return)
 	
     
