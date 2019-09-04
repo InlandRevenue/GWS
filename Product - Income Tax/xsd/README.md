@@ -20,7 +20,8 @@ The [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd) imports the [ReturnCo
 
 [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd) also includes the `prepopResponse` element. This is because the `prepopResponse` is common between all income tax form types. 
 
-* View and downdoad Income Return Common [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd)
+* View and download Income Return Common [IncomeReturnCommon.v1.xsd](IncomeReturnCommon.v1.xsd)
+* Download all [XSDs](Bundle-IncTax-XSD.zip)
 	
 ## XSD Schemas	
 
@@ -63,6 +64,7 @@ to be submitted on amendment.
 | | Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `CFC ` | Attachment | Single |1 | 2013+ |
 | | Tax credit claim (IR526) | [ReturnREB.v1.xsd](ReturnREB.v1.xsd) | `REB` | | 1| |    
 
+| | |
 
 * [More infomation of filing a Tax Return](https://www.ird.govt.nz/activities/file-an-income-tax-return)
 	

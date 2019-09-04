@@ -4,7 +4,7 @@ _______________________________________
 NAME: 	IncomeReturnCommon.xsd
 VER:	1.0
 ISSUER:	Inland Revenue Department
-DATE:	07/07/2019
+DATE:	03/09/2019
 DESC:	This schema defines common fields for all income tax returns submitted through the Gateway Services.
 _______________________________________
 -->
@@ -131,7 +131,7 @@ _______________________________________
 	</xsd:complexType>
 	<xsd:complexType name="SchedularPaymentsType">
 		<xsd:sequence>
-			<xsd:element name="witholdingTaxDeducted" type="cmn:MoneyTypePositive"/>
+			<xsd:element name="withholdingTaxDeducted" type="cmn:MoneyTypePositive"/>
 			<xsd:element name="totalIncome" type="cmn:MoneyType"/>
 		</xsd:sequence>
 	</xsd:complexType>
