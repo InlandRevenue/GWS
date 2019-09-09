@@ -1,0 +1,66 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <add:Action xmlns:add="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/File</add:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:ReturnFileRequestMsg>
+                <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
+                    <r9:fileRequest xmlns:r9="urn:www.ird.govt.nz/GWS:types/ReturnIR9.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                        <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                            <cmn:softwareProviderData>
+                                <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+                                <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+                                <cmn:softwareRelease>1</cmn:softwareRelease>
+                            </cmn:softwareProviderData>
+                            <cmn:identifier IdentifierValueType="IRD">056632778</cmn:identifier>
+                            <cmn:accountType>INC</cmn:accountType>
+                            <rc:periodEndDate>2019-03-31</rc:periodEndDate>
+                            <rc:majorFormType>INC</rc:majorFormType>
+                            <rc:minorFormType>9</rc:minorFormType>
+                        </rc:fileHeader>
+                        <rc:fileBody>
+                            <rc:standardFields>
+                                <rc:isNilReturn>false</rc:isNilReturn>
+                                <rc:isFinalReturn>false</rc:isFinalReturn>
+                                <rc:amendmentRequest>
+                                    <rc:isAmended>false</rc:isAmended>
+                                    <rc:amendReason/>
+                                    <rc:amendDetails/>
+                                </rc:amendmentRequest>
+                            </rc:standardFields>
+                            <rc:formFields xsi:type="r9:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1">
+                                <r9:incorporatedBody>true</r9:incorporatedBody>
+                                <r9:typeOfClubOrSociety>F</r9:typeOfClubOrSociety>
+                                <r9:friendlyNetIncome>10000.00</r9:friendlyNetIncome>
+                                <r9:interest>0.00</r9:interest>
+                                <r9:dividends>0.00</r9:dividends>
+                                <r9:taxableMADistributions>0.00</r9:taxableMADistributions>
+                                <r9:otherIncome>0.00</r9:otherIncome>
+                                <r9:incomeTaxDeductionForNonProfit>2000.00</r9:incomeTaxDeductionForNonProfit>
+                                <r9:donationsDeduction>1000.00</r9:donationsDeduction>
+                                <r9:netIncome>9000.00</r9:netIncome>
+                                <r9:lossesBroughtForward>0.00</r9:lossesBroughtForward>
+                                <r9:totalTaxableIncome>9000.00</r9:totalTaxableIncome>
+                                <r9:taxOnTaxableIncome>2520.00</r9:taxOnTaxableIncome>
+                                <r9:overseasTaxPaid>1800.00</r9:overseasTaxPaid>
+                                <r9:imputationCreditsReceived>1000.00</r9:imputationCreditsReceived>
+                                <r9:imputationBroughtForward>0.00</r9:imputationBroughtForward>
+                                <r9:totalRWTWithheld>1000.00</r9:totalRWTWithheld>
+                                <r9:rlwtCredit>0.00</r9:rlwtCredit>
+                                <r9:otherTaxCredits>1000.00</r9:otherTaxCredits>
+                                <r9:residualIncomeTax>-2000.00</r9:residualIncomeTax>
+                                <r9:overpaymentProvisionalTax>1000.00</r9:overpaymentProvisionalTax>
+                                <r9:provisionalTax>
+                                    <ic:provisionalTaxOption>STD</ic:provisionalTaxOption>
+                                    <ic:provisionalTaxPayable>1000</ic:provisionalTaxPayable>
+                                    <ic:provisionalTaxStartDate>2019-02-01</ic:provisionalTaxStartDate>
+                                </r9:provisionalTax>
+                            </rc:formFields>
+                        </rc:fileBody>
+                    </r9:fileRequest>
+                </fil:FileRequestWrapper>
+            </ret:ReturnFileRequestMsg>
+        </ret:File>
+    </soap:Body>
+</soap:Envelope>

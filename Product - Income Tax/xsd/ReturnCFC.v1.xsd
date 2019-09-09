@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnCFC.xsd
+	VER:			1.0
+	ISSUER:			Inland Revenue Department
+	DATE:			29/06/2019
+	DESC:			This schema defines the elements and related data types required for the Income Tax CFC/FIF Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCFC.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnCFC.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnCFC.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="cfcDisclosures" type="CFCDisclosureListType" minOccurs="0"/>
+					<xsd:element name="fifDisclosures" type="FIFDisclosureListType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--RetrieveReturnRequestType is unique for Indvidual Income Tax-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End RetrieveReturnRequestType-->
+	<xsd:complexType name="CFCDisclosureListType">
+		<xsd:sequence>
+			<xsd:element name="cfcDisclosure" type="CFCDisclosureType" minOccurs="0" maxOccurs="1000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CFCDisclosureType">
+		<xsd:sequence>
+			<xsd:element name="cfcName" type="cmn:String255"/>
+			<xsd:element name="balanceDate" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="primaryActivity" type="PrimaryActivityType" minOccurs="0"/>
+			<xsd:element name="primaryActivityOther" type="cmn:String50" minOccurs="0"/>
+			<xsd:element name="jurisdiction" type="cmn:CountryType" minOccurs="0"/>
+			<xsd:element name="jurisdictionOther" type="cmn:String50" minOccurs="0"/>
+			<xsd:element name="currency" type="cmn:CurrencyType" minOccurs="0"/>
+			<xsd:element name="currencyOther" type="cmn:String50" minOccurs="0"/>
+			<xsd:element name="grossRevenue" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="royaltyIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="profitBeforeTax" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="totalAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="australianCFC" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="activeCFC" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="employees" type="cmn:QuantityTypePositive" minOccurs="0"/>
+			<xsd:element name="earnings" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="totalAssetsLessFinancialAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="incomeInterest" type="cmn:PercentageType" minOccurs="0"/>
+			<xsd:element name="attributedIncome" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="incomeAfterNetLoss" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="taxCreditsEarnedInCurrentYear" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="taxCreditsUsedInCurrentYear" type="cmn:MoneyTypePositive" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FIFDisclosureListType">
+		<xsd:sequence>
+			<xsd:element name="fifDisclosure" type="FIFDisclosureType" minOccurs="0" maxOccurs="1000"/>
+			<xsd:element name="fifDisclosureCalculatingMethods" type="FIFDisclosureCalculationType" minOccurs="0" maxOccurs="1000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FIFDisclosureType">
+		<xsd:sequence>
+			<xsd:element name="fifName" type="cmn:String255"/>
+			<xsd:element name="balanceDate" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="primaryActivity" type="PrimaryActivityType" minOccurs="0"/>
+			<xsd:element name="primaryActivityOther" type="cmn:String50" minOccurs="0"/>
+			<xsd:element name="jurisdiction" type="cmn:CountryType" minOccurs="0"/>
+			<xsd:element name="jurisdictionOther" type="cmn:String50" minOccurs="0"/>
+			<xsd:element name="currency" type="cmn:CurrencyType" minOccurs="0"/>
+			<xsd:element name="currencyOther" type="cmn:String50" minOccurs="0"/>
+			<xsd:element name="sectionEX35AustralianExemption" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="activeBusinessTest" type="xsd:boolean" minOccurs="0"/>
+			<xsd:element name="incomeInterest" type="cmn:PercentageType" minOccurs="0"/>
+			<xsd:element name="attributedIncome" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="incomeAfterNetLoss" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="taxCreditsEarnedInCurrentYear" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="taxCreditsUsedInCurrentYear" type="cmn:MoneyTypePositive" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FIFDisclosureCalculationType">
+		<xsd:sequence>
+			<xsd:element name="calculationMethod" type="CalculationMethodType"/>
+			<xsd:element name="methodFIFName" type="cmn:String255" minOccurs="0"/>
+			<xsd:element name="stockExchangeCode" type="cmn:String50" minOccurs="0"/>
+			<xsd:element name="country" type="cmn:CountryType"/>
+			<xsd:element name="methodMarketValue" type="cmn:MoneyTypePositive"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="CalculationMethodType">
+		<xsd:annotation>
+			<xsd:documentation>
+        COST
+        CV
+        DRR
+        FDR
+      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[A-Z]{0,6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="PrimaryActivityType">
+		<xsd:annotation>
+			<xsd:documentation>
+        DISTRIBUTOR: Wholesale Distributor
+        FINANCIER: Financier
+        HEADOFFICE: Head Office / Regional Head Office
+        INSURER: Insurer
+        INTANGIBLE: Intangible Property Owner
+        INVESTOR: Investor
+        MANUFACTURER: Manufacturer
+        PROVIDER: Service Provider
+        PURAGENT: Purchasing Agent
+        RESEARCH: Research and Development Provider
+        RETAIL: Retail Distributor
+        RISK: Limited Risk Distributor
+        SELLAGENT: Selling Agent
+        TOLL: Toll Manufacturer
+        OTHER: Other
+      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[A-Z]{0,12}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

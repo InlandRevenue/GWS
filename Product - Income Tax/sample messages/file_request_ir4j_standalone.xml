@@ -1,0 +1,64 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <add:Action xmlns:add="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/File</add:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:ReturnFileRequestMsg>
+                <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
+                    <r4J:fileRequest xmlns:r4J="urn:www.ird.govt.nz/GWS:types/ReturnIR4J.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                        <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                            <cmn:softwareProviderData>
+                                <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+                                <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+                                <cmn:softwareRelease>1</cmn:softwareRelease>
+                            </cmn:softwareProviderData>
+                            <cmn:identifier IdentifierValueType="IRD">078445386</cmn:identifier>
+                            <cmn:accountType>INC</cmn:accountType>
+                            <rc:periodEndDate>2018-03-31</rc:periodEndDate>
+                            <rc:majorFormType>INC</rc:majorFormType>
+                            <rc:minorFormType>4J</rc:minorFormType>
+                        </rc:fileHeader>
+                        <rc:fileBody>
+                            <rc:standardFields>
+                                <rc:isNilReturn>false</rc:isNilReturn>
+                                <rc:isFinalReturn>false</rc:isFinalReturn>
+                                <rc:amendmentRequest>
+                                    <rc:isAmended>false</rc:isAmended>
+                                    <rc:amendReason/>
+                                    <rc:amendDetails/>
+                                </rc:amendmentRequest>
+                            </rc:standardFields>
+                            <rc:formFields xsi:type="r4J:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1">
+                                <r4J:openingBalance>0.00</r4J:openingBalance>
+                                <r4J:incomeTaxPaid>1120.00</r4J:incomeTaxPaid>
+                                <r4J:totalFDPPaid>0.00</r4J:totalFDPPaid>
+                                <r4J:totalRWTOnInterest>1140.00</r4J:totalRWTOnInterest>
+                                <r4J:imputationAndFDPCredits>1150.00</r4J:imputationAndFDPCredits>
+                                <r4J:otherCredits>1160.00</r4J:otherCredits>
+                                <r4J:incomeTaxRefunded>1120.00</r4J:incomeTaxRefunded>
+                                <r4J:totalFDPRefunds>0.00</r4J:totalFDPRefunds>
+                                <r4J:imputationCreditsAttached>1140.00</r4J:imputationCreditsAttached>
+                                <r4J:otherDebits>1294.93</r4J:otherDebits>
+                                <r4J:closingBalance>-1015.07</r4J:closingBalance>
+                                <r4J:adjustments>0.00</r4J:adjustments>
+                                <r4J:furtherIncomeTaxPayable>0.00</r4J:furtherIncomeTaxPayable>
+                                <r4J:fdpReturn>
+                                    <r4J:fdpOpeningBalance>0.00</r4J:fdpOpeningBalance>
+                                    <r4J:fdpPaid>300.00</r4J:fdpPaid>
+                                    <r4J:fdpCreditsAttachedReceived>200.00</r4J:fdpCreditsAttachedReceived>
+                                    <r4J:fdpCreditsAttachedPaid>300.00</r4J:fdpCreditsAttachedPaid>
+                                    <r4J:fdpRefunded>200.00</r4J:fdpRefunded>
+                                    <r4J:fdpOtherDebits>0.00</r4J:fdpOtherDebits>
+                                    <r4J:fdpTotalBalance>0.00</r4J:fdpTotalBalance>
+                                    <r4J:fdpTransfer>0.00</r4J:fdpTransfer>
+                                    <r4J:fdpClosingBalance>0.00</r4J:fdpClosingBalance>
+                                </r4J:fdpReturn>
+                            </rc:formFields>
+                        </rc:fileBody>
+                    </r4J:fileRequest>
+                </fil:FileRequestWrapper>
+            </ret:ReturnFileRequestMsg>
+        </ret:File>
+    </soap:Body>
+</soap:Envelope>
