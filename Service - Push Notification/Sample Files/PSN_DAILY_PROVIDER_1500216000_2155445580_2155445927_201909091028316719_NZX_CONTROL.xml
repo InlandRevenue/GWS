@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<FileTransfers xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" TotalReturnCount="24" TotalPeriodCount="12">
+  <FileTransfer FileName="PSN_DAILY_PROVIDER_1500216000_2155445580_2155445927_201909091028315313_NZX.zip" ReturnCount="24" PeriodCount="12">
+    <ChildFile FileName="PSN_DAILY_AGENT_IRD_132349932_2155445580_2155445927_201909091028315782_NZX.xml" ReturnCount="12" PeriodCount="6" />
+    <ChildFile FileName="PSN_DAILY_CUSTOMER_2155445580_2155445927_201909091028315782_NZX.xml" ReturnCount="12" PeriodCount="6" />
+  </FileTransfer>
+</FileTransfers>
