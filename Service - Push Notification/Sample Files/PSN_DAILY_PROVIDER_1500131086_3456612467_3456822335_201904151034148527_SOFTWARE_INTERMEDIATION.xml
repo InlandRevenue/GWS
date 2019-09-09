@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<SoftwareIntermediationSummary xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" RetrievedDate="2019-04-15T10:33:45.227">
+    <CustomerLink ID="011357709" IDType="IRD" AccountType="INC" />
+    <AgentLink ID="132271782" IDType="IRD" />
+</SoftwareIntermediationSummary> 
