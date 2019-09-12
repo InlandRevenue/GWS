@@ -40,6 +40,7 @@
 	- Request
 		- [Submission Key Method](sample%20messages/ile_Request_NRT_NRINT_amendment_with_submission_key.xml) (NRINT)
 	    - [Submission Key Reverse Replace](sample%20messages/File_Request_NRT_NRINT_amendment_ReverseReplace.xml)
+    - Response		
 		- [NRT positive response sample](sample%20messages/File_Response_Generic.xml)
 	
 - RetrieveReturn
