@@ -24,19 +24,6 @@
 - Identity and Access Services
 	- Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)
 
-## Environment Information:
-
-- Mock Environment Information
-	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)
-	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
-
-- Test Environment Information
-	- [Test scenarios report template and mindmap](../Test%20Details%20-%20IIR/README.md#test-environment-information)
-	- [Test URL Endpoints](../Test%20Details%20-%20IIR/README.md#test-environment-information)
-
-- Production Environment Information
-	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)
-	
 ## Message Samples:
 -----------------
 
@@ -65,4 +52,18 @@
 		- [Response](sample%20messages/RetrieveStatus_Response_with_submission_key.xml) 
 	- Without Submission Key
 		- [Request](sample%20messages/RetrieveStatus_Request_without_submission_key.xml) 
-		- [Response](sample%20messages/RetrieveStatus_Response_without_submission_key.xml) 
+		- [Response](sample%20messages/RetrieveStatus_Response_without_submission_key.xml) 	
+	
+## Environment Information:
+
+- Mock Environment Information
+	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)
+	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
+
+- Test Environment Information
+	- [Test scenarios report template and mindmap](../Test%20Details%20-%20IIR/README.md#test-environment-information)
+	- [Test URL Endpoints](../Test%20Details%20-%20IIR/README.md#test-environment-information)
+
+- Production Environment Information
+	- [Production URL Endpoints](../Test%20Details%20-%20IIR/README.md#production-environment-information)
+	
