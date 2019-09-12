@@ -62,7 +62,7 @@
 - RetrieveStatus
 	- With Submission Key
 		- [Request](sample%20messages/RetrieveStatus_Request_with_submission_key.xml) 
-		- [Response](sample%20messages/NRTRetrieveStatusRequest_PeriodEndDate.xml) 
+		- [Response](sample%20messages/RetrieveStatus_Response_with_submission_key.xml) 
 	- Without Submission Key
 		- [Request](sample%20messages/RetrieveStatus_Request_without_submission_key.xml) 
 		- [Response](sample%20messages/RetrieveStatus_Response_without_submission_key.xml) 
