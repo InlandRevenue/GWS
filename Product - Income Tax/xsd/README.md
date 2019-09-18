@@ -60,7 +60,7 @@ to be submitted on amendment.
 | | Branch equivalent tax account return| [ReturnIR308.v1.xsd](ReturnIR308.v1.xsd)| `308` | Primary | Single |1 | 2013+ |
 | | Property sale information |[ReturnIR833.v1.xsd](ReturnIR833.v1.xsd)| `833` | Primary or attachment | Single |1 | 2016+ |
 | | Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `CFC ` | Attachment | Single |1 | 2013+ |
-| | Tax credit claim (IR526) | [ReturnREB.v1.xsd](ReturnREB.v1.xsd) | `REB` | | 1| |    
+| | Donation Tax credit claim (IR526) | [ReturnREB.v1.xsd](ReturnREB.v1.xsd) | `REB` | | 1| |    
 
 
 
