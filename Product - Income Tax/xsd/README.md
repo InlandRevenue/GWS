@@ -46,18 +46,18 @@ to be submitted on amendment.
 |Trust or estate | Estate or trust income tax return| [ReturnIR6.v1.xsd](ReturnIR6.v1.xsd)| `6` | Primary | Single |1 | 2013+ |
 | Partnerships and look-through companies | Partnership and LTCs income tax return| [ReturnIR7.v1.xsd](ReturnIR7.v1.xsd)| `7` | Primary | Single |1 | 2015+ |
 | Māori authority| Māori authorities income tax return |[ReturnIR8.v1.xsd](ReturnIR8.v1.xsd)| `8` | Primary | Single |1 | 2015+ |
-| Māori authority| Māori authorities credit account return |[ReturnIR8J.v1.xsd](ReturnIR8J.v1.xsd)| `8J` | Primary | Single |1 | 2015+ |
+| Māori authority| Māori authorities credit account return |[ReturnIR8J.v1.xsd](ReturnIR8J.v1.xsd)| `8J` | Primary or attachment | Single |1 | 2015+ |
 | Clubs and Societies | Clubs or societies income tax return| [ReturnIR9.v1.xsd](ReturnIR9.v1.xsd)| `9` | Primary | Single |1 | 2015+ |
 | Group investment fund | Superannuation funds income tax return |[ReturnIR44.v1.xsd](ReturnIR44.v1.xsd)| `44` | Primary | Single |1 | 2015+ |
-| Group investment fund| Group investment fund return |[ReturnIR44E.v1.xsd](ReturnIR44E.v1.xsd)| `44E` | Primary | Single |1 | 2013+ |
-| Individual| Farming income |[ReturnIR3F.v1.xsd](ReturnIR3F.v1.xsd)| `3F` | Primary | Single |1 | 2013+ |
-| Individual| Schedule of business income |[ReturnIR3B.v1.xsd](ReturnIR3B.v1.xsd)| `3B` | Primary | Single |1 | 2013+ |
-|Individual | Rental income schedule| [ReturnIR3R.v1.xsd](ReturnIR3R.v1.xsd)| `3R` | Primary | Multiple |1 | 2013+ |
-| | Sale or disposal of financial arrangements |[ReturnIR3K.v1.xsd](ReturnIR3K.v1.xsd)| `3K` | Primary | Multiple |1 | 2013+ |
-| Financial | Financial statements summary |[ReturnIR10.v1.xsd](ReturnIR10.v1.xsd)| `10` | Primary | Single |1 | 2013+ |
-| | Adjust your income |[ReturnIR215.v1.xsd](ReturnIR215.v1.xsd) | `215` | Primary | Single |1 | 2015+ |
-| | Schedule of beneficiary’s estate or trust income |[ReturnIR307.v1.xsd](ReturnIR307.v1.xsd)| `307` | Primary | Multiple |1 | 2013+ |
-| | Branch equivalent tax account return| [ReturnIR308.v1.xsd](ReturnIR308.v1.xsd)| `308` | Primary | Single |1 | 2013+ |
+| Group investment fund| Group investment fund return |[ReturnIR44E.v1.xsd](ReturnIR44E.v1.xsd)| `44E` | Attachment | Single |1 | 2013+ |
+| Individual| Farming income |[ReturnIR3F.v1.xsd](ReturnIR3F.v1.xsd)| `3F` | Attachment | Single |1 | 2013+ |
+| Individual| Schedule of business income |[ReturnIR3B.v1.xsd](ReturnIR3B.v1.xsd)| `3B` | Attachment | Single |1 | 2013+ |
+|Individual | Rental income schedule| [ReturnIR3R.v1.xsd](ReturnIR3R.v1.xsd)| `3R` | Attachment | Multiple |1 | 2013+ |
+| | Sale or disposal of financial arrangements |[ReturnIR3K.v1.xsd](ReturnIR3K.v1.xsd)| `3K` | Attachment | Multiple |1 | 2013+ |
+| Financial | Financial statements summary |[ReturnIR10.v1.xsd](ReturnIR10.v1.xsd)| `10` | Attachment | Single |1 | 2013+ |
+| | Adjust your income |[ReturnIR215.v1.xsd](ReturnIR215.v1.xsd) | `215` | Primary or attachment | Single |1 | 2015+ |
+| | Schedule of beneficiary’s estate or trust income |[ReturnIR307.v1.xsd](ReturnIR307.v1.xsd)| `307` | Attachment | Multiple |1 | 2013+ |
+| | Branch equivalent tax account return| [ReturnIR308.v1.xsd](ReturnIR308.v1.xsd)| `308` | Attachment | Single |1 | 2013+ |
 | | Property sale information |[ReturnIR833.v1.xsd](ReturnIR833.v1.xsd)| `833` | Primary or attachment | Single |1 | 2016+ |
 | | Controlled foreign investment |[ReturnCFC.v1.xsd](ReturnCFC.v1.xsd)| `CFC ` | Attachment | Single |1 | 2013+ |
 | | Donation Tax credit claim (IR526) | [ReturnREB.v1.xsd](ReturnREB.v1.xsd) | `REB` | | 1| |    
