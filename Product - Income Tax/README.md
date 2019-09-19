@@ -34,7 +34,7 @@
 
 * Service: Identity and Access – view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 * Service: Intermediation – view [Schemas, WSDLs, and build pack](../Service%20-%20Intermediation/)
-* Service: Return Status Push Notification - view [Schemas and build pack](../Service%20-%20Push Notification/)
+* Service: Return Status Push Notification - view [Schemas and build pack](../Service%20-%20Push%20Notification/)
 
 ## Income profile types and related forms:  
 
@@ -56,9 +56,25 @@
 | Income from another partnership | Partnership and LTCs income tax return - **IR7**|
 | Excess imputation credits brought forward | Clubs or societies income tax return - **IR9**|
 
-## Income Tax Form Types:
+## Income Tax Form Types and supported forms:
 
+* Individual income tax return - IR3
+	* Financial statements summary - IR10
+	* 833
+	* 3F
+	* 3B
+	* 3R
+	* 3K
+	* 307
+	* 308
+	* 215
+	* CFC
 * Companies income tax return - IR4
+	* IR10 
+	* 833
+	* 44E
+	* 4J
+	* CFC
 * Annual imputation return - IR4J 
 * Estate or trust income tax return - IR6 
 * Partnership and LTCs income tax return - IR7
@@ -73,11 +89,11 @@
 * Sale or disposal of financial arrangements - IR3K 
 * Financial statements summary - IR10
 * Adjust your income - IR215
-* Schedule of beneficiary’s estate or trust 
-income - IR307
+* Schedule of beneficiary’s estate or trust income - IR307
 * Branch equivalent tax account return - IR308 
 * Controlled foreign investment - CFC
 * Individual income tax return - PTS  
+
 > Note: PTS Individual income tax return RetrieveReturn and RetrieveStatus for income years prior to 2019 
 
 ## Sample request and responses
