@@ -22,6 +22,9 @@
 
 - Returns Service 
 	- Download and view the [Return Service Income Tax build pack](Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20INC.pdf) to view data definitions of each operation and response status code definitions
+	
+- Donation Tax Credit operation
+* [Donation Tax Credit operation](DonationTaxCredit.md) 
 
 ## Environment Information: 
 - [Mock Environment Information - Emulated Services, Mindmap and Test data](#mock-environment-information)
@@ -41,7 +44,7 @@
 | Income profile type | Forms |
 | --- | --- |
 | NZ income with tax deducted | Individual income tax return - **IR3** _Prepop_ <br/> Non-resident income tax return - **IR3NR** |
-| Schedular Payments  | Individual income tax return - **IR3** _Prepop_ <br/> Companies income tax return - **IR4** <br/> Partnership and LTCs income tax return - **IR7**|
+| Schedula Payments  | Individual income tax return - **IR3** _Prepop_ <br/> Companies income tax return - **IR4** <br/> Partnership and LTCs income tax return - **IR7**|
 | Investment income  | Individual income tax return - **IR3** _Prepop_ <br/> Non-resident income tax return - **IR3NR** |
 | Other expenses | Individual income tax return - **IR3** _Prepop_ |
 | Net losses brought forward |   Individual income tax return - **IR3** _Prepop_ <br/> Non-resident income tax return - **IR3NR**|
@@ -56,32 +59,61 @@
 | Income from another partnership | Partnership and LTCs income tax return - **IR7**|
 | Excess imputation credits brought forward | Clubs or societies income tax return - **IR9**|
 
-## Income Tax Form Types and supported forms:
+## Primary Income Tax Form Types:
 
 * Individual income tax return - IR3
 	* Financial statements summary - IR10
-	* 833
-	* 3F
-	* 3B
-	* 3R
-	* 3K
-	* 307
-	* 308
-	* 215
-	* CFC
+	* Property sale information - IR833
+	* Farming income - IR3F
+	* Schedule of business income - IR3B
+	* Rental income schedule - IR3R
+	* Sale or disposal of financial arrangements - IR3K
+	* Schedule of beneficiary’s estate or trust income - IR307
+	* Branch equivalent tax account return - IR308
+	* Adjust your income - IR215
+	* Controlled foreign investment - CFC
 * Companies income tax return - IR4
-	* IR10 
-	* 833
-	* 44E
-	* 4J
-	* CFC
+	* Financial statements summary - IR10 
+	* Property sale information - IR833
+	* Group investment fund return - IR44E
+	* Annual imputation return - IR4J
+	* Controlled foreign investment - CFC
 * Annual imputation return - IR4J 
 * Estate or trust income tax return - IR6 
+	* Financial statements summary -IR10
+	* Property sale information - IR833
+	* Farming income - IR3F
+	* Schedule of business income - IR3B
+	* Rental income schedule - IR3R
+	* Group investment fund return - IR44E
+	* Branch equivalent tax account return -IR308
+	* Controlled foreign investment - CFC
 * Partnership and LTCs income tax return - IR7
+	* Financial statements summary- IR10
+	* Property sale information - IR833
+	* Schedule of business income - IR3B
+	* Rental income schedule - IR3R
+	* Controlled foreign investment - CFC
 * Māori authorities income tax return - IR8
+	* Financial statements summary - IR10
+	* Property sale information - IR833
+	* Schedule of business income - IR3B
+	* Rental income schedule - IR3R
+	* Property sale information - IR8J
+	* Controlled foreign investment - CFC
 * Māori authorities credit account return - IR8J
+
 * Clubs or societies income tax return - IR9
+	* Financial statements summary - IR10
+	* Property sale information - IR833
+	* Controlled foreign investment - CFC
 * Superannuation funds income tax return - IR44
+	* Financial statements summary - IR10
+	* Property sale information - IR833
+	* Controlled foreign investment - CFC
+	
+## Attachment income tax return:	
+* Annual imputation return - IR4J 
 * Group investment fund return - IR44E
 * Farming income - IR3F
 * Schedule of business income - IR3B
@@ -90,6 +122,7 @@
 * Financial statements summary - IR10
 * Adjust your income - IR215
 * Schedule of beneficiary’s estate or trust income - IR307
+* Property sale information - IR833
 * Branch equivalent tax account return - IR308 
 * Controlled foreign investment - CFC
 * Individual income tax return - PTS  
@@ -110,7 +143,6 @@
     - [IR8J File request](sample%20messages/file_request_ir8j_standalone.xml)
     - [IR9 File request](sample%20messages/file_request_ir9_standalone.xml)
     - [IR44 File request](sample%20messages/file_request_ir44_standalone.xml)
-    - [IR526 File request](sample%20messages/file_request_ir526_standalone.xml)
     - [File Response](sample%20messages/file_response.xml)
 - RetrieveReturn
     - [RetrieveReturn request](sample%20messages/retrievereturn_request.xml)
@@ -125,13 +157,9 @@
     - [IR8J RetrieveReturn response](sample%20messages/retrievereturn_response_ir8j.xml)
     - [IR9 RetrieveReturn response](sample%20messages/retrievereturn_response_ir9.xml)
     - [IR44 RetrieveReturn response](sample%20messages/retrievereturn_response_ir44.xml)
-    - [IR526 RetrieveReturn request](sample%20messages/retrievereturn_request_ir526.xml)
-    - [IR526 RetrieveReturn response](sample%20messages/retrievereturn_response_ir526.xml)
 - RetrieveReturn
     - [RetrieveStatus request](sample%20messages/retrievestatus_request.xml)
     - [RetrieveStatus response](sample%20messages/retrievestatus_response.xml)
-    - [IR526 RetrieveStatus request](sample%20messages/retrievestatus_request_ir526.xml)
-    - [IR526 RetrieveStatus response](sample%20messages/retrievestatus_response_ir526.xml)
 - Prepop
     - [Prepop request](sample%20messages/prepop_request.xml)
     - [Prepop response (Individual customer)](sample%20messages/prepop_response_individual.xml)
@@ -147,11 +175,11 @@
     - Landing page: https://mock-inc.ird.digitalpartner.services
     - Service endpoint: https://mock-inc.ird.digitalpartner.services/gateway/GWS/Returns/
 - Test Scenarios
-    - Income Tax Mock Scenarios Mindmap
+    - Income Tax Mock Scenarios Mind map
     [Mock Scenarios](images/income-tax-test-scenarios.png)
     ![Mock Scenarios](images/income-tax-test-scenarios.png) 
 - Test Data
-    - This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
+    - This table shows which scenarios (as per their numbers in the mind map) require specific data to trigger the expected responses.
     - Text in italics represents the name of the XML node in the request.
     
 <table>
