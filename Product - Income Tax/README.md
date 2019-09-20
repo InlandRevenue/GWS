@@ -23,8 +23,7 @@
 - Returns Service 
 	- Download and view the [Return Service Income Tax build pack](Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20INC.pdf) to view data definitions of each operation and response status code definitions
 	
-- Donation Tax Credit operation
-* [Donation Tax Credit operation](DonationTaxCredit.md) 
+* [IR526 Donation Tax Credit operation](DonationTaxCredit.md) 
 
 ## Environment Information: 
 - [Mock Environment Information - Emulated Services, Mindmap and Test data](#mock-environment-information)
