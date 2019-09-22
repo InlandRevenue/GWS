@@ -6,7 +6,8 @@
         <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
-                    <r526:fileRequest xmlns:r526="urn:www.ird.govt.nz/GWS:types/ReturnREB.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                    <r526:fileRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" 
+                        xmlns:r526="urn:www.ird.govt.nz/GWS:types/ReturnREB.v1">
                         <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
                             <cmn:softwareProviderData>
                                 <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
@@ -28,7 +29,9 @@
                                     <rc:amendDetails/>
                                 </rc:amendmentRequest>
                             </rc:standardFields>
-                            <rc:formFields xsi:type="r526:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1">
+                            <rc:formFields xsi:type="r526:FormFieldsType" 
+                                xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" 
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <r526:schoolKindergartenDonations>1000</r526:schoolKindergartenDonations>
                                 <r526:partnerSchoolKindergartenDonations>500</r526:partnerSchoolKindergartenDonations>
                                 <r526:religiousOrganisationDonations>1000.00</r526:religiousOrganisationDonations>

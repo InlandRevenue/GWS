@@ -6,7 +6,8 @@
         <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
-                    <r9:fileRequest xmlns:r9="urn:www.ird.govt.nz/GWS:types/ReturnIR9.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                    <r9:fileRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" 
+                        xmlns:r9="urn:www.ird.govt.nz/GWS:types/ReturnIR9.v1">
                         <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
                             <cmn:softwareProviderData>
                                 <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
@@ -29,7 +30,9 @@
                                     <rc:amendDetails/>
                                 </rc:amendmentRequest>
                             </rc:standardFields>
-                            <rc:formFields xsi:type="r9:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1">
+                            <rc:formFields xsi:type="r9:FormFieldsType" 
+                                xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" 
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <r9:incorporatedBody>true</r9:incorporatedBody>
                                 <r9:typeOfClubOrSociety>F</r9:typeOfClubOrSociety>
                                 <r9:friendlyNetIncome>10000.00</r9:friendlyNetIncome>

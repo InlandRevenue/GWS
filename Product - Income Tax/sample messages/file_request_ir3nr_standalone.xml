@@ -6,7 +6,8 @@
         <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
-                    <r3NR:fileRequest xmlns:r3NR="urn:www.ird.govt.nz/GWS:types/ReturnIR3NR.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                    <r3NR:fileRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" 
+                        xmlns:r3NR="urn:www.ird.govt.nz/GWS:types/ReturnIR3NR.v1">
                         <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
                             <cmn:softwareProviderData>
                                 <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
@@ -36,7 +37,9 @@
                                     <rc:transferAmount>100</rc:transferAmount>
                                 </rc:creditTransferRequest>
                             </rc:standardFields>
-                            <rc:formFields xsi:type="r3NR:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1">
+                            <rc:formFields xsi:type="r3NR:FormFieldsType" 
+                                xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" 
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <r3NR:nzSuperIndicator>false</r3NR:nzSuperIndicator>
                                 <r3NR:totalInterestRWT>0</r3NR:totalInterestRWT>
                                 <r3NR:totalInterest>0</r3NR:totalInterest>
@@ -44,7 +47,7 @@
                                 <r3NR:totalDividendCredits>0</r3NR:totalDividendCredits>
                                 <r3NR:totalDividends>0</r3NR:totalDividends>
                                 <r3NR:nrwtOnTotalDividends>0</r3NR:nrwtOnTotalDividends>
-                                <r3NR:totalWitholdingTaxOnRoyalties>0</r3NR:totalWitholdingTaxOnRoyalties>
+                                <r3NR:totalWithholdingTaxOnRoyalties>0</r3NR:totalWithholdingTaxOnRoyalties>
                                 <r3NR:totalRoyalties>0</r3NR:totalRoyalties>
                                 <r3NR:nrwtOnTotalRoyalties>0</r3NR:nrwtOnTotalRoyalties>
                                 <r3NR:totalTaxCredits>0</r3NR:totalTaxCredits>

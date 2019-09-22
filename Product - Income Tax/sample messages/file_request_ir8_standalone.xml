@@ -6,7 +6,8 @@
         <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
-                    <r8:fileRequest xmlns:r8="urn:www.ird.govt.nz/GWS:types/ReturnIR8.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                    <r8:fileRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" 
+                        xmlns:r8="urn:www.ird.govt.nz/GWS:types/ReturnIR8.v1">
                         <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
                             <cmn:softwareProviderData>
                                 <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
@@ -29,7 +30,9 @@
                                     <rc:amendDetails/>
                                 </rc:amendmentRequest>
                             </rc:standardFields>
-                            <rc:formFields xsi:type="r8:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1">
+                            <rc:formFields xsi:type="r8:FormFieldsType" 
+                                xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" 
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <r8:grossInterest>1000.00</r8:grossInterest>
                                 <r8:grossDividends>1000.00</r8:grossDividends>
                                 <r8:maoriAuthorityDistributions>1000.00</r8:maoriAuthorityDistributions>

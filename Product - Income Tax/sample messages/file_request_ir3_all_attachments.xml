@@ -6,7 +6,8 @@
         <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
             <ret:ReturnFileRequestMsg>
                 <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
-                    <r3:fileRequest xmlns:r3="urn:www.ird.govt.nz/GWS:types/ReturnIR3.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                    <r3:fileRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" 
+                        xmlns:r3="urn:www.ird.govt.nz/GWS:types/ReturnIR3.v1">
                         <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
                             <cmn:softwareProviderData>
                                 <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
@@ -29,7 +30,8 @@
                                     <rc:amendDetails/>
                                 </rc:amendmentRequest>
                             </rc:standardFields>
-                            <rc:formFields xsi:type="r3:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1">
+                            <rc:formFields xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" 
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="r3:FormFieldsType">
                                 <r3:ir215Attached>false</r3:ir215Attached>
                                 <r3:totalFTCFromWINZ>0</r3:totalFTCFromWINZ>
                                 <r3:totalPAYEDeducted>2200.00</r3:totalPAYEDeducted>
@@ -119,7 +121,8 @@
                                 <r3:attachmentForms>
                                     <ic:attachment>
                                         <ic:formType>10</ic:formType>
-                                        <ic:formFields xsi:type="r10:FormFieldsType" xmlns:r10="urn:www.ird.govt.nz/GWS:types/ReturnIR10.v1">
+                                        <ic:formFields xsi:type="r10:FormFieldsType" 
+                                            xmlns:r10="urn:www.ird.govt.nz/GWS:types/ReturnIR10.v1">
                                             <r10:multipleActivity>true</r10:multipleActivity>
                                             <r10:grossSalesAndServiceIncome>1000.00</r10:grossSalesAndServiceIncome>
                                             <r10:openingStock>1000.00</r10:openingStock>
@@ -183,7 +186,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>833</ic:formType>
-                                        <ic:formFields xsi:type="r833:FormFieldsType" xmlns:r833="urn:www.ird.govt.nz/GWS:types/ReturnIR833.v1">
+                                        <ic:formFields xsi:type="r833:FormFieldsType" 
+                                            xmlns:r833="urn:www.ird.govt.nz/GWS:types/ReturnIR833.v1">
                                             <r833:brightLine>true</r833:brightLine>
                                             <r833:propertyTitle>PT2</r833:propertyTitle>
                                             <r833:propertyAddress1>PA1</r833:propertyAddress1>
@@ -204,7 +208,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>3F</ic:formType>
-                                        <ic:formFields xsi:type="r3F:FormFieldsType" xmlns:r3F="urn:www.ird.govt.nz/GWS:types/ReturnIR3F.v1">
+                                        <ic:formFields xsi:type="r3F:FormFieldsType" 
+                                            xmlns:r3F="urn:www.ird.govt.nz/GWS:types/ReturnIR3F.v1">
                                             <r3F:livestockSalesDetails>
                                                 <r3F:livestockIncome>
                                                     <r3F:type>CATTLE</r3F:type>
@@ -301,7 +306,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>3B</ic:formType>
-                                        <ic:formFields xsi:type="r3B:FormFieldsType" xmlns:r3B="urn:www.ird.govt.nz/GWS:types/ReturnIR3B.v1">
+                                        <ic:formFields xsi:type="r3B:FormFieldsType" 
+                                            xmlns:r3B="urn:www.ird.govt.nz/GWS:types/ReturnIR3B.v1">
                                             <r3B:salesAmount>1000.00</r3B:salesAmount>
                                             <r3B:openingStockAmount>1000.00</r3B:openingStockAmount>
                                             <r3B:purchasesAmount>1000.00</r3B:purchasesAmount>
@@ -336,7 +342,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>3R</ic:formType>
-                                        <ic:formFields xsi:type="r3R:FormFieldsType" xmlns:r3R="urn:www.ird.govt.nz/GWS:types/ReturnIR3R.v1">
+                                        <ic:formFields xsi:type="r3R:FormFieldsType" 
+                                            xmlns:r3R="urn:www.ird.govt.nz/GWS:types/ReturnIR3R.v1">
                                             <r3R:totalRents>1000.00</r3R:totalRents>
                                             <r3R:otherIncomeDescription>string</r3R:otherIncomeDescription>
                                             <r3R:otherIncomeAmount>1000.00</r3R:otherIncomeAmount>
@@ -387,7 +394,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>3K</ic:formType>
-                                        <ic:formFields xsi:type="r3K:FormFieldsType" xmlns:r3K="urn:www.ird.govt.nz/GWS:types/ReturnIR3K.v1">
+                                        <ic:formFields xsi:type="r3K:FormFieldsType" 
+                                            xmlns:r3K="urn:www.ird.govt.nz/GWS:types/ReturnIR3K.v1">
                                             <r3K:stockSaleOrRedemption>123123.00</r3K:stockSaleOrRedemption>
                                             <r3K:totalInterestReceived>0.00</r3K:totalInterestReceived>
                                             <r3K:originalCost>0.00</r3K:originalCost>
@@ -396,7 +404,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>307</ic:formType>
-                                        <ic:formFields xsi:type="r307:FormFieldsType" xmlns:r307="urn:www.ird.govt.nz/GWS:types/ReturnIR307.v1">
+                                        <ic:formFields xsi:type="r307:FormFieldsType" 
+                                            xmlns:r307="urn:www.ird.govt.nz/GWS:types/ReturnIR307.v1">
                                             <r307:trustName>string</r307:trustName>
                                             <r307:trustIrdNumber>111111111</r307:trustIrdNumber>
                                             <r307:estateTrustType>F</r307:estateTrustType>
@@ -414,7 +423,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>308</ic:formType>
-                                        <ic:formFields xsi:type="r308:FormFieldsType" xmlns:r308="urn:www.ird.govt.nz/GWS:types/ReturnIR308.v1">
+                                        <ic:formFields xsi:type="r308:FormFieldsType" 
+                                            xmlns:r308="urn:www.ird.govt.nz/GWS:types/ReturnIR308.v1">
                                             <r308:openingDate>2018-01-01</r308:openingDate>
                                             <r308:openingBalance>1000.00</r308:openingBalance>
                                             <r308:betaEntryDetails>
@@ -434,7 +444,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>215</ic:formType>
-                                        <ic:formFields xsi:type="r215:FormFieldsType" xmlns:r215="urn:www.ird.govt.nz/GWS:types/ReturnIR215.v1">
+                                        <ic:formFields xsi:type="r215:FormFieldsType" 
+                                            xmlns:r215="urn:www.ird.govt.nz/GWS:types/ReturnIR215.v1">
                                             <r215:childIncomeDetails>
                                                 <r215:childIncome>
                                                     <r215:childName>string</r215:childName>
@@ -485,7 +496,8 @@
                                     </ic:attachment>
                                     <ic:attachment>
                                         <ic:formType>CFC</ic:formType>
-                                        <ic:formFields xsi:type="rCFC:FormFieldsType" xmlns:rCFC="urn:www.ird.govt.nz/GWS:types/ReturnCFC.v1">
+                                        <ic:formFields xsi:type="rCFC:FormFieldsType" 
+                                            xmlns:rCFC="urn:www.ird.govt.nz/GWS:types/ReturnCFC.v1">
                                             <rCFC:cfcDisclosures>
                                                 <rCFC:cfcDisclosure>
                                                     <rCFC:cfcName>a</rCFC:cfcName>
