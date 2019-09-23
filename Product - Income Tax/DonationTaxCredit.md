@@ -5,14 +5,10 @@
 
 ## Key Documentation:
 
-* Business use cases
-	* [view on IR website](https://www.classic.ird.govt.nz/software-providers/docs/)
-
 * XSD Schemas 
-    * View and download the [Income Return Common xsd](xsd/IncomeReturnCommon.v1.xsd) from this [xsd](xsd/) directory	
-    * View the Income Tax XSD schema files from the [xsd](xsd/) directory
-    * View and download the [return service common xsd](../Service%20-%20Return/Latest/)
-    * View and download the [common xsd](../Schema%20-%20Common/)
+    * View the Tax Credit Donation [XSD schema](xsd/ReturREB.v1.xsd) directory
+    * View and download the [return service common XSD](../Service%20-%20Return/Latest/)
+    * View and download the [common XSD](../Schema%20-%20Common/)
 	
 * Returns Service 
 	* Download and view the [Return Service Income Tax build pack](Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20INC.pdf) to view data definitions of each operation and response status code definitions		
