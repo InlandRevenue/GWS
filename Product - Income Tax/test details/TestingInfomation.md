@@ -198,8 +198,8 @@
 -----------------
 
 - Mock URLs:
-	- Mock Emulated Services	-	https://mock-iir.ird.digitalpartner.services/ 
-	- Mock URL Endpoint			- 	https://mock-iir.ird.digitalpartner.services/gateway/GWS/Returns/
+	- Mock Emulated Services	-	https://mock-inc.ird.digitalpartner.services/ 
+	- Mock URL Endpoint			- 	https://mock-inc.ird.digitalpartner.services/gateway/GWS/Returns/
 
 - Returns Service Mappings - (default) port 443 of path "/gateway/GWS/Returns":
 	- /gateway/GWS/Returns?wsdl - WSDL is not available, returning HTTP 200 only.
@@ -208,17 +208,16 @@
 	- FileReturns 		-	https://services.ird.govt.nz/GWS/Returns/Return/File
 	- RetrieveReturns 	-	https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturn
 	- RetrieveStatus 	-	https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatus
+	- Prepop   	-	https://services.ird.govt.nz/GWS/Returns/Return/Prepop
+	- RetrieveFilingObligations   	-	https://services.ird.govt.nz/GWS/Returns/Return/RetrieveFilingObligations
 	 
 - Authentication: 
-	- Authentication is based on the outcome of OAuth token validation (using new OAuth emulator)
+	- Authentication is based on the outcome of OAuth token validation (using new [OAuth emulator](https://mock-oauth.ird.digitalpartner.services/))
 	- Incoming requests should include "Authorization" header with the OAuth token value
 	- In case of missing token, emulated service would respond with error statusCode 2
 
 - Schema Validations:
 	- In case of failure XML validation failure response (error code 21)
-
-- Account type value is then verified to asses it is valid III product request.
-	- if not, an invalid account type error is returned.
 
 - Then the service operation specific validations are carried out and returned with appropriate response (per mind map).
 - Unmatched requests will return an appropriate HTTP response status
@@ -227,7 +226,7 @@
 -----------------
 
 * Test Environment URL Endpoints
-	
+
 	* Cloud Gateway Service: `https://test3.services.ird.govt.nz:4046/gateway/gws/returns/`
 	* Native Desktop Gateway Service: `https://test3.services.ird.govt.nz/gateway2/gws/returns/`
 	* Cloud SOAP WSDL: `https://test3.services.ird.govt.nz:4046/gateway/gws/returns/?wsdl`

@@ -13,11 +13,6 @@
 * Returns Service 
 	* Download and view the [Return Service Income Tax build pack](Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20INC.pdf) to view data definitions of each operation and response status code definitions		
 
-* XSD Schemas 
-    * View the Income Tax XSD schema files from the [xsd](xsd/) directory
-    * View and download the [return service common v2 xsd](../Service%20-%20Return/Latest/)
-    * View and download the [common v2 xsd](../Schema%20-%20Common/)
-
 * [Sample request and responses](#Sample-request-and-responses)
 
 ---
