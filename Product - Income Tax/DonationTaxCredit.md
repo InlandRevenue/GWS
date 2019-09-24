@@ -20,14 +20,14 @@
 ## Sample request and responses
 
 - File
-    - [IR526 File request](sample%20messages/file_request_ir526_standalone.xml)
+    - [File request](sample%20messages/file_request_ir526_standalone.xml)
     - [File Response](sample%20messages/file_response.xml)
 - RetrieveReturn
-    - [IR526 RetrieveReturn request](sample%20messages/retrievereturn_request_ir526.xml)
-    - [IR526 RetrieveReturn response](sample%20messages/retrievereturn_response_ir526.xml) 
+    - [RetrieveReturn request](sample%20messages/retrievereturn_request_ir526.xml)
+    - [RetrieveReturn response](sample%20messages/retrievereturn_response_ir526.xml) 
 - RetrieveReturn
-    - [IR526 RetrieveStatus request](sample%20messages/retrievestatus_request_ir526.xml)
-    - [IR526 RetrieveStatus response](sample%20messages/retrievestatus_response_ir526.xml)
+    - [RetrieveStatus request](sample%20messages/retrievestatus_request_ir526.xml)
+    - [RetrieveStatus response](sample%20messages/retrievestatus_response_ir526.xml)
    
 ## Environment Information: 
 - [Mock Environment Information - Emulated Services, Mindmap and Test data](test%20details/TestingInfomation.md#mock-environment-information)
