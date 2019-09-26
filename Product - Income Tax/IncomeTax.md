@@ -45,73 +45,98 @@
 | Income from another partnership | Partnership and LTCs income tax return - **IR7**|
 | Excess imputation credits brought forward | Clubs or societies income tax return - **IR9**|
 
-## Primary Income Tax Form Types:
+## Primary income tax return: 
 
-* Individual income tax return - IR3
-	* Financial statements summary - IR10
-	* Property sale information - IR833
-	* Farming income - IR3F
-	* Schedule of business income - IR3B
-	* Rental income schedule - IR3R
-	* Sale or disposal of financial arrangements - IR3K
-	* Schedule of beneficiary’s estate or trust income - IR307
-	* Branch equivalent tax account return - IR308
-	* Adjust your income - IR215
-	* Controlled foreign investment - CFC
-* Companies income tax return - IR4
-	* Financial statements summary - IR10 
-	* Property sale information - IR833
-	* Group investment fund return - IR44E
-	* Annual imputation return - IR4J
-	* Controlled foreign investment - CFC
-* Annual imputation return - IR4J 
-* Estate or trust income tax return - IR6 
-	* Financial statements summary -IR10
-	* Property sale information - IR833
-	* Farming income - IR3F
-	* Schedule of business income - IR3B
-	* Rental income schedule - IR3R
-	* Group investment fund return - IR44E
-	* Branch equivalent tax account return -IR308
-	* Controlled foreign investment - CFC
-* Partnership and LTCs income tax return - IR7
-	* Financial statements summary- IR10
-	* Property sale information - IR833
-	* Schedule of business income - IR3B
-	* Rental income schedule - IR3R
-	* Controlled foreign investment - CFC
-* Māori authorities income tax return - IR8
-	* Financial statements summary - IR10
-	* Property sale information - IR833
-	* Schedule of business income - IR3B
-	* Rental income schedule - IR3R
-	* Property sale information - IR8J
-	* Controlled foreign investment - CFC
-* Māori authorities credit account return - IR8J
-
-* Clubs or societies income tax return - IR9
-	* Financial statements summary - IR10
-	* Property sale information - IR833
-	* Controlled foreign investment - CFC
-* Superannuation funds income tax return - IR44
-	* Financial statements summary - IR10
-	* Property sale information - IR833
+* IR3 - Resident Individual Income Tax Return
+	* IR10 - Financial statements summary 
+	* IR833 - Property sale information  
+	* IR3F - arming income 
+	* IR3B - Schedule of business income
+	* IR3R - Rental income schedule
+	* IR3K - Sale or disposal of financial arrangements
+	* IR307 - Schedule of beneficiary’s estate or trust income
+	* IR308 - Branch equivalent tax account return
+	* IR215 - Adjust your income 
 	* Controlled foreign investment - CFC
 	
+* IR3NR – Non-Resident Individual Income Tax Return
+	* IR10 - Financial statements summary 
+	* IR833 - Property sale information  
+	* IR3F - arming income 
+	* IR3B - Schedule of business income
+	* IR3R - Rental income schedule
+	* IR3K - Sale or disposal of financial arrangements
+	
+* IR4/S - Companies Income Tax Return  
+	* IR10 - Financial statements summary
+	* IR833 - Property sale information  
+	* IR44E - Group investment fund return 
+	* IR4J - Annual imputation return  
+	* CFC - Controlled foreign investment  
+
+* IR6 - Estate or Trust Income Tax Return
+	* IR10 - Financial statements summary  
+	* IR833 - Property sale information  
+	* IR3F - Farming income 
+	* IR3B - Schedule of business income 
+	* IR3R - Rental income schedule 
+	* IR44E - Group investment fund return 
+	* IR308 - Branch equivalent tax account return 
+	* CFC - Controlled foreign investment
+	
+* IR7 - Partnership and LTCs income tax return 
+	* IR10 - Financial statements summary
+	* IR833 - Property sale information 
+	* IR3F - Farming income 
+	* IR3B - Schedule of business income 
+	* IR3R - Rental income schedule
+	* IR44E - Group investment fund return
+	* CFC - Controlled foreign investment
+	
+* IR8 - Māori authorities income tax return 
+	* IR10 - Financial statements summary 
+	* IR833 - Property sale information  
+	* IR3B - Schedule of business income
+	* IR3R - Rental income schedule
+	* IR8J - Property sale information 
+	* CFC - Controlled foreign investment 
+	
+* IR8J - Māori authorities credit account return 
+	* IR10 - Financial statements summary  
+	* IR833 - Property sale information  
+	* IR3B - Schedule of business income 
+	* IR3R - Rental income schedule 
+	* IR8J - Property sale information  
+	* CFC - Controlled foreign investment 
+
+* IR9 - Clubs or societies income tax return 
+	* IR10 - Financial statements summary  
+	* IR833 - Property sale information  
+	* CFC - Controlled foreign investment 
+	
+* IR44 - Superannuation funds income tax return
+	* IR10 - Financial statements summary
+	* IR833 - Property sale information 
+	* CFC  - Controlled foreign investment
+	
+* IR215 - Adjust your income 
+	* Does not support attachments	
+	
 ## Attachment income tax return:	
-* Annual imputation return - IR4J 
-* Group investment fund return - IR44E
-* Farming income - IR3F
-* Schedule of business income - IR3B
-* Rental income schedule - IR3R
-* Sale or disposal of financial arrangements - IR3K 
-* Financial statements summary - IR10
-* Adjust your income - IR215
-* Schedule of beneficiary’s estate or trust income - IR307
-* Property sale information - IR833
-* Branch equivalent tax account return - IR308 
-* Controlled foreign investment - CFC
-* Individual income tax return - PTS  
+
+* IR3F - Farming income
+* IR3B - Schedule of business income
+* IR3R - Rental income schedule
+* IR3K - Sale or disposal of financial arrangements 
+* IR4J - Annual imputation return 
+* IR44E - Group investment fund return
+* IR10 - Financial statements summary 
+* IR215 - Adjust your income
+* IR307 - Schedule of beneficiary’s estate or trust income
+* IR833 - Property sale information
+* IR308 - Branch equivalent tax account return  
+* CFC - Controlled foreign investment  
+* PTS - Individual income tax return   
 
 > Note: PTS Individual income tax return RetrieveReturn and RetrieveStatus for income years prior to 2019 
 
