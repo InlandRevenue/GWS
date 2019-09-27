@@ -22,6 +22,17 @@ the evening of each business day.
 
 > NOTE: The real production and non-production the XML and ZIP files will be PGP encrypted.
 
+## Requirements: 
+
+* Software Providers needs to provide the following:
+	* IP Address and port number for a SFTP server
+	* SFTP Username and Password 
+	* SFTP remote directory 
+	* Public PGP key - used for payload encryption 
+	
+* The On-boarding Team will provide a 
+	* SSH Keys for SFTP
+
 ## Products using this service:
 * [Income Tax](../Product%20-%20Income%20Tax/)
 
