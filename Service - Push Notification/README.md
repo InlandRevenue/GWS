@@ -28,10 +28,10 @@ the evening of each business day.
 	* IP Address and port number for a SFTP server
 	* SFTP Username and Password 
 	* SFTP remote directory 
-	* Public PGP key - used for payload encryption 
+	* Public PGP key - used for payload encryption (See [openpgp.org](openpgp.org) for more information)
 	
 * The On-boarding Team will provide a 
-	* SSH Keys for SFTP
+	* SSH Keys for SFTP Public Key Authentication 
 
 ## Products using this service:
 * [Income Tax](../Product%20-%20Income%20Tax/)
