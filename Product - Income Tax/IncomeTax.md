@@ -17,33 +17,11 @@
 * Returns Service 
 	* Download and view the [Return Service Income Tax build pack](Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20INC.pdf) to view data definitions of each operation and response status code definitions	
 	
-* [Income profile types and related forms](#Income-profile-types-and-related-forms)
-
 * [Income Tax Form Types](#Income-Tax-Form-Types) 
 
 * [Sample request and responses](#Sample-request-and-responses)
 
 ---
-
-## Income profile types and related forms:  
-
-| Income profile type | Forms |
-| --- | --- |
-| NZ income with tax deducted | Individual income tax return - **IR3** _Prepop_ <br/> Non-resident income tax return - **IR3NR** |
-| Schedula Payments  | Individual income tax return - **IR3** _Prepop_ <br/> Companies income tax return - **IR4** <br/> Partnership and LTCs income tax return - **IR7**|
-| Investment income  | Individual income tax return - **IR3** _Prepop_ <br/> Non-resident income tax return - **IR3NR** |
-| Other expenses | Individual income tax return - **IR3** _Prepop_ |
-| Net losses brought forward |   Individual income tax return - **IR3** _Prepop_ <br/> Non-resident income tax return - **IR3NR**|
-| Excess imputation credits | Individual income tax return - **IR3** _Prepop_ |
-| NZ income with tax deducted  | Individual income tax return - **IR3** _Prepop_ |
-| NZ interest  | Companies income tax return - **IR4** <br/> Estate or trust income tax return - **IR6** <br/> Partnership and LTCs income tax return - **IR7** <br/> Māori authorities income tax return - **IR8** <br/> Clubs or societies income tax return - **IR9**| 
-| NZ dividends |Companies income tax return - **IR4**<br/>Estate or trust income tax return - **IR6**<br/>Māori authorities income tax return - **IR8**<br/> |
-| Income from partnership, estate or trust  |Companies income tax return - **IR4**<br/> Estate or trust income tax return - **IR6**|
-| Losses brought from previous years | Companies income tax return - **IR4** <br/> Estate or trust income tax return - **IR6** <br/> Māori authorities income tax return - **IR8** <br/> Clubs or societies income tax return - **IR9** |
-| PIE | Companies income tax return - **IR4** <br/> Partnership and LTCs income tax return - **IR7**|
-| Income from a look through company | Estate or trust income tax return - **IR6** <br/> Partnership and LTCs income tax return - **IR7**|
-| Income from another partnership | Partnership and LTCs income tax return - **IR7**|
-| Excess imputation credits brought forward | Clubs or societies income tax return - **IR9**|
 
 ## Primary income tax return: 
 
@@ -57,7 +35,7 @@
 	* IR307 - Schedule of beneficiary’s estate or trust income
 	* IR308 - Branch equivalent tax account return
 	* IR215 - Adjust your income 
-	* Controlled foreign investment - CFC
+	* CFC - Controlled foreign investment
 	
 * IR3NR – Non-Resident Individual Income Tax Return
 	* IR10 - Financial statements summary 
