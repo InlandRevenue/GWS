@@ -1,0 +1,25 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <a:Action xmlns:a="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatus</a:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:RetrieveStatus xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:ReturnStatusRequestMsg>
+                <ret1:RetrieveStatusRequestWrapper xmlns:ret1="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusRequest">
+                    <rc:retrieveFormInfoRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                        <cmn:softwareProviderData xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                            <cmn:softwareProvider>softwareProvider</cmn:softwareProvider>
+                            <cmn:softwarePlatform>softwarePlatform</cmn:softwarePlatform>
+                            <cmn:softwareRelease>v1</cmn:softwareRelease>
+                        </cmn:softwareProviderData>
+                        <cmn:identifier xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" IdentifierValueType="IRD">123774663</cmn:identifier>
+                        <cmn:accountType xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">NRT</cmn:accountType>
+                        <rc:periodEndDate>2020-04-30</rc:periodEndDate>
+                        <rc:majorFormType>NRT</rc:majorFormType>
+                        <rc:minorFormType>NRT</rc:minorFormType>
+                    </rc:retrieveFormInfoRequest>
+                </ret1:RetrieveStatusRequestWrapper>
+            </ret:ReturnStatusRequestMsg>
+        </ret:RetrieveStatus>
+    </soap:Body>
+</soap:Envelope>

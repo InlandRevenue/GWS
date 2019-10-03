@@ -1,0 +1,24 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/Prepop</wsa:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:Prepop xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:ReturnPrepopRequestMsg>
+                <prep:PrepopRequestWrapper xmlns:prep="https://services.ird.govt.nz/GWS/Returns/:types/PrepopRequest">
+                    <rc:retrieveFormInfoRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                        <cmn:softwareProviderData>
+                            <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+                            <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+                            <cmn:softwareRelease>1.0</cmn:softwareRelease>
+                        </cmn:softwareProviderData>
+                        <cmn:identifier IdentifierValueType="ACCIRD">132306907</cmn:identifier>
+                        <cmn:accountType>INC</cmn:accountType>
+                        <rc:periodEndDate>2019-03-31</rc:periodEndDate>
+                        <rc:majorFormType>INC</rc:majorFormType>
+                    </rc:retrieveFormInfoRequest>
+                </prep:PrepopRequestWrapper>
+            </ret:ReturnPrepopRequestMsg>
+        </ret:Prepop>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,58 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveReturnResponseWrapper>
+                            <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r8="urn:www.ird.govt.nz/GWS:types/ReturnIR8.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xsi:type="r8:RetrieveReturnResponseBodyType">
+                                    <rc:standardFields>
+                                        <rc:isNilReturn>false</rc:isNilReturn>
+                                    </rc:standardFields>
+                                    <r8:formFields>
+                                        <r8:submissionKey>1263943680</r8:submissionKey>
+                                        <r8:grossInterest>1000.00</r8:grossInterest>
+                                        <r8:grossDividends>1000.00</r8:grossDividends>
+                                        <r8:maoriAuthorityDistributions>1000.00</r8:maoriAuthorityDistributions>
+                                        <r8:netRentalIncome>1000.00</r8:netRentalIncome>
+                                        <r8:netTradingIncome>1000.00</r8:netTradingIncome>
+                                        <r8:otherIncome>1000.00</r8:otherIncome>
+                                        <r8:adjustmentsOutsideFinancialAccounts>1000.00</r8:adjustmentsOutsideFinancialAccounts>
+                                        <r8:donationDeductions>1000.00</r8:donationDeductions>
+                                        <r8:lossesBroughtForward>0.00</r8:lossesBroughtForward>
+                                        <r8:totalTaxableIncome>6000.00</r8:totalTaxableIncome>
+                                        <r8:taxOnTaxableIncome>1050.00</r8:taxOnTaxableIncome>
+                                        <r8:overseasTaxPaid>875.00</r8:overseasTaxPaid>
+                                        <r8:dividendImputationCredits>1000.00</r8:dividendImputationCredits>
+                                        <r8:totalRWTDeducted>1000.00</r8:totalRWTDeducted>
+                                        <r8:rlwtCredit>0.00</r8:rlwtCredit>
+                                        <r8:otherTaxCredits>1000.00</r8:otherTaxCredits>
+                                        <r8:residualIncomeTax>-2000.00</r8:residualIncomeTax>
+                                        <r8:overpaymentProvisionalTax>1000.00</r8:overpaymentProvisionalTax>
+                                        <r8:provisionalTax>
+                                            <ic:provisionalTaxOption>STD</ic:provisionalTaxOption>
+                                            <ic:provisionalTaxPayable>1000</ic:provisionalTaxPayable>
+                                            <ic:provisionalTaxStartDate>2019-03-01</ic:provisionalTaxStartDate>
+                                        </r8:provisionalTax>
+                                        <r8:disclosureOfForeignInterestRequired>true</r8:disclosureOfForeignInterestRequired>
+                                    </r8:formFields>
+                                </responseBody>
+                            </retrieveReturnResponse>
+                        </b:RetrieveReturnResponseWrapper>
+                    </RetrieveReturnResult>
+                </RetrieveReturnResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

@@ -1,0 +1,87 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveReturnResponseWrapper>
+                            <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r44="urn:www.ird.govt.nz/GWS:types/ReturnIR44.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xsi:type="r44:RetrieveReturnResponseBodyType">
+                                    <rc:standardFields>
+                                        <rc:isNilReturn>false</rc:isNilReturn>
+                                    </rc:standardFields>
+                                    <r44:formFields>
+                                        <r44:submissionKey>1263943680</r44:submissionKey>
+                                        <r44:financialMarketsAuthorityNumber>AS/3980</r44:financialMarketsAuthorityNumber>
+                                        <r44:fundBalanceDate>2019-03-31</r44:fundBalanceDate>
+                                        <r44:assetsIncludeNZLifeOrTransferred>false</r44:assetsIncludeNZLifeOrTransferred>
+                                        <r44:nzLifeOrTransfersTotalAssets>false</r44:nzLifeOrTransfersTotalAssets>
+                                        <r44:electionRequired>false</r44:electionRequired>
+                                        <r44:fundIncome>1000.00</r44:fundIncome>
+                                        <r44:deductionsFromOtherSchemes>
+                                            <ic:deduction>
+                                                <ic:name>Johnny Bravo</ic:name>
+                                                <ic:irdNumber>074407102</ic:irdNumber>
+                                                <ic:amount>1000.00</ic:amount>
+                                            </ic:deduction>
+                                        </r44:deductionsFromOtherSchemes>
+                                        <r44:totalDeductionsFromOtherSchemes>1000.00</r44:totalDeductionsFromOtherSchemes>
+                                        <r44:deductionsTreatedAsCapitalOnDisposal>0</r44:deductionsTreatedAsCapitalOnDisposal>
+                                        <r44:deductionsTreatedAsRevenueOnDisposal>0</r44:deductionsTreatedAsRevenueOnDisposal>
+                                        <r44:deductionsToOtherSchemes>
+                                            <ic:deduction>
+                                                <ic:name>Homer Simpson</ic:name>
+                                                <ic:irdNumber>081734402</ic:irdNumber>
+                                                <ic:amount>1000.00</ic:amount>
+                                            </ic:deduction>
+                                        </r44:deductionsToOtherSchemes>
+                                        <r44:totalDeductionsToOtherSchemes>1000</r44:totalDeductionsToOtherSchemes>
+                                        <r44:additionsTreatedAsCapitalOnDisposal>0</r44:additionsTreatedAsCapitalOnDisposal>
+                                        <r44:additionsTreatedAsRevenueOnDisposal>0</r44:additionsTreatedAsRevenueOnDisposal>
+                                        <r44:lossesBroughtForward>0</r44:lossesBroughtForward>
+                                        <r44:totalTaxableIncome>1000.00</r44:totalTaxableIncome>
+                                        <r44:taxOnTaxableIncome>280.00</r44:taxOnTaxableIncome>
+                                        <r44:trusteeDetails>
+                                            <ic:trustee>
+                                                <ic:fullName>BoJack Horseman</ic:fullName>
+                                                <ic:irdNumber>093612547</ic:irdNumber>
+                                            </ic:trustee>
+                                        </r44:trusteeDetails>
+                                        <r44:fifOrCFCDisclosureRequired>false</r44:fifOrCFCDisclosureRequired>
+                                        <r44:investmentsDisposedOfDuringYear>false</r44:investmentsDisposedOfDuringYear>
+                                        <r44:investmentsDisposedOfDuringYearAmount>1000.00</r44:investmentsDisposedOfDuringYearAmount>
+                                        <r44:gainsOrLossesTreatedAsNonTaxable>false</r44:gainsOrLossesTreatedAsNonTaxable>
+                                        <r44:gainsOrLossesTreatedAsNonTaxableReason>string</r44:gainsOrLossesTreatedAsNonTaxableReason>
+                                        <r44:preApril1988InvestmentsDisposedOf>false</r44:preApril1988InvestmentsDisposedOf>
+                                        <r44:investmentsTreatedAsTradingStock>false</r44:investmentsTreatedAsTradingStock>
+                                        <r44:overseasTaxCredit>1000.00</r44:overseasTaxCredit>
+                                        <r44:imputationCredits>1000.00</r44:imputationCredits>
+                                        <r44:rwtAndOtherTaxCredits>1000.00</r44:rwtAndOtherTaxCredits>
+                                        <r44:rlwtCredit>0</r44:rlwtCredit>
+                                        <r44:residualIncomeTax>-1000.00</r44:residualIncomeTax>
+                                        <r44:overpaymentProvisionalTax>1000.00</r44:overpaymentProvisionalTax>
+                                        <r44:provisionalTax>
+                                            <ic:provisionalTaxOption>STD</ic:provisionalTaxOption>
+                                            <ic:provisionalTaxPayable>1000</ic:provisionalTaxPayable>
+                                            <ic:provisionalTaxStartDate>2018-08-01</ic:provisionalTaxStartDate>
+                                        </r44:provisionalTax>
+                                    </r44:formFields>
+                                </responseBody>
+                            </retrieveReturnResponse>
+                        </b:RetrieveReturnResponseWrapper>
+                    </RetrieveReturnResult>
+                </RetrieveReturnResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>
