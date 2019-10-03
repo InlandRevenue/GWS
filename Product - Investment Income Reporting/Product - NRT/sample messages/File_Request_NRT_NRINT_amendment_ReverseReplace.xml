@@ -1,0 +1,64 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <a:Action xmlns:a="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/File</a:Action>
+    </soap:Header>
+    <soap:Body>
+        <r:File xmlns:r="https://services.ird.govt.nz/GWS/Returns/">
+            <r:ReturnFileRequestMsg>
+                <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
+                    <ret:fileRequest xmlns:ret="urn:www.ird.govt.nz/GWS:types/ReturnNRT.v1">
+                        <ret1:fileHeader xmlns:ret1="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                            <com:softwareProviderData xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                <com:softwareProvider>softwareProvider</com:softwareProvider>
+                                <com:softwarePlatform>softwarePlatform</com:softwarePlatform>
+                                <com:softwareRelease>v1</com:softwareRelease>
+                            </com:softwareProviderData>
+                            <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2" IdentifierValueType="IRD">123768973</com:identifier>
+                            <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">NRT</com:accountType>
+                            <ret1:periodEndDate>2020-03-31</ret1:periodEndDate>
+                            <ret1:majorFormType>NRT</ret1:majorFormType>
+                            <ret1:minorFormType>NRT</ret1:minorFormType>
+                        </ret1:fileHeader>
+                        <ret1:fileBody xmlns:ret1="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                            <ret1:standardFields>
+                                <ret1:isNilReturn>false</ret1:isNilReturn>
+                                <ret1:isFinalReturn>false</ret1:isFinalReturn>
+                                <ret1:amendmentRequest>
+                                    <ret1:isAmended>true</ret1:isAmended>
+                                    <ret1:amendReason>MATH</ret1:amendReason>
+                                    <ret1:amendDetails>An amendment from the NRT Test Harness</ret1:amendDetails>
+                                </ret1:amendmentRequest>
+                            </ret1:standardFields>
+                            <ret1:formFields xsi:type="ret:FormFieldsType" 
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <ret:isReverseReplace>true</ret:isReverseReplace>
+                                <ret:lineItems>
+                                    <ret:referenceId>11</ret:referenceId>
+                                    <ret:amendType>A</ret:amendType>
+                                    <ret:externalID>123</ret:externalID>
+                                    <ret:primaryIRD>123671791</ret:primaryIRD>
+                                    <ret:primaryDateOfBirth>1970-05-05</ret:primaryDateOfBirth>
+                                    <ret:primaryName>Rachel Lawrence</ret:primaryName>
+                                    <ret:primaryPhone>2323231321213</ret:primaryPhone>
+                                    <ret:primaryEmail>RachelLawrence@IIITest.com</ret:primaryEmail>
+                                    <ret:primaryCountry>NZ</ret:primaryCountry>
+                                    <ret:primaryAddress>test</ret:primaryAddress>
+                                    <ret:incomeInformation>
+                                        <ret1:incomeType>NRINT</ret1:incomeType>
+                                        <ret1:grossAmount>5005</ret1:grossAmount>
+                                        <ret1:deductedAmount>53</ret1:deductedAmount>
+                                        <ret1:rate>10.5</ret1:rate>
+                                        <ret:imputationCredits>18.78</ret:imputationCredits>
+                                        <ret:creditRatio>100.0</ret:creditRatio>
+                                        <ret:australianDividend>false</ret:australianDividend>
+                                        <ret:australianExchangeRate>24.23</ret:australianExchangeRate>
+                                    </ret:incomeInformation>
+                                </ret:lineItems>
+                            </ret1:formFields>
+                        </ret1:fileBody>
+                    </ret:fileRequest>
+                </fil:FileRequestWrapper>
+            </r:ReturnFileRequestMsg>
+        </r:File>
+    </soap:Body>
+</soap:Envelope>

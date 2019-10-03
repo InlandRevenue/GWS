@@ -15,9 +15,51 @@
 	
 - Returns Service - Investment Income Information 
 	- [Download the build pack](../Service%20-%20Return%20III/Latest/Gateway%20Services%20Build%20Pack%20-%20Return%20Service%20-%20III.pdf) to view data definitions of each operation and response status code definitions
+
+## Sample Message:
+
+* File
+	* Income Type DIVINT
+		* [Request](sample%20messages/RWT_File_Request_incomeType_DIVINT.xml)   
+		* [Response](sample%20messages/RWT_File_Response_incomeType_DIVINT.xml)
+	
+	* Multiple Income Information
+		* [Request](sample%20messages/RWT_File_Request_with_multiple_income_information.xml)
+		* [Response](sample%20messages/RWT_File_Response_with_multiple_income_information.xml)	
+		
+	* Multiple Joint Account Holders
+		* [Request](sample%20messages/RWT_File_Request_with_multiple_joint_account_holders.xml)
+		* [Response](sample%20messages/RWT_File_Response_with_multiple_joint_account_holders.xml)	
+	
+* File Amendment
+	* [File Amendment](sample%20messages/RWT_File_Request_amendment.xml)
+	
+	* Request Amendment by Reference Id
+		* [Request](sample%20messages/RWT_File_Request_amendment_by_referenceId.xml)
+		* [Response](sample%20messages/RWT_File_Response_amendment_by_referenceId.xml)
+		
+* RetrieveReturn
+	* Retrieve Return with submission 	
+		* [Request](sample%20messages/RWT_RetrieveReturn_Request_with_submission_key.xml)
+		* [Response](sample%20messages/RWT_RetrieveReturn_Response_with_submission_key.xml)
+	* Retrieve Return without submission 	
+		* [Request](sample%20messages/RWT_RetrieveReturn_Request_without_submission_key.xml)
+		* [Response](sample%20messages/RWT_RetrieveReturn_Response_without_submission_key.xml)
+		
+* ReturnSatus	
+	* With submission Key
+		* [Request](sample%20messages/RWT_ReturnSatus_Request_without_submission_key.xml)
+		* [Response](sample%20messages/RWT_ReturnSatus_Request_with_submission_key.xml)
+	* Without submission Key
+		* [Request](sample%20messages/RWT_ReturnSatus_Response_without_submission_key.xml)
+		* [Response](sample%20messages/RWT_ReturnSatus_Response_with_submission_key.xml)
+
+---
 	
 ## Environment Information:
 
+
+	
 - Mock Environment Information
 	- [Mindmap and test data](../Test%20Details%20-%20IIR/README.md#mock-environment-information)
 	- [Mock URL Endpoints](../Test%20Details%20-%20IIR/README.md#mock-environment)
