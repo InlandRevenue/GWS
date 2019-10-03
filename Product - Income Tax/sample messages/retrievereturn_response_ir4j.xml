@@ -1,0 +1,58 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveReturnResponseWrapper>
+                            <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r4J="urn:www.ird.govt.nz/GWS:types/ReturnIR4J.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xsi:type="r4J:RetrieveReturnResponseBodyType">
+                                    <rc:standardFields>
+                                        <rc:isNilReturn>false</rc:isNilReturn>
+                                    </rc:standardFields>
+                                    <r4J:formFields>
+                                        <r4J:submissionKey>1263943680</r4J:submissionKey>
+                                        <r4J:openingBalance>0.00</r4J:openingBalance>
+                                        <r4J:incomeTaxPaid>1120.00</r4J:incomeTaxPaid>
+                                        <r4J:totalFDPPaid>0.00</r4J:totalFDPPaid>
+                                        <r4J:totalRWTOnInterest>1140.00</r4J:totalRWTOnInterest>
+                                        <r4J:imputationAndFDPCredits>1150.00</r4J:imputationAndFDPCredits>
+                                        <r4J:otherCredits>1160.00</r4J:otherCredits>
+                                        <r4J:incomeTaxRefunded>1120.00</r4J:incomeTaxRefunded>
+                                        <r4J:totalFDPRefunds>0.00</r4J:totalFDPRefunds>
+                                        <r4J:imputationCreditsAttached>1140.00</r4J:imputationCreditsAttached>
+                                        <r4J:otherDebits>1294.93</r4J:otherDebits>
+                                        <r4J:closingBalance>-1015.07</r4J:closingBalance>
+                                        <r4J:adjustments>0.00</r4J:adjustments>
+                                        <r4J:furtherIncomeTaxPayable>0.00</r4J:furtherIncomeTaxPayable>
+                                        <r4J:fdpReturn>
+                                            <r4J:fdpOpeningBalance>0.00</r4J:fdpOpeningBalance>
+                                            <r4J:fdpPaid>300.00</r4J:fdpPaid>
+                                            <r4J:fdpCreditsAttachedReceived>200.00</r4J:fdpCreditsAttachedReceived>
+                                            <r4J:fdpCreditsAttachedPaid>300.00</r4J:fdpCreditsAttachedPaid>
+                                            <r4J:fdpRefunded>200.00</r4J:fdpRefunded>
+                                            <r4J:fdpOtherDebits>0.00</r4J:fdpOtherDebits>
+                                            <r4J:fdpTotalBalance>0.00</r4J:fdpTotalBalance>
+                                            <r4J:fdpTransfer>0.00</r4J:fdpTransfer>
+                                            <r4J:fdpClosingBalance>0.00</r4J:fdpClosingBalance>
+                                        </r4J:fdpReturn>
+                                    </r4J:formFields>
+                                </responseBody>
+                            </retrieveReturnResponse>
+                        </b:RetrieveReturnResponseWrapper>
+                    </RetrieveReturnResult>
+                </RetrieveReturnResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

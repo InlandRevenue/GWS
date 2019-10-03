@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnIR308.xsd
+	VER:			1.0
+	ISSUER:			Inland Revenue Department
+	DATE:			29/06/2019
+	DESC:			This schema defines the elements and related data types required for the Returns IR308 Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR308.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR308.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR308.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" schemaLocation="./IncomeReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains income tax return common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="openingDate" type="cmn:DateType" minOccurs="0"/>
+					<xsd:element name="openingBalance" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="betaEntryDetails" type="BETAEntryListType" minOccurs="0"/>
+					<xsd:element name="closingDate" type="cmn:DateType" minOccurs="0"/>
+					<xsd:element name="closingBalance" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="balanceAt1April" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="year1April" type="cmn:YearType"/>
+					<xsd:element name="balanceAt31March" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="year31March" type="cmn:YearType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--Begin Specific File Data-->
+	<xsd:complexType name="BETAEntryListType">
+		<xsd:sequence>
+			<xsd:element name="betaEntry" type="BETAEntryType" minOccurs="0" maxOccurs="100000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="BETAEntryType">
+		<xsd:sequence>
+			<xsd:element name="dateOfEntry" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="sourceAndDescription" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="balance" type="cmn:MoneyType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Specific File Data-->
+	<!--Begin Specific retrieveReturn Data-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Specific retrieveReturn Data-->
+</xsd:schema>

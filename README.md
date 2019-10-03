@@ -17,6 +17,7 @@ Use this repository to access software development kits (SDKs) for API products 
 * Identity and Access Service - [view details](Service%20-%20Identity%20and%20Access/Latest)
 * Intermediation Service - [view details](Service%20-%20Intermediation)
 * Software Intermediation Service - [view details](Service%20-%20Software%20Intermediation)
+* Gateway Services Build Pack - Push Notifications - [view details](Push&Notifications)
 
 Download the latest or previous versions from this GitHub repository. You can also subscribe to updates using GitHub functionality.
 
