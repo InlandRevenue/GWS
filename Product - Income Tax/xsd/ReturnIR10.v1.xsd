@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnIR10.xsd
+	VER:			1
+	ISSUER:			Inland Revenue Department
+	DATE:			29/06/2019
+	DESC:			This schema defines the elements and related data types required for the Financial Statement Summary Income Tax 2019 Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR10.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR10.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR10.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="multipleActivity" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="grossSalesAndServiceIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="openingStock" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="purchases" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="closingStock" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="grossProfit" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="interestReceived" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="dividendsReceived" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="rentLeaseLicenceIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="badDebts" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="depreciationAndAmortisation" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="insurance" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="interestExpense" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="fees" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="rates" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="rentsLeasesLicences" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="repairsAndMaintenance" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="researchAndDevelopment" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="relatedPartyRemuneration" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="salariesAndWages" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="contractorPayments" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherExpenses" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalExpenses" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="exceptionalItems" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="netProfitLossBeforeTax" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="taxAdjustments" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="currentYearTaxableProfitLoss" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="accountsReceivable" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="cashAndDeposits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherCurrentAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="vehicles" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="plantAndMachinery" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="furnitureAndFittings" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="land" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="buildings" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherFixedAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="intangibles" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="sharesAndOwnershipInterests" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="termDeposits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherNonCurrentAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalAssets" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="provisions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="accountsPayable" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="currentLoans" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherCurrentLiabilities" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalCurrentLiabilities" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="nonCurrentLiabilities" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalLiabilities" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="ownersEquity" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="taxDepreciation" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="unTaxedRealisedGainsAndReceipts" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="additionsToFixedAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="disposalOfFixedAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="dividendsPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="drawings" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="currentAccountYearEndBalances" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="taxDeductibleLossOnDisposalOfFixedAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--RetrieveReturnRequestType is unique for Indvidual Income Tax-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End RetrieveReturnRequestType-->
+</xsd:schema>

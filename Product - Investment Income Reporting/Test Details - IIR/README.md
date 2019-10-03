@@ -15,9 +15,9 @@
 	- [Requests Matching Logic](#mock-environment-requests-matching-logic)
 	
 - Test Environment Information
-	- [Test scenarios report template and mindmap](#test-environment-information)
+	- [Test scenarios report template](#test-environment-information)
 	- [Test Environment URLs](#test-urls)
-
+	
 - Production Environment Information
 	- [Production Environment URLs](#production-environment-information)
 	
@@ -75,6 +75,7 @@ Mock Environment Information:
 | IIR-ES-021 |  Error Handling            | - |  NRT (incomeType: NRDIV) / DWT request <br/>with  missing payment date field | 
 
 
+
 			
 Mock Environment:
 -----------------
@@ -105,8 +106,15 @@ Mock Environment:
 - Then the service operation specific validations are carried out and returned with appropriate response (per mind map).
 - Unmatched requests will return an appropriate HTTP response status
 
-Test Environment Information:
------------------
+Test Environment Information:	
+-----------------  
+
+- Test Scenarios
+	- [Download AIL test scenarios report template](Investment%20Income%20Reporting%20-%20Tax%20Type%20-%20AIL%20-%20%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download DWT test scenarios report template](Investment%20Income%20Reporting%20-%20Tax%20Type%20-%20DWT%20-%20%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download IPS test scenarios report template](Investment%20Income%20Reporting%20-%20Tax%20Type%20-%20IPS%20-%20%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download NRT test scenarios report template](Investment%20Income%20Reporting%20-%20Tax%20Type%20-%20NRT%20-%20%20Test%20Scenarios%20Report%20Template.docx)
+	- [Download RWT test scenarios report template](Investment%20Income%20Reporting%20-%20Tax%20Type%20-%20RWT%20-%20%20Test%20Scenarios%20Report%20Template.docx)
 
 - Test URL Endpoint:
     - Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
@@ -115,6 +123,8 @@ Test Environment Information:
 - Test WSDL URL Endpoint:
 	- Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
     - Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/?wsdl
+	
+
 
 Production Environment Information:
 -----------------  
