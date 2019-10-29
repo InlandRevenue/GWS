@@ -19,5 +19,4 @@ The Notifications Service enables actionable event notifications to be retrieved
 
 * (Required) Service: Identity and Access - view [How to integrate, OAuth requests and responses message sample and build pack](../Service%20-%20Identity%20and%20Access/Latest/) 
 
->The included [Notifications.yaml](Notifications.yaml) file can be used along with an 
-OpenAPI editor such as [editor.swagger.io](https://editor.swagger.io) to view technical specifications for this operation and generate example client code. 
+>The included [Notifications.yaml](Notifications.yaml) file can be used along with an OpenAPI editor such as [editor.swagger.io](https://editor.swagger.io) to view technical specifications for this operation and generate example client code. 
