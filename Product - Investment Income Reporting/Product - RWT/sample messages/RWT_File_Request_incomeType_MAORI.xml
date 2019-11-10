@@ -15,7 +15,7 @@
                             </com:softwareProviderData>
                             <com:identifier xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2" IdentifierValueType="IRD">123768736</com:identifier>
                             <com:accountType xmlns:com="urn:www.ird.govt.nz/GWS:types/Common.v2">RWT</com:accountType>
-                            <ret1:periodEndDate>2019-04-30</ret1:periodEndDate>
+                            <ret1:periodEndDate>2019-09-30</ret1:periodEndDate>
                             <ret1:majorFormType>RWT</ret1:majorFormType>
                             <ret1:minorFormType>RWT</ret1:minorFormType>
                         </ret1:fileHeader>
@@ -24,16 +24,15 @@
                                 <ret1:isNilReturn>false</ret1:isNilReturn>
                                 <ret1:isFinalReturn>false</ret1:isFinalReturn>
                                 <ret1:amendmentRequest>
-                                    <ret1:isAmended>true</ret1:isAmended>
-                                    <ret1:amendReason>MATH</ret1:amendReason>
-                                    <ret1:amendDetails>Calculation error on RWT deducted</ret1:amendDetails>
+                                    <ret1:isAmended>false</ret1:isAmended>
+                                    <ret1:amendReason/>
+                                    <ret1:amendDetails/>
                                 </ret1:amendmentRequest>
                             </ret1:standardFields>
                             <ret1:formFields xsi:type="ret:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                                 <ret:isReverseReplace>false</ret:isReverseReplace>
                                 <ret:lineItems>
                                     <ret:referenceId>11</ret:referenceId>
-                                    <ret:amendType>A</ret:amendType>
                                     <ret:externalID>123</ret:externalID>
                                     <ret:primaryIRD>123671791</ret:primaryIRD>
                                     <ret:primaryDateOfBirth>1970-05-05</ret:primaryDateOfBirth>
@@ -44,12 +43,12 @@
                                     <ret:primaryAddress>test</ret:primaryAddress>
                                     <ret:incomeInformation>
                                         <ret1:incomeType>DIVINT</ret1:incomeType>
-                                        <ret1:grossAmount>5054.25</ret1:grossAmount>
-                                        <ret1:deductedAmount>1667.90</ret1:deductedAmount>
-                                        <ret1:rate>33.0</ret1:rate>
+                                        <ret1:grossAmount>1000.00</ret1:grossAmount>
+                                        <ret1:deductedAmount>0.00</ret1:deductedAmount>
+                                        <ret1:rate>17.5</ret1:rate>
                                         <ret:imputationCredits>0.00</ret:imputationCredits>
-                                        <ret:maoriAuthorityCredits>0.00</ret:maoriAuthorityCredits>
-                                        <ret:creditRatio>0.00</ret:creditRatio>
+                                        <ret:maoriAuthorityCredits>175.00</ret:maoriAuthorityCredits>
+                                        <ret:creditRatio>100.00</ret:creditRatio>
                                     </ret:incomeInformation>
                                 </ret:lineItems>
                             </ret1:formFields>
