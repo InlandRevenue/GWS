@@ -8,7 +8,7 @@ schemes:
   - http
 paths: 
   /list: 
-    post: 
+    post:
       tags: 
         - Notification service
       summary: Notification service
@@ -41,6 +41,15 @@ paths:
           description: ' '
           schema: 
             $ref: '#/definitions/list_POST_ResponseDefault'
+securityDefinitions:
+  Authorization:
+    type: apiKey
+    in: header
+    name: Authorization
+security:
+  - Authorization: []
+
+           
 definitions: 
   list_POST_Request: 
     type: object
