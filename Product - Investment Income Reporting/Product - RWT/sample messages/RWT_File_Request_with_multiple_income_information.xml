@@ -47,8 +47,6 @@
                                         <ret1:deductedAmount>1667.90</ret1:deductedAmount>
                                         <ret1:rate>33.0</ret1:rate>
                                         <ret:imputationCredits>0.00</ret:imputationCredits>
-                                        <ret:maoriAuthorityCredits>0.00</ret:maoriAuthorityCredits>
-                                        <ret:creditRatio>0.00</ret:creditRatio>
                                     </ret:incomeInformation>
                                     <ret:incomeInformation>
                                         <ret1:incomeType>DIVINT</ret1:incomeType>
@@ -56,8 +54,6 @@
                                         <ret1:deductedAmount>412.58</ret1:deductedAmount>
                                         <ret1:rate>33.0</ret1:rate>
                                         <ret:imputationCredits>0.00</ret:imputationCredits>
-                                        <ret:maoriAuthorityCredits>0.00</ret:maoriAuthorityCredits>
-                                        <ret:creditRatio>100.0</ret:creditRatio>
                                     </ret:incomeInformation>
                                 </ret:lineItems>
                             </ret1:formFields>

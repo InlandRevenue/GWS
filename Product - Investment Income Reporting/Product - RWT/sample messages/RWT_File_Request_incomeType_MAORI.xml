@@ -42,11 +42,10 @@
                                     <ret:primaryCountry>NZ</ret:primaryCountry>
                                     <ret:primaryAddress>test</ret:primaryAddress>
                                     <ret:incomeInformation>
-                                        <ret1:incomeType>DIVINT</ret1:incomeType>
+                                        <ret1:incomeType>MAORI</ret1:incomeType>
                                         <ret1:grossAmount>1000.00</ret1:grossAmount>
                                         <ret1:deductedAmount>0.00</ret1:deductedAmount>
                                         <ret1:rate>17.5</ret1:rate>
-                                        <ret:imputationCredits>0.00</ret:imputationCredits>
                                         <ret:maoriAuthorityCredits>175.00</ret:maoriAuthorityCredits>
                                         <ret:creditRatio>100.00</ret:creditRatio>
                                     </ret:incomeInformation>
