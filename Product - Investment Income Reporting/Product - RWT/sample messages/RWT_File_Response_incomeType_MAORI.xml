@@ -1,0 +1,23 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+    <s:Header>
+        <a:Action xmlns:a="http://www.w3.org/2005/08/addressing" s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/FileResponse</a:Action>
+    </s:Header>
+    <s:Body>
+        <FileResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+            <FileResult>
+                <b:FileResponseWrapper xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/FileResponse">
+                    <fileResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                            <statusCode>0</statusCode>
+                            <errorMessage/>
+                        </statusMessage>
+                        <responseBody>
+                            <gatewayId>0000 000+ SRJR Q</gatewayId>
+                            <submissionKey>486283372</submissionKey>
+                        </responseBody>
+                    </fileResponse>
+                </b:FileResponseWrapper>
+            </FileResult>
+        </FileResponse>
+    </s:Body>
+</s:Envelope>
