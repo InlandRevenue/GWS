@@ -33,32 +33,21 @@
                                 <ret:isReverseReplace>false</ret:isReverseReplace>
                                 <ret:lineItems>
                                     <ret:referenceId>11</ret:referenceId>
-                                    <ret:externalID>abc</ret:externalID>
-                                    <ret:primaryIRD>123769651</ret:primaryIRD>
-                                    <ret:primaryDateOfBirth>1973-06-07</ret:primaryDateOfBirth>
-                                    <ret:primaryName>Jehan Peterson</ret:primaryName>
+                                    <ret:externalID>123</ret:externalID>
+                                    <ret:primaryIRD>123671791</ret:primaryIRD>
+                                    <ret:primaryDateOfBirth>1970-05-05</ret:primaryDateOfBirth>
+                                    <ret:primaryName>Rachel Lawrence</ret:primaryName>
                                     <ret:primaryPhone>2323231321213</ret:primaryPhone>
-                                    <ret:primaryEmail>dsfd@IIItest.com</ret:primaryEmail>
+                                    <ret:primaryEmail>RachelLawrence@IIITest.com</ret:primaryEmail>
                                     <ret:primaryCountry>NZ</ret:primaryCountry>
-                                    <ret:primaryAddress>test address</ret:primaryAddress>
-                                    <ret:accountHolders>
-                                        <ret1:irdNumber>123769732</ret1:irdNumber>
-                                        <ret1:dateOfBirth>1987-08-07</ret1:dateOfBirth>
-                                        <ret1:name>Veronika Anderson</ret1:name>
-                                        <ret1:address>test address 1</ret1:address>
-                                    </ret:accountHolders>
-                                    <ret:accountHolders>
-                                        <ret1:irdNumber>123769708</ret1:irdNumber>
-                                        <ret1:dateOfBirth>1966-04-03</ret1:dateOfBirth>
-                                        <ret1:name>Steven Robinson</ret1:name>
-                                        <ret1:address>test address 2</ret1:address>
-                                    </ret:accountHolders>
+                                    <ret:primaryAddress>test</ret:primaryAddress>
                                     <ret:incomeInformation>
-                                        <ret1:incomeType>DIVINT</ret1:incomeType>
-                                        <ret1:grossAmount>5054.25</ret1:grossAmount>
-                                        <ret1:deductedAmount>1667.90</ret1:deductedAmount>
-                                        <ret1:rate>33.0</ret1:rate>
-                                        <ret:imputationCredits>0.00</ret:imputationCredits>
+                                        <ret1:incomeType>MAORI</ret1:incomeType>
+                                        <ret1:grossAmount>1000.00</ret1:grossAmount>
+                                        <ret1:deductedAmount>0.00</ret1:deductedAmount>
+                                        <ret1:rate>17.5</ret1:rate>
+                                        <ret:maoriAuthorityCredits>175.00</ret:maoriAuthorityCredits>
+                                        <ret:creditRatio>100.00</ret:creditRatio>
                                     </ret:incomeInformation>
                                 </ret:lineItems>
                             </ret1:formFields>

@@ -26,7 +26,7 @@
                                 <ret1:amendmentRequest>
                                     <ret1:isAmended>true</ret1:isAmended>
                                     <ret1:amendReason>MATH</ret1:amendReason>
-                                    <ret1:amendDetails>An amendment from the RWT Test Harness</ret1:amendDetails>
+                                    <ret1:amendDetails>Calculation error on RWT deducted</ret1:amendDetails>
                                 </ret1:amendmentRequest>
                             </ret1:standardFields>
                             <ret1:formFields xsi:type="ret:FormFieldsType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -43,12 +43,10 @@
                                     <ret:primaryAddress>test</ret:primaryAddress>
                                     <ret:incomeInformation>
                                         <ret1:incomeType>DIVINT</ret1:incomeType>
-                                        <ret1:grossAmount>5005</ret1:grossAmount>
-                                        <ret1:deductedAmount>53</ret1:deductedAmount>
-                                        <ret1:rate>10.5</ret1:rate>
-                                        <ret:imputationCredits>18.78</ret:imputationCredits>
-                                        <ret:maoriAuthorityCredits>20.22</ret:maoriAuthorityCredits>
-                                        <ret:creditRatio>100.0</ret:creditRatio>
+                                        <ret1:grossAmount>5054.25</ret1:grossAmount>
+                                        <ret1:deductedAmount>1667.90</ret1:deductedAmount>
+                                        <ret1:rate>33.0</ret1:rate>
+                                        <ret:imputationCredits>0.00</ret:imputationCredits>
                                     </ret:incomeInformation>
                                 </ret:lineItems>
                             </ret1:formFields>
