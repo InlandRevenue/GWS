@@ -101,16 +101,16 @@
 	- [Download test scenarios report template](Payday%20Filing%20–%20Employment%20Information%20-%20Test%20Report%20Template.docx)
 
 * Test URL Endpoints
-	- Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/
-	- Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/returns/
-	- Cloud SOAP WSDL: https://test3.services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
-	- Native Desktop SOAP WSDL: https://test3.services.ird.govt.nz/gateway2/gws/returns/?wsdl
+	- Cloud Gateway Service: https://test3.services.ird.govt.nz:4046/gateway/gws/employment/
+	- Native Desktop Gateway Service: https://test3.services.ird.govt.nz/gateway2/gws/employment/
+	- Cloud SOAP WSDL: https://test3.services.ird.govt.nz:4046/gateway/gws/employment/?wsdl
+	- Native Desktop SOAP WSDL: https://test3.services.ird.govt.nz/gateway2/gws/employment/?wsdl
             
 ## Production Environment Information:
 -----------------
 
 * Production URL Endpoints
-	- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/returns/
-	- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/returns/
-	- Cloud SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/returns/?wsdl
-	- Native Desktop SOAP WSDL https://services.ird.govt.nz/gateway2/gws/returns/?wsdl
+	- Cloud Gateway Service: https://services.ird.govt.nz:4046/gateway/gws/employment/
+	- Native Desktop Gateway Service: https://services.ird.govt.nz/gateway2/gws/employment/
+	- Cloud SOAP WSDL: https://services.ird.govt.nz:4046/gateway/gws/employment/?wsdl
+	- Native Desktop SOAP WSDL https://services.ird.govt.nz/gateway2/gws/employment/?wsdl
