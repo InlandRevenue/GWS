@@ -1,0 +1,244 @@
+swagger: '2.0'
+info: 
+  title: IncomeProfile
+  description: The Income Profile API provides a mechanism for external partners to retrieve income data reported to IR by employers.
+  version: ""
+host: localhost
+basePath: /WebServices/Gateway/IncomeProfile/
+schemes: 
+  - http
+paths: 
+  /list: 
+    post: 
+      tags: 
+        - Income Profile
+      summary: Income Profile
+      description: ""
+      operationId: listPOST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/list_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/list_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/list_POST_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/list_POST_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/list_POST_ResponseDefault'
+definitions: 
+  list_POST_Request: 
+    type: object
+    required: 
+      - IRD
+      - StartDate
+    properties: 
+      IRD: 
+        type: string
+        description: The customers IRD number. If it is an 8 digit IRD then it must be 0 padded. E.g. '12345678' should be '012345678'.
+        maxLength: 9
+        minLength: 9
+      StartDate: 
+        type: string
+        description: 'This is the date the payment was effective from. Must be in the format ''YYYY-MM-DD'', e.g. ''2019-03-31''.'
+        maxLength: 10
+        minLength: 10
+      EndDate: 
+        type: string
+        description: 'This is the date the payment was effective to. Must be in the format ''YYYY-MM-DD'', e.g. ''2019-03-31''.'
+        maxLength: 10
+        minLength: 10
+  list_POST_Response200: 
+    type: object
+    required: 
+      - IncomeProfile
+    properties: 
+      IncomeProfile: 
+        type: array
+        description: IncomeProfile Array
+        items: 
+          type: object
+          description: Income Profile Object
+          required: 
+            - IncomeRequired
+            - IncomeType
+            - IncomeSource
+            - Amount
+            - Deductions
+          properties: 
+            IncomeRequired: 
+              type: string
+              description: 'Date that the income was recognised. Must be in the format ''YYYY-MM-DD'', e.g. ''2019-03-31''.'
+              maxLength: 10
+              minLength: 10
+            IncomeType: 
+              type: string
+              description: '<p>Income Type, this is one of the following:
+
+    <ul>
+<li>ACC - Accident Compensation</li>
+<li>ACC2006 - Accident Compensation (2006)</li>
+<li>ACCATC - ACC Attendant care</li>
+<li>AIL - Approved issuer levy</li>
+<li>CAE - Casual Agricultural Employee</li>
+<li>DIVIDN - Dividends</li>
+<li>DIVINT - Dividends treated as interest</li>
+<li>EDW - Election Day Worker</li>
+<li>ESS - Employee Share Scheme</li>
+<li>EXCIMP - Excess Imputation Credits</li>
+<li>INCBEN - Income Tested Benefit</li>
+<li>LOSCAR - Loss carried forward</li>
+<li>LTCINC - LTC Income</li>
+<li>MAORI - Māori Authority</li>
+<li>NONBUS - Non-business expense</li>
+<li>NRDIV - Non-resident dividends</li>
+<li>NRINT - Non-resident interest</li>
+<li>NZINT - Interest</li>
+<li>PENSION - NZ Superannuation or Pension</li>
+<li>PIE - Certificates (PIE)</li>
+<li>PPL - Paid Parental Leave</li>
+<li>PTRINC - Partnership Income</li>
+<li>RLWT - RLWT Deducted</li>
+<li>ROYALT - Royalties</li>
+<li>SALWAGE - Salary / Wages</li>
+<li>SHREMP - Shareholder-Employee Salary</li>
+<li>SLS215 - Income Adjustment - SLS</li>
+<li>SLSALL - Student Allowance</li>
+<li>TRST - Estate / Trust Income</li>
+<li>WT - Schedular Payments</li>
+    </ul>
+</p>'
+              maxLength: 255
+            IncomeSource: 
+              type: string
+              description: 'Income source, an ID type and value; this 2-tuple identifies the employer or investment account from which the income has been earned.'
+              maxLength: 255
+            Amount: 
+              type: string
+              format: Currency
+              description: 'Income amount, this is the gross amount.'
+            Deductions: 
+              type: string
+              format: Currency
+              description: The amount that was deducted from the income amount.
+  list_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1010</td><td>Invalid authorisation</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>EV1200</td><td>The number of records retrieved exceeds the maximum limit.</td></tr><tr><td>EV2234</td><td>IR number failed check digit</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1010
+                - EV1100
+                - EV1200
+                - EV2234
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  list_POST_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  list_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1010</td><td>Invalid authorisation</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>EV1200</td><td>The number of records retrieved exceeds the maximum limit.</td></tr><tr><td>EV2234</td><td>IR number failed check digit</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1010
+                - EV1100
+                - EV1200
+                - EV2234
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
