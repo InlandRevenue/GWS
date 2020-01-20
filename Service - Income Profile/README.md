@@ -6,6 +6,9 @@
 
 The Income Profile API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
 
+>**NOTE:** The Income Profile Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 token.
+ 
+
 
 ## Key Documentation
 ---
@@ -22,6 +25,8 @@ The Income Profile API described in this build pack document provides a mechanis
 * Mindmap
     * [View Mock scenarios Mindmap](#mock-scenarios-mindmap)
 
+>**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
+        
 * Test data
     * [View test data for Mock service](#test-data-for-mock)
 
