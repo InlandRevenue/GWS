@@ -1,0 +1,39 @@
+{
+  "IncomeProfile": [
+    {
+      "IncomeRequired": "2013-07-31",
+      "IncomeType": "ACC",
+      "IncomeSource": "",
+      "Amount": "1409.66",
+      "Deductions": "232.95"
+    },
+    {
+      "IncomeRequired": "2017-03-31",
+      "IncomeType": "SHREMP",
+      "IncomeSource": "",
+      "Amount": "87284.53",
+      "Deductions": "0.00"
+    },
+    {
+      "IncomeRequired": "2018-03-31",
+      "IncomeType": "NZINT",
+      "IncomeSource": "027-083-307-INC005",
+      "Amount": "14000.00",
+      "Deductions": "0.00"
+    },
+    {
+      "IncomeRequired": "2018-03-31",
+      "IncomeType": "PIE",
+      "IncomeSource": "",
+      "Amount": "829.75",
+      "Deductions": "145.21"
+    },
+    {
+      "IncomeRequired": "2018-08-31",
+      "IncomeType": "SALWAGE",
+      "IncomeSource": "",
+      "Amount": "1770.00",
+      "Deductions": "307.51"
+    }
+  ]
+}
