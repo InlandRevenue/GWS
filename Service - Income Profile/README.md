@@ -55,11 +55,13 @@ The Income Profile API described in this build pack document provides a mechanis
 	    * [Positive response](sample%20messages/response_positive_response.json)
 	  
 	* Negative response - http 400
+	    * [EV1020 - Token not valid](sample%20messages/response_EV1020_token_is_not_valid.json)
+	    * [EV1021 - No token](sample%20messages/response_EV1021_no_token.json)
 	    * [EV1022 - Access is not permitted](sample%20messages/response_EV1022_access_is_not_permitted.json)
 	    * [EV1100 - Invalid input parameter](sample%20messages/response_EV1100_invalid_input_parameter.json)
 	    * [EV1200 - Exceeds the maximum limit](sample%20messages/response_EV1200_exceed_the_max_limit.json)
 	    * [EV2234 - IR number failed check digitd](sample%20messages/response_EV2234_IR_failed_check_digit.json)
-	    * [EV2235 - IR number not found](sample%20messages/response_EV2234_IR_failed_check_digit.json)
+	    * [EV2235 - IR number not found](sample%20messages/response_EV2235_IR_not_found.json)
 	    
 	* Negative response - http 416
 	    * Emulator body: "Requested Range Not Satisfiable"
