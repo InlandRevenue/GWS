@@ -1,12 +1,12 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-# Income Profile API
+# Income API
 ---
 
-The Income Profile API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
+The Income API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
 
->**NOTE:** The Income Profile Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 token.
+>**NOTE:** The Income API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 token.
  
 
 
@@ -14,10 +14,10 @@ The Income Profile API described in this build pack document provides a mechanis
 ---
 
 - YAML file:
-	- View and download the [IncomeProfile.yaml](IncomeProfile.yaml)
+	- View and download the [IncomeAPI.yaml](IncomeAPI.yaml)
 
-- Income Profile Build Pack 
-	- [Download the build pack](Gateway%20Services%20Build%20pack%20-%20Income%20Profile%20API.pdf) to view data definitions of each operation and response status code definitions
+- Income API Build Pack 
+	- [Download the build pack](Gateway%20Services%20Build%20pack%20-%20Income%20API.pdf) to view data definitions of each operation and response status code definitions
 	
 * Message Samples
 	* [View message samples for requests and responses](#-message-samples)
@@ -75,7 +75,7 @@ The Income Profile API described in this build pack document provides a mechanis
 
       Scenario ID | Data: IRD number | Http status | Response 
     	--- | --- | --- | ---
-    	MOCK-01, MOCK-02 | 019542033, 027083307, 069164331, 059637355, 081526583. Date range must include at least one day between 2013-07-31 and 2069-11-04 | 200 | List of Income Profile
+    	MOCK-01, MOCK-02 | 019542033, 027083307, 069164331, 059637355, 081526583. Date range must include at least one day between 2013-07-31 and 2069-11-04 | 200 | List of Incomes
     	MOCK-10 | 123612507 | 400 | EV1022 - Access is not permitted for the requester to perform this operation for the submitted identifier
     	MOCK-11, MOCK-12, MOCK-13, MOCK-14, MOCK-15, MOCK-16, MOCK-17 | Any IRD number. E.g. 019542033. Request must be updated according to the scenario | 400 | EV1100 - Invalid input parameters. Please check documentation
     	MOCK-20 | 123346718 | 400 | EV1200 - The number of records retrieved exceeds the maximum limit
