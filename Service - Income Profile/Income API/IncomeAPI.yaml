@@ -4,7 +4,7 @@ info:
   description: Income API
   version: ""
 host: test3.services.ird.govt.nz
-basePath: /gateway/income/profile/
+basePath: /gateway/income/
 schemes: 
   - https
 paths: 
