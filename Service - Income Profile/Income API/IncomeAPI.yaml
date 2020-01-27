@@ -1,17 +1,17 @@
 swagger: '2.0'
 info: 
-  title: IncomeProfile
-  description: The Income Profile API provides a mechanism for external partners to retrieve income data reported to IR by employers.
+  title: Income
+  description: Income API
   version: ""
-host: localhost
-basePath: /WebServices/Gateway/IncomeProfile/
+host: test3.services.ird.govt.nz
+basePath: /gateway/income/profile/
 schemes: 
-  - http
+  - https
 paths: 
   /list: 
     post: 
       tags: 
-        - Income Profile
+        - list
       summary: Income Profile
       description: ""
       operationId: listPOST
@@ -42,6 +42,17 @@ paths:
           description: ' '
           schema: 
             $ref: '#/definitions/list_POST_ResponseDefault'
+  /status: 
+    get: 
+      tags: 
+        - status
+      summary: Web Service Status
+      description: 'This web service sends a 200 HTTP response with a message body of "OK".'
+      operationId: statusGET
+      parameters: []
+      responses: 
+        default: 
+          description: ' '
 definitions: 
   list_POST_Request: 
     type: object
@@ -56,12 +67,12 @@ definitions:
         minLength: 9
       StartDate: 
         type: string
-        description: 'This is the date the payment was effective from. Must be in the format ''YYYY-MM-DD'', e.g. ''2019-03-31''.'
+        description: 'This is the date the payment was effective from. Must be in the format ''YYYY-MM-DD'', e.g. ''2019-03-31''. This must be greater tha ''1900-01-01''.'
         maxLength: 10
         minLength: 10
       EndDate: 
         type: string
-        description: 'This is the date the payment was effective to. Must be in the format ''YYYY-MM-DD'', e.g. ''2019-03-31''.'
+        description: 'This is the date the payment was effective to. Must be in the format ''YYYY-MM-DD'', e.g. ''2019-03-31''. This must be greater tha ''1900-01-01''.'
         maxLength: 10
         minLength: 10
   list_POST_Response200: 
@@ -117,9 +128,9 @@ definitions:
 <li>RLWT - RLWT Deducted</li>
 <li>ROYALT - Royalties</li>
 <li>SALWAGE - Salary / Wages</li>
-<li>SHREMP - Shareholder-Employee Salary</li>
 <li>SLS215 - Income Adjustment - SLS</li>
 <li>SLSALL - Student Allowance</li>
+<li>SHREMP - Shareholder-Employee Salary</li>
 <li>TRST - Estate / Trust Income</li>
 <li>WT - Schedular Payments</li>
     </ul>
@@ -127,15 +138,13 @@ definitions:
               maxLength: 255
             IncomeSource: 
               type: string
-              description: 'Income source, an ID type and value; this 2-tuple identifies the employer or investment account from which the income has been earned.'
+              description: 'Income source, an ID type and value; this 2-tuple identifies the employer or investment account from which the income has been earned. If this income source is unknown an empty string will be returned. '
               maxLength: 255
             Amount: 
               type: string
-              format: Currency
               description: 'Income amount, this is the gross amount.'
             Deductions: 
               type: string
-              format: Currency
               description: The amount that was deducted from the income amount.
   list_POST_Response400: 
     type: object
@@ -155,13 +164,16 @@ definitions:
           properties: 
             code: 
               type: string
-              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1010</td><td>Invalid authorisation</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>EV1200</td><td>The number of records retrieved exceeds the maximum limit.</td></tr><tr><td>EV2234</td><td>IR number failed check digit</td></tr></tbody></table>'
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token provided is not valid</td></tr><tr><td>EV1021</td><td>No token in present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>EV1200</td><td>The number of records retrieved exceeds the maximum limit.</td></tr><tr><td>EV2234</td><td>IR number failed check digit</td></tr><tr><td>EV2235</td><td>IR number not found</td></tr></tbody></table>'
               maxLength: 6
               enum: 
-                - EV1010
+                - EV1020
+                - EV1021
+                - EV1022
                 - EV1100
                 - EV1200
                 - EV2234
+                - EV2235
             type: 
               type: string
               description: Type of validation code returned
@@ -224,13 +236,16 @@ definitions:
           properties: 
             code: 
               type: string
-              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1010</td><td>Invalid authorisation</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>EV1200</td><td>The number of records retrieved exceeds the maximum limit.</td></tr><tr><td>EV2234</td><td>IR number failed check digit</td></tr></tbody></table>'
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token provided is not valid</td></tr><tr><td>EV1021</td><td>No token in present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>EV1200</td><td>The number of records retrieved exceeds the maximum limit.</td></tr><tr><td>EV2234</td><td>IR number failed check digit</td></tr><tr><td>EV2235</td><td>IR number not found</td></tr></tbody></table>'
               maxLength: 6
               enum: 
-                - EV1010
+                - EV1020
+                - EV1021
+                - EV1022
                 - EV1100
                 - EV1200
                 - EV2234
+                - EV2235
             type: 
               type: string
               description: Type of validation code returned
