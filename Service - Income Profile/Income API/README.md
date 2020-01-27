@@ -1,5 +1,5 @@
-![IRD logo](../Images/IRlogo.gif)
-![Software Dev](../Images/SoftwareDev.png)
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
 
 # Income API
 ---
@@ -90,9 +90,9 @@ The Income API described in this build pack document provides a mechanism for ex
 
 | End point|  URL|
 |--|--|
-| Mock | https://mock-ipr.ird.digitalpartner.services/secure/gateway/income/profile/list |
-| Testing | https://test3.services.ird.govt.nz:4046/gateway/income/profile/list |    
-| Pre-Production | https://test4.services.ird.govt.nz:4046/gateway/income/profile/list | 
-| Production | https://services.ird.govt.nz:4046/gateway/income/profile/list |
+| Mock | https://mock-ipr.ird.digitalpartner.services/secure/gateway/income/list |
+| Testing | https://test3.services.ird.govt.nz:4046/gateway/income/list |    
+| Pre-Production | https://test4.services.ird.govt.nz:4046/gateway/income/list | 
+| Production | https://services.ird.govt.nz:4046/gateway/income/list |
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
