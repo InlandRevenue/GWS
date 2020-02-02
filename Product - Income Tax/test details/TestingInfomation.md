@@ -39,6 +39,7 @@
 - Test Data
     - This table shows which scenarios (as per their numbers in the mind map) require specific data to trigger the expected responses.
     - Text in italics represents the name of the XML node in the request.
+	- **For all retrieve return scenarios, the periodEndDate must be 2019-03-31.**
     
 <table>
     <tbody>
