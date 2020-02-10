@@ -19,7 +19,7 @@ The Income API described in this build pack document provides a mechanism for ex
 	* [View message samples for requests and responses](#-message-samples)
 
 - Supporting services
-    * Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../Service%20-%20Identity%20and%20Access/Latest/)
+    * Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)
 
 ## Environment Information
 ---
