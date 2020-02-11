@@ -94,7 +94,7 @@ The Income API described in this build pack document provides a mechanism for ex
 
 ### Test scenarios report template
 
-![Download Test Scenarios report template](Income API Service - Test Report Template.docx)
+- [Download Test Scenarios report template](Income%20API%20Service%20-%20Test%20Report%20Template.docx)
 
 ## Prod environment information
 ---
