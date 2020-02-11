@@ -1,0 +1,325 @@
+swagger: '2.0'
+info: 
+  title: Customer API
+  description: 'REST APIs for retrieving customer, account, period, and bill item data.'
+  version: ""
+host: 'eservices-test7-gateway.npnsp.ird.govt.nz'
+basePath: /secure/gateway/customer/
+schemes: 
+  - https
+paths: 
+  /bill/: 
+    post: 
+      tags: 
+        - bill
+      summary: Customer Bill API
+      description: ""
+      operationId: bill/POST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/bill_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/bill_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/bill_POST_Response400'
+        '404': 
+          description: 'HttpStatus: 404 - NotFound'
+          schema: 
+            $ref: '#/definitions/bill_POST_Response404'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/bill_POST_ResponseDefault'
+  /status: 
+    get: 
+      tags: 
+        - status
+      summary: Web Service Status
+      description: 'This web service sends a 200 HTTP response with a message body of "OK".'
+      operationId: statusGET
+      parameters: []
+      responses: 
+        default: 
+          description: ' '
+definitions: 
+  bill_POST_Request: 
+    type: object
+    required: 
+      - Bill
+    properties: 
+      Bill: 
+        type: object
+        description: Bill item object
+        required: 
+          - Id
+        properties: 
+          Id: 
+            type: string
+            description: Bill item's unique identifier.
+            maxLength: 10
+            minLength: 2
+  bill_POST_Response200: 
+    type: object
+    required: 
+      - Bill
+      - ProvMethodHistory
+      - ProvDetails
+    properties: 
+      Bill: 
+        type: object
+        description: Results object
+        required: 
+          - CustomerId
+          - CustomerIdType
+          - AccountId
+          - AccountIdType
+          - Period
+          - Id
+          - RetrieveDate
+        properties: 
+          CustomerId: 
+            type: string
+            description: Customer ID of customer to whom requested bill item belongs. This ID is the customer's IRD number.
+            maxLength: 9
+            minLength: 9
+          CustomerIdType: 
+            type: string
+            description: ID type of customer to whom requested bill item belongs.
+            maxLength: 3
+            minLength: 3
+          AccountId: 
+            type: string
+            description: Account ID of the account to which requested bill item belongs.
+            maxLength: 15
+          AccountIdType: 
+            type: string
+            description: ID type of account to which requested bill item belongs.
+            maxLength: 6
+          Period: 
+            type: string
+            description: End date of the filing period to which requested bill item belongs.
+            maxLength: 10
+            minLength: 10
+          Id: 
+            type: string
+            description: Bill item's unique identifier.
+            maxLength: 10
+            minLength: 2
+          RetrieveDate: 
+            type: string
+            description: Date that the requested bill item information was retrieved.
+            maxLength: 10
+            minLength: 10
+      ProvMethodHistory: 
+        type: array
+        description: 'All versions of provisional methods belonging to the account. Because there is no direct association between a bill item and the method that it was generated for, this object contains all history for all provisional tax methods on the account.'
+        items: 
+          type: object
+          description: Provisional method history object
+          required: 
+            - MethodKey
+            - Version
+            - Method
+            - TaxYear
+            - Commence
+            - Cease
+            - Amount
+          properties: 
+            MethodKey: 
+              type: string
+              description: Unique identifier for the provisional method.
+              maxLength: 10
+              minLength: 3
+            Version: 
+              type: string
+              description: Version of provisional tax method. Value of 0 indicates that the method has not seen any changes since its creation.
+              minLength: 1
+            Method: 
+              type: string
+              description: 'Method used. Available options are STD (standard), EST (estimation), RATIO, and AIM.'
+              maxLength: 5
+              minLength: 3
+            TaxYear: 
+              type: string
+              description: Tax year associated with provisional tax method.
+              maxLength: 4
+              minLength: 4
+            Commence: 
+              type: string
+              description: Provisional tax method commence date.
+              maxLength: 10
+              minLength: 10
+            Cease: 
+              type: string
+              description: Provisional tax method cease date.
+              maxLength: 10
+              minLength: 10
+            Amount: 
+              type: string
+              description: Provisional tax method amount.
+              minLength: 1
+            Ratio: 
+              type: string
+              description: Provisional tax method ratio (applicable to ratio method only).
+              maxLength: 6
+              minLength: 6
+      ProvDetails: 
+        type: object
+        description: Provisional tax method details.
+        required: 
+          - TransactionId
+          - TransactionType
+          - FilingPeriod
+          - DueDate
+          - Amount
+          - FITReduction
+          - Method
+          - Reversed
+          - Processed
+        properties: 
+          TransactionId: 
+            type: string
+            description: Unique identifier of provisional tax instalment transaction.
+            maxLength: 10
+            minLength: 3
+          TransactionType: 
+            type: string
+            description: Type of transaction associated with the bill item.
+            maxLength: 6
+            minLength: 6
+          FilingPeriod: 
+            type: string
+            description: Provisional tax method filing period. This date is the last day of the tax year.
+            maxLength: 10
+            minLength: 10
+          DueDate: 
+            type: string
+            description: Provisional tax instalment due date.
+            maxLength: 10
+            minLength: 10
+          Amount: 
+            type: string
+            description: Provisional tax instalment amount due.
+            minLength: 6
+          FITReduction: 
+            type: string
+            description: Provisional tax instalment FIT reduction.
+            minLength: 6
+          Method: 
+            type: string
+            description: 'Provisional tax instalment method that the instalment and bill item were generated for. Available options are STD (standard), EST (estimation), RATIO, and AIM.'
+            maxLength: 5
+            minLength: 3
+          Reversed: 
+            type: string
+            description: Provisional tax instalment reversed date.
+            maxLength: 10
+            minLength: 10
+          Processed: 
+            type: string
+            description: Provisional tax instalment processed date.
+            maxLength: 10
+            minLength: 10
+  bill_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1000</td><td>No incoming POST content found</td></tr><tr><td>EV1001</td><td>Error parsing incoming POST content because of invalid markup</td></tr><tr><td>EV1002</td><td>Incoming content contains invalid field names or field/value lengths exceeding 255 characters.</td></tr><tr><td>EV2000</td><td>Mandatory field - Bill.Id  - is missing</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1000
+                - EV1001
+                - EV1002
+                - EV2000
+            type: 
+              type: string
+              description: Type of validation code returned
+            message: 
+              type: string
+              description: Error message
+  bill_POST_Response404: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: No results array
+        items: 
+          type: object
+          description: Errors object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>ER5000</td><td>No bill item found with input data</td></tr><tr><td>ER5100</td><td>No provisional methods found for customer</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - ER5000
+                - ER5100
+            type: 
+              type: string
+              description: Type of validation code returned
+            message: 
+              type: string
+              description: Error message
+  bill_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1000</td><td>No incoming POST content found</td></tr><tr><td>EV1001</td><td>Error parsing incoming POST content because of invalid markup</td></tr><tr><td>EV1002</td><td>Incoming content contains invalid field names or field/value lengths exceeding 255 characters.</td></tr><tr><td>EV2000</td><td>Mandatory field - Bill.Id  - is missing</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1000
+                - EV1001
+                - EV1002
+                - EV2000
+            type: 
+              type: string
+              description: Type of validation code returned
+            message: 
+              type: string
+              description: Error message
