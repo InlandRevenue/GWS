@@ -1,7 +1,7 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-# Income API
+# Income API #
 ---
 The Income API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
 
@@ -18,27 +18,16 @@ The Income API described in this build pack document provides a mechanism for ex
 - Message Samples
 	* [View message samples for requests and responses](#-message-samples)
 
-- Supporting services
-    * Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)
-
 ## Environment Information
+- [Mock Environment Information - Emulated Services, MindMap and Test data](#-mock-environment-information)
+
+- [Test Environment Information - Test Scenarios Report Template and URL Endpoints](#-test-environment-information)
+
+- [Production Environment Information - URL Endpoint](#-prod-environment-information)
+
+## Supporting services
 ---
-- Mock Environment Information
-
-    * [View mock environment URL](#mock-environment-url)
-    * [View Mock scenarios Mindmap](#mock-scenarios-mindmap)
-    * [View test data for Mock Service](#test-data-for-mock-service)
-
->**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
-
-- Test environment information
-
-    * [View test environment URL](#test-environment-url)
-    * [View test scenarios report template](#test-scenarios-report-template)
-
-- Production environment information
-
-    * [View prod environment URL](#prod-environment-url)
+- Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)
 
 ## Message Samples
 ---
@@ -60,12 +49,12 @@ The Income API described in this build pack document provides a mechanism for ex
 	    * [EV2235 - IR number not found](sample%20messages/response_EV2235_IR_not_found.json)
 	    
 	* Negative response - http 416
-	    * Emulator body: "Requested Range Not Satisfiable"
+	    * Emulator response payload body: "Requested Range Not Satisfiable"
 	    * Production or test environment: body is empty. Http status reasonPhrase: "Requested Range Not Satisfiable"
 
 ## Mock Environment Information
 ---
-### Mock environment URL
+### Mock Emulated service URL
 | End point|  URL|
 |--|--|
 | Mock | https://mock-ipr.ird.digitalpartner.services/secure/gateway/income/list |
@@ -75,7 +64,7 @@ The Income API described in this build pack document provides a mechanism for ex
 - [View larger image](images/Income%20API%20Emulator%20Mindmap.png)
 ![Mock Scenarios](images/Income%20API%20Emulator%20Mindmap.png)
 
-### Test data for Mock Service
+### Test data
 
    - The following test data can be tested in our Mock Services environment when submitting requests to the service operations
    - This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
@@ -91,6 +80,7 @@ The Income API described in this build pack document provides a mechanism for ex
     	MOCK-50 | 019542033, 027083307, 069164331, 059637355, 081526583. Date range must exclude days between 2013-07-31 and 2069-11-04 | 416 | Empty response body
     	MOCK-51 | Any IRD number not used in any other scenarios. E.g. 023123023 | 416 | Empty response body
 
+>**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
 ## Test environment information
 ---
@@ -104,7 +94,7 @@ The Income API described in this build pack document provides a mechanism for ex
 
 ### Test scenarios report template
 
-![Download the Test Scenarios report template](IncomeAPI-OnBoardingScenarios.xlsx)
+![Download Test Scenarios report template](Income API Service - Test Report Template.docx)
 
 ## Prod environment information
 ---
