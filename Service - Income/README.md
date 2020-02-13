@@ -1,7 +1,9 @@
-![IRD logo](../../Images/IRlogo.gif)
-![Software Dev](../../Images/SoftwareDev.png)
+![IRD logo](../Images/IRlogo.gif)
+![Software Dev](../Images/SoftwareDev.png)
 
-# Income API #
+#### Release version 1.0
+
+# Income API 
 ---
 #### Release version 1.0
 The Income API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
@@ -28,7 +30,7 @@ The Income API described in this build pack document provides a mechanism for ex
 
 ## Supporting services
 ---
-- Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../../Service%20-%20Identity%20and%20Access/Latest/)
+- Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../Service%20-%20Identity%20and%20Access/Latest/)
 
 ## Message Samples
 ---
