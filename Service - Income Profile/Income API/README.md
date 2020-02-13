@@ -3,6 +3,7 @@
 
 # Income API #
 ---
+#### Release version 1.0
 The Income API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
 
 >**NOTE:** The Income API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 token.
