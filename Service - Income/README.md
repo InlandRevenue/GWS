@@ -1,8 +1,6 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-#### Release version 1.0
-
 # Income API 
 ---
 #### Release version 1.0
@@ -13,7 +11,7 @@ The Income API described in this build pack document provides a mechanism for ex
 ## Key Documentation
 ---
 - YAML file:
-	- View and download the [IncomeAPI.yaml](IncomeAPI.yaml)
+	- View and download the [Income API YAML](Income%20API%202020-01-28.yaml)
 
 - Income API Build Pack 
 	- [Download the build pack](Gateway%20Services%20Build%20pack%20-%20Income%20API.pdf) to view data definitions of each operation and response status code definitions
