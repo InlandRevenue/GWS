@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:             ReturnIR9.v1.xsd
+	VER:              1.1
+	ISSUER:           Inland Revenue Department
+	DATE:             20/11/2019
+	DESC:             This schema defines the elements and related data types required for the Returns Clubs and Societies Income Tax 2020 Gateway Service.
+	CHANGE(s):
+	* residentialRentalIncome added
+	* saleOfProperty added
+	* researchAndDevelopment added
+  * typeOfClubOrSociety required
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR9.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR9.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR9.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" schemaLocation="./IncomeReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains income tax return common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="incorporatedBody" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="typeOfClubOrSociety" type="ic:SocietyType"/>
+					<xsd:element name="residentialRentalIncome" type="ic:ResidentialRentalIncomeType" minOccurs="0"/>
+					<xsd:element name="saleOfProperty" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="friendlyNetIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="interest" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="dividends" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="taxableMADistributions" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="otherIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="incomeTaxDeductionForNonProfit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="donationsDeduction" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="netIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="lossesBroughtForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalTaxableIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="taxOnTaxableIncome" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="overseasTaxPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="imputationCreditsReceived" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="imputationBroughtForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="researchAndDevelopment" type="ic:ResearchAndDevelopmentType" minOccurs="0"/>
+					<xsd:element name="totalRWTWithheld" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="rlwtCredit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherTaxCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="residualIncomeTax" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="overpaymentProvisionalTax" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="provisionalTax" type="ic:ProvisionalTaxType" minOccurs="0"/>
+					<xsd:element name="attachmentForms" type="ic:AttachmentListType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--RetrieveReturnRequestType is unique for Indvidual Income Tax-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End RetrieveReturnRequestType-->
+</xsd:schema>
