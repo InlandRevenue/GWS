@@ -34,10 +34,7 @@ For most forms, only one is allowed to be submitted per period. Some form types,
 can be submitted multiple times in the same period, in which case a submissionKey is required 
 to be submitted on amendment.  
 
-### 2020+ Annual Income Return XSDs
-[2020 XSD files](./2020/)
-
-### 2013~2019 Annual Income Return XSDs 
+### 2020 Annual Income Return XSDs 
 
 | Entity Type | Primary Form | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years supported| Attachment Forms   |
 | --- | --- | --- | :---: | :---: | :---: | :---: | :---: | --- |
@@ -65,7 +62,8 @@ to be submitted on amendment.
 | | Donation Tax credit claim (IR526) | [ReturnREB.v1.xsd](ReturnREB.v1.xsd) | `REB` | | 1| |  |   
 | Individual | Auto-calc return | [ReturnAUTO.v1.xsd](ReturnAUTO.v1.xsd) | `CALC`  | Primary | Single | 1 | 2019+ | |
 
-
+### 2013-2019 Annual Income Return XSDs
+Archived [XSD files](./2013-2019/)
 
 * More information of filing a Tax Return can be found [here](https://www.ird.govt.nz/activities/file-an-income-tax-return)
 	
