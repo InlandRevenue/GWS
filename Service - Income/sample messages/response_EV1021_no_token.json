@@ -1,0 +1,9 @@
+{
+  "errors": [
+    {
+      "code": "EV1021",
+      "type": "security",
+      "message": "No token in present as an HTTP header"
+    }
+  ]
+}
