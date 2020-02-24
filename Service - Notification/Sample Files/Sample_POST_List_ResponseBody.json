@@ -1,0 +1,42 @@
+{
+  "Notifications": [
+    {
+      "NotificationKey": 5418350924,
+      "Category": "3",
+      "SubCategory": "Compliance",
+      "Type": "COLCAS",
+      "Description": "Information has been requested to progress a collection case",
+      "DocumentLocationID": 5419038861,
+      "DocumentID": 5419039610,
+      "ExtID": "",
+      "ExtIDType": "",
+      "ID": "139026659",
+      "IDType": "IRD",
+      "SubjectID": "139026659",
+      "SubjectIDType": "IRD",
+      "RecordCreated": "2019-10-01T14:25:32",
+      "EventDate": "2019-10-01T00:00:00",
+      "FilingPeriod": "9999-12-31",
+      "DueDate": "9999-12-31"
+    },
+    {
+      "NotificationKey": 5413450600,
+      "Category": "3",
+      "SubCategory": "Compliance",
+      "Type": "RTNPRC",
+      "Description": "Information has been requested to progress an assessment correction",
+      "DocumentLocationID": 5413516236,
+      "DocumentID": 5413515316,
+      "ExtID": "",
+      "ExtIDType": "",
+      "ID": "139026659GST003",
+      "IDType": "ACC",
+      "SubjectID": "139026659",
+      "SubjectIDType": "IRD",
+      "RecordCreated": "2020-02-01T09:21:20",
+      "EventDate": "2020-02-01T00:00:00",
+      "FilingPeriod": "2019-09-30",
+      "DueDate": "9999-12-31"
+    }
+  ]
+}
