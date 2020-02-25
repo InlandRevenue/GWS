@@ -1,0 +1,31 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatusResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatusResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveStatusResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveStatusResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveStatusResponseWrapper>
+                            <retrieveStatusResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody>
+                                    <returnStatus>
+                                        <status code="PRCD">Processed</status>
+                                    </returnStatus>
+                                </responseBody>
+                            </retrieveStatusResponse>
+                        </b:RetrieveStatusResponseWrapper>
+                    </RetrieveStatusResult>
+                </RetrieveStatusResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

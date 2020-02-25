@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnI8J.xsd
+	VER:			1
+	ISSUER:			Inland Revenue Department
+	DATE:			29/06/2019
+	DESC:			This schema defines the elements and related data types required for the Returns Maori Authority Imputation Tax 2019 Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR8J.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR8J.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR8J.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" schemaLocation="./IncomeReturnCommon.v1.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains income tax return common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="openingBalance" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="incomeTaxPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalFDPPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalRWTOnInterest" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="imputationAndFDPCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="incomeTaxRefunded" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="totalFDPRefunds" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="imputationCreditsAttached" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherDebits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="closingBalance" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="furtherIncomeTaxPayable" type="cmn:MoneyType" minOccurs="0"/>
+					<xsd:element name="fdpReturn" type="FDPReturnType" minOccurs="0"/>
+					<xsd:element name="attachmentForms" type="ic:AttachmentListType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--Income tax common data types-->
+	<xsd:complexType name="FDPReturnType">
+		<xsd:sequence>
+			<xsd:element name="fdpOpeningBalance" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="fdpPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="fdpCreditsAttachedReceived" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="fdpCreditsAttachedPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="fdpRefunded" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="fdpOtherDebits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="fdpClosingBalance" type="cmn:MoneyType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End income tax common data types-->
+	<!--RetrieveReturnRequestType is unique for Indvidual Income Tax-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End RetrieveReturnRequestType-->
+</xsd:schema>

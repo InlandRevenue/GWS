@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:			ReturnIR3F.xsd
+	VER:			1.0
+	ISSUER:			Inland Revenue Department
+	DATE:			29/06/2019
+	DESC:			This schema defines the elements and related data types required for the Returns IR3F Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR3F.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR3F.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR3F.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Begin Imports Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--End Import Statements-->
+	<!--Begin File Elements-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--End File Elements-->
+	<!--Begin Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="livestockSalesDetails" type="LivestockIncomeListType" minOccurs="0"/>
+					<xsd:element name="livestockOnHandEOYDetails" type="LivestockOnHandEOYListType" minOccurs="0"/>
+					<xsd:element name="woolBalesSold" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="woolBalesIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="woolOnHand" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="woolOnHandAverageValue" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="meatHidesSkinsVelvet" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="grainSeedsFruitTobaccoHopsGardenProduce" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="dairyProduce" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="livestockBailmentPlantHire" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="depreciationOrInsuranceRecovery" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="privateUseOfProduce" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="shareMilkingName" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="shareMilkingShare" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="shareMilkingAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="freeHouseRentalValue" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="giftedLivestockProduceValue" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherIncomeDetails" type="OtherListType" minOccurs="0"/>
+					<xsd:element name="otherUnsoldProduceOnHandDetails" type="OtherListType" minOccurs="0"/>
+					<xsd:element name="livestockRevaluationIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="farmIncomeEqualisationRefund" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="livestockPurchaseDetails" type="LivestockIncomeListType" minOccurs="0"/>
+					<xsd:element name="valueOfLivestockBOY" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="valueOfProduceBOY" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="accLeviesPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="animalHealth" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="depreciationBuildings" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="depreciationOtherAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="developmentExpenditure" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="electricityOrGas" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="farmIncomeEqualisationDeposit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="freightAndCartage" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="fringeBenefitTax" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="insurance" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="interest" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="legal" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="lossOnDisposalOfAssets" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="motorVehicleExpenses" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="motorVehiclePrivateUseApportionment" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="contractorPayments" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="shareMilkerPayments" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="employeeRations" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="rentAndRates" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="repairsAndMaintenance" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="seedFertiliserAndLime" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="farmLabourSalaryAndWages" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="travellingExpenses" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="otherExpensesDetails" type="OtherListType" minOccurs="0"/>
+					<xsd:element name="shareMilkerPaymentDetails" type="ShareMilkerPaymentListType" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Override FormFieldsType-->
+	<!--Begin Specific File Data Types-->
+	<xsd:complexType name="LivestockIncomeListType">
+		<xsd:sequence>
+			<xsd:element name="livestockIncome" type="LivestockIncomeType" minOccurs="0" maxOccurs="100000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LivestockIncomeType">
+		<xsd:sequence>
+			<xsd:element name="type" type="LivestockType" minOccurs="0"/>
+			<xsd:element name="number" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="value" type="cmn:MoneyTypePositive" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LivestockOnHandEOYListType">
+		<xsd:sequence>
+			<xsd:element name="livestockOnHandEOY" type="LivestockOnHandEOYType" minOccurs="0" maxOccurs="100000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LivestockOnHandEOYType">
+		<xsd:sequence>
+			<xsd:element name="type" type="LivestockType" minOccurs="0"/>
+			<xsd:element name="class" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="number" type="xsd:integer" minOccurs="0"/>
+			<xsd:element name="valuePerHead" type="cmn:MoneyTypePositive" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="LivestockType">
+		<xsd:annotation>
+			<xsd:documentation>
+                CATTLE
+                DEER
+                GOAT
+                PIGS
+                SHEEP
+                OTHER
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="[A-Z]{0,6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="OtherListType">
+		<xsd:sequence>
+			<xsd:element name="other" type="OtherType" minOccurs="0" maxOccurs="100000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OtherType">
+		<xsd:sequence>
+			<xsd:element name="type" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="amount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ShareMilkerPaymentListType">
+		<xsd:sequence>
+			<xsd:element name="shareMilkerPayment" type="ShareMilkerPaymentType" minOccurs="0" maxOccurs="100000"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ShareMilkerPaymentType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="dairyAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="bobbyCalvesAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="calfRearingAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="pigsAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="otherAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--End Specific File Data Types-->
+	<!--Begin Specific retrieveReturn Data-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--End Specific retrieveReturn Data-->
+</xsd:schema>
