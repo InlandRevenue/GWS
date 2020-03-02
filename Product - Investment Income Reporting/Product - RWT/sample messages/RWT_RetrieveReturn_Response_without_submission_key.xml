@@ -39,21 +39,21 @@
                                     </r:accountHolders>
                                     <r:incomeInformation>
                                         <rc:incomeType xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">MAORI</rc:incomeType>
-                                        <rc:grossAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">1000.00</rc:grossAmount>
-                                        <rc:deductedAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">0.00</rc:deductedAmount>
+                                        <rc:grossAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">5000.00</rc:grossAmount>
+                                        <rc:deductedAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">10.00</rc:deductedAmount>
                                         <rc:rate xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">17.5</rc:rate>
                                         <r:imputationCredits>0.00</r:imputationCredits>
-                                        <r:maoriAuthorityCredits>175.00</r:maoriAuthorityCredits>
-                                        <r:creditRatio>100.00</r:creditRatio>
+                                        <r:maoriAuthorityCredits>100.00</r:maoriAuthorityCredits>
+                                        <r:creditRatio>1.5</r:creditRatio>
                                     </r:incomeInformation>
                                     <r:incomeInformation>
-                                        <rc:incomeType xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">MAORI</rc:incomeType>
-                                        <rc:grossAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">810.00</rc:grossAmount>
-                                        <rc:deductedAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">16.75</rc:deductedAmount>
+                                        <rc:incomeType xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">DIVINT</rc:incomeType>
+                                        <rc:grossAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">5300.00</rc:grossAmount>
+                                        <rc:deductedAmount xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">30.00</rc:deductedAmount>
                                         <rc:rate xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">17.5</rc:rate>
-                                        <r:imputationCredits>0.00</r:imputationCredits>
-                                        <r:maoriAuthorityCredits>125.00</r:maoriAuthorityCredits>
-                                        <r:creditRatio>100.00</r:creditRatio>
+                                        <r:imputationCredits>100.00</r:imputationCredits>
+                                        <r:maoriAuthorityCredits>0.00</r:maoriAuthorityCredits>
+                                        <r:creditRatio>0</r:creditRatio>
                                     </r:incomeInformation>
                                 </r:lineItems>
                             </r:formFields>

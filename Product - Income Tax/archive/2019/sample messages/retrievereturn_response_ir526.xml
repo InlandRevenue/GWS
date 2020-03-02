@@ -1,0 +1,42 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveReturnResponseWrapper>
+                            <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r526="urn:www.ird.govt.nz/GWS:types/ReturnREB.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xsi:type="r526:RetrieveReturnResponseBodyType">
+                                    <rc:standardFields>
+                                        <rc:isNilReturn>false</rc:isNilReturn>
+                                    </rc:standardFields>
+                                    <r526:formFields>
+                                        <r526:schoolKindergartenDonations>1000</r526:schoolKindergartenDonations>
+                                        <r526:partnerSchoolKindergartenDonations>500</r526:partnerSchoolKindergartenDonations>
+                                        <r526:religiousOrganisationDonations>1000.00</r526:religiousOrganisationDonations>
+                                        <r526:partnerReligiousOrganisationDonations>500.00</r526:partnerReligiousOrganisationDonations>
+                                        <r526:doneeOrganisationDonations>1000.00</r526:doneeOrganisationDonations>
+                                        <r526:partnerDoneeOrganisationDonations>500.00</r526:partnerDoneeOrganisationDonations>
+                                        <r526:totalReceiptAmount>6000.00</r526:totalReceiptAmount>
+                                        <r526:taxCreditClaimAmount>-2000.00</r526:taxCreditClaimAmount>
+                                        <r526:partnerIRD>047760798</r526:partnerIRD>
+                                    </r526:formFields>
+                                </responseBody>
+                            </retrieveReturnResponse>
+                        </b:RetrieveReturnResponseWrapper>
+                    </RetrieveReturnResult>
+                </RetrieveReturnResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

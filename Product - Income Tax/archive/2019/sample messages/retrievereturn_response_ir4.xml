@@ -1,0 +1,102 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+   <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+      <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+   </env:Header>
+   <env:Body>
+      <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+         <s:Header>
+            <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+         </s:Header>
+         <s:Body>
+            <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+               <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                  <b:RetrieveReturnResponseWrapper>
+                     <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                           <statusCode>0</statusCode>
+                           <errorMessage/>
+                        </statusMessage>
+                        <responseBody xsi:type="r4:RetrieveReturnResponseBodyType" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r4="urn:www.ird.govt.nz/GWS:types/ReturnIR4.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                           <rc:standardFields>
+                              <rc:isNilReturn>false</rc:isNilReturn>
+                           </rc:standardFields>
+                           <r4:formFields>
+                              <r4:submissionKey>1263943680</r4:submissionKey>
+                              <r4:nonResidentIndicator>false</r4:nonResidentIndicator>
+                              <r4:schedularPayments>
+                                 <ic:witholdingTaxDeducted>1000.00</ic:witholdingTaxDeducted>
+                                 <ic:totalIncome>1000.00</ic:totalIncome>
+                              </r4:schedularPayments>
+                              <r4:interestIncome>
+                                 <ic:totalTaxPaid>1000.00</ic:totalTaxPaid>
+                                 <ic:totalIncome>1000.00</ic:totalIncome>
+                              </r4:interestIncome>
+                              <r4:pieIncome>
+                                 <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                 <ic:totalIncome>1000.00</ic:totalIncome>
+                              </r4:pieIncome>
+                              <r4:dividendIncome>
+                                 <ic:totalImputationCredits>280.00</ic:totalImputationCredits>
+                                 <ic:totalRWTCredits>0.00</ic:totalRWTCredits>
+                                 <ic:totalGrossDividends>1000.00</ic:totalGrossDividends>
+                              </r4:dividendIncome>
+                              <r4:maoriAuthorityDistributions>
+                                 <ic:totalMACredits>1000.00</ic:totalMACredits>
+                                 <ic:totalMADistributions>1000.00</ic:totalMADistributions>
+                              </r4:maoriAuthorityDistributions>
+                              <r4:partnershipEstateTrustIncome>
+                                 <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                 <ic:totalIncome>1000.00</ic:totalIncome>
+                              </r4:partnershipEstateTrustIncome>
+                              <r4:overseasIncome>
+                                 <ic:totalTaxPaid>0.00</ic:totalTaxPaid>
+                                 <ic:totalIncome>1000.00</ic:totalIncome>
+                              </r4:overseasIncome>
+                              <r4:businessOrRentalIncome>1000.00</r4:businessOrRentalIncome>
+                              <r4:totalGrossPremium>0.00</r4:totalGrossPremium>
+                              <r4:totalGrossPremiumPaidToSwitzerland>0.00</r4:totalGrossPremiumPaidToSwitzerland>
+                              <r4:totalTaxablePremium>0.00</r4:totalTaxablePremium>
+                              <r4:otherIncome>1000.00</r4:otherIncome>
+                              <r4:rlwtCredit>0.00</r4:rlwtCredit>
+                              <r4:saleOfProperty>1000.00</r4:saleOfProperty>
+                              <r4:donationsMade>1000.00</r4:donationsMade>
+                              <r4:lossesBroughtForward>0.00</r4:lossesBroughtForward>
+                              <r4:lossesClaimedThisYear>0.00</r4:lossesClaimedThisYear>
+                              <r4:netLossesToFrom>0.00</r4:netLossesToFrom>
+                              <r4:subventionPaymentsToFrom>0.00</r4:subventionPaymentsToFrom>
+                              <r4:totalTaxableIncome>9000.00</r4:totalTaxableIncome>
+                              <r4:taxOnTaxableIncome>2520.00</r4:taxOnTaxableIncome>
+                              <r4:foreignInvestorTaxCredit>1000.00</r4:foreignInvestorTaxCredit>
+                              <r4:residualIncomeTax>-3760.00</r4:residualIncomeTax>
+                              <r4:provisionalTax>
+                                 <ic:provisionalTaxOption>STD</ic:provisionalTaxOption>
+                                 <ic:provisionalTaxPayable>1000</ic:provisionalTaxPayable>
+                                 <ic:provisionalTaxStartDate>2017-01-01</ic:provisionalTaxStartDate>
+                              </r4:provisionalTax>
+                              <r4:paymentsMadeToNonResidents>false</r4:paymentsMadeToNonResidents>
+                              <r4:witholdingTaxDeducted>false</r4:witholdingTaxDeducted>
+                              <r4:foreignIncomeDisclosure>false</r4:foreignIncomeDisclosure>
+                              <r4:repurchasedRedeemedCancelledShares>1000.00</r4:repurchasedRedeemedCancelledShares>
+                              <r4:foreignSourcedDividends>false</r4:foreignSourcedDividends>
+                              <r4:foreignControlIndicator>false</r4:foreignControlIndicator>
+                              <r4:lowestEconomicShareholderInterest>1000.00</r4:lowestEconomicShareholderInterest>
+                              <r4:shareholderDetails>
+                                 <ic:shareholder>
+                                    <ic:irdNumber>132311501</ic:irdNumber>
+                                    <ic:remuneration>0.00</ic:remuneration>
+                                    <ic:loansFromCompany>1000.00</ic:loansFromCompany>
+                                    <ic:currentAccountBalance>1000.00</ic:currentAccountBalance>
+                                    <ic:shareholderLossOffsets>1000.00</ic:shareholderLossOffsets>
+                                    <ic:subventionPayments>1000.00</ic:subventionPayments>
+                                 </ic:shareholder>
+                              </r4:shareholderDetails>
+                           </r4:formFields>
+                        </responseBody>
+                     </retrieveReturnResponse>
+                  </b:RetrieveReturnResponseWrapper>
+               </RetrieveReturnResult>
+            </RetrieveReturnResponse>
+         </s:Body>
+      </s:Envelope>
+   </env:Body>
+</env:Envelope>

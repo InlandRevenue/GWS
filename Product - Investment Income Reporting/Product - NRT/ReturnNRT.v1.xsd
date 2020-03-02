@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 	NAME:		ReturnNRT.xsd
-	VER:		1
+	VER:		1.1
 	ISSUER:		Inland Revenue Department
-	DATE:		2019-04-12
+	DATE:		2019-10-31
 	DESC:		This schema defines the elements and related data types required for the Returns NRT Gateway Service.
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnNRT.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnNRT.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnNRT.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
@@ -44,7 +44,7 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element name="amendType" type="rc:LineItemAmendType" minOccurs="0"/>
-			<xsd:element name="externalID" type="cmn:String255" minOccurs="0"/>
+			<xsd:element name="externalID" type="cmn:String255"/>
 			<xsd:element name="primaryIRD" type="cmn:IRDNumberType" minOccurs="0"/>
 			<xsd:element name="primaryDateOfBirth" type="cmn:DateType" minOccurs="0"/>
 			<xsd:element name="primaryName" type="cmn:FormattedNameType"/>
@@ -64,7 +64,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="rc:Income">
 				<xsd:sequence>
-					<xsd:element name="imputationCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="imputationCredits" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="creditRatio" type="cmn:PercentageType" minOccurs="0"/>
 					<xsd:element name="australianDividend" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="australianExchangeRate" type="cmn:MoneyTypePositive" minOccurs="0"/>

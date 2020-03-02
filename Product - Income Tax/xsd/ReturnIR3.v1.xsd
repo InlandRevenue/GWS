@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-	NAME:			ReturnIR3.xsd
-	VER:			1
-	ISSUER:			Inland Revenue Department
-	DATE:			29/06/2019
-	DESC:			This schema defines the elements and related data types required for the Returns Individual Income Tax 2019 Gateway Service.
+	NAME:             ReturnIR3.v1.xsd
+	VER:              1.1
+	ISSUER:           Inland Revenue Department
+	DATE:             20/11/2019
+	DESC:             This schema defines the elements and related data types required for the Returns Individual Income Tax 2020 Gateway Service.
+    CHANGE(s):
+    * shareholderAIMTaxPaid added
+    * residentialRentalIncome added
+    * researchAndDevelopment added
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIR3.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIR3.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIR3.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!--Begin Imports Statement(s)-->
@@ -32,7 +36,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="rc:FormFieldsType">
 				<xsd:sequence>
-					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>
+					<xsd:element name="submissionKey" type="cmn:Quantity32TypePositive" minOccurs="0"/>          
 					<xsd:element name="ir215Attached" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="totalFTCFromWINZ" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="totalPAYEDeducted" type="cmn:MoneyTypePositive" minOccurs="0"/>
@@ -64,6 +68,8 @@
 					<xsd:element name="taxCreditSubtotal" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="totalShareholderEmployeeSalary" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="futureShareholderSalary" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="shareholderAIMTaxPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="residentialRentalIncome" type="ic:ResidentialRentalIncomeType" minOccurs="0"/>          
 					<xsd:element name="netRentalIncome" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="selfEmployedIncome" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="otherIncome" type="cmn:MoneyType" minOccurs="0"/>
@@ -79,6 +85,7 @@
 					<xsd:element name="amountOfIETCClaimed" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="imputationBroughtForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
 					<xsd:element name="taxOnTaxableIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="researchAndDevelopment" type="ic:ResearchAndDevelopmentType" minOccurs="0"/>          
 					<xsd:element name="residualIncomeTax" type="cmn:MoneyType" minOccurs="0"/>
 					<xsd:element name="earlyPaymentDiscountEligibility" type="xsd:boolean" minOccurs="0"/>
 					<xsd:element name="overpaymentProvisionalTax" type="cmn:MoneyTypePositive" minOccurs="0"/>

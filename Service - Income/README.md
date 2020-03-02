@@ -103,4 +103,3 @@ The Income API described in this build pack document provides a mechanism for ex
 | End point|  URL|
 |--|--|
 | Production | https://services.ird.govt.nz:4046/gateway/income/list |
-

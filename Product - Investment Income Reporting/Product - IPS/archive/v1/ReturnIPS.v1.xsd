@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	NAME:		ReturnIPS.xsd
+	VER:		1
+	ISSUER:		Inland Revenue Department
+	DATE:		2019-04-12
+	DESC:		This schema defines the elements and related data types required for the Returns IPS Gateway Service.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnIPS.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnIPS.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnIPS.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Import Statement(s)-->
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" schemaLocation="./ReturnCommon.v2.xsd">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Contains common return data types.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--File Element-->
+	<xsd:element name="fileRequest" type="rc:FileRequestType"/>
+	<!--Override FormFieldsType-->
+	<xsd:complexType name="FormFieldsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+			FormFieldsType is an abstract data type in the ReturnCommon schema. The data elements defined here will all appear under the formFields parent element
+			in the ReturnCommon FileBodyType.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="rc:FormFieldsType">
+				<xsd:sequence>
+					<xsd:element name="submissionKey" type="cmn:QuantityTypePositive" minOccurs="0"/>
+					<xsd:element name="isReverseReplace" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="lineItems" type="LineItemType" minOccurs="1" maxOccurs="5000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="LineItemType">
+		<xsd:sequence>
+			<xsd:element name="lineNumber" type="cmn:QuantityTypePositive" minOccurs="0"/>
+			<xsd:element name="referenceId" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:normalizedString">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="20"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="amendType" type="rc:LineItemAmendType" minOccurs="0"/>
+			<xsd:element name="externalID" type="cmn:String255" minOccurs="0"/>
+			<xsd:element name="primaryIRD" type="cmn:IRDNumberType" minOccurs="0"/>
+			<xsd:element name="primaryDateOfBirth" type="cmn:DateType" minOccurs="0"/>
+			<xsd:element name="primaryName" type="cmn:FormattedNameType"/>
+			<xsd:element name="primaryPhone" type="cmn:UnstructuredPhoneNumberType" minOccurs="0"/>
+			<xsd:element name="primaryEmail" type="cmn:EmailAddressType" minOccurs="0"/>
+			<xsd:element name="primaryCountry" type="cmn:Country2DigitType" minOccurs="0"/>
+			<xsd:element name="primaryAddress" type="cmn:FormattedAddressType" minOccurs="0"/>
+			<xsd:element name="accountHolders" type="rc:Recipient" minOccurs="0" maxOccurs="500"/>
+			<xsd:element name="incomeInformation" type="rc:Income" maxOccurs="10"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--RetrieveReturn Structure-->
+	<!--RetrieveReturnRequestType is unique to IPS because a return can be filed multiple times during a period.-->
+	<xsd:complexType name="RetrieveReturnResponseBodyType">
+		<xsd:complexContent>
+			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
+				<xsd:sequence>
+					<xsd:element name="formFields" type="FormFieldsType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

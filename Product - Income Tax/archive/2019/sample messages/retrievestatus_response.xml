@@ -1,0 +1,83 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatusResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveStatusResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveStatusResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveStatusResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveStatusResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveStatusResponseWrapper>
+                            <retrieveStatusResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>1263943680</submissionKey>
+                                        <minorFormType>3</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>1557618688</submissionKey>
+                                        <minorFormType>10</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>1020747776</submissionKey>
+                                        <minorFormType>833</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>2136956928</submissionKey>
+                                        <minorFormType>3F</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>2094489600</submissionKey>
+                                        <minorFormType>3B</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>47669248</submissionKey>
+                                        <minorFormType>3R</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>14639104</submissionKey>
+                                        <minorFormType>3K</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>1088380928</submissionKey>
+                                        <minorFormType>307</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>1121411072</submissionKey>
+                                        <minorFormType>308</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>584540160</submissionKey>
+                                        <minorFormType>215</minorFormType>
+                                    </returnStatus>
+                                    <returnStatus>
+                                        <status code="OPRCD">Ontime-processed</status>
+                                        <submissionKey>819945472</submissionKey>
+                                        <minorFormType>CFC</minorFormType>
+                                    </returnStatus>
+                                </responseBody>
+                            </retrieveStatusResponse>
+                        </b:RetrieveStatusResponseWrapper>
+                    </RetrieveStatusResult>
+                </RetrieveStatusResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

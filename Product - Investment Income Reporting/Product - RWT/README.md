@@ -22,10 +22,6 @@
 	* Income Type DIVINT
 		* [Request](sample%20messages/RWT_File_Request_incomeType_DIVINT.xml)   
 		* [Response](sample%20messages/RWT_File_Response_incomeType_DIVINT.xml)
-		
-	* Income Type MAORI
-		* [Request](sample%20messages/RWT_File_Request_incomeType_MAORI.xml)
-		* [Response](sample%20messages/RWT_File_Response_incomeType_MAORI.xml)		
 	
 	* Multiple Income Information
 		* [Request](sample%20messages/RWT_File_Request_with_multiple_income_information.xml)
