@@ -2,9 +2,9 @@
 <!-- Documentation
 _______________________________________
 NAME: 	ReturnCommon.v2.xsd
-VER:	2.1
+VER:	2.0
 ISSUER:	Inland Revenue Department
-DATE:	31/10/2018
+DATE:	20/12/2018
 DESC:	This schema defines the ReturnCommon data types used accross the IRD hosted, Gateway Services.
 _______________________________________
 -->
@@ -296,10 +296,16 @@ _______________________________________
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="additionalInfo" type="CodeStringType" minOccurs="0">
+			<xsd:element name="additionalInfo" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="en">Additional information on the status of the form</xsd:documentation>
 				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:normalizedString">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="255"/>
+					</xsd:restriction>
+				</xsd:simpleType>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
@@ -388,7 +394,7 @@ _______________________________________
 		<xsd:sequence>
 			<xsd:element name="incomeType" type="cmn:String6" minOccurs="0"/>
 			<xsd:element name="grossAmount" type="cmn:MoneyType"/>
-			<xsd:element name="deductedAmount" type="cmn:MoneyType" minOccurs="0"/>
+			<xsd:element name="deductedAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="rate" type="cmn:MoneyType" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>
