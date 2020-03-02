@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-	NAME:		ReturnNRT.xsd
-	VER:		1.1
+	NAME:		ReturnAIL.xsd
+	VER:		1
 	ISSUER:		Inland Revenue Department
-	DATE:		2019-10-31
-	DESC:		This schema defines the elements and related data types required for the Returns NRT Gateway Service.
+	DATE:		2019-04-12
+	DESC:		This schema defines the elements and related data types required for the Returns AIL Gateway Service.
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnNRT.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnNRT.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnNRT.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www.ird.govt.nz/GWS:types/ReturnAIL.v1" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:r="urn:www.ird.govt.nz/GWS:types/ReturnAIL.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:www.ird.govt.nz/GWS:types/ReturnAIL.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<!--Import Statement(s)-->
 	<xsd:import namespace="urn:www.ird.govt.nz/GWS:types/Common.v2" schemaLocation="./Common.v2.xsd">
 		<xsd:annotation>
@@ -44,7 +44,7 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element name="amendType" type="rc:LineItemAmendType" minOccurs="0"/>
-			<xsd:element name="externalID" type="cmn:String255"/>
+			<xsd:element name="externalID" type="cmn:String255" minOccurs="0"/>
 			<xsd:element name="primaryIRD" type="cmn:IRDNumberType" minOccurs="0"/>
 			<xsd:element name="primaryDateOfBirth" type="cmn:DateType" minOccurs="0"/>
 			<xsd:element name="primaryName" type="cmn:FormattedNameType"/>
@@ -52,28 +52,21 @@
 			<xsd:element name="primaryEmail" type="cmn:EmailAddressType" minOccurs="0"/>
 			<xsd:element name="primaryCountry" type="cmn:Country2DigitType" minOccurs="0"/>
 			<xsd:element name="primaryAddress" type="cmn:FormattedAddressType" minOccurs="0"/>
-			<xsd:element name="numberShares" type="cmn:QuantityTypePositive" minOccurs="0"/>
-			<xsd:element name="paymentDate" type="cmn:DateType" minOccurs="0"/>
-			<xsd:element name="dividendDeclaredDate" type="cmn:DateType" minOccurs="0"/>
-			<xsd:element name="bonusIssue" type="xsd:boolean" minOccurs="0"/>
 			<xsd:element name="accountHolders" type="rc:Recipient" minOccurs="0" maxOccurs="500"/>
-			<xsd:element name="incomeInformation" type="NRTIncomeType" maxOccurs="10"/>
+			<xsd:element name="incomeInformation" type="AILIncomeType" maxOccurs="10"/>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="NRTIncomeType">
+	<xsd:complexType name="AILIncomeType">
 		<xsd:complexContent>
 			<xsd:extension base="rc:Income">
 				<xsd:sequence>
-					<xsd:element name="imputationCredits" type="cmn:MoneyType" minOccurs="0"/>
-					<xsd:element name="creditRatio" type="cmn:PercentageType" minOccurs="0"/>
-					<xsd:element name="australianDividend" type="xsd:boolean" minOccurs="0"/>
-					<xsd:element name="australianExchangeRate" type="cmn:MoneyTypePositive" minOccurs="0"/>
+					<xsd:element name="interestZeroRated" type="cmn:MoneyTypePositive"/>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
 	<!--RetrieveReturn Structure-->
-	<!--RetrieveReturnRequestType is unique to RWT because a return can be filed multiple times during a period.-->
+	<!--RetrieveReturnRequestType is unique to DWT because a return can be filed multiple times during a period.-->
 	<xsd:complexType name="RetrieveReturnResponseBodyType">
 		<xsd:complexContent>
 			<xsd:extension base="rc:RetrieveReturnResponseBodyType">
