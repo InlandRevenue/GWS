@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Documentation
 _______________________________________
-NAME: 	IncomeReturnCommon.xsd
-VER:	1.0
-ISSUER:	Inland Revenue Department
-DATE:	03/09/2019
-DESC:	This schema defines common fields for all income tax returns submitted through the Gateway Services.
+	NAME:       IncomeReturnCommon.v1.xsd
+	VER:        1.1
+	ISSUER:     Inland Revenue Department
+	DATE:       20/11/2019
+	DESC:       This schema defines common fields for all income tax returns submitted through the Gateway Services.
+	CHANGE(s):
+	* residentialRentalIncome added
+	* researchAndDevelopment added
+	* shareholderAIMTaxPaid added to ShareholderListType
+	* shareholderAIMTaxPaid added to ShareholderType
 _______________________________________
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" targetNamespace="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
@@ -39,6 +44,23 @@ _______________________________________
 	</xsd:complexType>
 	<!--End Specific Prepop Data-->
 	<!--Structures-->
+  <xsd:complexType name="ResidentialRentalIncomeType">
+    <xsd:sequence>
+      <xsd:element name="indicator" type="ResidentialMethodType" minOccurs="0"/>
+      <xsd:element name="totalIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="residentialRentalDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="excessDeductionsBroughtForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="deductionsClaimedThisYear" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="netIncome" type="cmn:MoneyType" minOccurs="0"/>
+      <xsd:element name="excessDeductionsCarriedForward" type="cmn:MoneyTypePositive" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResearchAndDevelopmentType">
+    <xsd:sequence>
+      <xsd:element name="nonrefundableCredit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="refundableCredit" type="cmn:MoneyTypePositive" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
 	<xsd:complexType name="IndividualType">
 		<xsd:sequence>
 			<xsd:element name="periodBegin" type="cmn:DateType"/>
@@ -123,6 +145,7 @@ _______________________________________
 		<xsd:sequence>
 			<xsd:element name="irdNumber" type="cmn:IRDNumberType"/>
 			<xsd:element name="remuneration" type="cmn:MoneyTypePositive"/>
+      <xsd:element name="shareholderAIMTaxPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="loansFromCompany" type="cmn:MoneyTypePositive"/>
 			<xsd:element name="currentAccountBalance" type="cmn:MoneyType"/>
 			<xsd:element name="shareholderLossOffsets" type="cmn:MoneyType"/>
@@ -296,11 +319,13 @@ _______________________________________
 			<xsd:element name="shareOfDividendIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="shareOfMADistributions" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="shareOfOverseasIncome" type="cmn:MoneyType" minOccurs="0"/>
+      <xsd:element name="shareOfResidentialRentalIncome" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="shareOfRentalIncome" type="cmn:MoneyType" minOccurs="0"/>
 			<xsd:element name="shareOfPassiveIncome" type="cmn:MoneyType" minOccurs="0"/>
 			<xsd:element name="shareOfOtherIncome" type="cmn:MoneyType" minOccurs="0"/>
 			<xsd:element name="totalIncome" type="cmn:MoneyType" minOccurs="0"/>
 			<xsd:element name="deductionForExtinguishedLoss" type="cmn:MoneyTypePositive" minOccurs="0"/>
+      <xsd:element name="shareOfResidentialRentalDeductions" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="shareOfOverseasTaxPaid" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="shareOfImputationCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
 			<xsd:element name="shareOfOtherTaxCredits" type="cmn:MoneyTypePositive" minOccurs="0"/>
@@ -334,4 +359,16 @@ _______________________________________
 			<xsd:element name="formFields" type="rc:FormFieldsType"/>
 		</xsd:sequence>
 	</xsd:complexType>
+  <xsd:simpleType name="ResidentialMethodType">
+    <xsd:annotation>
+      <xsd:documentation>
+        I: Combination
+        C: Individual
+        P: Portfolio
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:pattern value="[ICP]"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 </xsd:schema>

@@ -1,0 +1,123 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/RetrieveReturnResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <RetrieveReturnResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <RetrieveReturnResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/RetrieveReturnResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:RetrieveReturnResponseWrapper>
+                            <retrieveReturnResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2" xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:r6="urn:www.ird.govt.nz/GWS:types/ReturnIR6.v1" xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" xsi:type="r6:RetrieveReturnResponseBodyType">
+                                    <rc:standardFields>
+                                        <rc:isNilReturn>false</rc:isNilReturn>
+                                    </rc:standardFields>
+                                    <r6:formFields>
+                                        <r6:submissionKey>1263943680</r6:submissionKey>
+                                        <r6:firstReturnEstateTrustStartDate>2018-05-28</r6:firstReturnEstateTrustStartDate>
+                                        <r6:estateTrustType>C</r6:estateTrustType>
+                                        <r6:interestIncome>
+                                            <ic:totalTaxPaid>0</ic:totalTaxPaid>
+                                            <ic:totalIncome>0</ic:totalIncome>
+                                        </r6:interestIncome>
+                                        <r6:dividendIncome>
+                                            <ic:totalImputationCredits>0</ic:totalImputationCredits>
+                                            <ic:totalRWTCredits>1000.00</ic:totalRWTCredits>
+                                            <ic:totalGrossDividends>4000.00</ic:totalGrossDividends>
+                                        </r6:dividendIncome>
+                                        <r6:maoriAuthorityDistributions>
+                                            <ic:totalMACredits>1000.00</ic:totalMACredits>
+                                            <ic:totalMADistributions>1000.00</ic:totalMADistributions>
+                                        </r6:maoriAuthorityDistributions>
+                                        <r6:partnershipEstateTrustIncome>
+                                            <ic:totalTaxCredits>6000.00</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r6:partnershipEstateTrustIncome>
+                                        <r6:overseasIncome>
+                                            <ic:totalTaxPaid>0</ic:totalTaxPaid>
+                                            <ic:totalIncome>1000</ic:totalIncome>
+                                        </r6:overseasIncome>
+                                        <r6:pieIncome>
+                                            <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r6:pieIncome>
+                                        <r6:ltcIncome>
+                                            <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r6:ltcIncome>
+                                        <r6:ltcNonAllowableDeductions>0</r6:ltcNonAllowableDeductions>
+                                        <r6:ltcPriorYearNonAllowableDeductionsClaimed>0</r6:ltcPriorYearNonAllowableDeductionsClaimed>
+                                        <r6:ltcAdjustedIncome>1000.00</r6:ltcAdjustedIncome>
+                                        <r6:businessOrRentalIncome>1000.00</r6:businessOrRentalIncome>
+                                        <r6:otherIncome>
+                                            <ic:totalTaxCredits>1000.00</ic:totalTaxCredits>
+                                            <ic:totalIncome>1000.00</ic:totalIncome>
+                                        </r6:otherIncome>
+                                        <r6:saleOfProperty>1000.00</r6:saleOfProperty>
+                                        <r6:rlwtCredit>0</r6:rlwtCredit>
+                                        <r6:totalTaxCredits>11000.00</r6:totalTaxCredits>
+                                        <r6:beneficiaryIncome>0</r6:beneficiaryIncome>
+                                        <r6:trusteeIncome>12000.00</r6:trusteeIncome>
+                                        <r6:totalExpensesClaimed>0</r6:totalExpensesClaimed>
+                                        <r6:lossesBroughtForward>0</r6:lossesBroughtForward>
+                                        <r6:lossesClaimedThisYear>0</r6:lossesClaimedThisYear>
+                                        <r6:totalDistributions>1000.00</r6:totalDistributions>
+                                        <r6:totalTaxableDistributions>1000.00</r6:totalTaxableDistributions>
+                                        <r6:disclosureRequiredCFCorFIF>false</r6:disclosureRequiredCFCorFIF>
+                                        <r6:totalBeneficiaryTax>0</r6:totalBeneficiaryTax>
+                                        <r6:totalTrusteeIncome>12000</r6:totalTrusteeIncome>
+                                        <r6:taxOnTrusteeIncome>3960.00</r6:taxOnTrusteeIncome>
+                                        <r6:trusteeShareOfOverseasTaxPaid>0</r6:trusteeShareOfOverseasTaxPaid>
+                                        <r6:trusteeShareOfDivImpCredits>0</r6:trusteeShareOfDivImpCredits>
+                                        <r6:trusteeShareOfTaxCredits>11000.00</r6:trusteeShareOfTaxCredits>
+                                        <r6:taxOnTrusteeIncomeLessCredits>-7040.00</r6:taxOnTrusteeIncomeLessCredits>
+                                        <r6:residualIncomeTax>-7040.00</r6:residualIncomeTax>
+                                        <r6:provisionalTax>
+                                            <ic:provisionalTaxOption>EST</ic:provisionalTaxOption>
+                                            <ic:provisionalTaxPayable>1000</ic:provisionalTaxPayable>
+                                            <ic:provisionalTaxStartDate>2019-01-01</ic:provisionalTaxStartDate>
+                                        </r6:provisionalTax>
+                                        <r6:beneficiaryDetails>
+                                            <ic:beneficiary>
+                                                <ic:beneficiaryIrdNumber>111111111</ic:beneficiaryIrdNumber>
+                                                <ic:beneficiaryName>Joe Bloggs</ic:beneficiaryName>
+                                                <ic:beneficiaryDOB>1985-09-01</ic:beneficiaryDOB>
+                                                <ic:beneficiaryAddress>1 Bloggs Way</ic:beneficiaryAddress>
+                                                <ic:beneficiaryIsNonResident>true</ic:beneficiaryIsNonResident>
+                                                <ic:shareOfInterestIncome>1000.00</ic:shareOfInterestIncome>
+                                                <ic:shareOfDividendsIncome>1000.00</ic:shareOfDividendsIncome>
+                                                <ic:shareOfMADistributionsIncome>1000.00</ic:shareOfMADistributionsIncome>
+                                                <ic:shareOfOverseasIncome>1000.00</ic:shareOfOverseasIncome>
+                                                <ic:shareOfOtherIncome>1000.00</ic:shareOfOtherIncome>
+                                                <ic:taxableIncome>5000.00</ic:taxableIncome>
+                                                <ic:taxPaidByTrust>true</ic:taxPaidByTrust>
+                                                <ic:distributionByNonComplyingtrust>1000.00</ic:distributionByNonComplyingtrust>
+                                                <ic:taxOnTaxableIncome>1000.00</ic:taxOnTaxableIncome>
+                                                <ic:overseasTaxPaid>500.00</ic:overseasTaxPaid>
+                                                <ic:taxLessOverseasTaxPaid>500.00</ic:taxLessOverseasTaxPaid>
+                                                <ic:dividendImputationCredit>0</ic:dividendImputationCredit>
+                                                <ic:taxLessDividendImputationCredit>500.00</ic:taxLessDividendImputationCredit>
+                                                <ic:otherPaidTaxCredits>1000.00</ic:otherPaidTaxCredits>
+                                                <ic:taxLessOtherPaidTaxCredits>-500.00</ic:taxLessOtherPaidTaxCredits>
+                                                <ic:taxOnDistributionByNonComplyingTrust>450.00</ic:taxOnDistributionByNonComplyingTrust>
+                                                <ic:beneficiaryTaxPayable>-50.00</ic:beneficiaryTaxPayable>
+                                            </ic:beneficiary>
+                                        </r6:beneficiaryDetails>
+                                    </r6:formFields>
+                                </responseBody>
+                            </retrieveReturnResponse>
+                        </b:RetrieveReturnResponseWrapper>
+                    </RetrieveReturnResult>
+                </RetrieveReturnResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

@@ -1,0 +1,60 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+    <env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action env:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/PrepopResponse</wsa:Action>
+    </env:Header>
+    <env:Body>
+        <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+            <s:Header>
+                <a:Action s:mustUnderstand="1">https://services.ird.govt.nz/GWS/Returns/Return/PrepopResponse</a:Action>
+            </s:Header>
+            <s:Body>
+                <PrepopResponse xmlns="https://services.ird.govt.nz/GWS/Returns/">
+                    <PrepopResult xmlns:b="https://services.ird.govt.nz/GWS/Returns/:types/PrepopResponse" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                        <b:PrepopResponseWrapper>
+                            <prepopResponse xmlns="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2">
+                                <statusMessage xmlns="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                                    <statusCode>0</statusCode>
+                                    <errorMessage/>
+                                </statusMessage>
+                                <responseBody xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ic:PrepopResponseBodyType">
+                                    <ic:individual>
+                                        <ic:periodBegin>2018-04-01</ic:periodBegin>
+                                        <ic:periodEnd>2019-03-31</ic:periodEnd>
+                                        <ic:filingFrequency type="IIT03I">Annual - March</ic:filingFrequency>
+                                        <ic:balanceDate>2019-03-31</ic:balanceDate>
+                                        <ic:formExpected>3</ic:formExpected>
+                                        <ic:transitionalYear>false</ic:transitionalYear>
+                                        <ic:bankruptPeriod>false</ic:bankruptPeriod>
+                                        <ic:preAdjudication>false</ic:preAdjudication>
+                                        <ic:postAdjudication>false</ic:postAdjudication>
+                                        <ic:preAdjudicationFiled>false</ic:preAdjudicationFiled>
+                                        <ic:incomeProfile>
+                                            <ic:income>
+                                                <ic:incomeSource>Cool Beans Coffee Company</ic:incomeSource>
+                                                <ic:incomeType type="NZINT">New Zealand interest received</ic:incomeType>
+                                                <ic:amount>8794.33</ic:amount>
+                                                <ic:deductions>3525.00</ic:deductions>
+                                            </ic:income>
+                                            <ic:income>
+                                                <ic:incomeSource>Schedular Payments Test</ic:incomeSource>
+                                                <ic:incomeType type="WT">Schedular payments</ic:incomeType>
+                                                <ic:amount>3000.00</ic:amount>
+                                                <ic:deductions>300.00</ic:deductions>
+                                            </ic:income>
+                                            <ic:income>
+                                                <ic:incomeSource>Dividends</ic:incomeSource>
+                                                <ic:incomeType type="DIVIDN">New Zealand dividends</ic:incomeType>
+                                                <ic:amount>1000.00</ic:amount>
+                                                <ic:deductions>100.00</ic:deductions>
+                                            </ic:income>
+                                        </ic:incomeProfile>
+                                    </ic:individual>
+                                </responseBody>
+                            </prepopResponse>
+                        </b:PrepopResponseWrapper>
+                    </PrepopResult>
+                </PrepopResponse>
+            </s:Body>
+        </s:Envelope>
+    </env:Body>
+</env:Envelope>

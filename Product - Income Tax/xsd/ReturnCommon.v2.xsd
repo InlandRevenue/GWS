@@ -2,9 +2,9 @@
 <!-- Documentation
 _______________________________________
 NAME: 	ReturnCommon.v2.xsd
-VER:	2.0
+VER:	2.1
 ISSUER:	Inland Revenue Department
-DATE:	20/12/2018
+DATE:	31/08/2018
 DESC:	This schema defines the ReturnCommon data types used accross the IRD hosted, Gateway Services.
 _______________________________________
 -->
@@ -388,7 +388,7 @@ _______________________________________
 		<xsd:sequence>
 			<xsd:element name="incomeType" type="cmn:String6" minOccurs="0"/>
 			<xsd:element name="grossAmount" type="cmn:MoneyType"/>
-			<xsd:element name="deductedAmount" type="cmn:MoneyTypePositive" minOccurs="0"/>
+			<xsd:element name="deductedAmount" type="cmn:MoneyType" minOccurs="0"/>
 			<xsd:element name="rate" type="cmn:MoneyType" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:complexType>

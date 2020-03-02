@@ -1,0 +1,51 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <add:Action xmlns:add="http://www.w3.org/2005/08/addressing">https://services.ird.govt.nz/GWS/Returns/Return/File</add:Action>
+    </soap:Header>
+    <soap:Body>
+        <ret:File xmlns:ret="https://services.ird.govt.nz/GWS/Returns/">
+            <ret:ReturnFileRequestMsg>
+                <fil:FileRequestWrapper xmlns:fil="https://services.ird.govt.nz/GWS/Returns/:types/FileRequest">
+                    <r526:fileRequest xmlns:rc="urn:www.ird.govt.nz/GWS:types/ReturnCommon.v2" 
+                        xmlns:r526="urn:www.ird.govt.nz/GWS:types/ReturnREB.v1">
+                        <rc:fileHeader xmlns:cmn="urn:www.ird.govt.nz/GWS:types/Common.v2">
+                            <cmn:softwareProviderData>
+                                <cmn:softwareProvider>SoftwareProvider</cmn:softwareProvider>
+                                <cmn:softwarePlatform>SoftwarePlatform</cmn:softwarePlatform>
+                                <cmn:softwareRelease>1</cmn:softwareRelease>
+                            </cmn:softwareProviderData>
+                            <cmn:identifier IdentifierValueType="IRD">055786372</cmn:identifier>
+                            <cmn:accountType>REB</cmn:accountType>
+                            <rc:periodEndDate>2019-03-31</rc:periodEndDate>
+                            <rc:majorFormType>REB</rc:majorFormType>
+                        </rc:fileHeader>
+                        <rc:fileBody>
+                            <rc:standardFields>
+                                <rc:isNilReturn>false</rc:isNilReturn>
+                                <rc:isFinalReturn>false</rc:isFinalReturn>
+                                <rc:amendmentRequest>
+                                    <rc:isAmended>false</rc:isAmended>
+                                    <rc:amendReason/>
+                                    <rc:amendDetails/>
+                                </rc:amendmentRequest>
+                            </rc:standardFields>
+                            <rc:formFields xsi:type="r526:FormFieldsType" 
+                                xmlns:ic="urn:www.ird.govt.nz/GWS:types/IncomeReturnCommon.v1" 
+                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <r526:schoolKindergartenDonations>1000</r526:schoolKindergartenDonations>
+                                <r526:partnerSchoolKindergartenDonations>500</r526:partnerSchoolKindergartenDonations>
+                                <r526:religiousOrganisationDonations>1000.00</r526:religiousOrganisationDonations>
+                                <r526:partnerReligiousOrganisationDonations>500.00</r526:partnerReligiousOrganisationDonations>
+                                <r526:doneeOrganisationDonations>1000.00</r526:doneeOrganisationDonations>
+                                <r526:partnerDoneeOrganisationDonations>500.00</r526:partnerDoneeOrganisationDonations>
+                                <r526:totalReceiptAmount>6000.00</r526:totalReceiptAmount>
+                                <r526:taxCreditClaimAmount>-2000.00</r526:taxCreditClaimAmount>
+                                <r526:partnerIRD>047760798</r526:partnerIRD>
+                            </rc:formFields>
+                        </rc:fileBody>
+                    </r526:fileRequest>
+                </fil:FileRequestWrapper>
+            </ret:ReturnFileRequestMsg>
+        </ret:File>
+    </soap:Body>
+</soap:Envelope>

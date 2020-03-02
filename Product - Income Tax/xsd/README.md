@@ -34,7 +34,7 @@ For most forms, only one is allowed to be submitted per period. Some form types,
 can be submitted multiple times in the same period, in which case a submissionKey is required 
 to be submitted on amendment.  
 
-### XSD Return Files
+### 2020 Annual Income Return XSDs 
 
 | Entity Type | Primary Form | XSD schema | minorFormType | Form type | Forms allowed per period | Version | Years supported| Attachment Forms   |
 | --- | --- | --- | :---: | :---: | :---: | :---: | :---: | --- |
