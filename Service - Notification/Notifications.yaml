@@ -1,0 +1,324 @@
+swagger: '2.0'
+info: 
+  title: Notifications
+  version: ""
+host: localhost
+basePath: /webservices/gateway/notifications/
+schemes: 
+  - http
+paths: 
+  /list: 
+    post:
+      tags: 
+        - Notification service
+      summary: Notification service
+      description: ""
+      operationId: listPOST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/list_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/list_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/list_POST_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/list_POST_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/list_POST_ResponseDefault'
+securityDefinitions:
+  Authorization:
+    type: apiKey
+    in: header
+    name: Authorization
+security:
+  - Authorization: []
+
+           
+definitions: 
+  list_POST_Request: 
+    type: object
+    required: 
+      - FromDateTime
+    properties: 
+      QueryIDType: 
+        type: string
+        description: '<p>The query ID type is the type of ID that is used to filter notifications</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>CLTLID</td><td>Other Tax Preparer Client List Identifier</td></tr><tr><td>CST</td><td>A non-IRD Number type identifier. Given to customers who do not have an IRD number in the system</td></tr><tr><td>IRD</td><td>Inland Revenue Department ID</td></tr><tr><td>KSF</td><td>KiwiSaver Schemes ID</td></tr><tr><td>LSTID</td><td>Tax Agent List Identifier</td></tr></tbody></table>'
+        maxLength: 6
+        minLength: 1
+        enum: 
+          - CLTLID
+          - CST
+          - IRD
+          - KSF
+          - LSTID
+      QueryID: 
+        type: string
+        description: '<p>The query ID is used to filter available notifications by recipient</p>'
+        maxLength: 30
+      FromDateTime: 
+        type: string
+        format: 'date-time'
+        description: '<p>The earliest point in time on which to select notifications based on their date-time stamp. This is an ISO8601 formatted datetime. Example: 2020-01-02T08:06:26</p>'
+      ToDateTime: 
+        type: string
+        format: 'date-time'
+        description: '<p>The latest point in time on which to select notifications based on their date-time stamp. This is an ISO8601 formatted date time. Example: 2020-01-15T15:53:00</p>'
+  list_POST_Response200: 
+    type: object
+    required: 
+      - Notifications
+    properties: 
+      Notifications: 
+        type: array
+        description: '<p>Notifications response array</p>'
+        items: 
+          type: object
+          description: '<p>Notification object</p>'
+          required: 
+            - NotificationKey
+            - RecordCreated
+            - EventDate
+            - Category
+            - SubCategory
+            - Type
+            - Description
+            - DocumentID
+            - DocumentLocationID
+            - ExtID
+            - ExtIDType
+            - IDType
+            - ID
+            - SubjectIDType
+            - SubjectID
+            - FilingPeriod
+            - DueDate
+          properties: 
+            NotificationKey: 
+              type: number
+              format: int64
+              description: '<p>Unique notification location identifier</p>'
+            RecordCreated: 
+              type: string
+              description: '<p>Point in time the notification object was created. This is an ISO8601 formatted datetime. Example: 2020-01-01T06:12:15</p>'
+            EventDate: 
+              type: string
+              description: '<p>Date time corresponding to event that created this notification. This is an ISO8601 formatted datetime. Example: 2020-01-01T08:06:26</p>'
+            Category: 
+              type: string
+              description: '<p>Notification category</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>1</td><td>Event notifications</td></tr><tr><td>2</td><td>Reminder notifications</td></tr><tr><td>3</td><td>Request for information notifications</td></tr><tr><td>4</td><td>Error notifications</td></tr><tr><td>5</td><td>Action required notifications</td></tr></tbody></table>'
+              maxLength: 1
+              minLength: 1
+              enum: 
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+            SubCategory: 
+              type: string
+              description: '<p>Notification sub category.  New notification sub categories can be added at any time.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>Compliance</td><td>Compliance</td></tr><tr><td>Customer</td><td>Customer</td></tr><tr><td>Employer</td><td>Employer</td></tr><tr><td>GST</td><td>GST</td></tr><tr><td>IncomeTax</td><td>Income tax</td></tr><tr><td>KiwiSaver</td><td>KiwiSaver</td></tr><tr><td>Registration</td><td>Registration</td></tr><tr><td>Return</td><td>Return</td></tr></tbody></table>'
+              maxLength: 30
+              minLength: 1
+              enum: 
+                - Compliance
+                - Customer
+                - Employer
+                - GST
+                - IncomeTax
+                - KiwiSaver
+                - Registration
+                - Return
+            Type: 
+              type: string
+              description: '<p>Notification type.  New notification types can be added at any time.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>ActiveStatus</td><td>Active/Non active status</td></tr><tr><td>AuditCase</td><td>Audit case</td></tr><tr><td>BasisChange</td><td>The accounting basis changed</td></tr><tr><td>CollectionReq</td><td>Collection case - request for information</td></tr><tr><td>Compliance</td><td>A bill is overdue</td></tr><tr><td>Debt</td><td>Debt case</td></tr><tr><td>DTC</td><td>Donation tax credit - more information required</td></tr><tr><td>Emp18</td><td>Employee turned 18, required to make compulsory contributions</td></tr><tr><td>Employer</td><td>An example employer notification</td></tr><tr><td>EOTChange</td><td>Change to extension of time</td></tr><tr><td>GST</td><td>An example GST notification</td></tr><tr><td>GSTFrq</td><td>GST filing frequency changed</td></tr><tr><td>InvalidIRD</td><td>Invalid or zero IRD number</td></tr><tr><td>KSEnrol</td><td>Start kiwisaver - first request</td></tr><tr><td>NewAccount</td><td>A new account has been registered</td></tr><tr><td>NewEmail</td><td>You have a new email</td></tr><tr><td>NewIncType</td><td>New income type has been added/changed</td></tr><tr><td>NonIndIRD</td><td>Non individual IRD number used</td></tr><tr><td>PaymentOverdue</td><td>Late payment</td></tr><tr><td>PIR</td><td>Prescribed Investor Rate</td></tr><tr><td>RefundPend</td><td>Refund pending - Bank account required</td></tr><tr><td>ReturnDue</td><td>A return is due</td></tr><tr><td>ReturnProc</td><td>Return is processing</td></tr><tr><td>ReturnProcRequest</td><td>Return processing - Request for information</td></tr><tr><td>TaxCode</td><td>Incorrect tax code on employment service record</td></tr><tr><td>TaxCodeEIS</td><td>Incorrect tax code on employment informaiton service</td></tr></tbody></table>'
+              maxLength: 30
+              minLength: 1
+              enum: 
+                - ActiveStatus
+                - AuditCase
+                - BasisChange
+                - CollectionReq
+                - Compliance
+                - Debt
+                - DTC
+                - Emp18
+                - Employer
+                - EOTChange
+                - GST
+                - GSTFrq
+                - InvalidIRD
+                - KSEnrol
+                - NewAccount
+                - NewEmail
+                - NewIncType
+                - NonIndIRD
+                - PaymentOverdue
+                - PIR
+                - RefundPend
+                - ReturnDue
+                - ReturnProc
+                - ReturnProcRequest
+                - TaxCode
+                - TaxCodeEIS
+            Description: 
+              type: string
+              description: '<p>Notification description</p>'
+              maxLength: 255
+              minLength: 1
+            DocumentID: 
+              type: number
+              format: int64
+              description: '<p>The ID of a document that can be retreived through the document service.</p>'
+            DocumentLocationID: 
+              type: number
+              format: int64
+              description: '<p>An ID corresponding to the location where a document submitted through the document service will added.</p>'
+            ExtID: 
+              type: string
+              description: '<p>An external ID for providing more information with a notification</p>'
+              maxLength: 30
+            ExtIDType: 
+              type: string
+              description: '<p>Type of external ID, if one is provided</p>'
+              maxLength: 30
+            IDType: 
+              type: string
+              description: '<p>The type of ID for the recipient of the notification</p>'
+              maxLength: 6
+              minLength: 1
+            ID: 
+              type: string
+              description: '<p>An ID for the main recipient of the notification. This can be filtered with a query ID and query ID type.</p>'
+              maxLength: 30
+              minLength: 1
+            SubjectIDType: 
+              type: string
+              description: '<p>Subject ID Type.  Example: Recipient of notification is employer, the subject ID could be that of an employee.</p>'
+              maxLength: 30
+            SubjectID: 
+              type: string
+              description: '<p>Subject ID.  Example: Recipient of notification is employer, the subject ID could be that of an employee.</p>'
+              maxLength: 30
+            FilingPeriod: 
+              type: string
+              description: '<p>Filing period. This is an ISO8601 formatted date. Example: 2020-03-31</p>'
+            DueDate: 
+              type: string
+              description: '<p>Due date. This is an ISO8601 formatted date. Example: 2020-03-31</p>'
+  list_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>NOT001</td><td>The number of notifications retrieved exceeds the maximum limit of notifications.  Please filter your criteria.</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+                - NOT001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  list_POST_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  list_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>NOT001</td><td>The number of notifications retrieved exceeds the maximum limit of notifications.  Please filter your criteria.</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+                - NOT001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
