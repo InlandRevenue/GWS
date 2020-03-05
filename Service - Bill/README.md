@@ -38,12 +38,12 @@ The objective of this API is to allow transaction data services (TDS) software p
 ### Test environment URL
 | End point|  URL|
 |--|--|
-| Testing | https://test3.services.ird.govt.nz:4046/gateway/document/{operation}|    
-| Pre-Production | https://test4.services.ird.govt.nz:4046/gateway/document/{operation} | 
+| Testing | https://test3.services.ird.govt.nz:4046/gateway/bill/|    
+| Pre-Production | https://test4.services.ird.govt.nz:4046/gateway/bill/ | 
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
 
 ### Prod environment URL
 | End point|  URL|
 |--|--|
-| Production | https://services.ird.govt.nz:4046/gateway/document/{operation} |
+| Production | https://services.ird.govt.nz:4046/gateway/bill/ |
