@@ -11,7 +11,7 @@ The objective of this API is to allow transaction data services (TDS) software p
 ## Key Documentation
 ---
 - YAML file:
-	- View and download the [Customer API YAML](Customer%20API.yaml)
+	- View and download the [Customer API YAML](Bill%20API%202020-03-09.yaml)
 
 - Income API Build Pack 
 	- [Download the build pack](Build%20pack%20-%20Bill%20API.pdf) to view data definitions of each operation and response status code definitions
