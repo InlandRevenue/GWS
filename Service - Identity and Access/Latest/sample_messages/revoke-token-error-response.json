@@ -1,8 +1,0 @@
-{
-   "error": "invalid_grant",
-   "error_description": "Cannot terminate invalid token."
-}
-{
-   "error": "invalid_request",
-   "error_description": "Invalid token action: deleted"
-}
