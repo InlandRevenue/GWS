@@ -1,7 +1,7 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-# Income Service 
+# Income Service API  
 
-Income Service has moved to a new GitHub Repository<br/>
+Income Service API has moved to a new GitHub Repository<br/>
 [Gateway_Services-Customer-and-Account/Service - Income](https://github.com/InlandRevenue/Gateway_Services-Customer-and-Account/tree/master/Service%20-%20Income)
