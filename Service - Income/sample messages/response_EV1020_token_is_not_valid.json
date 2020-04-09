@@ -1,9 +1,0 @@
-{
-  "errors": [
-    {
-      "code": "EV1020",
-      "type": "security",
-      "message": "Authentication failure means the token provided is not valid"
-    }
-  ]
-}
