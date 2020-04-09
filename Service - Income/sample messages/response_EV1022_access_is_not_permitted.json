@@ -1,9 +1,0 @@
-{
-  "errors": [
-    {
-      "code": "EV1022",
-      "type": "validation",
-      "message": "Access is not permitted for the requester to perform this operation for the submitted identifier"
-    }
-  ]
-}

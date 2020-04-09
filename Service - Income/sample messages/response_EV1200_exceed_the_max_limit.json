@@ -1,9 +1,0 @@
-{
-  "errors": [
-    {
-      "code": "EV1200",
-      "type": "validation",
-      "message": "The number of records retrieved exceeds the maximum limit"
-    }
-  ]
-}
