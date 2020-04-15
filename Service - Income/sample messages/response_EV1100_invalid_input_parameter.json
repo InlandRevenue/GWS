@@ -1,9 +1,0 @@
-{
-  "errors": [
-    {
-      "code": "EV1100",
-      "type": "validation",
-      "message": "Invalid input parameters. Please check documentation"
-    }
-  ]
-}
